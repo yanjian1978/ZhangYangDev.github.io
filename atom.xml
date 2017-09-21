@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>柒索</title>
+  
+  <subtitle>一个头脑聪明，五肢发达的男人。</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-09-21T08:57:03.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>柒索</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『JVM语言 - Groovy』基础(二)</title>
+    <link href="http://yoursite.com/2017/09/21/groovy-basic-2/"/>
+    <id>http://yoursite.com/2017/09/21/groovy-basic-2/</id>
+    <published>2017-09-21T06:56:02.000Z</published>
+    <updated>2017-09-21T08:57:03.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
+    
+    
+      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
+    
+      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『JVM语言 - Groovy』基础(一)</title>
+    <link href="http://yoursite.com/2017/09/18/groovy-basic-1/"/>
+    <id>http://yoursite.com/2017/09/18/groovy-basic-1/</id>
+    <published>2017-09-18T15:15:33.000Z</published>
+    <updated>2017-09-21T08:38:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Groovy-基本语法：&quot;&gt;&lt;a href=&quot;#Groovy-基本语法：&quot; class=&quot;headerlink&quot; title=&quot;Groovy - 基本语法：&quot;&gt;&lt;/a&gt;Groovy - 基本语法：&lt;/h2&gt;&lt;h3 id=&quot;HelloWorld：&quot;&gt;&lt;a href=
+      
+    
+    </summary>
+    
+      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
+    
+    
+      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
+    
+      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『JVM语言 - Groovy』简介</title>
+    <link href="http://yoursite.com/2017/09/15/groovy-introduction/"/>
+    <id>http://yoursite.com/2017/09/15/groovy-introduction/</id>
+    <published>2017-09-14T16:46:02.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Groovy-概述：&quot;&gt;&lt;a href=&quot;#Groovy-概述：&quot; class=&quot;headerlink&quot; title=&quot;Groovy - 概述：&quot;&gt;&lt;/a&gt;Groovy - 概述：&lt;/h2&gt;&lt;p&gt;Apache Groovy是一种&lt;strong&gt;强大的&lt;/stron
+      
+    
+    </summary>
+    
+      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
+    
+    
+      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
+    
+      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用 Now.sh来免费部署你的项目？</title>
+    <link href="http://yoursite.com/2017/09/10/nowsh-note/"/>
+    <id>http://yoursite.com/2017/09/10/nowsh-note/</id>
+    <published>2017-09-10T15:51:59.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;ZEIT：Our Mission，Make Cloud Computing as Easy and Accessi
+      
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://yoursite.com/categories/Tools/"/>
+    
+    
+      <category term="Now.sh" scheme="http://yoursite.com/tags/Now-sh/"/>
+    
+      <category term="Deployments" scheme="http://yoursite.com/tags/Deployments/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『构建工具-Gradle』相关内容整理</title>
+    <link href="http://yoursite.com/2017/09/02/gradle-node/"/>
+    <id>http://yoursite.com/2017/09/02/gradle-node/</id>
+    <published>2017-09-02T07:15:01.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://camo.githubusercontent.com/45933e6c03cf27fa6a490944a0b36dda20e325a7/687474703a2f2f6269742e6c792f326b5a57776738&quot; alt=&quot;Gr
+      
+    
+    </summary>
+    
+      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Gradle" scheme="http://yoursite.com/tags/Gradle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot - Actuator QuickStart</title>
+    <link href="http://yoursite.com/2017/08/22/springboot-actuator/"/>
+    <id>http://yoursite.com/2017/08/22/springboot-actuator/</id>
+    <published>2017-08-22T13:55:58.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Spring-Boot-Actuator简介&quot;&gt;&lt;a href=&quot;#Spring-Boot-Actuator简介&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot - Actuator简介:&quot;&gt;&lt;/a&gt;Spring Boot - Act
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
+    
+      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot - 多环境配置(.properties &amp; .yml)</title>
+    <link href="http://yoursite.com/2017/08/15/springboot-configuration/"/>
+    <id>http://yoursite.com/2017/08/15/springboot-configuration/</id>
+    <published>2017-08-15T10:55:08.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在Spring Boot的配置文件中，有两种后缀的配置文件，分别是.properties文件和.yml文件。Spring Boot 提供了对应用进行自动化配置。相比以前 XML 的配置方式，很多显式方式申明是不需要的。大多数默认的配置足够实现开发功能，从而更快速开发。&lt;/p
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
+    
+      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot - explain &amp; QuickStart</title>
+    <link href="http://yoursite.com/2017/08/10/springboot-quickstart/"/>
+    <id>http://yoursite.com/2017/08/10/springboot-quickstart/</id>
+    <published>2017-08-10T02:14:20.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Spring-Boot-简介：&quot;&gt;&lt;a href=&quot;#Spring-Boot-简介：&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot - 简介：&quot;&gt;&lt;/a&gt;Spring Boot - 简介：&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;T
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
+    
+      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HighCharts - 学习笔记整理</title>
+    <link href="http://yoursite.com/2017/08/05/hightcharts-note/"/>
+    <id>http://yoursite.com/2017/08/05/hightcharts-note/</id>
+    <published>2017-08-05T06:10:24.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;HighCharts概述：&quot;&gt;&lt;a href=&quot;#HighCharts概述：&quot; class=&quot;headerlink&quot; title=&quot;HighCharts概述：&quot;&gt;&lt;/a&gt;HighCharts概述：&lt;/h2&gt;&lt;p&gt;HighCharts是用JavaScript编写的图
+      
+    
+    </summary>
+    
+      <category term="Charts" scheme="http://yoursite.com/categories/Charts/"/>
+    
+    
+      <category term="HighCharts" scheme="http://yoursite.com/tags/HighCharts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『构建工具-Webpack』相关内容整理</title>
+    <link href="http://yoursite.com/2017/07/23/webpack-note/"/>
+    <id>http://yoursite.com/2017/07/23/webpack-note/</id>
+    <published>2017-07-23T09:11:16.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Webpack是什么？&quot;&gt;&lt;a href=&quot;#Webpack是什么？&quot; class=&quot;headerlink&quot; title=&quot;Webpack是什么？&quot;&gt;&lt;/a&gt;Webpack是什么？&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;webpack is a module b
+      
+    
+    </summary>
+    
+      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
+    
+    
+      <category term="Webpack" scheme="http://yoursite.com/tags/Webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『构建工具-Maven』相关内容整理</title>
+    <link href="http://yoursite.com/2017/07/04/maven-note/"/>
+    <id>http://yoursite.com/2017/07/04/maven-note/</id>
+    <published>2017-07-04T15:12:29.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Maven-工具简介&quot;&gt;&lt;a href=&quot;#Maven-工具简介&quot; class=&quot;headerlink&quot; title=&quot;Maven-工具简介:&quot;&gt;&lt;/a&gt;Maven-工具简介:&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Apache Maven是跨平台的项目管理工具
+      
+    
+    </summary>
+    
+      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lombok - 使用注解让你的JavaBean变得更加简洁</title>
+    <link href="http://yoursite.com/2017/06/23/lombok-note-md/"/>
+    <id>http://yoursite.com/2017/06/23/lombok-note-md/</id>
+    <published>2017-06-23T13:23:28.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Lombok-工具简介：&quot;&gt;&lt;a href=&quot;#Lombok-工具简介：&quot; class=&quot;headerlink&quot; title=&quot;Lombok - 工具简介：&quot;&gt;&lt;/a&gt;Lombok - 工具简介：&lt;/h2&gt;&lt;p&gt;Lombok是一个编译时注释预处理器，有助于在编译时
+      
+    
+    </summary>
+    
+      <category term="Java Tools" scheme="http://yoursite.com/categories/Java-Tools/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Lombok" scheme="http://yoursite.com/tags/Lombok/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『管理工具-NPM』相关内容整理</title>
+    <link href="http://yoursite.com/2017/05/09/npm-note/"/>
+    <id>http://yoursite.com/2017/05/09/npm-note/</id>
+    <published>2017-05-09T09:15:46.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;NPM是什么？&quot;&gt;&lt;a href=&quot;#NPM是什么？&quot; class=&quot;headerlink&quot; title=&quot;NPM是什么？&quot;&gt;&lt;/a&gt;NPM是什么？&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;npm（全称 &lt;strong&gt;Node Package Manager&lt;/
+      
+    
+    </summary>
+    
+      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
+    
+    
+      <category term="NPM" scheme="http://yoursite.com/tags/NPM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『构建工具-Gulp』相关内容整理</title>
+    <link href="http://yoursite.com/2017/04/26/gulp-note/"/>
+    <id>http://yoursite.com/2017/04/26/gulp-note/</id>
+    <published>2017-04-26T14:15:46.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Gulp-简介&quot;&gt;&lt;a href=&quot;#Gulp-简介&quot; class=&quot;headerlink&quot; title=&quot;Gulp- 简介&quot;&gt;&lt;/a&gt;Gulp- 简介&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Automate and enhance your workflow 
+      
+    
+    </summary>
+    
+      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
+    
+    
+      <category term="Gulp" scheme="http://yoursite.com/tags/Gulp/"/>
+    
+  </entry>
+  
+</feed>

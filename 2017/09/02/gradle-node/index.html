@@ -1,0 +1,1089 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Java,Gradle," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="柒索" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Gradle - 简介：Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化建构工具。它使用一种基于Groovy的特定领域语言来声明项目设置，而不是传统的XML。 当前其支持的语言限于Java、Groovy和Scala，计划未来将支持更多的语言。Gradle，这是一个构建系统(工具)，我们认为这是Java（JVM）世界中构建技术的巨大飞跃。  Gradle提供了：">
+<meta name="keywords" content="Java,Gradle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="『构建工具-Gradle』相关内容整理">
+<meta property="og:url" content="http://yoursite.com/2017/09/02/gradle-node/index.html">
+<meta property="og:site_name" content="柒索">
+<meta property="og:description" content="Gradle - 简介：Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化建构工具。它使用一种基于Groovy的特定领域语言来声明项目设置，而不是传统的XML。 当前其支持的语言限于Java、Groovy和Scala，计划未来将支持更多的语言。Gradle，这是一个构建系统(工具)，我们认为这是Java（JVM）世界中构建技术的巨大飞跃。  Gradle提供了：">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://camo.githubusercontent.com/45933e6c03cf27fa6a490944a0b36dda20e325a7/687474703a2f2f6269742e6c792f326b5a57776738">
+<meta property="og:updated_time" content="2017-09-20T15:15:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="『构建工具-Gradle』相关内容整理">
+<meta name="twitter:description" content="Gradle - 简介：Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化建构工具。它使用一种基于Groovy的特定领域语言来声明项目设置，而不是传统的XML。 当前其支持的语言限于Java、Groovy和Scala，计划未来将支持更多的语言。Gradle，这是一个构建系统(工具)，我们认为这是Java（JVM）世界中构建技术的巨大飞跃。  Gradle提供了：">
+<meta name="twitter:image" content="https://camo.githubusercontent.com/45933e6c03cf27fa6a490944a0b36dda20e325a7/687474703a2f2f6269742e6c792f326b5a57776738">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/09/02/gradle-node/"/>
+
+
+
+
+
+  <title> 『构建工具-Gradle』相关内容整理 | 柒索 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">柒索</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个头脑聪明，五肢发达的男人。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/02/gradle-node/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="柒索">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柒索">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                『构建工具-Gradle』相关内容整理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-02T15:15:01+08:00">
+                2017-09-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Build-Tools/" itemprop="url" rel="index">
+                    <span itemprop="name">Build Tools</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://camo.githubusercontent.com/45933e6c03cf27fa6a490944a0b36dda20e325a7/687474703a2f2f6269742e6c792f326b5a57776738" alt="Gradle "></p>
+<h2 id="Gradle-简介："><a href="#Gradle-简介：" class="headerlink" title="Gradle - 简介："></a>Gradle - 简介：</h2><p><strong>Gradle</strong>是一个基于<strong>Apache Ant</strong>和<strong>Apache Maven</strong>概念的项目<strong>自动化建构</strong>工具。它使用一种基于<strong>Groovy</strong>的特定领域语言来声明项目设置，而不是传统的<strong>XML</strong>。</p>
+<p>当前其支持的语言限于<strong>Java</strong>、<strong>Groovy</strong>和<strong>Scala</strong>，计划未来将支持更多的语言。Gradle，这是一个构建系统(工具)，我们认为这是Java（JVM）世界中构建技术的巨大飞跃。 </p>
+<p>Gradle提供了：</p>
+<ul>
+<li><p>一个非常灵活的通用构建工具，如Ant。</p>
+</li>
+<li><p>一种可切换的，像 maven 一样的基于约定约定优于配置的构建框架</p>
+</li>
+<li><p>强大的多工程构建支持</p>
+</li>
+<li><p>强大的依赖管理(基于 ApacheIvy)</p>
+</li>
+<li><p>对已有的 maven 和 ivy 仓库的全面支持</p>
+</li>
+<li><p>支持传递性依赖管理，而不需要远程仓库或者 pom.xml 或者 ivy 配置文件</p>
+</li>
+<li><p>ant 式的任务和构建是 gradle 的第一公民</p>
+</li>
+<li><p>基于 groovy，其 build 脚本使用 groovy dsl 编写</p>
+</li>
+<li><p>具有广泛的领域模型支持你的构建</p>
+<p>Reference：<a href="https://docs.gradle.org/4.1/userguide/introduction.html" target="_blank" rel="external">https://docs.gradle.org/4.1/userguide/introduction.html</a></p>
+</li>
+</ul>
+<h2 id="Gradle-概述："><a href="#Gradle-概述：" class="headerlink" title="Gradle - 概述："></a>Gradle - 概述：</h2><h3 id="基于声明的构建和基于约定的构建"><a href="#基于声明的构建和基于约定的构建" class="headerlink" title="基于声明的构建和基于约定的构建"></a>基于声明的构建和基于约定的构建</h3><p>Gradle的核心是基于Groovy的丰富的可扩展的域特定语言（DSL）。Gradle通过提供可以根据需要进行组合的声明性语言元素将声明式构建推送到一个新的层次。这些元素还为Java，Groovy，OSGi，Web和Scala项目提供了逐个常规的支持。更重要的是，这种声明性语言是可扩展的。添加您自己的新语言元素或增强现有的元素，从而提供简洁，可维护和易于理解的构建。</p>
+<h3 id="为以依赖为基础的编程方式提供语言支持"><a href="#为以依赖为基础的编程方式提供语言支持" class="headerlink" title="为以依赖为基础的编程方式提供语言支持"></a>为以依赖为基础的编程方式提供语言支持</h3><p>声明性语言优点在于通用任务图，你可以将其充分利用在构建中. 它提供了最大限度的灵活性，以让 Gradle 适应你的特殊需求。</p>
+<h3 id="构建结构化"><a href="#构建结构化" class="headerlink" title="构建结构化"></a>构建结构化</h3><p>Gradle 的灵活和丰富性最终能够支持在你的构建中应用通用的设计模式。 例如，它可以很容易地将你的构建拆分为多个可重用的模块，最后再进行组装，但不要强制地进行模块的拆分。 不要把原本在一起的东西强行分开（比如在你的项目结构里），从而避免让你的构建变成一场噩梦。 最后，你可以创建一个结构良好，易于维护，易于理解的构建。</p>
+<h3 id="深度-API"><a href="#深度-API" class="headerlink" title="深度 API"></a>深度 API</h3><p>Gradle 允许你在构建执行的整个生命周期，对它的核心配置及执行行为进行监视并自定义。</p>
+<h3 id="Gradle-的扩展"><a href="#Gradle-的扩展" class="headerlink" title="Gradle 的扩展"></a>Gradle 的扩展</h3><p>Gradle 有非常良好的扩展性。 从简单的单项目构建，到庞大的多项目构建，它都能显著地提升你的效率。 这才是真正的结构化构建。通过最先进的增量构建功能，它可以解决许多大型企业所面临的性能瓶颈问题。</p>
+<h3 id="多项目构建"><a href="#多项目构建" class="headerlink" title="多项目构建"></a>多项目构建</h3><p>Gradle 对多项目构建的支持非常出色。项目依赖是首先需要考虑的问题。 我们允许你在多项目构建当中对项目依赖关系进行建模，因为它们才是你真正的问题域。 Gradle 遵守你的布局。</p>
+<p>Gradle 提供了局部构建的功能。 如果你在构建一个单独的子项目，Gradle 也会帮你构建它所依赖的所有子项目。 你也可以选择重新构建依赖于特定子项目的子项目。 这种增量构建将使得在大型构建任务中省下大量时间。</p>
+<h3 id="多种方式管理依赖"><a href="#多种方式管理依赖" class="headerlink" title="多种方式管理依赖"></a>多种方式管理依赖</h3><p>不同的团队喜欢用不同的方式来管理他们的外部依赖。 从 Maven 和 Ivy 的远程仓库的传递依赖管理，到本地文件系统的 jar 包或目录，Gradle 对所有的管理策略都提供了方便的支持。</p>
+<h3 id="Gradle-是第一个构建集成工具"><a href="#Gradle-是第一个构建集成工具" class="headerlink" title="Gradle 是第一个构建集成工具"></a>Gradle 是第一个构建集成工具</h3><p>Ant tasks 是最重要的。而更有趣的是，Ant projects 也是最重要的。 Gradle 对任意的 Ant 项目提供了深度导入，并在运行时将 Ant 目标(target)转换为原生的 Gradle 任务(task)。 你可以从 Gradle 上依赖它们(Ant targets)，增强它们，甚至在你的 build.xml 上定义对 Gradle tasks 的依赖。Gradle 为属性、路径等等提供了同样的整合。</p>
+<p>Gradle 完全支持用于发布或检索依赖的 Maven 或 Ivy 仓库。 Gradle 同样提供了一个转换器，用于将一个 Maven pom.xml 文件转换为一个 Gradle 脚本。Maven 项目的运行时导入的功能将很快会有。</p>
+<h3 id="易于移植"><a href="#易于移植" class="headerlink" title="易于移植"></a>易于移植</h3><p>Gradle 能适应你已有的任何结构。因此，你总可以在你构建项目的同一个分支当中开发你的 Gradle 构建脚本，并且它们能够并行进行。 我们通常建议编写测试，以保证生成的文件是一样的。 这种移植方式会尽可能的可靠和减少破坏性。这也是重构的最佳做法。</p>
+<h3 id="Groovy"><a href="#Groovy" class="headerlink" title="Groovy"></a>Groovy</h3><p>Gradle 的构建脚本是采用 Groovy 写的，而不是用 XML。 但与其他方法不同，它并不只是展示了由一种动态语言编写的原始脚本的强大。 那样将导致维护构建变得很困难。 Gradle 的整体设计是面向被作为一门语言，而不是一个僵化的框架。 并且 Groovy 是我们允许你通过抽象的 Gradle 描述你个人的 story 的黏合剂。 Gradle 提供了一些标准通用的 story。这是我们相比其他声明性构建系统的主要特点。 我们的 Groovy 支持也不是简单的糖衣层，整个 Gradle 的 API 都是完全 groovy 化的。只有通过 Groovy才能去运用它并对它提高效率。</p>
+<h3 id="The-Gradle-wrapper"><a href="#The-Gradle-wrapper" class="headerlink" title="The Gradle wrapper"></a>The Gradle wrapper</h3><p>Gradle Wrapper 允许你在没有安装 Gradle 的机器上执行 Gradle 构建。 这一点是非常有用的。比如，对一些持续集成服务来说。 它对一个开源项目保持低门槛构建也是非常有用的。 Wrapper 对企业来说也很有用，它使得对客户端计算机零配置。 它强制使用指定的版本，以减少兼容支持问题。</p>
+<h3 id="自由和开源"><a href="#自由和开源" class="headerlink" title="自由和开源"></a>自由和开源</h3><p>Gradle 是一个开源项目，并遵循 ASL 许可。</p>
+<p>Reference：<a href="https://docs.gradle.org/4.1/userguide/overview.html" target="_blank" rel="external">https://docs.gradle.org/4.1/userguide/overview.html</a></p>
+<h2 id="Gradle-安装："><a href="#Gradle-安装：" class="headerlink" title="Gradle - 安装："></a>Gradle - 安装：</h2><p>关于 Gradle 的安装官网上为我们提供了非常详细的过程，如果你使用的是 MacOS，那么建议使用 Homebrew 进行安装，简单快捷。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">➜  ~ brew install gradle  # 安装Gradle</div><div class="line">➜  ~ gradle -v			  # 查看版本信息</div><div class="line"></div><div class="line">------------------------------------------------------------</div><div class="line">Gradle 4.1</div><div class="line">------------------------------------------------------------</div><div class="line"></div><div class="line">Build time:   2017-08-07 14:38:48 UTC</div><div class="line">Revision:     941559e020f6c357ebb08d5c67acdb858a3defc2</div><div class="line"></div><div class="line">Groovy:       2.4.11</div><div class="line">Ant:          Apache Ant(TM) version 1.9.6 compiled on June 29 2015</div><div class="line">JVM:          1.8.0_121 (Oracle Corporation 25.121-b13)</div><div class="line">OS:           Mac OS X 10.12.6 x86_64</div></pre></td></tr></table></figure>
+<p>配置Gradle的环境变量：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GRADLE_HOME=/usr/local/gradle</div></pre></td></tr></table></figure>
+<p>Reference：<a href="https://docs.gradle.org/4.1/userguide/installation.html" target="_blank" rel="external">https://docs.gradle.org/4.1/userguide/installation.html</a></p>
+<h2 id="Gradle-构建基础："><a href="#Gradle-构建基础：" class="headerlink" title="Gradle - 构建基础："></a>Gradle - 构建基础：</h2><h3 id="Projects-amp-tasks"><a href="#Projects-amp-tasks" class="headerlink" title="Projects &amp; tasks:"></a>Projects &amp; tasks:</h3><p>projects 和 tasks是 Gradle 中最重要的两个概念。</p>
+<p>任何一个 Gradle 构建都是由一个或多个 projects 组成。每个 project 包括许多可构建组成部分。 这完全取决于你要构建些什么。举个例子，每个 project 或许是一个 jar 包或者一个 web 应用，它也可以是一个由许多其他项目中产生的 jar 构成的 zip 压缩包。一个 project 不必描述它只能进行构建操作。它也可以部署你的应用或搭建你的环境。不要担心它像听上去的那样庞大。 Gradle 的 build-by-convention 可以让您来具体定义一个 project 到底该做什么。</p>
+<p>每个 project 都由多个 tasks 组成。每个 task 都代表了构建执行过程中的一个原子性操作。如编译，打包，生成 javadoc，发布到某个仓库等操作。</p>
+<h3 id="build-gradle文件："><a href="#build-gradle文件：" class="headerlink" title="build.gradle文件："></a>build.gradle文件：</h3><p>示例代码：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">task hello &#123;</div><div class="line">    doLast &#123;</div><div class="line">        println <span class="string">'Hello world!'</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在命令行里, 进入脚本所在的文件夹然后输入 <strong>gradle -q hello</strong> 来执行构建脚本，示例代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gradle -q hello Hello world!</div></pre></td></tr></table></figure>
+<p>这里发生了什么? 这个构建脚本定义了一个独立的 task, 叫做 hello, 并且加入了一个 action. 当你运行 <strong>gradle hello</strong>, Gradle 执行叫做 hello 的 task, 也就是执行了你所提供的 action. 这个 action 是一个包含了一些 Groovy 代码的闭包(closure 这个概念不清楚的同学好好谷歌下).</p>
+<p>如果你认为这些看上去和 Ant 的 targets 很相像, 好吧, 你是对的. Gradle tasks 和 Ant 的 targets 是对等的. 但是你将会会看到, Gradle tasks 更加强大. 我们使用一个不同于 Ant 的术语 task, 看上去比 target 更加能直白. 不幸的是这带来了一个术语冲突, 因为 Ant 称它的命令, 比如 javac 或者 copy, 叫 tasks. 所以当我们谈论 tasks, 是指 Gradle 的 tasks. 如果我们讨论 Ant 的 tasks (Ant 命令), 我们会直接称呼 ant task.</p>
+<p> <strong>-q</strong>. 代表 quite 模式. 它不会生成 Gradle 的日志信息 (log messages), 所以用户只能看到 tasks 的输出. 它使得的输出更加清晰. 你并不一定需要加入这个选项.</p>
+<h2 id="Gradle-构建项目："><a href="#Gradle-构建项目：" class="headerlink" title="Gradle - 构建项目："></a>Gradle - 构建项目：</h2><h3 id="创建项目目录："><a href="#创建项目目录：" class="headerlink" title="创建项目目录："></a>创建项目目录：</h3><p>示例代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  ~ mkdir gradle-app</div><div class="line">➜  ~ cd gradle-app</div></pre></td></tr></table></figure>
+<h3 id="使用-Gradle-Wrapper构建："><a href="#使用-Gradle-Wrapper构建：" class="headerlink" title="使用 Gradle Wrapper构建："></a>使用 Gradle Wrapper构建：</h3><p>示例代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">➜  gradle-app gradle wrapper</div><div class="line"></div><div class="line">BUILD SUCCESSFUL in 0s</div><div class="line">1 actionable task: 1 executed</div></pre></td></tr></table></figure>
+<p>以下是 Gradle Wrapper 生成的文件。</p>
+<p>示例代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">➜  gradle-app tree</div><div class="line">.</div><div class="line">├── gradle</div><div class="line">│   └── wrapper</div><div class="line">│       ├── gradle-wrapper.jar</div><div class="line">│       └── gradle-wrapper.properties</div><div class="line">├── gradlew</div><div class="line">└── gradlew.bat</div><div class="line"></div><div class="line">2 directories, 4 files</div></pre></td></tr></table></figure>
+<ul>
+<li>gradlew : 这是一个可执行文件，应用于运行gradle构建任务</li>
+<li>gradlew.bat : 同上，运行再 windows/doc 平台。</li>
+<li>gradle/wrapper/gradle-wrapper.properties ：gradle包装器配置文件</li>
+</ul>
+<h4 id="gradle-wrapper-properties："><a href="#gradle-wrapper-properties：" class="headerlink" title="gradle-wrapper.properties："></a>gradle-wrapper.properties：</h4><p>示例代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">➜  gradle-app cat gradle/wrapper/gradle-wrapper.properties</div><div class="line">distributionBase=GRADLE_USER_HOME</div><div class="line">distributionPath=wrapper/dists</div><div class="line">zipStoreBase=GRADLE_USER_HOME</div><div class="line">zipStorePath=wrapper/dists</div><div class="line">distributionUrl=https\://services.gradle.org/distributions/gradle-4.1-bin.zip</div></pre></td></tr></table></figure>
+<h3 id="初始化你创建的项目："><a href="#初始化你创建的项目：" class="headerlink" title="初始化你创建的项目："></a>初始化你创建的项目：</h3><p>示例代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">➜  gradle-app ./gradlew init</div><div class="line">Downloading https://services.gradle.org/distributions/gradle-4.1-bin.zip</div><div class="line">................................................................</div><div class="line">Unzipping /Users/UName/.gradle/wrapper/dists/gradle-4.1-bin/c3kp51zwwt108wc78u68yt7vs/gradle-4.1-bin.zip to /Users/UName/.gradle/wrapper/dists/gradle-4.1-bin/c3kp51zwwt108wc78u68yt7vs</div><div class="line">Set executable permissions for: </div><div class="line">/Users/UName/.gradle/wrapper/dists/gradle-4.1-bin/c3kp51zwwt108wc78u68yt7vs/</div><div class="line">gradle-4.1/bin/gradle</div><div class="line"></div><div class="line">BUILD SUCCESSFUL in 18s</div><div class="line">2 actionable tasks: 1 executed, 1 up-to-date</div></pre></td></tr></table></figure>
+<p>现在可以再次查看下项目：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">➜  gradle-app tree</div><div class="line">.</div><div class="line">├── build.gradle</div><div class="line">├── gradle</div><div class="line">│   └── wrapper</div><div class="line">│       ├── gradle-wrapper.jar</div><div class="line">│       └── gradle-wrapper.properties</div><div class="line">├── gradlew</div><div class="line">├── gradlew.bat</div><div class="line">└── settings.gradle</div><div class="line"></div><div class="line">2 directories, 6 files</div></pre></td></tr></table></figure>
+<p>相较于之前，则多了<code>build.gradle</code>和<code>settings.gradle</code>两个文件。</p>
+<h4 id="build-gradle"><a href="#build-gradle" class="headerlink" title="build.gradle:"></a>build.gradle:</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">  * 此构建文件是由Gradle'init'任务生成的。</span></div><div class="line"><span class="comment">  *</span></div><div class="line"><span class="comment">  * 这个生成的文件包含一个注释掉的示例Java项目，让你开始。</span></div><div class="line"><span class="comment">  * 有关更多详细信息，请参阅Gradle中的Java Quickstart一章</span></div><div class="line"><span class="comment">  * 用户指南可在https://docs.gradle.org/4.1/userguide/tutorial_java_projects.html</span></div><div class="line"><span class="comment">  */</span></div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">// 应用 JAVA 插件来添加项目对 JAVA 的支持</span></div><div class="line"><span class="comment">apply plugin: 'java'</span></div><div class="line"><span class="comment"></span></div><div class="line"><span class="comment">// 此处可以声明在何处找到项目的依赖关系</span></div><div class="line"><span class="comment">repositories &#123;   </span></div><div class="line"><span class="comment">//项目空间引用远程仓库--- jcenter(),您可以在这里声明任何Maven / Ivy /文件库。</span></div><div class="line"><span class="comment">    jcenter()</span></div><div class="line"><span class="comment">&#125;</span></div><div class="line"><span class="comment"></span></div><div class="line"><span class="comment">// 声明生产和测试代码的依赖关系</span></div><div class="line"><span class="comment">dependencies &#123;</span></div><div class="line"><span class="comment">    // 生产代码在编译时使用SLF4J logging API</span></div><div class="line"><span class="comment">    compile 'org.slf4j:slf4j-api:1.7.25'</span></div><div class="line"><span class="comment"></span></div><div class="line"><span class="comment">    // 声明您希望在测试中使用的最喜欢的测试框架的依赖关系.</span></div><div class="line"><span class="comment">    // Gradache测试任务也支持TestNG. 只需要testCompile 依赖于 </span></div><div class="line"><span class="comment">    // testCompile 'org.testng:testng:6.8.1' ，和添加</span></div><div class="line"><span class="comment">    // 'test.useTestNG()' 到你的构建脚本中。</span></div><div class="line"><span class="comment">    testCompile 'junit:junit:4.12'</span></div><div class="line"><span class="comment">&#125;</span></div><div class="line"><span class="comment">*/</span></div></pre></td></tr></table></figure>
+<h4 id="settings-gradle"><a href="#settings-gradle" class="headerlink" title="settings.gradle:"></a>settings.gradle:</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">➜  gradle-app cat settings.gradle</div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * 此设置文件是由Gradle'init'任务生成的。</span></div><div class="line"><span class="comment"> *</span></div><div class="line"><span class="comment"> * 设置文件用于指定要在构建中包含哪些项目，在单个项目中构建此文件可以为空或甚至删除。</span></div><div class="line"><span class="comment"> *</span></div><div class="line"><span class="comment"> * 在用户指南中可以找到有关在Gradle中配置多项目构建的详细信息</span></div><div class="line"><span class="comment"> * https://docs.gradle.org/4.1/userguide/multi_project_builds.html</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment">// 作为多项目构建的一部分 来声明项目使用'include'方法</span></div><div class="line"><span class="comment">include 'shared'</span></div><div class="line"><span class="comment">include 'api'</span></div><div class="line"><span class="comment">include 'services:webservice'</span></div><div class="line"><span class="comment">*/</span></div><div class="line"></div><div class="line">rootProject.name = <span class="string">'gradle-app'</span></div></pre></td></tr></table></figure>
+<h3 id="继续完善项目："><a href="#继续完善项目：" class="headerlink" title="继续完善项目："></a>继续完善项目：</h3><p>整个项目的目录结构如下,与 Maven 工程目录结构无差别:</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src/main/java</td>
+<td>JAVA 源码</td>
+</tr>
+<tr>
+<td>src/main/resources</td>
+<td>生产资源文件</td>
+</tr>
+<tr>
+<td>src/test/java</td>
+<td>测试源码</td>
+</tr>
+<tr>
+<td>src/test/resources</td>
+<td>测试资源文件</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">➜  gradle-app tree</div><div class="line">.</div><div class="line">├── build.gradle</div><div class="line">├── gradle</div><div class="line">│   └── wrapper</div><div class="line">│       ├── gradle-wrapper.jar</div><div class="line">│       └── gradle-wrapper.properties</div><div class="line">├── gradle-app.iml  # 导入 IDEA 后生成的文件</div><div class="line">├── gradlew</div><div class="line">├── gradlew.bat</div><div class="line">├── settings.gradle</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   └── java</div><div class="line">    │       └── ws</div><div class="line">    │           └── object</div><div class="line">    │               └── gradle</div><div class="line">    │                   └── App.java</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── ws</div><div class="line">                └── object</div><div class="line">                    └── gradle</div><div class="line">                        └── AppTest.java</div><div class="line"></div><div class="line">13 directories, 9 files</div></pre></td></tr></table></figure>
+<p><strong>App.java</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> ws.object.gradle;</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span></span></div><div class="line"><span class="class"></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getAppId</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">"hello-world"</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">( String[] args )</span></span></div><div class="line"><span class="function">    </span>&#123;</div><div class="line">        System.out.println( <span class="string">"Hello World!"</span> );</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>AppTest.java</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> ws.object.gradle;</div><div class="line"></div><div class="line"><span class="keyword">import</span> junit.framework.TestCase;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * Unit test for simple App.</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppTest</span> <span class="keyword">extends</span> <span class="title">TestCase</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAppId</span><span class="params">()</span> </span>&#123;</div><div class="line">        App app = <span class="keyword">new</span> App();</div><div class="line">        assertEquals(<span class="string">"App ID"</span>, <span class="string">"hello-world"</span>, app.getAppId());</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="构建创建的项目："><a href="#构建创建的项目：" class="headerlink" title="构建创建的项目："></a>构建创建的项目：</h3><p>现在我们已经创建了App.java和AppTest.java，我们准备好构建项目。 这可以通过执行如下所示的构建任务来完成。示例代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">➜  gradle-app ./gradlew build</div><div class="line"></div><div class="line">BUILD SUCCESSFUL in 1s</div><div class="line">4 actionable tasks: 4 executed</div></pre></td></tr></table></figure>
+<h3 id="让项目跑起来："><a href="#让项目跑起来：" class="headerlink" title="让项目跑起来："></a>让项目跑起来：</h3><p>使用内置的jar库运行应用程序，示例代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  gradle-app java -cp build/libs/gradle-app.jar ws.object.gradle.App</div><div class="line">Hello World!</div></pre></td></tr></table></figure>
+<p>或者您可以使用内置的类文件夹运行，示例代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  gradle-app java -cp build/classes/java/main/  ws.object.gradle.App</div><div class="line">Hello World!</div></pre></td></tr></table></figure>
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><p><a href="https://gradle.org/" target="_blank" rel="external">Gradle Official Website</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/Gradle" target="_blank" rel="external">Gradle Wikipedia</a></p>
+<p><a href="https://github.com/gradle/gradle" target="_blank" rel="external">Gradle Github</a></p>
+<p><a href="https://spring.io/guides/gs/gradle/" target="_blank" rel="external">Building Java Projects with Gradle</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Gradle/" rel="tag"># Gradle</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/22/springboot-actuator/" rel="next" title="Spring Boot - Actuator QuickStart">
+                <i class="fa fa-chevron-left"></i> Spring Boot - Actuator QuickStart
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/10/nowsh-note/" rel="prev" title="如何使用 Now.sh来免费部署你的项目？">
+                如何使用 Now.sh来免费部署你的项目？ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDgwNi83MzU4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460"
+               alt="柒索" />
+          <p class="site-author-name" itemprop="name">柒索</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ZhangYangDev" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="" title="Blog" target="_blank">Blog</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradle-简介："><span class="nav-number">1.</span> <span class="nav-text">Gradle - 简介：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradle-概述："><span class="nav-number">2.</span> <span class="nav-text">Gradle - 概述：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基于声明的构建和基于约定的构建"><span class="nav-number">2.1.</span> <span class="nav-text">基于声明的构建和基于约定的构建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为以依赖为基础的编程方式提供语言支持"><span class="nav-number">2.2.</span> <span class="nav-text">为以依赖为基础的编程方式提供语言支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建结构化"><span class="nav-number">2.3.</span> <span class="nav-text">构建结构化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深度-API"><span class="nav-number">2.4.</span> <span class="nav-text">深度 API</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradle-的扩展"><span class="nav-number">2.5.</span> <span class="nav-text">Gradle 的扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多项目构建"><span class="nav-number">2.6.</span> <span class="nav-text">多项目构建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多种方式管理依赖"><span class="nav-number">2.7.</span> <span class="nav-text">多种方式管理依赖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradle-是第一个构建集成工具"><span class="nav-number">2.8.</span> <span class="nav-text">Gradle 是第一个构建集成工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#易于移植"><span class="nav-number">2.9.</span> <span class="nav-text">易于移植</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Groovy"><span class="nav-number">2.10.</span> <span class="nav-text">Groovy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Gradle-wrapper"><span class="nav-number">2.11.</span> <span class="nav-text">The Gradle wrapper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自由和开源"><span class="nav-number">2.12.</span> <span class="nav-text">自由和开源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradle-安装："><span class="nav-number">3.</span> <span class="nav-text">Gradle - 安装：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradle-构建基础："><span class="nav-number">4.</span> <span class="nav-text">Gradle - 构建基础：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Projects-amp-tasks"><span class="nav-number">4.1.</span> <span class="nav-text">Projects & tasks:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#build-gradle文件："><span class="nav-number">4.2.</span> <span class="nav-text">build.gradle文件：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradle-构建项目："><span class="nav-number">5.</span> <span class="nav-text">Gradle - 构建项目：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建项目目录："><span class="nav-number">5.1.</span> <span class="nav-text">创建项目目录：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-Gradle-Wrapper构建："><span class="nav-number">5.2.</span> <span class="nav-text">使用 Gradle Wrapper构建：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#gradle-wrapper-properties："><span class="nav-number">5.2.1.</span> <span class="nav-text">gradle-wrapper.properties：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化你创建的项目："><span class="nav-number">5.3.</span> <span class="nav-text">初始化你创建的项目：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#build-gradle"><span class="nav-number">5.3.1.</span> <span class="nav-text">build.gradle:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#settings-gradle"><span class="nav-number">5.3.2.</span> <span class="nav-text">settings.gradle:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继续完善项目："><span class="nav-number">5.4.</span> <span class="nav-text">继续完善项目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建创建的项目："><span class="nav-number">5.5.</span> <span class="nav-text">构建创建的项目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#让项目跑起来："><span class="nav-number">5.6.</span> <span class="nav-text">让项目跑起来：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料："><span class="nav-number">6.</span> <span class="nav-text">参考资料：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">柒索</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

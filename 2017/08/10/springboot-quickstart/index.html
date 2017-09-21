@@ -1,0 +1,1092 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Spring Boot,Spring," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="柒索" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Spring Boot - 简介： Takes an opinionated view of building production-ready Spring applications. Spring Boot favors convention over configuration and is designed to get you up and running as quickly as p">
+<meta name="keywords" content="Spring Boot,Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Boot - explain &amp; QuickStart">
+<meta property="og:url" content="http://yoursite.com/2017/08/10/springboot-quickstart/index.html">
+<meta property="og:site_name" content="柒索">
+<meta property="og:description" content="Spring Boot - 简介： Takes an opinionated view of building production-ready Spring applications. Spring Boot favors convention over configuration and is designed to get you up and running as quickly as p">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-20T15:15:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring Boot - explain &amp; QuickStart">
+<meta name="twitter:description" content="Spring Boot - 简介： Takes an opinionated view of building production-ready Spring applications. Spring Boot favors convention over configuration and is designed to get you up and running as quickly as p">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/10/springboot-quickstart/"/>
+
+
+
+
+
+  <title> Spring Boot - explain & QuickStart | 柒索 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">柒索</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个头脑聪明，五肢发达的男人。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/10/springboot-quickstart/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="柒索">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柒索">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Spring Boot - explain & QuickStart
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T10:14:20+08:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spring-Boot/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring Boot</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Spring-Boot-简介："><a href="#Spring-Boot-简介：" class="headerlink" title="Spring Boot - 简介："></a>Spring Boot - 简介：</h2><blockquote>
+<p>Takes an opinionated view of building production-ready Spring applications. Spring Boot favors convention over configuration and is designed to get you up and running as quickly as possible.    <strong><a href="http://projects.spring.io/spring-boot/#quick-start" target="_blank" rel="external">Spring.io</a></strong></p>
+</blockquote>
+<h2 id="Spring-Boot-核心特性："><a href="#Spring-Boot-核心特性：" class="headerlink" title="Spring Boot - 核心特性："></a>Spring Boot - 核心特性：</h2><ul>
+<li><strong>Spring Boot Starter</strong>：将常用的依赖分组进行了整合，将其合并到一个依赖中，这样就可以一次性添加到项目的依赖中。</li>
+<li><strong>自动配置</strong>：Spring Boot的自动配置特性利用了Spring 4对条件化配置的支持，合理的推测应用所需要的Bean并自动化配置它们。</li>
+<li><strong>命令行接口(CLI)</strong>：Spring Boot CLI 发挥了Groovy的优势，并结合自动配置进一步简化Spring应用程序的开发。</li>
+<li><strong>Actuator</strong>：Actuator为Spring Boot应用添加了一定的管理特性。</li>
+</ul>
+<h2 id="Spring-Boot-QuickStart："><a href="#Spring-Boot-QuickStart：" class="headerlink" title="Spring Boot - QuickStart："></a>Spring Boot - QuickStart：</h2><h3 id="使用Spring-Initalizr构建Spring-Boot项目"><a href="#使用Spring-Initalizr构建Spring-Boot项目" class="headerlink" title="使用Spring Initalizr构建Spring Boot项目:"></a>使用Spring Initalizr构建Spring Boot项目:</h3><p>要想使用Spring Initalizr，最简单直接的办法就是打开 <a href="http://start.spring.io" target="_blank" rel="external">http://start.spring.io</a>，使用Spring Initalizr的web界面来构建Spring Boot项目。打开Spring Initalizr的web界面后，根据自己需求选择合适的选项：</p>
+<p>示例代码：</p>
+<p><strong>Generate a <code>Maven Project</code>  with <code>Java</code> and Spring Boot <code>1.5.6</code></strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Group: ws.object.springboot</div><div class="line">Artifact: SpringBoot</div><div class="line">Dependencies: Web JPA #可多选</div></pre></td></tr></table></figure></p>
+<p>如果在当前页面找不到你所需要的依赖，请点击 <code>Switch to the full version</code> ,打开后就能看到可用依赖的完整列表。</p>
+<p>填写完成之后，点击<code>Generate Project</code>，Spring Initalizr就会为你生成一个名为<code>SpringBoot.zip</code>的文件，解压后项目结构如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">➜ unzip SpringBoot.zip</div><div class="line">➜ tree ./SpringBoot</div><div class="line">./SpringBoot</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── ws</div><div class="line">    │   │       └── object</div><div class="line">    │   │           └── springboot</div><div class="line">    │   │               └── SpringBoot</div><div class="line">    │   │                   └── Application.java</div><div class="line">    │   └── resources</div><div class="line">    │       ├── application.properties</div><div class="line">    │       ├── static</div><div class="line">    │       └── templates</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── ws</div><div class="line">                └── object</div><div class="line">                    └── springboot</div><div class="line">                        └── SpringBoot</div><div class="line">                            └── ApplicationTests.java</div><div class="line"></div><div class="line">16 directories, 6 files</div></pre></td></tr></table></figure>
+<p>如你所见，项目中基本没有代码，除了几个空目录之外，还包含了以下几样东西：</p>
+<ul>
+<li>pom.xml  :  Maven工程的主要配置文件。</li>
+<li>Application.java ： 一个带有main()方法的类，用于引导启动应用程序。</li>
+<li>ApplicationTests.java ：一个空的JUnit测试类，它加载了Spring Boot自动配置的Spring应用上下文。</li>
+<li>application.properties ：一个空的properties配置文件，可以根据需要添加配置属性。</li>
+<li>static目录 ： 放置Web应用程序的静态内容(js，css，images…)。</li>
+<li>templates目录 ： 放置用于呈现模型数据的模板文件。</li>
+<li>mvnw和mvnw.cmd文件：分别是Windows系统和类Unix系统下Maven的配置文件。</li>
+</ul>
+<p>参考资料：<a href="https://stackoverflow.com/questions/38723833/what-is-the-purpose-of-mvnw-and-mvnw-cmd-files" target="_blank" rel="external"><strong>Stack Overflow </strong>- What is the purpose of mvnw and mvnw.cmd files?</a></p>
+<h3 id="使用IntelliJ-IDEA构建Spring-Boot项目："><a href="#使用IntelliJ-IDEA构建Spring-Boot项目：" class="headerlink" title="使用IntelliJ IDEA构建Spring Boot项目："></a>使用IntelliJ IDEA构建Spring Boot项目：</h3><p>打开 IntelliJ IDEA，到<code>Welcome to IntelliJ IDEA</code> 界面，选择 <code>Create New Project</code>，左侧列表栏找到<code>Spring Initalizr</code>，选择自己需要的<code>Project SDk</code>，还有<code>Initalizr Service URL</code> ，Next，填写相关信息：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Group</td>
+<td style="text-align:center">Maven工程组的标识</td>
+<td style="text-align:center">ws.object.springboot</td>
+</tr>
+<tr>
+<td style="text-align:center">Artifact</td>
+<td style="text-align:center">Maven工程的标识与项目名称一致</td>
+<td style="text-align:center">SpringBoot</td>
+</tr>
+<tr>
+<td style="text-align:center">Type</td>
+<td style="text-align:center">项目的构建方式</td>
+<td style="text-align:center">Maven Project</td>
+</tr>
+<tr>
+<td style="text-align:center">Packaging</td>
+<td style="text-align:center">打包方式</td>
+<td style="text-align:center">Jar</td>
+</tr>
+<tr>
+<td style="text-align:center">Java Version</td>
+<td style="text-align:center">Java的版本信息</td>
+<td style="text-align:center">1.8</td>
+</tr>
+<tr>
+<td style="text-align:center">Language</td>
+<td style="text-align:center">编程语言</td>
+<td style="text-align:center">Java</td>
+</tr>
+<tr>
+<td style="text-align:center">Version</td>
+<td style="text-align:center">项目版本号</td>
+<td style="text-align:center">0.0.1-SNAPSHOT</td>
+</tr>
+<tr>
+<td style="text-align:center">Name</td>
+<td style="text-align:center">项目名称</td>
+<td style="text-align:center">SpringBoot</td>
+</tr>
+<tr>
+<td style="text-align:center">Description</td>
+<td style="text-align:center">项目简介</td>
+<td style="text-align:center">……</td>
+</tr>
+</tbody>
+</table>
+<p>当前页填写完成之后，点击<code>Next</code>，选择项目所需要的依赖，选择完成之后，进入到下一页选择项目的存放路径等信息，然后项目就构建完成了。</p>
+<h3 id="使用Spring-Boot-CLI构建Spring-Boot项目："><a href="#使用Spring-Boot-CLI构建Spring-Boot项目：" class="headerlink" title="使用Spring Boot CLI构建Spring Boot项目："></a>使用Spring Boot CLI构建Spring Boot项目：</h3><p>Spring Boot CLI中有一些命令，可以帮我们快速构建Spring Boot项目，示例代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">➜  mkdir SpringBoot &amp;&amp; cd SpringBoot</div><div class="line">➜  SpringBoot spring init</div><div class="line">Using service at https://start.spring.io</div><div class="line">Content saved to 'demo.zip'</div><div class="line">➜  SpringBoot ls</div><div class="line">demo.zip</div><div class="line">➜  SpringBoot unzip demo.zip</div><div class="line">Archive:  demo.zip</div><div class="line">   inflating: mvnw</div><div class="line">   creating: .mvn/</div><div class="line">   creating: .mvn/wrapper/</div><div class="line">   creating: src/</div><div class="line">   creating: src/main/</div><div class="line">   creating: src/main/java/</div><div class="line">   creating: src/main/java/com/</div><div class="line">   creating: src/main/java/com/example/</div><div class="line">   creating: src/main/java/com/example/demo/</div><div class="line">   creating: src/main/resources/</div><div class="line">   creating: src/test/</div><div class="line">   creating: src/test/java/</div><div class="line">   creating: src/test/java/com/</div><div class="line">   creating: src/test/java/com/example/</div><div class="line">   creating: src/test/java/com/example/demo/</div><div class="line">  inflating: .gitignore</div><div class="line">  inflating: .mvn/wrapper/maven-wrapper.jar</div><div class="line">  inflating: .mvn/wrapper/maven-wrapper.properties</div><div class="line">  inflating: mvnw.cmd</div><div class="line">  inflating: pom.xml</div><div class="line">  inflating: src/main/java/com/example/demo/DemoApplication.java</div><div class="line">  inflating: src/main/resources/application.properties</div><div class="line">  inflating: src/test/java/com/example/demo/DemoApplicationTests.java</div></pre></td></tr></table></figure>
+<p>解压完成之后，使用<code>Tree</code>命令查看一下目录结构：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">➜  SpringBoot tree ../SpringBoot</div><div class="line">../SpringBoot</div><div class="line">├── demo.zip</div><div class="line">├── mvnw</div><div class="line">├── mvnw.cmd</div><div class="line">├── pom.xml</div><div class="line">└── src</div><div class="line">    ├── main</div><div class="line">    │   ├── java</div><div class="line">    │   │   └── com</div><div class="line">    │   │       └── example</div><div class="line">    │   │           └── demo</div><div class="line">    │   │               └── DemoApplication.java</div><div class="line">    │   └── resources</div><div class="line">    │       └── application.properties</div><div class="line">    └── test</div><div class="line">        └── java</div><div class="line">            └── com</div><div class="line">                └── example</div><div class="line">                    └── demo</div><div class="line">                        └── DemoApplicationTests.java</div><div class="line"></div><div class="line">12 directories, 7 files</div></pre></td></tr></table></figure>
+<p>然后将构建好的项目导入到 IDEA或者 Eclipse中就好了。</p>
+<h2 id="Spring-Boot-CLI："><a href="#Spring-Boot-CLI：" class="headerlink" title="Spring Boot - CLI："></a>Spring Boot - CLI：</h2><h3 id="使用Homebrew安装Spring-Boot-CLI："><a href="#使用Homebrew安装Spring-Boot-CLI：" class="headerlink" title="使用Homebrew安装Spring Boot CLI："></a>使用Homebrew安装Spring Boot CLI：</h3><p>示例代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">➜  ~ brew --version # 查看Homebrew版本信息</div><div class="line">Homebrew 1.3.1</div><div class="line"></div><div class="line">➜  ~ brew tap pivotal/tap # 安装Pivotal的tap</div><div class="line">==&gt; Tapping pivotal/tap  ……</div><div class="line"></div><div class="line">➜  ~ brew install springboot # 安装Spring Boot</div><div class="line">==&gt; Installing springboot from pivotal/tap</div><div class="line">==&gt; Downloading ……</div><div class="line"></div><div class="line">➜  ~ spring --version # 查看版本</div><div class="line">Spring CLI v1.5.6.RELEASE</div></pre></td></tr></table></figure>
+<p><strong>pivotal/tap</strong>：Prvotal是Spring以及Spring Boot背后的公司，通过它的tap可以安装Spring Boot。tap是向Homebrew添加额外仓库的一种途径。</p>
+<h3 id="Spring-Boot-CLI"><a href="#Spring-Boot-CLI" class="headerlink" title="Spring Boot CLI:"></a>Spring Boot CLI:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> spring init</div></pre></td></tr></table></figure>
+<p>这条命令会下载一个<code>demo.zip</code>文件，与之前使用<code>spring init</code>构建的项目一样的结构。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> spring init -dweb,jpa,security          # 使用-d或--dependencies来指定依赖</div></pre></td></tr></table></figure>
+<p>与<code>spring init</code>命令一样，但是在<code>pom.xml</code>中添加了Spring Boot的Web，JPA，Security起步依赖。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> spring init -dweb,jpa,security --build gradle      # --build 指定项目使用Grandle构建</div></pre></td></tr></table></figure>
+<p>使用Gradle来构建项目，默认情况下是使用Maven来构建的。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> spring init -dweb,jpa,security --build gradle -p war # -p或者-packaging</div></pre></td></tr></table></figure>
+<p>默认情况下，无论是Maven或Gradle构建项目成功之后都会产生一个可执行的JAR文件，如果你需要一个war文件，可以通过<code>-p</code> 参数来指定。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> spring init -dweb,jpa,security --build gradle  ~/Project/SpringBoot</div></pre></td></tr></table></figure>
+<p>这里的最后一个参数可以指定你的demo.zip文件的解压目录。如果你希望CLI生成的项目解压到当前目录，可以使用 <code>—extract</code>或者<code>-x</code>参数。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> spring help</div></pre></td></tr></table></figure>
+<p>也可以使用 <code>spring help</code>来查看其他命令，并了解如何使用。</p>
+<h2 id="Spring-Boot-Maven-Plugin"><a href="#Spring-Boot-Maven-Plugin" class="headerlink" title="Spring Boot Maven Plugin:"></a>Spring Boot Maven Plugin:</h2><h3 id="在pom-xml中配置插件："><a href="#在pom-xml中配置插件：" class="headerlink" title="在pom.xml中配置插件："></a>在pom.xml中配置插件：</h3><p>示例代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">plugins</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">plugin</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="插件的指令详解："><a href="#插件的指令详解：" class="headerlink" title="插件的指令详解："></a>插件的指令详解：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜ mvn spring-boot:help</div></pre></td></tr></table></figure>
+<p>显示spring-boot-maven-plugin的帮助信息。<br>调用<code>mvn spring-boot：help -Ddetail = true -Dgoal = &lt;goal-name&gt;</code>显示参数细节。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜ mvn spring-boot:build-info</div></pre></td></tr></table></figure>
+<p>根据当前的内容生成一个build-info.properties文件,在你的Maven Project中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜ mvn spring-boot:repackage</div></pre></td></tr></table></figure>
+<p>重新包装现有的JAR和WAR存档，以便可以从中执行命令行使用java -jar。使用layout = NONE也可以简单地使用使用嵌套依赖关系打包一个JAR（没有主类，因此不可执行）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜ mvn spring-boot:run</div></pre></td></tr></table></figure>
+<p>运行基于Maven构建的Spring Boot应用程序。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜ mvn spring-boot:start</div></pre></td></tr></table></figure>
+<p>启动Spring Boot应用程序。通常使用这个命令在应用程序在测试之前启动的集成测试场景中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜ mvn spring-boot:stop</div></pre></td></tr></table></figure>
+<p>  停止由“start”目标开始的应用程序。通常测试套件完成后调用。</p>
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><ul>
+<li><a href="http://projects.spring.io/spring-boot/" target="_blank" rel="external">Spring Boot-Spring.io</a></li>
+<li><a href="https://github.com/spring-projects/spring-boot" target="_blank" rel="external">Spring Boot-Github</a></li>
+<li><a href="http://docs.spring.io/spring-boot/docs/current/reference/pdf/spring-boot-reference.pdf" target="_blank" rel="external">Spring Boot-Reference.pdf</a></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Spring-Boot/" rel="tag"># Spring Boot</a>
+          
+            <a href="/tags/Spring/" rel="tag"># Spring</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/05/hightcharts-note/" rel="next" title="HighCharts - 学习笔记整理">
+                <i class="fa fa-chevron-left"></i> HighCharts - 学习笔记整理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/15/springboot-configuration/" rel="prev" title="Spring Boot - 多环境配置(.properties & .yml)">
+                Spring Boot - 多环境配置(.properties & .yml) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDgwNi83MzU4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460"
+               alt="柒索" />
+          <p class="site-author-name" itemprop="name">柒索</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ZhangYangDev" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="" title="Blog" target="_blank">Blog</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-简介："><span class="nav-number">1.</span> <span class="nav-text">Spring Boot - 简介：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-核心特性："><span class="nav-number">2.</span> <span class="nav-text">Spring Boot - 核心特性：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-QuickStart："><span class="nav-number">3.</span> <span class="nav-text">Spring Boot - QuickStart：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Spring-Initalizr构建Spring-Boot项目"><span class="nav-number">3.1.</span> <span class="nav-text">使用Spring Initalizr构建Spring Boot项目:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用IntelliJ-IDEA构建Spring-Boot项目："><span class="nav-number">3.2.</span> <span class="nav-text">使用IntelliJ IDEA构建Spring Boot项目：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Spring-Boot-CLI构建Spring-Boot项目："><span class="nav-number">3.3.</span> <span class="nav-text">使用Spring Boot CLI构建Spring Boot项目：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-CLI："><span class="nav-number">4.</span> <span class="nav-text">Spring Boot - CLI：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Homebrew安装Spring-Boot-CLI："><span class="nav-number">4.1.</span> <span class="nav-text">使用Homebrew安装Spring Boot CLI：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Boot-CLI"><span class="nav-number">4.2.</span> <span class="nav-text">Spring Boot CLI:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-Maven-Plugin"><span class="nav-number">5.</span> <span class="nav-text">Spring Boot Maven Plugin:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在pom-xml中配置插件："><span class="nav-number">5.1.</span> <span class="nav-text">在pom.xml中配置插件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件的指令详解："><span class="nav-number">5.2.</span> <span class="nav-text">插件的指令详解：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料："><span class="nav-number">6.</span> <span class="nav-text">参考资料：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">柒索</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

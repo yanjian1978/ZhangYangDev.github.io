@@ -1,0 +1,1195 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="HighCharts," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="柒索" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="HighCharts概述：HighCharts是用JavaScript编写的图表库，可以在Web应用中使用，开源，个人及非商可以任用。 HighCharts特点： 兼容性 - 支持所有主流浏览器和移动平台（android、iOS等）。 多设备 - 支持多种设备，如手持设备 iPhone/iPad、平板等。 免费使用 - 开源免费。 轻量 - highcharts.js 内核库大小只有 35KB 左">
+<meta name="keywords" content="HighCharts">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HighCharts - 学习笔记整理">
+<meta property="og:url" content="http://yoursite.com/2017/08/05/hightcharts-note/index.html">
+<meta property="og:site_name" content="柒索">
+<meta property="og:description" content="HighCharts概述：HighCharts是用JavaScript编写的图表库，可以在Web应用中使用，开源，个人及非商可以任用。 HighCharts特点： 兼容性 - 支持所有主流浏览器和移动平台（android、iOS等）。 多设备 - 支持多种设备，如手持设备 iPhone/iPad、平板等。 免费使用 - 开源免费。 轻量 - highcharts.js 内核库大小只有 35KB 左">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img.hcharts.cn/static/highcharts/images/docs/basic_first_meet1.jpg">
+<meta property="og:updated_time" content="2017-09-20T15:15:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HighCharts - 学习笔记整理">
+<meta name="twitter:description" content="HighCharts概述：HighCharts是用JavaScript编写的图表库，可以在Web应用中使用，开源，个人及非商可以任用。 HighCharts特点： 兼容性 - 支持所有主流浏览器和移动平台（android、iOS等）。 多设备 - 支持多种设备，如手持设备 iPhone/iPad、平板等。 免费使用 - 开源免费。 轻量 - highcharts.js 内核库大小只有 35KB 左">
+<meta name="twitter:image" content="https://img.hcharts.cn/static/highcharts/images/docs/basic_first_meet1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/05/hightcharts-note/"/>
+
+
+
+
+
+  <title> HighCharts - 学习笔记整理 | 柒索 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">柒索</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个头脑聪明，五肢发达的男人。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/05/hightcharts-note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="柒索">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柒索">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HighCharts - 学习笔记整理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-05T14:10:24+08:00">
+                2017-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Charts/" itemprop="url" rel="index">
+                    <span itemprop="name">Charts</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="HighCharts概述："><a href="#HighCharts概述：" class="headerlink" title="HighCharts概述："></a>HighCharts概述：</h2><p>HighCharts是用JavaScript编写的图表库，可以在Web应用中使用，开源，个人及非商可以任用。</p>
+<h2 id="HighCharts特点："><a href="#HighCharts特点：" class="headerlink" title="HighCharts特点："></a>HighCharts特点：</h2><ul>
+<li><strong>兼容性</strong> - 支持所有主流浏览器和移动平台（android、iOS等）。</li>
+<li><strong>多设备</strong> - 支持多种设备，如手持设备 iPhone/iPad、平板等。</li>
+<li><strong>免费使用</strong> - 开源免费。</li>
+<li><strong>轻量</strong> - highcharts.js 内核库大小只有 35KB 左右。</li>
+<li><strong>配置简单</strong> - 使用 json 格式配置</li>
+<li><strong>动态</strong> - 可以在图表生成后修改。</li>
+<li><strong>多维</strong> - 支持多维图表</li>
+<li><strong>配置提示工具</strong> - 鼠标移动到图表的某一点上有提示信息。</li>
+<li><strong>时间轴</strong> - 可以精确到毫秒。</li>
+<li><strong>导出</strong> - 表格可导出为 PDF/ PNG/ JPG / SVG 格式</li>
+<li><strong>输出</strong> - 网页输出图表。</li>
+<li><strong>可变焦</strong> - 选中图表部分放大，近距离观察图表；</li>
+<li><strong>外部数据</strong> - 从服务器载入动态数据。</li>
+<li><strong>文字旋转</strong> - 支持在任意方向的标签旋转。</li>
+</ul>
+<h2 id="HighCharts构成："><a href="#HighCharts构成：" class="headerlink" title="HighCharts构成："></a>HighCharts构成：</h2><h3 id="界面构成："><a href="#界面构成：" class="headerlink" title="界面构成："></a>界面构成：</h3><p>在Highcharts中，一个图表通常由图表区，标题，绘图区，坐标轴，图例，数据列等几个部分组成。</p>
+<h3 id="代码构成："><a href="#代码构成：" class="headerlink" title="代码构成："></a>代码构成：</h3><p><img src="https://img.hcharts.cn/static/highcharts/images/docs/basic_first_meet1.jpg" alt=""></p>
+<ul>
+<li>标题（Title）：</li>
+</ul>
+<p>图表标题，包含标题和副标题（subTitle），其中副标题是非必须的。</p>
+<ul>
+<li>坐标轴（Axis）：</li>
+</ul>
+<p>坐标轴包含x轴（xAxis）和y轴（yAxis）。通常情况下，x轴显示在图表的底部，y轴显示在图表的左侧。多个数据列可以共同使用同一个坐标轴，为了对比或区分数据，Highcharts提供了多轴的支持。</p>
+<ul>
+<li>数据列（Series）：</li>
+</ul>
+<p>数据列即图表上一个或多个数据系列，比如曲线图中的一条曲线，柱状图中的一个柱形。</p>
+<ul>
+<li>数据提示框（Tooltip）：</li>
+</ul>
+<p>当鼠标悬停在某点上时，以框的形式提示该点的数据，比如该点的值、数据单位等。数据提示框内提示的信息完全可以通过格式化函数动态指定。</p>
+<ul>
+<li>图例（Legend）：</li>
+</ul>
+<p>图例是图表中用不同形状、颜色、文字等 标示不同数据列，通过点击标示可以显示或隐藏该数据列。</p>
+<ul>
+<li>版权标签（Credits）：</li>
+</ul>
+<p>显示在图表右下方的包含链接的文字，默认是Highcharts官网地址。通过指定credits.enabled=false即可不显示该信息。</p>
+<ul>
+<li>导出功能（Exporting）：</li>
+</ul>
+<p>通过引入 exporting.js即可增加图表导出为常见文件功能。</p>
+<ul>
+<li>示线（PlotLines）：</li>
+</ul>
+<p>可以在图表上增加一条标示线，比如平均值线，最高值线等。</p>
+<ul>
+<li>示区（PlotBands）：</li>
+</ul>
+<p>可以在图表添加不同颜色的区域带，标示出明显的范围区域。</p>
+<h2 id="HighCharts配置："><a href="#HighCharts配置：" class="headerlink" title="HighCharts配置："></a>HighCharts配置：</h2><h3 id="HighCharts常用配置项"><a href="#HighCharts常用配置项" class="headerlink" title="HighCharts常用配置项:"></a>HighCharts常用配置项:</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">配置项</th>
+<th style="text-align:center">说   明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">chart</td>
+<td style="text-align:center">图表基本配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">colors</td>
+<td style="text-align:center">全局颜色</td>
+</tr>
+<tr>
+<td style="text-align:center">credits</td>
+<td style="text-align:center">版权信息配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">data</td>
+<td style="text-align:center">高级数据模块配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">defs</td>
+<td style="text-align:center">定义SVG风格模式适配项</td>
+</tr>
+<tr>
+<td style="text-align:center">drilldown</td>
+<td style="text-align:center">下钻功能配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">exporting</td>
+<td style="text-align:center">导出功能配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">labels</td>
+<td style="text-align:center">标签配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">legend</td>
+<td style="text-align:center">图例配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">loading</td>
+<td style="text-align:center">加载动画配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">navigation</td>
+<td style="text-align:center">导航配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">noData</td>
+<td style="text-align:center">无数据模块配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">pane</td>
+<td style="text-align:center">面板模块配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">plotOptions</td>
+<td style="text-align:center">绘图区配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">responsive</td>
+<td style="text-align:center">响应式适配配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">series</td>
+<td style="text-align:center">数据列配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">subtitle</td>
+<td style="text-align:center">副标题配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">title</td>
+<td style="text-align:center">标题配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">tooltip</td>
+<td style="text-align:center">提示框配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">xAxis</td>
+<td style="text-align:center">x轴配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">yAxis</td>
+<td style="text-align:center">y轴配置项</td>
+</tr>
+<tr>
+<td style="text-align:center">zAxis</td>
+<td style="text-align:center">z轴配置项</td>
+</tr>
+</tbody>
+</table>
+<h3 id="HighCharts图表容器配置："><a href="#HighCharts图表容器配置：" class="headerlink" title="HighCharts图表容器配置："></a>HighCharts图表容器配置：</h3><h4 id="1、通过-dom-调用-highcharts-函数的方式"><a href="#1、通过-dom-调用-highcharts-函数的方式" class="headerlink" title="1、通过 dom 调用 highcharts() 函数的方式"></a>1、通过 dom 调用 highcharts() 函数的方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&quot;#container&quot;).highcharts(&#123;</div><div class="line">    // Highcharts 配置  </div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="2、通过-chart-renderTo-来指定"><a href="#2、通过-chart-renderTo-来指定" class="headerlink" title="2、通过 chart.renderTo 来指定"></a>2、通过 chart.renderTo 来指定</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var charts = new Highcharts.Chart(&#123;</div><div class="line">    // Highcharts 配置</div><div class="line">    chart : &#123;</div><div class="line">        renderTo : &quot;container&quot;  // 注意这里一定是 ID 选择器</div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="3、通过构造函数"><a href="#3、通过构造函数" class="headerlink" title="3、通过构造函数"></a>3、通过构造函数</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var charts = new Highcharts.Chart(&apos;container&apos;, &#123;</div><div class="line">  // Highcharts 配置</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="Highcharts图表样式配置："><a href="#Highcharts图表样式配置：" class="headerlink" title="Highcharts图表样式配置："></a>Highcharts图表样式配置：</h3><p>图表样式属性包括 border、backgroundColor、margin、spacing、style等</p>
+<ul>
+<li><p>边框：包括 borderColor、borderRadius、borderWidth</p>
+</li>
+<li><p>背景：包括 backgroundColor</p>
+</li>
+<li><p>外边距：包括 margin、marginTop、marginRight、marginBottom、marginLeft</p>
+</li>
+<li><p>内边距：包括 spacing、spacingTop、spacingRight、spacingBottom、spacingLeft</p>
+</li>
+<li><p>其他样式：其他属性例如字体等属性，实例代码</p>
+<p>示例代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">chart: &#123;</div><div class="line">    style: &#123;</div><div class="line">        fontFamily: &quot;&quot;,</div><div class="line">        fontSize: &apos;12px&apos;,</div><div class="line">        fontWeight: &apos;bold&apos;,</div><div class="line">        color: &apos;#006cee&apos;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>另外还可以通过 <code>chart.className</code>来绑定 CSS 类并给定 CSS 样式。</p>
+<p>​</p>
+</li>
+</ul>
+<h3 id="HIghcharts图表绘图配置："><a href="#HIghcharts图表绘图配置：" class="headerlink" title="HIghcharts图表绘图配置："></a>HIghcharts图表绘图配置：</h3><p>图表绘图区的可配置属性有：</p>
+<ul>
+<li>plotBackgroundColor ： 绘图区背景颜色</li>
+<li>plotBackgroundImage ： 绘图区背景图片</li>
+<li>plotBorderColor ： 绘图区边框颜色</li>
+<li>plotBorderWidth ： 绘图区边框宽度</li>
+<li>plotShadow ： 绘图投影</li>
+</ul>
+<h3 id="Highcharts图表常用事件："><a href="#Highcharts图表常用事件：" class="headerlink" title="Highcharts图表常用事件："></a>Highcharts图表常用事件：</h3><ul>
+<li>click ：图表点击事件，效果见 <a href="https://code.hcharts.cn/highcharts/hhhhhg" target="_blank" rel="external">在线演示</a></li>
+<li>load ：图表加载完后事件，效果见 <a href="https://code.hcharts.cn/highcharts/hhhhyj" target="_blank" rel="external">在线演示</a></li>
+<li>addSeries ：图表增加序列事件，效果见 <a href="https://code.hcharts.cn/highcharts/hhhhhj" target="_blank" rel="external">在线演示</a></li>
+<li>drilldown ：图表下钻事件，效果见 <a href="https://code.hcharts.cn/highcharts/hhhhys" target="_blank" rel="external">在线演示</a></li>
+<li>drillup ： 图表上钻事件，效果见 <a href="https://code.hcharts.cn/highcharts/hhhhys" target="_blank" rel="external">在线演示</a></li>
+<li>redraw ：图表重绘事件，效果见 <a href="https://code.hcharts.cn/highcharts/hhhhyg" target="_blank" rel="external">在线演示</a></li>
+<li>selection ： 图表范围选择事件，效果见 <a href="https://code.hcharts.cn/highcharts/hhhhqG" target="_blank" rel="external">在线演示</a></li>
+<li>beforePrint ： 图表打印前事件，效果见 <a href="https://code.hcharts.cn/highcharts/HNF0bj/1" target="_blank" rel="external">在线演示</a></li>
+<li>afterPrint ： 图表打印后事件,效果见 <a href="https://code.hcharts.cn/highcharts/HNF0bj" target="_blank" rel="external">在线演示</a></li>
+</ul>
+<h2 id="Highcharts图表："><a href="#Highcharts图表：" class="headerlink" title="Highcharts图表："></a>Highcharts图表：</h2><h3 id="直线图-line-："><a href="#直线图-line-：" class="headerlink" title="直线图 - (line)："></a>直线图 - (line)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;折线图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        width: <span class="number">1000</span>px;</div><div class="line">        height: <span class="number">500</span>px;</div><div class="line">        margin:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">    var chart = new Highcharts.Chart('container', &#123;</span></div><div class="line"><span class="string">        chart: &#123;</span></div><div class="line"><span class="string">            type: 'line',                       //指定图表的类型，默认是折线图（line）</span></div><div class="line"><span class="string">            style: &#123;</span></div><div class="line"><span class="string">                fontFamily: "</span>Microsoft YaHei<span class="string">",</span></div><div class="line"><span class="string">                fontSize: '18px',</span></div><div class="line"><span class="string">                fontWeight: 'bold'</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;</span></div><div class="line"><span class="string">        ,title: &#123;</span></div><div class="line"><span class="string">            text: '不同城市的月平均气温', // 标题</span></div><div class="line"><span class="string">            x: -20   // 相对于水平对齐的偏移量，可以是负数，单位是px</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        subtitle: &#123;</span></div><div class="line"><span class="string">            text: '数据来源: xxx.com', // 副标题</span></div><div class="line"><span class="string">            x: -20  //相对于水平对齐的偏移量，可以是负数，单位是px</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        xAxis: &#123; // x轴</span></div><div class="line"><span class="string">            categories: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        yAxis: &#123; //y轴</span></div><div class="line"><span class="string">            title: &#123;</span></div><div class="line"><span class="string">                text: '温度 (°C)'</span></div><div class="line"><span class="string">            &#125;,</span></div><div class="line"><span class="string">            plotLines: [&#123;</span></div><div class="line"><span class="string">                value: 0,</span></div><div class="line"><span class="string">                width: 1,</span></div><div class="line"><span class="string">                color: '#808080'</span></div><div class="line"><span class="string">            &#125;]</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        tooltip: &#123;</span></div><div class="line"><span class="string">            valueSuffix: '°C'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        legend: &#123;   // 图例配置项</span></div><div class="line"><span class="string">            layout: 'vertical',  // horizontal"</span> 或 <span class="string">"vertical</span></div><div class="line"><span class="string">            align: 'right',   // left，center 和 right</span></div><div class="line"><span class="string">            verticalAlign: 'middle', //  top，middle 和 bottom</span></div><div class="line"><span class="string">            borderWidth: 0</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        series: [&#123;</span></div><div class="line"><span class="string">            name: '东京',</span></div><div class="line"><span class="string">            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]</span></div><div class="line"><span class="string">        &#125;, &#123;</span></div><div class="line"><span class="string">            name: '纽约',</span></div><div class="line"><span class="string">            data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]</span></div><div class="line"><span class="string">        &#125;, &#123;</span></div><div class="line"><span class="string">            name: '柏林',</span></div><div class="line"><span class="string">            data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]</span></div><div class="line"><span class="string">        &#125;, &#123;</span></div><div class="line"><span class="string">            name: '伦敦',</span></div><div class="line"><span class="string">            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]</span></div><div class="line"><span class="string">        &#125;]</span></div><div class="line"><span class="string">    &#125;);</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="曲线图-spline-："><a href="#曲线图-spline-：" class="headerlink" title="曲线图 - (spline)："></a>曲线图 - (spline)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;曲线图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">#container&#123;</div><div class="line">    width: <span class="number">1200</span>px;</div><div class="line">    height: <span class="number">600</span>px;</div><div class="line">    margin:<span class="number">0</span> auto;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">    var charts =new  Highcharts.Chart('container',&#123;</span></div><div class="line"><span class="string">        chart:&#123; // 图表类型</span></div><div class="line"><span class="string">            type:'spline'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        title:&#123; // 标题</span></div><div class="line"><span class="string">            text:'城市平均气温-曲线图'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        subtitle:&#123; //副标题</span></div><div class="line"><span class="string">            text:'东京，纽约，伦敦'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        xAlias:&#123;  // x轴</span></div><div class="line"><span class="string">            categories: ['一月', '二月', '三月', '四月', '五月', '六月',</span></div><div class="line"><span class="string">                '七月', '八月', '九月', '十月', '十一月', '十二月']</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        yAlias:&#123; // y轴</span></div><div class="line"><span class="string">            title: &#123;</span></div><div class="line"><span class="string">                enable:true,</span></div><div class="line"><span class="string">                text: 'Temperature (\xB0C)'</span></div><div class="line"><span class="string">            &#125;,</span></div><div class="line"><span class="string">            plotLines: [&#123;</span></div><div class="line"><span class="string">                value: 0,</span></div><div class="line"><span class="string">                width: 1,</span></div><div class="line"><span class="string">                color: '#808080'</span></div><div class="line"><span class="string">            &#125;]</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        legend:&#123;</span></div><div class="line"><span class="string">            layout: 'vertical',</span></div><div class="line"><span class="string">            align: 'right',</span></div><div class="line"><span class="string">            verticalAlign: 'middle',</span></div><div class="line"><span class="string">            borderWidth: 0</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        tooltip:&#123;</span></div><div class="line"><span class="string">            valueSuffix: '\xB0C',</span></div><div class="line"><span class="string">            crosshairs: true,//竖线</span></div><div class="line"><span class="string">            shared: true</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        plotOptions:&#123;</span></div><div class="line"><span class="string">            spline: &#123;</span></div><div class="line"><span class="string">                marker: &#123;</span></div><div class="line"><span class="string">                    radius: 4,</span></div><div class="line"><span class="string">                    lineColor: '#666666',</span></div><div class="line"><span class="string">                    lineWidth: 1</span></div><div class="line"><span class="string">                &#125;</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        series:[</span></div><div class="line"><span class="string">            &#123;</span></div><div class="line"><span class="string">                name: 'Tokyo',</span></div><div class="line"><span class="string">                data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2,</span></div><div class="line"><span class="string">                    26.5, 23.3, 18.3, 13.9, 9.6]</span></div><div class="line"><span class="string">            &#125;,</span></div><div class="line"><span class="string">            &#123;</span></div><div class="line"><span class="string">                name: 'New York',</span></div><div class="line"><span class="string">                data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8,</span></div><div class="line"><span class="string">                    24.1, 20.1, 14.1, 8.6, 2.5]</span></div><div class="line"><span class="string">            &#125;,</span></div><div class="line"><span class="string">            &#123;</span></div><div class="line"><span class="string">                name: 'London',</span></div><div class="line"><span class="string">                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0,</span></div><div class="line"><span class="string">                    16.6, 14.2, 10.3, 6.6, 4.8]</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        ]</span></div><div class="line"><span class="string">    &#125;);</span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="面积图-area-："><a href="#面积图-area-：" class="headerlink" title="面积图 - (area)："></a>面积图 - (area)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;面积图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container &#123;</div><div class="line">        width: <span class="number">1000</span>px;</div><div class="line">        height: <span class="number">500</span>px;</div><div class="line">        margin: <span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">    var chat = new Highcharts.Chart('container', &#123;</span></div><div class="line"><span class="string">        chart: &#123;</span></div><div class="line"><span class="string">            type: 'area'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        title: &#123;</span></div><div class="line"><span class="string">            text: '面积图'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        subtitle: &#123;</span></div><div class="line"><span class="string">            text: '一个简单的面积图'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        xAlias: &#123;</span></div><div class="line"><span class="string">            //allowDecimals: true,</span></div><div class="line"><span class="string">            title:&#123;</span></div><div class="line"><span class="string">                text:'Y轴',</span></div><div class="line"><span class="string">                categories: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月']</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        tooltip: &#123;</span></div><div class="line"><span class="string">            valueSuffix: '单位'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        legend: &#123;</span></div><div class="line"><span class="string">            layout: 'vertical',</span></div><div class="line"><span class="string">            align: 'right',</span></div><div class="line"><span class="string">            verticalAlign: 'middle',</span></div><div class="line"><span class="string">            borderWidth: 0</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        yAlias: &#123;</span></div><div class="line"><span class="string">            title: &#123;</span></div><div class="line"><span class="string">                text: 'Y轴'</span></div><div class="line"><span class="string">            &#125;,plotLines: [&#123;</span></div><div class="line"><span class="string">                value: 0,</span></div><div class="line"><span class="string">                width: 1,</span></div><div class="line"><span class="string">                color: '#808080'</span></div><div class="line"><span class="string">            &#125;]</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        series: [</span></div><div class="line"><span class="string">            &#123;</span></div><div class="line"><span class="string">                name: '列一',</span></div><div class="line"><span class="string">                data: [13, 83, 56, 32, 89, 97, 143, 45, 67, 87, 98]</span></div><div class="line"><span class="string">            &#125;,</span></div><div class="line"><span class="string">            &#123;</span></div><div class="line"><span class="string">                name: '列二',</span></div><div class="line"><span class="string">                data: [13, 23, 61, 62, 15, 27, 83, 75, 47, 17, 28]</span></div><div class="line"><span class="string">            &#125;]</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">    &#125;);</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="曲线面积图-areaspline-："><a href="#曲线面积图-areaspline-：" class="headerlink" title="曲线面积图 - (areaspline)："></a>曲线面积图 - (areaspline)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;曲线面积图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        width: <span class="number">1200</span>px;</div><div class="line">        height: <span class="number">600</span>px;</div><div class="line">        margin:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">    var charts =new  Highcharts.Chart('container',&#123;</span></div><div class="line"><span class="string">        chart: &#123;</span></div><div class="line"><span class="string">            type: 'areaspline'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        title: &#123;</span></div><div class="line"><span class="string">            text: '不同家庭一周水果消费情况'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        legend: &#123;</span></div><div class="line"><span class="string">            layout: 'vertical',</span></div><div class="line"><span class="string">            align: 'left',</span></div><div class="line"><span class="string">            verticalAlign: 'top',</span></div><div class="line"><span class="string">            x: 150,</span></div><div class="line"><span class="string">            y: 100,</span></div><div class="line"><span class="string">            floating: true,</span></div><div class="line"><span class="string">            borderWidth: 1,</span></div><div class="line"><span class="string">            backgroundColor: (Highcharts.theme &amp;&amp; Highcharts.theme.legendBackgroundColor) || '#FFFFFF'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        xAxis: &#123;</span></div><div class="line"><span class="string">            categories: [</span></div><div class="line"><span class="string">                '周一',</span></div><div class="line"><span class="string">                '周二',</span></div><div class="line"><span class="string">                '周三',</span></div><div class="line"><span class="string">                '周四',</span></div><div class="line"><span class="string">                '周五',</span></div><div class="line"><span class="string">                '周六',</span></div><div class="line"><span class="string">                '周日'</span></div><div class="line"><span class="string">            ],</span></div><div class="line"><span class="string">            plotBands: [&#123; // visualize the weekend</span></div><div class="line"><span class="string">                from: 4.5,</span></div><div class="line"><span class="string">                to: 6.5,</span></div><div class="line"><span class="string">                color: 'rgba(68, 170, 213, .2)'</span></div><div class="line"><span class="string">            &#125;]</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        yAxis: &#123;</span></div><div class="line"><span class="string">            title: &#123;</span></div><div class="line"><span class="string">                text: '水果 单位'</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        tooltip: &#123;</span></div><div class="line"><span class="string">            shared: true,</span></div><div class="line"><span class="string">            valueSuffix: ' 单位'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        credits: &#123;</span></div><div class="line"><span class="string">            enabled: false</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        plotOptions: &#123;</span></div><div class="line"><span class="string">            areaspline: &#123;</span></div><div class="line"><span class="string">                fillOpacity: 0.5</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        series: [&#123;</span></div><div class="line"><span class="string">            name: '甲',</span></div><div class="line"><span class="string">            data: [3, 4, 3, 5, 4, 10, 12]</span></div><div class="line"><span class="string">        &#125;, &#123;</span></div><div class="line"><span class="string">            name: '乙',</span></div><div class="line"><span class="string">            data: [1, 3, 4, 3, 3, 5, 4]</span></div><div class="line"><span class="string">        &#125;]</span></div><div class="line"><span class="string">    &#125;);</span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="柱状图-column-："><a href="#柱状图-column-：" class="headerlink" title="柱状图 - (column)："></a>柱状图 - (column)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;柱状图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        width: <span class="number">1200</span>px;</div><div class="line">        height: <span class="number">600</span>px;</div><div class="line">        margin:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">    var charts =new  Highcharts.Chart('container',&#123;</span></div><div class="line"><span class="string">        chart: &#123;</span></div><div class="line"><span class="string">            type: 'column'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        title: &#123;</span></div><div class="line"><span class="string">            text: '堆叠柱形图'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        xAxis: &#123;</span></div><div class="line"><span class="string">            categories: ['苹果', '橘子', '梨', '葡萄', '香蕉']</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        yAxis: &#123;</span></div><div class="line"><span class="string">            min: 0,</span></div><div class="line"><span class="string">            title: &#123;</span></div><div class="line"><span class="string">                text: '水果消费总量'</span></div><div class="line"><span class="string">            &#125;,</span></div><div class="line"><span class="string">            stackLabels: &#123;</span></div><div class="line"><span class="string">                enabled: true,</span></div><div class="line"><span class="string">                style: &#123;</span></div><div class="line"><span class="string">                    fontWeight: 'bold',</span></div><div class="line"><span class="string">                    color: 'gray'</span></div><div class="line"><span class="string">                &#125;</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        legend: &#123;</span></div><div class="line"><span class="string">            align: 'right',</span></div><div class="line"><span class="string">            x: -30,</span></div><div class="line"><span class="string">            verticalAlign: 'top',</span></div><div class="line"><span class="string">            y: 25,</span></div><div class="line"><span class="string">            floating: true,</span></div><div class="line"><span class="string">            backgroundColor:  'white',</span></div><div class="line"><span class="string">            borderColor: '#CCC',</span></div><div class="line"><span class="string">            borderWidth: 1,</span></div><div class="line"><span class="string">            shadow: false</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        tooltip: &#123;</span></div><div class="line"><span class="string">            formatter: function () &#123;</span></div><div class="line"><span class="string">                return '&lt;b&gt;' + this.x + '&lt;/b&gt;&lt;br/&gt;' +</span></div><div class="line"><span class="string">                    this.series.name + ': ' + this.y + '&lt;br/&gt;' +</span></div><div class="line"><span class="string">                    '总量: ' + this.point.stackTotal;</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        plotOptions: &#123;</span></div><div class="line"><span class="string">            column: &#123;</span></div><div class="line"><span class="string">                stacking: 'normal',</span></div><div class="line"><span class="string">                dataLabels: &#123;</span></div><div class="line"><span class="string">                    enabled: true,</span></div><div class="line"><span class="string">                    color:  '#FFF',</span></div><div class="line"><span class="string">                    style: &#123;</span></div><div class="line"><span class="string">                        textShadow: '0 0 3px black'</span></div><div class="line"><span class="string">                    &#125;</span></div><div class="line"><span class="string">                &#125;</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        series: [&#123;</span></div><div class="line"><span class="string">            name: '甲',</span></div><div class="line"><span class="string">            data: [5, 3, 4, 7, 2]</span></div><div class="line"><span class="string">        &#125;, &#123;</span></div><div class="line"><span class="string">            name: '乙',</span></div><div class="line"><span class="string">            data: [2, 2, 3, 2, 1]</span></div><div class="line"><span class="string">        &#125;, &#123;</span></div><div class="line"><span class="string">            name: '丙',</span></div><div class="line"><span class="string">            data: [3, 4, 4, 2, 5]</span></div><div class="line"><span class="string">        &#125;]</span></div><div class="line"><span class="string">    &#125;);</span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="条形图-bar-："><a href="#条形图-bar-：" class="headerlink" title="条形图 - (bar)："></a>条形图 - (bar)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;条形图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        width: <span class="number">1200</span>px;</div><div class="line">        height: <span class="number">600</span>px;</div><div class="line">        margin:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">    var charts =new  Highcharts.Chart('container',&#123;</span></div><div class="line"><span class="string">        chart: &#123;</span></div><div class="line"><span class="string">            type: 'bar'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        title: &#123;</span></div><div class="line"><span class="string">            text: '各洲不同时间的人口条形图'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        subtitle: &#123;</span></div><div class="line"><span class="string">            text: '数据来源: Wikipedia.org'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        xAxis: &#123;</span></div><div class="line"><span class="string">            categories: ['非洲', '美洲', '亚洲', '欧洲', '大洋洲'],</span></div><div class="line"><span class="string">            title: &#123;</span></div><div class="line"><span class="string">                text: null</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        yAxis: &#123;</span></div><div class="line"><span class="string">            min: 0,</span></div><div class="line"><span class="string">            title: &#123;</span></div><div class="line"><span class="string">                text: '人口总量 (百万)',</span></div><div class="line"><span class="string">                align: 'high'</span></div><div class="line"><span class="string">            &#125;,</span></div><div class="line"><span class="string">            labels: &#123;</span></div><div class="line"><span class="string">                overflow: 'justify'</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        tooltip: &#123;</span></div><div class="line"><span class="string">            valueSuffix: ' 百万'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        plotOptions: &#123;</span></div><div class="line"><span class="string">            bar: &#123;</span></div><div class="line"><span class="string">                dataLabels: &#123;</span></div><div class="line"><span class="string">                    enabled: true,</span></div><div class="line"><span class="string">                    allowOverlap: true</span></div><div class="line"><span class="string">                &#125;</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        legend: &#123;</span></div><div class="line"><span class="string">            layout: 'vertical',</span></div><div class="line"><span class="string">            align: 'right',</span></div><div class="line"><span class="string">            verticalAlign: 'top',</span></div><div class="line"><span class="string">            x: -40,</span></div><div class="line"><span class="string">            y: 100,</span></div><div class="line"><span class="string">            floating: true,</span></div><div class="line"><span class="string">            borderWidth: 1,</span></div><div class="line"><span class="string">            backgroundColor: '#FFFFFF',</span></div><div class="line"><span class="string">            shadow: true</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        credits: &#123;</span></div><div class="line"><span class="string">            enabled: false</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        series: [&#123;</span></div><div class="line"><span class="string">            name: '1800 年',</span></div><div class="line"><span class="string">            data: [107, 31, 635, 203, 2]</span></div><div class="line"><span class="string">        &#125;, &#123;</span></div><div class="line"><span class="string">            name: '1900 年',</span></div><div class="line"><span class="string">            data: [133, 156, 947, 408, 6]</span></div><div class="line"><span class="string">        &#125;, &#123;</span></div><div class="line"><span class="string">            name: '2008 年',</span></div><div class="line"><span class="string">            data: [973, 914, 4054, 732, 34]</span></div><div class="line"><span class="string">        &#125;]</span></div><div class="line"><span class="string">    &#125;);</span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="饼图-pie-："><a href="#饼图-pie-：" class="headerlink" title="饼图 - (pie)："></a>饼图 - (pie)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;饼图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        width: <span class="number">1200</span>px;</div><div class="line">        height: <span class="number">600</span>px;</div><div class="line">        margin:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">    var charts =new  Highcharts.Chart('container',&#123;</span></div><div class="line"><span class="string">        chart: &#123;</span></div><div class="line"><span class="string">            plotBackgroundColor: null,</span></div><div class="line"><span class="string">            plotBorderWidth: null,</span></div><div class="line"><span class="string">            plotShadow: false</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        title: &#123;</span></div><div class="line"><span class="string">            text: '2014 某网站各浏览器浏览量占比'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        tooltip: &#123;</span></div><div class="line"><span class="string">            headerFormat: '&#123;series.name&#125;&lt;br&gt;',</span></div><div class="line"><span class="string">            pointFormat: '&#123;point.name&#125;: &lt;b&gt;&#123;point.percentage:.1f&#125;%&lt;/b&gt;'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        plotOptions: &#123;</span></div><div class="line"><span class="string">            pie: &#123;</span></div><div class="line"><span class="string">                allowPointSelect: true,</span></div><div class="line"><span class="string">                cursor: 'pointer',</span></div><div class="line"><span class="string">                dataLabels: &#123;</span></div><div class="line"><span class="string">                    enabled: true,</span></div><div class="line"><span class="string">                    format: '&lt;b&gt;&#123;point.name&#125;&lt;/b&gt;: &#123;point.percentage:.1f&#125; %',</span></div><div class="line"><span class="string">                    style: &#123;</span></div><div class="line"><span class="string">                        color:'black'</span></div><div class="line"><span class="string">                    &#125;</span></div><div class="line"><span class="string">                &#125;</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        series: [&#123;</span></div><div class="line"><span class="string">            type: 'pie',</span></div><div class="line"><span class="string">            name: '浏览器访问量占比',</span></div><div class="line"><span class="string">            data: [</span></div><div class="line"><span class="string">                ['Firefox',   45.0],</span></div><div class="line"><span class="string">                ['IE',       26.8],</span></div><div class="line"><span class="string">                &#123;</span></div><div class="line"><span class="string">                    name: 'Chrome',</span></div><div class="line"><span class="string">                    y: 12.8,</span></div><div class="line"><span class="string">                    sliced: true,</span></div><div class="line"><span class="string">                    selected: true</span></div><div class="line"><span class="string">                &#125;,</span></div><div class="line"><span class="string">                ['Safari',    8.5],</span></div><div class="line"><span class="string">                ['Opera',     6.2],</span></div><div class="line"><span class="string">                ['其他',   0.7]</span></div><div class="line"><span class="string">            ]</span></div><div class="line"><span class="string">        &#125;]</span></div><div class="line"><span class="string">    &#125;);</span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="散点图-scatter-："><a href="#散点图-scatter-：" class="headerlink" title="散点图 - (scatter)："></a>散点图 - (scatter)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;散点图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        width: <span class="number">1200</span>px;</div><div class="line">        height: <span class="number">600</span>px;</div><div class="line">        margin:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">    var charts =new  Highcharts.Chart('container',&#123;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">        chart: &#123;</span></div><div class="line"><span class="string">            type: 'scatter',</span></div><div class="line"><span class="string">            zoomType: 'xy'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        title: &#123;</span></div><div class="line"><span class="string">            text: '507 人按性别划分的身高和体重分布图'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        subtitle: &#123;</span></div><div class="line"><span class="string">            text: '数据来源: Heinz  2003'</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        xAxis: &#123;</span></div><div class="line"><span class="string">            title: &#123;</span></div><div class="line"><span class="string">                enabled: true,</span></div><div class="line"><span class="string">                text: '身高 (cm)'</span></div><div class="line"><span class="string">            &#125;,</span></div><div class="line"><span class="string">            startOnTick: true,</span></div><div class="line"><span class="string">            endOnTick: true,</span></div><div class="line"><span class="string">            showLastLabel: true</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        yAxis: &#123;</span></div><div class="line"><span class="string">            title: &#123;</span></div><div class="line"><span class="string">                text: '体重 (kg)'</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        legend: &#123;</span></div><div class="line"><span class="string">            layout: 'vertical',</span></div><div class="line"><span class="string">            align: 'left',</span></div><div class="line"><span class="string">            verticalAlign: 'top',</span></div><div class="line"><span class="string">            x: 100,</span></div><div class="line"><span class="string">            y: 70,</span></div><div class="line"><span class="string">            floating: true,</span></div><div class="line"><span class="string">            backgroundColor: '#FFFFFF',</span></div><div class="line"><span class="string">            borderWidth: 1</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        plotOptions: &#123;</span></div><div class="line"><span class="string">            scatter: &#123;</span></div><div class="line"><span class="string">                marker: &#123;</span></div><div class="line"><span class="string">                    radius: 5,</span></div><div class="line"><span class="string">                    states: &#123;</span></div><div class="line"><span class="string">                        hover: &#123;</span></div><div class="line"><span class="string">                            enabled: true,</span></div><div class="line"><span class="string">                            lineColor: 'rgb(100,100,100)'</span></div><div class="line"><span class="string">                        &#125;</span></div><div class="line"><span class="string">                    &#125;</span></div><div class="line"><span class="string">                &#125;,</span></div><div class="line"><span class="string">                states: &#123;</span></div><div class="line"><span class="string">                    hover: &#123;</span></div><div class="line"><span class="string">                        marker: &#123;</span></div><div class="line"><span class="string">                            enabled: false</span></div><div class="line"><span class="string">                        &#125;</span></div><div class="line"><span class="string">                    &#125;</span></div><div class="line"><span class="string">                &#125;,</span></div><div class="line"><span class="string">                tooltip: &#123;</span></div><div class="line"><span class="string">                    headerFormat: '&lt;b&gt;&#123;series.name&#125;&lt;/b&gt;&lt;br&gt;',</span></div><div class="line"><span class="string">                    pointFormat: '&#123;point.x&#125; cm, &#123;point.y&#125; kg'</span></div><div class="line"><span class="string">                &#125;</span></div><div class="line"><span class="string">            &#125;</span></div><div class="line"><span class="string">        &#125;,</span></div><div class="line"><span class="string">        series: [&#123;</span></div><div class="line"><span class="string">            name: '女',</span></div><div class="line"><span class="string">            color: 'rgba(223, 83, 83, .5)',</span></div><div class="line"><span class="string">            data: [[161.2, 51.6], [167.5, 59.0], [159.5, 49.2], [157.0, 63.0], [155.8, 53.6],</span></div><div class="line"><span class="string">                [170.0, 59.0], [159.1, 47.6], [166.0, 69.8], [176.2, 66.8], [160.2, 75.2],</span></div><div class="line"><span class="string">                [172.5, 55.2], [170.9, 54.2], [172.9, 62.5], [153.4, 42.0], [160.0, 50.0],</span></div><div class="line"><span class="string">                [147.2, 49.8], [168.2, 49.2], [175.0, 73.2], [157.0, 47.8], [167.6, 68.8],</span></div><div class="line"><span class="string">                [159.5, 50.6], [175.0, 82.5], [166.8, 57.2], [176.5, 87.8], [170.2, 72.8],</span></div><div class="line"><span class="string">                [174.0, 54.5], [173.0, 59.8], [179.9, 67.3], [170.5, 67.8], [160.0, 47.0],</span></div><div class="line"><span class="string">                [154.4, 46.2], [162.0, 55.0], [176.5, 83.0], [160.0, 54.4], [152.0, 45.8],</span></div><div class="line"><span class="string">                [162.1, 53.6], [170.0, 73.2], [160.2, 52.1], [161.3, 67.9], [166.4, 56.6],</span></div><div class="line"><span class="string">                [168.9, 62.3], [163.8, 58.5], [167.6, 54.5], [160.0, 50.2], [161.3, 60.3],</span></div><div class="line"><span class="string">                [167.6, 58.3], [165.1, 56.2], [160.0, 50.2], [170.0, 72.9], [157.5, 59.8],</span></div><div class="line"><span class="string">                [167.6, 61.0], [160.7, 69.1], [163.2, 55.9], [152.4, 46.5], [157.5, 54.3],</span></div><div class="line"><span class="string">                [168.3, 54.8], [180.3, 60.7], [165.5, 60.0], [165.0, 62.0], [164.5, 60.3],</span></div><div class="line"><span class="string">                [156.0, 52.7], [160.0, 74.3], [163.0, 62.0], [165.7, 73.1], [161.0, 80.0],</span></div><div class="line"><span class="string">                [162.0, 54.7], [166.0, 53.2], [174.0, 75.7], [172.7, 61.1], [167.6, 55.7],</span></div><div class="line"><span class="string">                [151.1, 48.7], [164.5, 52.3], [163.5, 50.0], [152.0, 59.3], [169.0, 62.5],</span></div><div class="line"><span class="string">                [164.0, 55.7], [161.2, 54.8], [155.0, 45.9], [170.0, 70.6], [176.2, 67.2],</span></div><div class="line"><span class="string">                [170.0, 69.4], [162.5, 58.2], [170.3, 64.8], [164.1, 71.6], [169.5, 52.8],</span></div><div class="line"><span class="string">                [163.2, 59.8], [154.5, 49.0], [159.8, 50.0], [173.2, 69.2], [170.0, 55.9],</span></div><div class="line"><span class="string">                [161.4, 63.4], [169.0, 58.2], [166.2, 58.6], [159.4, 45.7], [162.5, 52.2],</span></div><div class="line"><span class="string">                [159.0, 48.6], [162.8, 57.8], [159.0, 55.6], [179.8, 66.8], [162.9, 59.4],</span></div><div class="line"><span class="string">                [161.0, 53.6], [151.1, 73.2], [168.2, 53.4], [168.9, 69.0], [173.2, 58.4],</span></div><div class="line"><span class="string">                [171.8, 56.2], [178.0, 70.6], [164.3, 59.8], [163.0, 72.0], [168.5, 65.2],</span></div><div class="line"><span class="string">                [166.8, 56.6], [172.7, 105.2], [163.5, 51.8], [169.4, 63.4], [167.8, 59.0],</span></div><div class="line"><span class="string">                [159.5, 47.6], [167.6, 63.0], [161.2, 55.2], [160.0, 45.0], [163.2, 54.0],</span></div><div class="line"><span class="string">                [162.2, 50.2], [161.3, 60.2], [149.5, 44.8], [157.5, 58.8], [163.2, 56.4],</span></div><div class="line"><span class="string">                [172.7, 62.0], [155.0, 49.2], [156.5, 67.2], [164.0, 53.8], [160.9, 54.4],</span></div><div class="line"><span class="string">                [162.8, 58.0], [167.0, 59.8], [160.0, 54.8], [160.0, 43.2], [168.9, 60.5],</span></div><div class="line"><span class="string">                [158.2, 46.4], [156.0, 64.4], [160.0, 48.8], [167.1, 62.2], [158.0, 55.5],</span></div><div class="line"><span class="string">                [167.6, 57.8], [156.0, 54.6], [162.1, 59.2], [173.4, 52.7], [159.8, 53.2],</span></div><div class="line"><span class="string">                [170.5, 64.5], [159.2, 51.8], [157.5, 56.0], [161.3, 63.6], [162.6, 63.2],</span></div><div class="line"><span class="string">                [160.0, 59.5], [168.9, 56.8], [165.1, 64.1], [162.6, 50.0], [165.1, 72.3],</span></div><div class="line"><span class="string">                [166.4, 55.0], [160.0, 55.9], [152.4, 60.4], [170.2, 69.1], [162.6, 84.5],</span></div><div class="line"><span class="string">                [170.2, 55.9], [158.8, 55.5], [172.7, 69.5], [167.6, 76.4], [162.6, 61.4],</span></div><div class="line"><span class="string">                [167.6, 65.9], [156.2, 58.6], [175.2, 66.8], [172.1, 56.6], [162.6, 58.6],</span></div><div class="line"><span class="string">                [160.0, 55.9], [165.1, 59.1], [182.9, 81.8], [166.4, 70.7], [165.1, 56.8],</span></div><div class="line"><span class="string">                [177.8, 60.0], [165.1, 58.2], [175.3, 72.7], [154.9, 54.1], [158.8, 49.1],</span></div><div class="line"><span class="string">                [172.7, 75.9], [168.9, 55.0], [161.3, 57.3], [167.6, 55.0], [165.1, 65.5],</span></div><div class="line"><span class="string">                [175.3, 65.5], [157.5, 48.6], [163.8, 58.6], [167.6, 63.6], [165.1, 55.2],</span></div><div class="line"><span class="string">                [165.1, 62.7], [168.9, 56.6], [162.6, 53.9], [164.5, 63.2], [176.5, 73.6],</span></div><div class="line"><span class="string">                [168.9, 62.0], [175.3, 63.6], [159.4, 53.2], [160.0, 53.4], [170.2, 55.0],</span></div><div class="line"><span class="string">                [162.6, 70.5], [167.6, 54.5], [162.6, 54.5], [160.7, 55.9], [160.0, 59.0],</span></div><div class="line"><span class="string">                [157.5, 63.6], [162.6, 54.5], [152.4, 47.3], [170.2, 67.7], [165.1, 80.9],</span></div><div class="line"><span class="string">                [172.7, 70.5], [165.1, 60.9], [170.2, 63.6], [170.2, 54.5], [170.2, 59.1],</span></div><div class="line"><span class="string">                [161.3, 70.5], [167.6, 52.7], [167.6, 62.7], [165.1, 86.3], [162.6, 66.4],</span></div><div class="line"><span class="string">                [152.4, 67.3], [168.9, 63.0], [170.2, 73.6], [175.2, 62.3], [175.2, 57.7],</span></div><div class="line"><span class="string">                [160.0, 55.4], [165.1, 104.1], [174.0, 55.5], [170.2, 77.3], [160.0, 80.5],</span></div><div class="line"><span class="string">                [167.6, 64.5], [167.6, 72.3], [167.6, 61.4], [154.9, 58.2], [162.6, 81.8],</span></div><div class="line"><span class="string">                [175.3, 63.6], [171.4, 53.4], [157.5, 54.5], [165.1, 53.6], [160.0, 60.0],</span></div><div class="line"><span class="string">                [174.0, 73.6], [162.6, 61.4], [174.0, 55.5], [162.6, 63.6], [161.3, 60.9],</span></div><div class="line"><span class="string">                [156.2, 60.0], [149.9, 46.8], [169.5, 57.3], [160.0, 64.1], [175.3, 63.6],</span></div><div class="line"><span class="string">                [169.5, 67.3], [160.0, 75.5], [172.7, 68.2], [162.6, 61.4], [157.5, 76.8],</span></div><div class="line"><span class="string">                [176.5, 71.8], [164.4, 55.5], [160.7, 48.6], [174.0, 66.4], [163.8, 67.3]]</span></div><div class="line"><span class="string">        &#125;, &#123;</span></div><div class="line"><span class="string">            name: '男',</span></div><div class="line"><span class="string">            color: 'rgba(119, 152, 191, .5)',</span></div><div class="line"><span class="string">            data: [[174.0, 65.6], [175.3, 71.8], [193.5, 80.7], [186.5, 72.6], [187.2, 78.8],</span></div><div class="line"><span class="string">                [181.5, 74.8], [184.0, 86.4], [184.5, 78.4], [175.0, 62.0], [184.0, 81.6],</span></div><div class="line"><span class="string">                [180.0, 76.6], [177.8, 83.6], [192.0, 90.0], [176.0, 74.6], [174.0, 71.0],</span></div><div class="line"><span class="string">                [184.0, 79.6], [192.7, 93.8], [171.5, 70.0], [173.0, 72.4], [176.0, 85.9],</span></div><div class="line"><span class="string">                [176.0, 78.8], [180.5, 77.8], [172.7, 66.2], [176.0, 86.4], [173.5, 81.8],</span></div><div class="line"><span class="string">                [178.0, 89.6], [180.3, 82.8], [180.3, 76.4], [164.5, 63.2], [173.0, 60.9],</span></div><div class="line"><span class="string">                [183.5, 74.8], [175.5, 70.0], [188.0, 72.4], [189.2, 84.1], [172.8, 69.1],</span></div><div class="line"><span class="string">                [170.0, 59.5], [182.0, 67.2], [170.0, 61.3], [177.8, 68.6], [184.2, 80.1],</span></div><div class="line"><span class="string">                [186.7, 87.8], [171.4, 84.7], [172.7, 73.4], [175.3, 72.1], [180.3, 82.6],</span></div><div class="line"><span class="string">                [182.9, 88.7], [188.0, 84.1], [177.2, 94.1], [172.1, 74.9], [167.0, 59.1],</span></div><div class="line"><span class="string">                [169.5, 75.6], [174.0, 86.2], [172.7, 75.3], [182.2, 87.1], [164.1, 55.2],</span></div><div class="line"><span class="string">                [163.0, 57.0], [171.5, 61.4], [184.2, 76.8], [174.0, 86.8], [174.0, 72.2],</span></div><div class="line"><span class="string">                [177.0, 71.6], [186.0, 84.8], [167.0, 68.2], [171.8, 66.1], [182.0, 72.0],</span></div><div class="line"><span class="string">                [167.0, 64.6], [177.8, 74.8], [164.5, 70.0], [192.0, 101.6], [175.5, 63.2],</span></div><div class="line"><span class="string">                [171.2, 79.1], [181.6, 78.9], [167.4, 67.7], [181.1, 66.0], [177.0, 68.2],</span></div><div class="line"><span class="string">                [174.5, 63.9], [177.5, 72.0], [170.5, 56.8], [182.4, 74.5], [197.1, 90.9],</span></div><div class="line"><span class="string">                [180.1, 93.0], [175.5, 80.9], [180.6, 72.7], [184.4, 68.0], [175.5, 70.9],</span></div><div class="line"><span class="string">                [180.6, 72.5], [177.0, 72.5], [177.1, 83.4], [181.6, 75.5], [176.5, 73.0],</span></div><div class="line"><span class="string">                [175.0, 70.2], [174.0, 73.4], [165.1, 70.5], [177.0, 68.9], [192.0, 102.3],</span></div><div class="line"><span class="string">                [176.5, 68.4], [169.4, 65.9], [182.1, 75.7], [179.8, 84.5], [175.3, 87.7],</span></div><div class="line"><span class="string">                [184.9, 86.4], [177.3, 73.2], [167.4, 53.9], [178.1, 72.0], [168.9, 55.5],</span></div><div class="line"><span class="string">                [157.2, 58.4], [180.3, 83.2], [170.2, 72.7], [177.8, 64.1], [172.7, 72.3],</span></div><div class="line"><span class="string">                [165.1, 65.0], [186.7, 86.4], [165.1, 65.0], [174.0, 88.6], [175.3, 84.1],</span></div><div class="line"><span class="string">                [185.4, 66.8], [177.8, 75.5], [180.3, 93.2], [180.3, 82.7], [177.8, 58.0],</span></div><div class="line"><span class="string">                [177.8, 79.5], [177.8, 78.6], [177.8, 71.8], [177.8, 116.4], [163.8, 72.2],</span></div><div class="line"><span class="string">                [188.0, 83.6], [198.1, 85.5], [175.3, 90.9], [166.4, 85.9], [190.5, 89.1],</span></div><div class="line"><span class="string">                [166.4, 75.0], [177.8, 77.7], [179.7, 86.4], [172.7, 90.9], [190.5, 73.6],</span></div><div class="line"><span class="string">                [185.4, 76.4], [168.9, 69.1], [167.6, 84.5], [175.3, 64.5], [170.2, 69.1],</span></div><div class="line"><span class="string">                [190.5, 108.6], [177.8, 86.4], [190.5, 80.9], [177.8, 87.7], [184.2, 94.5],</span></div><div class="line"><span class="string">                [176.5, 80.2], [177.8, 72.0], [180.3, 71.4], [171.4, 72.7], [172.7, 84.1],</span></div><div class="line"><span class="string">                [172.7, 76.8], [177.8, 63.6], [177.8, 80.9], [182.9, 80.9], [170.2, 85.5],</span></div><div class="line"><span class="string">                [167.6, 68.6], [175.3, 67.7], [165.1, 66.4], [185.4, 102.3], [181.6, 70.5],</span></div><div class="line"><span class="string">                [172.7, 95.9], [190.5, 84.1], [179.1, 87.3], [175.3, 71.8], [170.2, 65.9],</span></div><div class="line"><span class="string">                [193.0, 95.9], [171.4, 91.4], [177.8, 81.8], [177.8, 96.8], [167.6, 69.1],</span></div><div class="line"><span class="string">                [167.6, 82.7], [180.3, 75.5], [182.9, 79.5], [176.5, 73.6], [186.7, 91.8],</span></div><div class="line"><span class="string">                [188.0, 84.1], [188.0, 85.9], [177.8, 81.8], [174.0, 82.5], [177.8, 80.5],</span></div><div class="line"><span class="string">                [171.4, 70.0], [185.4, 81.8], [185.4, 84.1], [188.0, 90.5], [188.0, 91.4],</span></div><div class="line"><span class="string">                [182.9, 89.1], [176.5, 85.0], [175.3, 69.1], [175.3, 73.6], [188.0, 80.5],</span></div><div class="line"><span class="string">                [188.0, 82.7], [175.3, 86.4], [170.5, 67.7], [179.1, 92.7], [177.8, 93.6],</span></div><div class="line"><span class="string">                [175.3, 70.9], [182.9, 75.0], [170.8, 93.2], [188.0, 93.2], [180.3, 77.7],</span></div><div class="line"><span class="string">                [177.8, 61.4], [185.4, 94.1], [168.9, 75.0], [185.4, 83.6], [180.3, 85.5],</span></div><div class="line"><span class="string">                [174.0, 73.9], [167.6, 66.8], [182.9, 87.3], [160.0, 72.3], [180.3, 88.6],</span></div><div class="line"><span class="string">                [167.6, 75.5], [186.7, 101.4], [175.3, 91.1], [175.3, 67.3], [175.9, 77.7],</span></div><div class="line"><span class="string">                [175.3, 81.8], [179.1, 75.5], [181.6, 84.5], [177.8, 76.6], [182.9, 85.0],</span></div><div class="line"><span class="string">                [177.8, 102.5], [184.2, 77.3], [179.1, 71.8], [176.5, 87.9], [188.0, 94.3],</span></div><div class="line"><span class="string">                [174.0, 70.9], [167.6, 64.5], [170.2, 77.3], [167.6, 72.3], [188.0, 87.3],</span></div><div class="line"><span class="string">                [174.0, 80.0], [176.5, 82.3], [180.3, 73.6], [167.6, 74.1], [188.0, 85.9],</span></div><div class="line"><span class="string">                [180.3, 73.2], [167.6, 76.3], [183.0, 65.9], [183.0, 90.9], [179.1, 89.1],</span></div><div class="line"><span class="string">                [170.2, 62.3], [177.8, 82.7], [179.1, 79.1], [190.5, 98.2], [177.8, 84.1],</span></div><div class="line"><span class="string">                [180.3, 83.2], [180.3, 83.2]]</span></div><div class="line"><span class="string">        &#125;]</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">    &#125;);</span></div><div class="line"><span class="string">&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;/html&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="箱线图-boxplot-："><a href="#箱线图-boxplot-：" class="headerlink" title="箱线图 - (boxplot)："></a>箱线图 - (boxplot)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;箱线图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        width: <span class="number">1200</span>px;</div><div class="line">        height: <span class="number">600</span>px;</div><div class="line">        margin:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script src="</span>https:<span class="comment">//img.hcharts.cn/highcharts/highcharts-more.js"&gt;&lt;/script&gt;</span></div><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> charts =<span class="keyword">new</span> Highcharts.Chart(<span class="string">'container'</span>,&#123;</div><div class="line">        chart: &#123;</div><div class="line">            type: <span class="string">'boxplot'</span></div><div class="line">        &#125;,</div><div class="line">        title: &#123;</div><div class="line">            text: <span class="string">'Highcharts 箱线图'</span></div><div class="line">        &#125;,</div><div class="line">        legend: &#123;</div><div class="line">            enabled: <span class="literal">false</span></div><div class="line">        &#125;,</div><div class="line">        xAxis: &#123;</div><div class="line">            categories: [<span class="string">'1'</span>, <span class="string">'2'</span>, <span class="string">'3'</span>, <span class="string">'4'</span>, <span class="string">'5'</span>],</div><div class="line">            title: &#123;</div><div class="line">                text: <span class="string">''</span></div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        yAxis: &#123;</div><div class="line">            title: &#123;</div><div class="line">                text: <span class="string">'观测值'</span></div><div class="line">            &#125;,</div><div class="line">            plotLines: [&#123;</div><div class="line">                value: <span class="number">932</span>,</div><div class="line">                color: <span class="string">'red'</span>,</div><div class="line">                width: <span class="number">1</span>,</div><div class="line">                label: &#123;</div><div class="line">                    text: <span class="string">'理论模型: 932'</span>,</div><div class="line">                    align: <span class="string">'center'</span>,</div><div class="line">                    style: &#123;</div><div class="line">                        color: <span class="string">'gray'</span></div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;]</div><div class="line">        &#125;,</div><div class="line">        tooltip: &#123;</div><div class="line">            pointFormat: <span class="string">'&lt;span style="color:&#123;point.color&#125;"&gt;\u25CF&lt;/span&gt; &lt;b&gt; &#123;series.name&#125;&lt;/b&gt;&lt;br/&gt;'</span> + <span class="comment">// eslint-disable-line no-dupe-keys</span></div><div class="line">            <span class="string">'最大值: &#123;point.high&#125;&lt;br/&gt;'</span> +</div><div class="line">            <span class="string">'Q2\t: &#123;point.q3&#125;&lt;br/&gt;'</span> +</div><div class="line">            <span class="string">'中位数: &#123;point.median&#125;&lt;br/&gt;'</span> +</div><div class="line">            <span class="string">'Q1\t: &#123;point.q1&#125;&lt;br/&gt;'</span> +</div><div class="line">            <span class="string">'最小值: &#123;point.low&#125;&lt;br/&gt;'</span></div><div class="line">        &#125;,</div><div class="line">        series: [&#123;</div><div class="line">            name: <span class="string">'观测值'</span>,</div><div class="line">            data: [</div><div class="line">                [<span class="number">760</span>, <span class="number">801</span>, <span class="number">848</span>, <span class="number">895</span>, <span class="number">965</span>],</div><div class="line">                [<span class="number">733</span>, <span class="number">853</span>, <span class="number">939</span>, <span class="number">980</span>, <span class="number">1080</span>],</div><div class="line">                [<span class="number">714</span>, <span class="number">762</span>, <span class="number">817</span>, <span class="number">870</span>, <span class="number">918</span>],</div><div class="line">                [<span class="number">724</span>, <span class="number">802</span>, <span class="number">806</span>, <span class="number">871</span>, <span class="number">950</span>],</div><div class="line">                [<span class="number">834</span>, <span class="number">836</span>, <span class="number">864</span>, <span class="number">882</span>, <span class="number">910</span>]</div><div class="line">            ],</div><div class="line">            tooltip: &#123;</div><div class="line">                headerFormat: <span class="string">'&lt;em&gt;实验号码： &#123;point.key&#125;&lt;/em&gt;&lt;br/&gt;'</span></div><div class="line">            &#125;</div><div class="line">        &#125;, &#123;</div><div class="line">            name: <span class="string">'异常值'</span>,</div><div class="line">            color: Highcharts.getOptions().colors[<span class="number">0</span>],</div><div class="line">            type: <span class="string">'scatter'</span>,</div><div class="line">            data: [ <span class="comment">// x, y positions where 0 is the first category</span></div><div class="line">                [<span class="number">0</span>, <span class="number">644</span>],</div><div class="line">                [<span class="number">4</span>, <span class="number">718</span>],</div><div class="line">                [<span class="number">4</span>, <span class="number">951</span>],</div><div class="line">                [<span class="number">4</span>, <span class="number">969</span>]</div><div class="line">            ],</div><div class="line">            marker: &#123;</div><div class="line">                fillColor: <span class="string">'white'</span>,</div><div class="line">                lineWidth: <span class="number">1</span>,</div><div class="line">                lineColor: Highcharts.getOptions().colors[<span class="number">0</span>]</div><div class="line">            &#125;,</div><div class="line">            tooltip: &#123;</div><div class="line">                pointFormat: <span class="string">'Observation: &#123;point.y&#125;'</span></div><div class="line">            &#125;</div><div class="line">        &#125;]</div><div class="line">    &#125;);</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>html&gt;</div></pre></td></tr></table></figure>
+<h3 id="气泡图-bubble-："><a href="#气泡图-bubble-：" class="headerlink" title="气泡图 - (bubble)："></a>气泡图 - (bubble)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;气泡图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        width: <span class="number">1200</span>px;</div><div class="line">        height: <span class="number">600</span>px;</div><div class="line">        margin:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script src="</span>https:<span class="comment">//img.hcharts.cn/highcharts/highcharts-more.js"&gt;&lt;/script&gt;</span></div><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> charts =<span class="keyword">new</span> Highcharts.Chart(<span class="string">'container'</span>,&#123;</div><div class="line">        chart: &#123;</div><div class="line">            type: <span class="string">'bubble'</span>,</div><div class="line">            zoomType: <span class="string">'xy'</span></div><div class="line">        &#125;,</div><div class="line">        title: &#123;</div><div class="line">            text: <span class="string">'Highcharts 气泡图'</span></div><div class="line">        &#125;,</div><div class="line">        series: [&#123;</div><div class="line">            name:<span class="string">'数据列 1'</span>,</div><div class="line">            <span class="comment">// 每个气泡包含三个值，x，y，z；其中 x，y用于定位，z 用于计算气泡大小</span></div><div class="line">            data: [[<span class="number">97</span>, <span class="number">36</span>, <span class="number">79</span>], [<span class="number">94</span>, <span class="number">74</span>, <span class="number">60</span>], [<span class="number">68</span>, <span class="number">76</span>, <span class="number">58</span>], [<span class="number">64</span>, <span class="number">87</span>, <span class="number">56</span>], [<span class="number">68</span>, <span class="number">27</span>, <span class="number">73</span>], [<span class="number">74</span>, <span class="number">99</span>, <span class="number">42</span>], [<span class="number">7</span>, <span class="number">93</span>, <span class="number">87</span>], [<span class="number">51</span>, <span class="number">69</span>, <span class="number">40</span>], [<span class="number">38</span>, <span class="number">23</span>, <span class="number">33</span>], [<span class="number">57</span>, <span class="number">86</span>, <span class="number">31</span>]]</div><div class="line">        &#125;, &#123;</div><div class="line">            name:<span class="string">'数据列 2'</span>,</div><div class="line">            data: [[<span class="number">25</span>, <span class="number">10</span>, <span class="number">87</span>], [<span class="number">2</span>, <span class="number">75</span>, <span class="number">59</span>], [<span class="number">11</span>, <span class="number">54</span>, <span class="number">8</span>], [<span class="number">86</span>, <span class="number">55</span>, <span class="number">93</span>], [<span class="number">5</span>, <span class="number">3</span>, <span class="number">58</span>], [<span class="number">90</span>, <span class="number">63</span>, <span class="number">44</span>], [<span class="number">91</span>, <span class="number">33</span>, <span class="number">17</span>], [<span class="number">97</span>, <span class="number">3</span>, <span class="number">56</span>], [<span class="number">15</span>, <span class="number">67</span>, <span class="number">48</span>], [<span class="number">54</span>, <span class="number">25</span>, <span class="number">81</span>]]</div><div class="line">        &#125;, &#123;</div><div class="line">            name:<span class="string">'数据列 3'</span>,</div><div class="line">            data: [[<span class="number">47</span>, <span class="number">47</span>, <span class="number">21</span>], [<span class="number">20</span>, <span class="number">12</span>, <span class="number">4</span>], [<span class="number">6</span>, <span class="number">76</span>, <span class="number">91</span>], [<span class="number">38</span>, <span class="number">30</span>, <span class="number">60</span>], [<span class="number">57</span>, <span class="number">98</span>, <span class="number">64</span>], [<span class="number">61</span>, <span class="number">17</span>, <span class="number">80</span>], [<span class="number">83</span>, <span class="number">60</span>, <span class="number">13</span>], [<span class="number">67</span>, <span class="number">78</span>, <span class="number">75</span>], [<span class="number">64</span>, <span class="number">12</span>, <span class="number">10</span>], [<span class="number">30</span>, <span class="number">77</span>, <span class="number">82</span>]]</div><div class="line">        &#125;]</div><div class="line">    &#125;);</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>html&gt;</div></pre></td></tr></table></figure>
+<h3 id="误差线图-errorbar-："><a href="#误差线图-errorbar-：" class="headerlink" title="误差线图 - (errorbar)："></a>误差线图 - (errorbar)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;误差图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        width: <span class="number">1200</span>px;</div><div class="line">        height: <span class="number">600</span>px;</div><div class="line">        margin:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script src="</span>https:<span class="comment">//img.hcharts.cn/highcharts/highcharts-more.js"&gt;&lt;/script&gt;</span></div><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> charts =<span class="keyword">new</span> Highcharts.Chart(<span class="string">'container'</span>,&#123;</div><div class="line">        chart: &#123;</div><div class="line">            zoomType: <span class="string">'xy'</span></div><div class="line">        &#125;,</div><div class="line">        title: &#123;</div><div class="line">            text: <span class="string">'误差图'</span></div><div class="line">        &#125;,</div><div class="line">        xAxis: [&#123;</div><div class="line">            categories: [<span class="string">'一月'</span>, <span class="string">'二月'</span>, <span class="string">'三月'</span>, <span class="string">'四月'</span>, <span class="string">'五月'</span>, <span class="string">'六月'</span>, <span class="string">'七月'</span>, <span class="string">'八月'</span>, <span class="string">'九月'</span>, <span class="string">'十月'</span>, <span class="string">'十一月'</span>, <span class="string">'十二月'</span>]</div><div class="line">        &#125;],</div><div class="line">        yAxis: [&#123; <span class="comment">// Primary yAxis</span></div><div class="line">            labels: &#123;</div><div class="line">                format: <span class="string">'&#123;value&#125; °C'</span>,</div><div class="line">                style: &#123;</div><div class="line">                    color: Highcharts.getOptions().colors[<span class="number">1</span>]</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            title: &#123;</div><div class="line">                text: <span class="string">'温度'</span>,</div><div class="line">                style: &#123;</div><div class="line">                    color: Highcharts.getOptions().colors[<span class="number">1</span>]</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;, &#123; <span class="comment">// Secondary yAxis</span></div><div class="line">            title: &#123;</div><div class="line">                text: <span class="string">'降水'</span>,</div><div class="line">                style: &#123;</div><div class="line">                    color: Highcharts.getOptions().colors[<span class="number">0</span>]</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            labels: &#123;</div><div class="line">                format: <span class="string">'&#123;value&#125; mm'</span>,</div><div class="line">                style: &#123;</div><div class="line">                    color: Highcharts.getOptions().colors[<span class="number">0</span>]</div><div class="line">                &#125;</div><div class="line">            &#125;,</div><div class="line">            opposite: <span class="literal">true</span></div><div class="line">        &#125;],</div><div class="line">        tooltip: &#123;</div><div class="line">            shared: <span class="literal">true</span></div><div class="line">        &#125;,</div><div class="line">        series: [&#123;</div><div class="line">            name: <span class="string">'降水'</span>,</div><div class="line">            type: <span class="string">'column'</span>,</div><div class="line">            yAxis: <span class="number">1</span>,</div><div class="line">            data: [<span class="number">49.9</span>, <span class="number">71.5</span>, <span class="number">106.4</span>, <span class="number">129.2</span>, <span class="number">144.0</span>, <span class="number">176.0</span>, <span class="number">135.6</span>, <span class="number">148.5</span>, <span class="number">216.4</span>, <span class="number">194.1</span>, <span class="number">95.6</span>, <span class="number">54.4</span>],</div><div class="line">            tooltip: &#123;</div><div class="line">                pointFormat: <span class="string">'&lt;span style="font-weight: bold; color: &#123;series.color&#125;"&gt;&#123;series.name&#125;&lt;/span&gt;: &lt;b&gt;&#123;point.y:.1f&#125; mm&lt;/b&gt; '</span></div><div class="line">            &#125;</div><div class="line">        &#125;, &#123;</div><div class="line">            name: <span class="string">'降雨误差'</span>,</div><div class="line">            type: <span class="string">'errorbar'</span>,</div><div class="line">            yAxis: <span class="number">1</span>,</div><div class="line">            data: [[<span class="number">48</span>, <span class="number">51</span>], [<span class="number">68</span>, <span class="number">73</span>], [<span class="number">92</span>, <span class="number">110</span>], [<span class="number">128</span>, <span class="number">136</span>], [<span class="number">140</span>, <span class="number">150</span>], [<span class="number">171</span>, <span class="number">179</span>], [<span class="number">135</span>, <span class="number">143</span>], [<span class="number">142</span>, <span class="number">149</span>], [<span class="number">204</span>, <span class="number">220</span>], [<span class="number">189</span>, <span class="number">199</span>], [<span class="number">95</span>, <span class="number">110</span>], [<span class="number">52</span>, <span class="number">56</span>]],</div><div class="line">            tooltip: &#123;</div><div class="line">                pointFormat: <span class="string">'(误差范围: &#123;point.low&#125;-&#123;point.high&#125; mm)&lt;br/&gt;'</span></div><div class="line">            &#125;</div><div class="line">        &#125;, &#123;</div><div class="line">            name: <span class="string">'温度'</span>,</div><div class="line">            type: <span class="string">'spline'</span>,</div><div class="line">            data: [<span class="number">7.0</span>, <span class="number">6.9</span>, <span class="number">9.5</span>, <span class="number">14.5</span>, <span class="number">18.2</span>, <span class="number">21.5</span>, <span class="number">25.2</span>, <span class="number">26.5</span>, <span class="number">23.3</span>, <span class="number">18.3</span>, <span class="number">13.9</span>, <span class="number">9.6</span>],</div><div class="line">            tooltip: &#123;</div><div class="line">                pointFormat: <span class="string">'&lt;span style="font-weight: bold; color: &#123;series.color&#125;"&gt;&#123;series.name&#125;&lt;/span&gt;: &lt;b&gt;&#123;point.y:.1f&#125;°C&lt;/b&gt; '</span></div><div class="line">            &#125;</div><div class="line">        &#125;, &#123;</div><div class="line">            name: <span class="string">'温度误差'</span>,</div><div class="line">            type: <span class="string">'errorbar'</span>,</div><div class="line">            data: [[<span class="number">6</span>, <span class="number">8</span>], [<span class="number">5.9</span>, <span class="number">7.6</span>], [<span class="number">9.4</span>, <span class="number">10.4</span>], [<span class="number">14.1</span>, <span class="number">15.9</span>], [<span class="number">18.0</span>, <span class="number">20.1</span>], [<span class="number">21.0</span>, <span class="number">24.0</span>], [<span class="number">23.2</span>, <span class="number">25.3</span>], [<span class="number">26.1</span>, <span class="number">27.8</span>], [<span class="number">23.2</span>, <span class="number">23.9</span>], [<span class="number">18.0</span>, <span class="number">21.1</span>], [<span class="number">12.9</span>, <span class="number">14.0</span>], [<span class="number">7.6</span>, <span class="number">10.0</span>]],</div><div class="line">            tooltip: &#123;</div><div class="line">                pointFormat: <span class="string">'(误差范围: &#123;point.low&#125;-&#123;point.high&#125;°C)&lt;br/&gt;'</span></div><div class="line">            &#125;</div><div class="line">        &#125;]</div><div class="line"></div><div class="line"></div><div class="line">    &#125;);</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>html&gt;</div></pre></td></tr></table></figure>
+<h3 id="漏斗图-funnel-："><a href="#漏斗图-funnel-：" class="headerlink" title="漏斗图 - (funnel)："></a>漏斗图 - (funnel)：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;漏斗图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        width: <span class="number">1000</span>px;</div><div class="line">        height: <span class="number">600</span>px;</div><div class="line">        margin:<span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script src="</span>https:<span class="comment">//img.hcharts.cn/highcharts/modules/funnel.js"&gt;&lt;/script&gt;</span></div><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> charts =<span class="keyword">new</span> Highcharts.Chart(<span class="string">'container'</span>,&#123;</div><div class="line">        chart: &#123;</div><div class="line">            type: <span class="string">'funnel'</span>,</div><div class="line">            marginRight: <span class="number">100</span></div><div class="line">        &#125;,</div><div class="line">        title: &#123;</div><div class="line">            text: <span class="string">'销售漏斗'</span>,</div><div class="line">            x: <span class="number">-50</span></div><div class="line">        &#125;,</div><div class="line">        plotOptions: &#123;</div><div class="line">            series: &#123;</div><div class="line">                dataLabels: &#123;</div><div class="line">                    enabled: <span class="literal">true</span>,</div><div class="line">                    format: <span class="string">'&lt;b&gt;&#123;point.name&#125;&lt;/b&gt; (&#123;point.y:,.0f&#125;)'</span>,</div><div class="line">                    color: <span class="string">'black'</span>,</div><div class="line">                    softConnector: <span class="literal">true</span></div><div class="line">                &#125;,</div><div class="line">                neckWidth: <span class="string">'30%'</span>,</div><div class="line">                neckHeight: <span class="string">'25%'</span></div><div class="line">                <span class="comment">//-- Other available options</span></div><div class="line">                <span class="comment">// height: pixels or percent</span></div><div class="line">                <span class="comment">// width: pixels or percent</span></div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        legend: &#123;</div><div class="line">            enabled: <span class="literal">false</span></div><div class="line">        &#125;,</div><div class="line">        series: [&#123;</div><div class="line">            name: <span class="string">'用户'</span>,</div><div class="line">            data: [</div><div class="line">                [<span class="string">'访问网站'</span>,   <span class="number">15654</span>],</div><div class="line">                [<span class="string">'下载产品'</span>,       <span class="number">4064</span>],</div><div class="line">                [<span class="string">'询价'</span>, <span class="number">1987</span>],</div><div class="line">                [<span class="string">'发送合同'</span>,    <span class="number">976</span>],</div><div class="line">                [<span class="string">'成交'</span>,    <span class="number">846</span>]</div><div class="line">            ]</div><div class="line">        &#125;]</div><div class="line">    &#125;);</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>html&gt;</div></pre></td></tr></table></figure>
+<h3 id="蜘蛛图："><a href="#蜘蛛图：" class="headerlink" title="蜘蛛图："></a>蜘蛛图：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;蜘蛛图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        min-width: <span class="number">400</span>px;</div><div class="line">        max-width: <span class="number">600</span>px;</div><div class="line">        height: <span class="number">400</span>px;</div><div class="line">        margin: <span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script src="</span>https:<span class="comment">//img.hcharts.cn/highcharts/highcharts-more.js"&gt;&lt;/script&gt;</span></div><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> charts =<span class="keyword">new</span> Highcharts.Chart(<span class="string">'container'</span>,&#123;</div><div class="line">        chart: &#123;</div><div class="line">            polar: <span class="literal">true</span>,</div><div class="line">            type: <span class="string">'line'</span></div><div class="line">        &#125;,</div><div class="line">        title: &#123;</div><div class="line">            text: <span class="string">'预算与支出'</span>,</div><div class="line">            x: <span class="number">-80</span></div><div class="line">        &#125;,</div><div class="line">        pane: &#123;</div><div class="line">            size: <span class="string">'80%'</span></div><div class="line">        &#125;,</div><div class="line">        xAxis: &#123;</div><div class="line">            categories: [<span class="string">'销售'</span>, <span class="string">'市场营销'</span>, <span class="string">'发展'</span>, <span class="string">'客户支持'</span>,</div><div class="line">                <span class="string">'信息技术'</span>, <span class="string">'行政管理'</span>],</div><div class="line">            tickmarkPlacement: <span class="string">'on'</span>,</div><div class="line">            lineWidth: <span class="number">0</span></div><div class="line">        &#125;,</div><div class="line">        yAxis: &#123;</div><div class="line">            gridLineInterpolation: <span class="string">'polygon'</span>,</div><div class="line">            lineWidth: <span class="number">0</span>,</div><div class="line">            min: <span class="number">0</span></div><div class="line">        &#125;,</div><div class="line">        tooltip: &#123;</div><div class="line">            shared: <span class="literal">true</span>,</div><div class="line">            pointFormat: <span class="string">'&lt;span style="color:&#123;series.color&#125;"&gt;&#123;series.name&#125;: &lt;b&gt;$&#123;point.y:,.0f&#125;&lt;/b&gt;&lt;br/&gt;'</span></div><div class="line">        &#125;,</div><div class="line">        legend: &#123;</div><div class="line">            align: <span class="string">'right'</span>,</div><div class="line">            verticalAlign: <span class="string">'top'</span>,</div><div class="line">            y: <span class="number">70</span>,</div><div class="line">            layout: <span class="string">'vertical'</span></div><div class="line">        &#125;,</div><div class="line">        series: [&#123;</div><div class="line">            name: <span class="string">'预算拨款'</span>,</div><div class="line">            data: [<span class="number">43000</span>, <span class="number">19000</span>, <span class="number">60000</span>, <span class="number">35000</span>, <span class="number">17000</span>, <span class="number">10000</span>],</div><div class="line">            pointPlacement: <span class="string">'on'</span></div><div class="line">        &#125;, &#123;</div><div class="line">            name: <span class="string">'实际支出'</span>,</div><div class="line">            data: [<span class="number">50000</span>, <span class="number">39000</span>, <span class="number">42000</span>, <span class="number">31000</span>, <span class="number">26000</span>, <span class="number">14000</span>],</div><div class="line">            pointPlacement: <span class="string">'on'</span></div><div class="line">        &#125;]</div><div class="line">    &#125;);</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>html&gt;</div></pre></td></tr></table></figure>
+<h3 id="极地图："><a href="#极地图：" class="headerlink" title="极地图："></a>极地图：</h3><p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=<span class="string">"en"</span>&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</div><div class="line">    &lt;title&gt;极地图&lt;<span class="regexp">/title&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;style&gt;</div><div class="line">    #container&#123;</div><div class="line">        min-width: <span class="number">400</span>px;</div><div class="line">        max-width: <span class="number">600</span>px;</div><div class="line">        height: <span class="number">400</span>px;</div><div class="line">        margin: <span class="number">0</span> auto;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&lt;<span class="regexp">/style&gt;</span></div><div class="line"><span class="regexp">&lt;body&gt;</span></div><div class="line"><span class="regexp">&lt;div id="container"&gt;&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script src="http:/</span><span class="regexp">/cdn.hcharts.cn/</span>highcharts/highcharts.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script src="</span>https:<span class="comment">//img.hcharts.cn/highcharts/highcharts-more.js"&gt;&lt;/script&gt;</span></div><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> charts =<span class="keyword">new</span> Highcharts.Chart(<span class="string">'container'</span>,&#123;</div><div class="line">        chart: &#123;</div><div class="line">            polar: <span class="literal">true</span></div><div class="line">        &#125;,</div><div class="line">        title: &#123;</div><div class="line">            text: <span class="string">'极地图'</span></div><div class="line">        &#125;,</div><div class="line">        pane: &#123;</div><div class="line">            startAngle: <span class="number">0</span>,</div><div class="line">            endAngle: <span class="number">360</span></div><div class="line">        &#125;,</div><div class="line">        xAxis: &#123;</div><div class="line">            tickInterval: <span class="number">45</span>,</div><div class="line">            min: <span class="number">0</span>,</div><div class="line">            max: <span class="number">360</span>,</div><div class="line">            labels: &#123;</div><div class="line">                formatter: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">                    <span class="keyword">return</span> <span class="keyword">this</span>.value + <span class="string">'°'</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        yAxis: &#123;</div><div class="line">            min: <span class="number">0</span></div><div class="line">        &#125;,</div><div class="line">        plotOptions: &#123;</div><div class="line">            series: &#123;</div><div class="line">                pointStart: <span class="number">0</span>,</div><div class="line">                pointInterval: <span class="number">45</span></div><div class="line">            &#125;,</div><div class="line">            column: &#123;</div><div class="line">                pointPadding: <span class="number">0</span>,</div><div class="line">                groupPadding: <span class="number">0</span></div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        series: [&#123;</div><div class="line">            type: <span class="string">'column'</span>,</div><div class="line">            name: <span class="string">'柱形'</span>,</div><div class="line">            data: [<span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>],</div><div class="line">            pointPlacement: <span class="string">'between'</span></div><div class="line">        &#125;, &#123;</div><div class="line">            type: <span class="string">'line'</span>,</div><div class="line">            name: <span class="string">'线'</span>,</div><div class="line">            data: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]</div><div class="line">        &#125;, &#123;</div><div class="line">            type: <span class="string">'area'</span>,</div><div class="line">            name: <span class="string">'面积'</span>,</div><div class="line">            data: [<span class="number">1</span>, <span class="number">8</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">4</span>, <span class="number">5</span>]</div><div class="line">        &#125;]</div><div class="line">    &#125;);</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>html&gt;</div></pre></td></tr></table></figure>
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><ul>
+<li><a href="https://www.highcharts.com" target="_blank" rel="external">HighCharts官网</a></li>
+<li><a href="https://www.hcharts.cn" target="_blank" rel="external">HighCharts中文网</a></li>
+<li><a href="https://bbs.hcharts.cn/forum.php" target="_blank" rel="external">HighCharts中文社区</a></li>
+<li><a href="http://api.highcharts.com/highcharts/" target="_blank" rel="external">HighCharts官网API</a></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HighCharts/" rel="tag"># HighCharts</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/23/webpack-note/" rel="next" title="『构建工具-Webpack』相关内容整理">
+                <i class="fa fa-chevron-left"></i> 『构建工具-Webpack』相关内容整理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/10/springboot-quickstart/" rel="prev" title="Spring Boot - explain & QuickStart">
+                Spring Boot - explain & QuickStart <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDgwNi83MzU4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460"
+               alt="柒索" />
+          <p class="site-author-name" itemprop="name">柒索</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ZhangYangDev" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="" title="Blog" target="_blank">Blog</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HighCharts概述："><span class="nav-number">1.</span> <span class="nav-text">HighCharts概述：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HighCharts特点："><span class="nav-number">2.</span> <span class="nav-text">HighCharts特点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HighCharts构成："><span class="nav-number">3.</span> <span class="nav-text">HighCharts构成：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#界面构成："><span class="nav-number">3.1.</span> <span class="nav-text">界面构成：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码构成："><span class="nav-number">3.2.</span> <span class="nav-text">代码构成：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HighCharts配置："><span class="nav-number">4.</span> <span class="nav-text">HighCharts配置：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HighCharts常用配置项"><span class="nav-number">4.1.</span> <span class="nav-text">HighCharts常用配置项:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HighCharts图表容器配置："><span class="nav-number">4.2.</span> <span class="nav-text">HighCharts图表容器配置：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、通过-dom-调用-highcharts-函数的方式"><span class="nav-number">4.2.1.</span> <span class="nav-text">1、通过 dom 调用 highcharts() 函数的方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、通过-chart-renderTo-来指定"><span class="nav-number">4.2.2.</span> <span class="nav-text">2、通过 chart.renderTo 来指定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、通过构造函数"><span class="nav-number">4.2.3.</span> <span class="nav-text">3、通过构造函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Highcharts图表样式配置："><span class="nav-number">4.3.</span> <span class="nav-text">Highcharts图表样式配置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HIghcharts图表绘图配置："><span class="nav-number">4.4.</span> <span class="nav-text">HIghcharts图表绘图配置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Highcharts图表常用事件："><span class="nav-number">4.5.</span> <span class="nav-text">Highcharts图表常用事件：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Highcharts图表："><span class="nav-number">5.</span> <span class="nav-text">Highcharts图表：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直线图-line-："><span class="nav-number">5.1.</span> <span class="nav-text">直线图 - (line)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#曲线图-spline-："><span class="nav-number">5.2.</span> <span class="nav-text">曲线图 - (spline)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面积图-area-："><span class="nav-number">5.3.</span> <span class="nav-text">面积图 - (area)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#曲线面积图-areaspline-："><span class="nav-number">5.4.</span> <span class="nav-text">曲线面积图 - (areaspline)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#柱状图-column-："><span class="nav-number">5.5.</span> <span class="nav-text">柱状图 - (column)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条形图-bar-："><span class="nav-number">5.6.</span> <span class="nav-text">条形图 - (bar)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#饼图-pie-："><span class="nav-number">5.7.</span> <span class="nav-text">饼图 - (pie)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#散点图-scatter-："><span class="nav-number">5.8.</span> <span class="nav-text">散点图 - (scatter)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#箱线图-boxplot-："><span class="nav-number">5.9.</span> <span class="nav-text">箱线图 - (boxplot)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#气泡图-bubble-："><span class="nav-number">5.10.</span> <span class="nav-text">气泡图 - (bubble)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#误差线图-errorbar-："><span class="nav-number">5.11.</span> <span class="nav-text">误差线图 - (errorbar)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#漏斗图-funnel-："><span class="nav-number">5.12.</span> <span class="nav-text">漏斗图 - (funnel)：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#蜘蛛图："><span class="nav-number">5.13.</span> <span class="nav-text">蜘蛛图：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#极地图："><span class="nav-number">5.14.</span> <span class="nav-text">极地图：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料："><span class="nav-number">6.</span> <span class="nav-text">参考资料：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">柒索</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
