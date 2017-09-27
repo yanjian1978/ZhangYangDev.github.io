@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[『JVM语言 - Groovy』基础(三)]]></title>
     <url>%2F2017%2F09%2F26%2Fgroovy-basic-3%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[Groovy - 方法：Groovy中的方法是使用返回类型或使用def关键字定义的。方法可以接收任意数量的参数。定义参数时，不必显式定义类型。可以添加修饰符，如public，private和protected。默认情况下，如果未提供可见性修饰符，则该方法为public。 最简单的方法是没有参数的方法，如下所示： 123def methodName() &#123; //Method code &#125; Groovy - I/O:Groovy - 日期和时间：Groovy - 正则表达式：Groovy - 异常处理：]]></content>
       <categories>
         <category>Groovy</category>
       </categories>
