@@ -958,7 +958,7 @@ pre .javascript .function {
 }
 .header {
 /*background: url('../../../../images/header.jpg');*/
-  background: url("https://helpx.adobe.com/lightroom/how-to/setup-computer-mobile-devices/_jcr_content/main-pars/image_1175612581.img.jpg/setup-computer-mobile-devices_1408x792.jpg");
+  background: url("../images/header.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
@@ -1689,7 +1689,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffbda4;
+  background: #8ed4ff;
 }
 .links-of-blogroll {
   font-size: 13px;
