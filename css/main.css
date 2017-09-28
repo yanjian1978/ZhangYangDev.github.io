@@ -957,10 +957,12 @@ pre .javascript .function {
   bottom: 19px;
 }
 .header {
-  background: url("../image/header.jpg");
+/*background: url('../../../../images/header.jpg');*/
+  background: url("https://helpx.adobe.com/lightroom/how-to/setup-computer-mobile-devices/_jcr_content/main-pars/image_1175612581.img.jpg/setup-computer-mobile-devices_1408x792.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
+  background-size: 100% 100%;
 }
 .header-inner {
   position: relative;
@@ -1687,7 +1689,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #83ff59;
+  background: #ffbda4;
 }
 .links-of-blogroll {
   font-size: 13px;
