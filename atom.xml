@@ -35,11 +35,11 @@
       <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
     
       <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -62,11 +62,11 @@
       <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
     
       <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -89,11 +89,11 @@
       <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
     
       <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -116,11 +116,11 @@
       <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
     
       <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -169,9 +169,9 @@
       <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
     
     
-      <category term="Gradle" scheme="http://yoursite.com/tags/Gradle/"/>
-    
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Gradle" scheme="http://yoursite.com/tags/Gradle/"/>
     
   </entry>
   
