@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-30T15:52:12.000Z</updated>
+  <updated>2017-10-01T15:59:36.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『JVM语言 - Groovy』基础(四)</title>
+    <link href="http://yoursite.com/2017/10/01/groovy-basic-4/"/>
+    <id>http://yoursite.com/2017/10/01/groovy-basic-4/</id>
+    <published>2017-10-01T15:28:15.000Z</published>
+    <updated>2017-10-01T15:59:36.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;List&quot;&gt;&lt;a href=&quot;#List&quot; class=&quot;headerlink&quot; title=&quot;List:&quot;&gt;&lt;/a&gt;List:&lt;/h2&gt;&lt;p&gt;列表是用于存储数据项集合的结构。在Groovy中，List保存了一系列对象引用。List中的对象引用占据序列中的位置，并
+      
+    
+    </summary>
+    
+      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
+    
+      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
+    
+  </entry>
   
   <entry>
     <title>『JVM语言 - Groovy』基础(三)</title>
@@ -35,11 +62,11 @@
       <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
     
     
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
       <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
     
       <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -62,11 +89,11 @@
       <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
     
     
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
       <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
     
       <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -89,11 +116,11 @@
       <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
     
     
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
       <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
     
       <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -116,11 +143,11 @@
       <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
     
     
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
       <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
     
       <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -169,9 +196,9 @@
       <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="Gradle" scheme="http://yoursite.com/tags/Gradle/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   

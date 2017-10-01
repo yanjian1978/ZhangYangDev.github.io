@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/10/01/groovy-basic-4/</loc>
+    
+    <lastmod>2017-10-01T15:59:36.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/09/26/groovy-basic-3/</loc>
     
     <lastmod>2017-09-30T15:52:12.000Z</lastmod>
@@ -23,7 +30,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://yoursite.com/2017/05/09/npm-note/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
@@ -37,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/09/15/groovy-introduction/</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/06/23/lombok-note-md/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
@@ -51,14 +51,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/07/04/maven-note/</loc>
+    <loc>http://yoursite.com/2017/09/15/groovy-introduction/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/08/05/hightcharts-note/</loc>
+    <loc>http://yoursite.com/2017/09/10/nowsh-note/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
@@ -72,7 +72,28 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/05/09/npm-note/</loc>
+    <loc>http://yoursite.com/2017/08/22/springboot-actuator/</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/08/05/hightcharts-note/</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/07/23/webpack-note/</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/07/04/maven-note/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
@@ -86,21 +107,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/08/22/springboot-actuator/</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/08/10/springboot-quickstart/</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/07/23/webpack-note/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
@@ -121,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/09/10/nowsh-note/</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
