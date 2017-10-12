@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-10T16:15:13.000Z</updated>
+  <updated>2017-10-11T06:10:10.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>『JVM语言 - Groovy』基础(六)</title>
+    <link href="http://yoursite.com/2017/10/11/groovy-basic-6/"/>
+    <id>http://yoursite.com/2017/10/11/groovy-basic-6/</id>
+    <published>2017-10-11T01:35:20.000Z</published>
+    <updated>2017-10-11T06:10:10.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;h2 id=&quot;Groovy&quot;&gt;&lt;a href=&quot;#Groovy&quot; class=&quot;headerlink&quot; title=&quot;Groovy -&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
+    
+      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
+    
+  </entry>
   
   <entry>
     <title>『JVM语言 - Groovy』基础(五)</title>
