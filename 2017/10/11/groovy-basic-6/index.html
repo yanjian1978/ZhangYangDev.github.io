@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="前言Groovy - XMLGroovy语言还提供了对XML语言的丰富支持。使用的两个最基本的XML类是 BuilderSupport和XmlParser，前者用来构建，后者解析。 生成XML:语法：1public MarkupBuilder() MarkupBuilder的用于构造整个XML文档。首先通过创建XML文档的对象来创建XML文档。一旦创建了对象，可以调用伪方法来创建XML文档的各种元">
+<meta name="description" content="前言Groovy - XMLGroovy语言还提供了对XML语言的丰富支持。使用的两个最基本的XML类是 BuilderSupport和XmlParser，前者用来构建，后者解析。 生成XML:MarkupBuilder的用于构造整个XML文档。首先通过创建XML文档的对象来创建XML文档。一旦创建了对象，可以调用伪方法来创建XML文档的各种元素。 示例代码： 12345678910import">
 <meta name="keywords" content="Java,Groovy,JVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『JVM语言 - Groovy』基础(六)">
 <meta property="og:url" content="http://yoursite.com/2017/10/11/groovy-basic-6/index.html">
 <meta property="og:site_name" content="柒索">
-<meta property="og:description" content="前言Groovy - XMLGroovy语言还提供了对XML语言的丰富支持。使用的两个最基本的XML类是 BuilderSupport和XmlParser，前者用来构建，后者解析。 生成XML:语法：1public MarkupBuilder() MarkupBuilder的用于构造整个XML文档。首先通过创建XML文档的对象来创建XML文档。一旦创建了对象，可以调用伪方法来创建XML文档的各种元">
+<meta property="og:description" content="前言Groovy - XMLGroovy语言还提供了对XML语言的丰富支持。使用的两个最基本的XML类是 BuilderSupport和XmlParser，前者用来构建，后者解析。 生成XML:MarkupBuilder的用于构造整个XML文档。首先通过创建XML文档的对象来创建XML文档。一旦创建了对象，可以调用伪方法来创建XML文档的各种元素。 示例代码： 12345678910import">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-13T12:51:28.000Z">
+<meta property="og:updated_time" content="2017-10-14T15:51:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="『JVM语言 - Groovy』基础(六)">
-<meta name="twitter:description" content="前言Groovy - XMLGroovy语言还提供了对XML语言的丰富支持。使用的两个最基本的XML类是 BuilderSupport和XmlParser，前者用来构建，后者解析。 生成XML:语法：1public MarkupBuilder() MarkupBuilder的用于构造整个XML文档。首先通过创建XML文档的对象来创建XML文档。一旦创建了对象，可以调用伪方法来创建XML文档的各种元">
+<meta name="twitter:description" content="前言Groovy - XMLGroovy语言还提供了对XML语言的丰富支持。使用的两个最基本的XML类是 BuilderSupport和XmlParser，前者用来构建，后者解析。 生成XML:MarkupBuilder的用于构造整个XML文档。首先通过创建XML文档的对象来创建XML文档。一旦创建了对象，可以调用伪方法来创建XML文档的各种元素。 示例代码： 12345678910import">
 
 
 
@@ -407,19 +407,20 @@
 
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="Groovy-XML"><a href="#Groovy-XML" class="headerlink" title="Groovy - XML"></a>Groovy - XML</h2><p>Groovy语言还提供了对XML语言的丰富支持。使用的两个最基本的XML类是 BuilderSupport和XmlParser，前者用来构建，后者解析。</p>
-<h3 id="生成XML"><a href="#生成XML" class="headerlink" title="生成XML:"></a>生成XML:</h3><h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> MarkupBuilder()</div></pre></td></tr></table></figure>
-<p>MarkupBuilder的用于构造整个XML文档。首先通过创建XML文档的对象来创建XML文档。一旦创建了对象，可以调用伪方法来创建XML文档的各种元素。</p>
+<h3 id="生成XML"><a href="#生成XML" class="headerlink" title="生成XML:"></a>生成XML:</h3><p>MarkupBuilder的用于构造整个XML文档。首先通过创建XML文档的对象来创建XML文档。一旦创建了对象，可以调用伪方法来创建XML文档的各种元素。</p>
 <p>示例代码：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> groovy.xml.MarkupBuilder</div><div class="line">    <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) &#123;</div><div class="line">        <span class="keyword">def</span> ele = <span class="keyword">new</span> MarkupBuilder()</div><div class="line">        ele.collection(<span class="string">root :</span> <span class="string">'root'</span>) &#123;</div><div class="line">            ID(<span class="number">1</span>)</div><div class="line">            Name(<span class="string">'ShenZhen'</span>)</div><div class="line">            CountryCode(<span class="string">'CHN'</span>)</div><div class="line">            District(<span class="string">'NanShan'</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>在上面的例子中，需要注意以下几点：</p>
 <ul>
-<li><strong>mB.collection（）</strong> - 这是一个标记生成器，用于创建<collection> &lt;/ collection&gt;的头XML标签</collection></li>
-<li><strong>电影（标题：’Enemy Behind’）</strong> -这些伪方法使用此方法创建带有值的标记的子标记。通过指定一个名为标题的值，这实际上表示需要为该元素创建一个属性。</li>
+<li>ele.collection() - 这是一个标记生成器，用于创建<collection> &lt;/ collection&gt;的头XML标签</collection></li>
+<li><strong>电影（标题：’Enemy Behind’）</strong> -这些伪方法使用此方法创建带有值的标记的子标记。通过指定一个名为标题的值，这实际上表示需要为该元素创建一个属性。<ul>
 <li>向伪方法提供闭包以创建XML文档的剩余元素。</li>
+</ul>
+</li>
 <li>初始化类的MarkupBuilder的默认构造函数，以便将生成的XML发布到标准输出流</li>
 </ul>
 <p>当我们运行上面的程序，我们将得到以下结果 -</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;collection shelf = &apos;New Arrivals&apos;&gt; </div><div class="line">   &lt;movie title = &apos;Enemy Behind&apos; /&gt; </div><div class="line">      &lt;type&gt;War, Thriller&lt;/type&gt; </div><div class="line">      &lt;format&gt;DVD&lt;/format&gt; </div><div class="line">      &lt;year&gt;2003&lt;/year&gt; </div><div class="line">      &lt;rating&gt;PG&lt;/rating&gt; </div><div class="line">      &lt;stars&gt;10&lt;/stars&gt; </div><div class="line">      &lt;description&gt;Talk about a US-Japan war&lt;/description&gt; </div><div class="line">   &lt;/movie&gt; </div><div class="line">&lt;/collection&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">collection</span> <span class="attr">root</span>=<span class="string">'root'</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ID</span>&gt;</span>1<span class="tag">&lt;/<span class="name">ID</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">Name</span>&gt;</span>ShenZhen<span class="tag">&lt;/<span class="name">Name</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">CountryCode</span>&gt;</span>CHN<span class="tag">&lt;/<span class="name">CountryCode</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">District</span>&gt;</span>NanShan<span class="tag">&lt;/<span class="name">District</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">collection</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>为了创建整个XML文档，需要执行以下操作。</p>
 <ul>
 <li>需要创建映射条目以存储元素的不同值。</li>
@@ -445,7 +446,8 @@
 <li>对于每个电影元素，我们使用闭包浏览每个子节点并显示相关信息。</li>
 </ul>
 <p>对于电影元素本身，我们使用@符号显示附加到电影元素的标题属性。</p>
-<h2 id="Groovy-JSON"><a href="#Groovy-JSON" class="headerlink" title="Groovy - JSON"></a>Groovy - JSON</h2><h2 id="Groovy-DSLS"><a href="#Groovy-DSLS" class="headerlink" title="Groovy - DSLS"></a>Groovy - DSLS</h2><h2 id="Groovy-Database"><a href="#Groovy-Database" class="headerlink" title="Groovy - Database"></a>Groovy - Database</h2><h2 id="Groovy-CLI"><a href="#Groovy-CLI" class="headerlink" title="Groovy - CLI"></a>Groovy - CLI</h2><h2 id="Groocy-Unit-Testing"><a href="#Groocy-Unit-Testing" class="headerlink" title="Groocy - Unit Testing"></a>Groocy - Unit Testing</h2><h2 id="Groovy-Template-Engines"><a href="#Groovy-Template-Engines" class="headerlink" title="Groovy - Template Engines"></a>Groovy - Template Engines</h2>
+<p>## </p>
+
       
     </div>
 
@@ -668,7 +670,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Groovy-XML"><span class="nav-number">2.</span> <span class="nav-text">Groovy - XML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成XML"><span class="nav-number">2.1.</span> <span class="nav-text">生成XML:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#语法："><span class="nav-number">2.1.1.</span> <span class="nav-text">语法：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析XML"><span class="nav-number">2.2.</span> <span class="nav-text">解析XML:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#句法"><span class="nav-number">2.2.1.</span> <span class="nav-text">句法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Groovy-JSON"><span class="nav-number">3.</span> <span class="nav-text">Groovy - JSON</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Groovy-DSLS"><span class="nav-number">4.</span> <span class="nav-text">Groovy - DSLS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Groovy-Database"><span class="nav-number">5.</span> <span class="nav-text">Groovy - Database</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Groovy-CLI"><span class="nav-number">6.</span> <span class="nav-text">Groovy - CLI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Groocy-Unit-Testing"><span class="nav-number">7.</span> <span class="nav-text">Groocy - Unit Testing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Groovy-Template-Engines"><span class="nav-number">8.</span> <span class="nav-text">Groovy - Template Engines</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Groovy-XML"><span class="nav-number">2.</span> <span class="nav-text">Groovy - XML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成XML"><span class="nav-number">2.1.</span> <span class="nav-text">生成XML:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析XML"><span class="nav-number">2.2.</span> <span class="nav-text">解析XML:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#句法"><span class="nav-number">2.2.1.</span> <span class="nav-text">句法</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
