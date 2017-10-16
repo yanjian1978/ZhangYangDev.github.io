@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="前言：本文讲解了 Groovy 语言中的面向对象，特征，闭包，注解等内容， Groovy - 面向对象(Object Oriented)在Groovy中，如在任何其他面向对象语言中一样，存在类和对象的概念以表示编程语言的对象定向性质。Groovy中的类声明了该类定义的对象的状态（数据）和行为。 getter和setter方法:在任何编程语言中，总是使用private关键字隐藏实例成员，而是提供ge">
+<meta name="description" content="前言：本文讲解了 Groovy 语言中的面向对象，特征，闭包，注解等内容。 Groovy - 面向对象(Object Oriented)在Groovy中，如在任何其他面向对象语言中一样，存在类和对象的概念以表示编程语言的对象定向性质。Groovy中的类声明了该类定义的对象的状态（数据）和行为。 getter和setter方法:在任何编程语言中，总是使用private关键字隐藏实例成员，而是提供ge">
 <meta name="keywords" content="Java,Groovy,JVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『JVM语言 - Groovy』基础(五)">
 <meta property="og:url" content="http://yoursite.com/2017/10/09/groovy-basic-5/index.html">
 <meta property="og:site_name" content="柒索">
-<meta property="og:description" content="前言：本文讲解了 Groovy 语言中的面向对象，特征，闭包，注解等内容， Groovy - 面向对象(Object Oriented)在Groovy中，如在任何其他面向对象语言中一样，存在类和对象的概念以表示编程语言的对象定向性质。Groovy中的类声明了该类定义的对象的状态（数据）和行为。 getter和setter方法:在任何编程语言中，总是使用private关键字隐藏实例成员，而是提供ge">
+<meta property="og:description" content="前言：本文讲解了 Groovy 语言中的面向对象，特征，闭包，注解等内容。 Groovy - 面向对象(Object Oriented)在Groovy中，如在任何其他面向对象语言中一样，存在类和对象的概念以表示编程语言的对象定向性质。Groovy中的类声明了该类定义的对象的状态（数据）和行为。 getter和setter方法:在任何编程语言中，总是使用private关键字隐藏实例成员，而是提供ge">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-10T16:15:13.000Z">
+<meta property="og:updated_time" content="2017-10-16T03:02:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="『JVM语言 - Groovy』基础(五)">
-<meta name="twitter:description" content="前言：本文讲解了 Groovy 语言中的面向对象，特征，闭包，注解等内容， Groovy - 面向对象(Object Oriented)在Groovy中，如在任何其他面向对象语言中一样，存在类和对象的概念以表示编程语言的对象定向性质。Groovy中的类声明了该类定义的对象的状态（数据）和行为。 getter和setter方法:在任何编程语言中，总是使用private关键字隐藏实例成员，而是提供ge">
+<meta name="twitter:description" content="前言：本文讲解了 Groovy 语言中的面向对象，特征，闭包，注解等内容。 Groovy - 面向对象(Object Oriented)在Groovy中，如在任何其他面向对象语言中一样，存在类和对象的概念以表示编程语言的对象定向性质。Groovy中的类声明了该类定义的对象的状态（数据）和行为。 getter和setter方法:在任何编程语言中，总是使用private关键字隐藏实例成员，而是提供ge">
 
 
 
@@ -406,7 +406,7 @@
       
 
       
-        <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>本文讲解了 Groovy 语言中的面向对象，特征，闭包，注解等内容，</p>
+        <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>本文讲解了 Groovy 语言中的面向对象，特征，闭包，注解等内容。</p>
 <h2 id="Groovy-面向对象-Object-Oriented"><a href="#Groovy-面向对象-Object-Oriented" class="headerlink" title="Groovy - 面向对象(Object Oriented)"></a>Groovy - 面向对象(Object Oriented)</h2><p>在Groovy中，如在任何其他面向对象语言中一样，存在类和对象的概念以表示编程语言的对象定向性质。Groovy中的类声明了该类定义的对象的状态（数据）和行为。</p>
 <h3 id="getter和setter方法"><a href="#getter和setter方法" class="headerlink" title="getter和setter方法:"></a>getter和setter方法:</h3><p>在任何编程语言中，总是使用private关键字隐藏实例成员，而是提供getter和setter方法来相应地设置和获取实例变量的值。以下示例显示如何完成此操作。</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> &#123;</span></div><div class="line">   <span class="keyword">private</span> <span class="keyword">int</span> StudentID;</div><div class="line">   <span class="keyword">private</span> String StudentName;</div><div class="line">	</div><div class="line">   <span class="keyword">void</span> setStudentID(<span class="keyword">int</span> pID) &#123;</div><div class="line">      StudentID = pID;</div><div class="line">   &#125;</div><div class="line">	</div><div class="line">   <span class="keyword">void</span> setStudentName(String pName) &#123;</div><div class="line">      StudentName = pName;</div><div class="line">   &#125;</div><div class="line">	</div><div class="line">   <span class="keyword">int</span> getStudentID() &#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.StudentID;</div><div class="line">   &#125;</div><div class="line">	</div><div class="line">   String getStudentName() &#123;</div><div class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.StudentName;</div><div class="line">   &#125;</div><div class="line">	</div><div class="line">   <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) &#123;</div><div class="line">      Student st = <span class="keyword">new</span> Student();</div><div class="line">      st.setStudentID(<span class="number">1</span>);</div><div class="line">      st.setStudentName(<span class="string">"Joe"</span>);</div><div class="line">		</div><div class="line">      println(st.getStudentID());</div><div class="line">      println(st.getStudentName());</div><div class="line">   &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
