@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Spring Boot,Spring," />
+  <meta name="keywords" content="MongoDB,NoSQL," />
 
 
 
@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="Spring Boot - Actuator简介:Spring Boot Actuator模块提供了一个监控和管理生产环境的模块，可以使用http、jmx、ssh、telnet等拉管理和监控应用。审计（Auditing）、 健康（health）、数据采集（metrics gathering）会自动加入到应用里面。 Spring Boot - Actuator的特点:Spring Boot Actu">
-<meta name="keywords" content="Spring Boot,Spring">
+<meta name="description" content="前言MongoShell - 简介MongoShell是一个互动的JavaScript接口的MongoDB，可以使用MongoShell来查询和更新数据以及执行管理操作。 MongoShell是MongoDB发行版的一个组件， 安装并启动MongoDB后，将MongoShell连接到正在运行的MongoDB实例，MongoDB手册中的大多数示例使用 MongoShell，然而，许多驱动程序也提供了">
+<meta name="keywords" content="MongoDB,NoSQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring Boot - Actuator QuickStart">
-<meta property="og:url" content="http://yoursite.com/2017/08/22/springboot-actuator/index.html">
+<meta property="og:title" content="『NoSQL - MongoDB』Mongo Shell">
+<meta property="og:url" content="http://yoursite.com/2017/10/18/mongodb-shell/index.html">
 <meta property="og:site_name" content="柒索">
-<meta property="og:description" content="Spring Boot - Actuator简介:Spring Boot Actuator模块提供了一个监控和管理生产环境的模块，可以使用http、jmx、ssh、telnet等拉管理和监控应用。审计（Auditing）、 健康（health）、数据采集（metrics gathering）会自动加入到应用里面。 Spring Boot - Actuator的特点:Spring Boot Actu">
+<meta property="og:description" content="前言MongoShell - 简介MongoShell是一个互动的JavaScript接口的MongoDB，可以使用MongoShell来查询和更新数据以及执行管理操作。 MongoShell是MongoDB发行版的一个组件， 安装并启动MongoDB后，将MongoShell连接到正在运行的MongoDB实例，MongoDB手册中的大多数示例使用 MongoShell，然而，许多驱动程序也提供了">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-20T15:15:06.000Z">
+<meta property="og:updated_time" content="2017-10-19T10:02:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Boot - Actuator QuickStart">
-<meta name="twitter:description" content="Spring Boot - Actuator简介:Spring Boot Actuator模块提供了一个监控和管理生产环境的模块，可以使用http、jmx、ssh、telnet等拉管理和监控应用。审计（Auditing）、 健康（health）、数据采集（metrics gathering）会自动加入到应用里面。 Spring Boot - Actuator的特点:Spring Boot Actu">
+<meta name="twitter:title" content="『NoSQL - MongoDB』Mongo Shell">
+<meta name="twitter:description" content="前言MongoShell - 简介MongoShell是一个互动的JavaScript接口的MongoDB，可以使用MongoShell来查询和更新数据以及执行管理操作。 MongoShell是MongoDB发行版的一个组件， 安装并启动MongoDB后，将MongoShell连接到正在运行的MongoDB实例，MongoDB手册中的大多数示例使用 MongoShell，然而，许多驱动程序也提供了">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/08/22/springboot-actuator/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/18/mongodb-shell/"/>
 
 
 
 
 
-  <title> Spring Boot - Actuator QuickStart | 柒索 </title>
+  <title> 『NoSQL - MongoDB』Mongo Shell | 柒索 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -307,7 +307,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/22/springboot-actuator/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/18/mongodb-shell/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="柒索">
@@ -328,7 +328,7 @@
             
             
               
-                Spring Boot - Actuator QuickStart
+                『NoSQL - MongoDB』Mongo Shell
               
             
           </h1>
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-22T21:55:58+08:00">
-                2017-08-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-18T17:27:44+08:00">
+                2017-10-18
               </time>
             
 
@@ -366,8 +366,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Spring-Boot/" itemprop="url" rel="index">
-                    <span itemprop="name">Spring Boot</span>
+                  <a href="/categories/NoSQL/" itemprop="url" rel="index">
+                    <span itemprop="name">NoSQL</span>
                   </a>
                 </span>
 
@@ -406,96 +406,57 @@
       
 
       
-        <h2 id="Spring-Boot-Actuator简介"><a href="#Spring-Boot-Actuator简介" class="headerlink" title="Spring Boot - Actuator简介:"></a>Spring Boot - Actuator简介:</h2><p>Spring Boot Actuator模块提供了一个监控和管理生产环境的模块，可以使用http、jmx、ssh、telnet等拉管理和监控应用。审计（Auditing）、 健康（health）、数据采集（metrics gathering）会自动加入到应用里面。</p>
-<h2 id="Spring-Boot-Actuator的特点"><a href="#Spring-Boot-Actuator的特点" class="headerlink" title="Spring Boot - Actuator的特点:"></a>Spring Boot - Actuator的特点:</h2><p>Spring Boot Actuator的关键特性是在应用程序里提供了众多的Web站点，通过他们可以来了解应用程序运行时的内部状况。Actuator为Spring Boot项目带来了许多有用的特性，包括：</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="MongoShell-简介"><a href="#MongoShell-简介" class="headerlink" title="MongoShell - 简介"></a>MongoShell - 简介</h2><p>MongoShell是一个互动的JavaScript接口的MongoDB，可以使用MongoShell来查询和更新数据以及执行管理操作。</p>
+<p>MongoShell是MongoDB发行版的一个组件， 安装并启动MongoDB后，将MongoShell连接到正在运行的MongoDB实例，MongoDB手册中的大多数示例使用 MongoShell，然而，许多驱动程序也提供了与MongoDB类似的接口。</p>
+<h3 id="启动MongoShell："><a href="#启动MongoShell：" class="headerlink" title="启动MongoShell："></a>启动MongoShell：</h3><p>在启动MongoShell之前请确保MongoDB 实例在运行，在Terminal 中键入Mongo则可以直接启动。</p>
+<p>示例代码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">➜  ~ mongo</div><div class="line">MongoDB shell version v3.4.3</div><div class="line">connecting to: mongodb://127.0.0.1:27017</div><div class="line">MongoDB server version: 3.4.3</div><div class="line">Server has startup warnings:</div><div class="line">2017-10-19T10:41:29.922+0800 I CONTROL  [initandlisten]</div><div class="line">2017-10-19T10:41:29.923+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.</div><div class="line">2017-10-19T10:41:29.923+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.</div><div class="line">2017-10-19T10:41:29.923+0800 I CONTROL  [initandlisten]</div><div class="line"><span class="meta">&gt;</span> db.version()</div><div class="line">3.4.3</div></pre></td></tr></table></figure>
+<h3 id="选项-参数"><a href="#选项-参数" class="headerlink" title="选项/参数:"></a>选项/参数:</h3><p>当没有任何参数运行mongo时，mongo shell将尝试连接到端口27017上的localhost接口上运行的MongoDB实例。</p>
+<h4 id="链接选项"><a href="#链接选项" class="headerlink" title="链接选项:"></a>链接选项:</h4><p>如果需要链接非27017端口或者远程实例，则可以使用以下语法来链接:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongo --username &lt;user&gt; --password &lt;pass&gt; --host &lt;host&gt; --port 28015</div></pre></td></tr></table></figure>
+<p>或者简写为:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongo -u &lt;user&gt; -p &lt;pass&gt; --host &lt;host&gt; --port 28015</div></pre></td></tr></table></figure>
+<h4 id="mongorc-js文件"><a href="#mongorc-js文件" class="headerlink" title=".mongorc.js文件:"></a>.mongorc.js文件:</h4><p>当启动的时候，mongo检查用户HOME目录下的一个JavaScript文件<code>.mongorc.js</code>，如果找到mongo在首次显示提示信息前解析.mongorc.js的内容。如果你使用shell执行一个JavaScript文件或计算表达式，要么通过在命令行使用–eval选项或者指定一个.js文件给mongo，mongo会在完成JavaScript的处理后读取.mongorc.js文件。你可以使用–norc选项来阻止加载.mongorc.js。</p>
+<h4 id="使用MongoShell"><a href="#使用MongoShell" class="headerlink" title="使用MongoShell:"></a>使用MongoShell:</h4><p>测试数据:(这个 employee 对象是包含 3 个员工记录的数组)</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">     </div><div class="line">&#123;</div><div class="line">    <span class="attr">"employees"</span>:[</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"firstName"</span>:<span class="string">"Bill"</span>,</div><div class="line">            <span class="attr">"lastName"</span>:<span class="string">"Gates"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"firstName"</span>:<span class="string">"George"</span>,</div><div class="line">            <span class="attr">"lastName"</span>:<span class="string">"Bush"</span></div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"firstName"</span>:<span class="string">"Thomas"</span>,</div><div class="line">            <span class="attr">"lastName"</span>:<span class="string">"Carter"</span></div><div class="line">        &#125;</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>管理端点</li>
-<li>合理的异常处理以及默认的”/error”映射端点</li>
-<li>获取应用信息的”/info”端点</li>
-<li>当启用Spring Security时，会有一个审计事件框架</li>
+<li>显示当前正在使用的数据库：</li>
 </ul>
-<h2 id="SpringBoot-Actuator-的端点："><a href="#SpringBoot-Actuator-的端点：" class="headerlink" title="SpringBoot - Actuator 的端点："></a>SpringBoot - Actuator 的端点：</h2><p>Spring Boot Actuator提供了13个 端点，有了它，你可以知道 Bean 在 Spring应用上下文里是如何组装在一起的，掌握应用程序可以获取的环境属性信息，获取运行时度量信息的快照……</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">HTTP方法</th>
-<th style="text-align:left">路径</th>
-<th style="text-align:left">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/aotoconfig</td>
-<td style="text-align:left">提供一份自动配置报告，记录哪些自动配置条件通过那些没通过</td>
-</tr>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/configprops</td>
-<td style="text-align:left">描述配置属性(包含默认值)如何注入 Bean</td>
-</tr>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/beans</td>
-<td style="text-align:left">描述应用程序上下文里全部的 Bean，以及他们的关系</td>
-</tr>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/dump</td>
-<td style="text-align:left">获取线程活动的快照</td>
-</tr>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/env</td>
-<td style="text-align:left">获取全部环境属性</td>
-</tr>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/env/{name}</td>
-<td style="text-align:left">根据名称来获取特定的环境属性值</td>
-</tr>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/health</td>
-<td style="text-align:left">报告应用程序的健康指标，这些值由 HealthIndicator 的实现来提供</td>
-</tr>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/info</td>
-<td style="text-align:left">获取应用程序的定制信息，这些信息由 info 开头的属性提供</td>
-</tr>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/mappings</td>
-<td style="text-align:left">描述全部的 URL 路径，以及它们和控制器(包含 Actuator 端点)的映射关系</td>
-</tr>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/metrics</td>
-<td style="text-align:left">报告各种应用程序度量信息，比如内存用量和 HTTP 请求次数</td>
-</tr>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/metrics/{name}</td>
-<td style="text-align:left">根据名称来获取应用程序的度量信息</td>
-</tr>
-<tr>
-<td style="text-align:left">POST</td>
-<td style="text-align:left">/shutdown</td>
-<td style="text-align:left">关闭应用程序，要求 endpoints，shutdown，enabled 设置为 True</td>
-</tr>
-<tr>
-<td style="text-align:left">GET</td>
-<td style="text-align:left">/trace</td>
-<td style="text-align:left">提供基本的 HTTP 请求跟踪信息(时间戳、HTTP 请求头等)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="SpringBoot-Actuator的使用："><a href="#SpringBoot-Actuator的使用：" class="headerlink" title="SpringBoot - Actuator的使用："></a>SpringBoot - Actuator的使用：</h2><p>需要启动 Actuator 的端点，只需要在项目中引入Actuator的起步依赖即可。</p>
-<h3 id="在-Maven-中使用："><a href="#在-Maven-中使用：" class="headerlink" title="在 Maven 中使用："></a>在 Maven 中使用：</h3><p>示例代码：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="在-Gradle-中使用："><a href="#在-Gradle-中使用：" class="headerlink" title="在 Gradle 中使用："></a>在 Gradle 中使用：</h3><p>示例代码：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">compile 'org.springframework.boot:spring-boot-starter-actuator'</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> db</div><div class="line">test</div></pre></td></tr></table></figure>
+<ul>
+<li>查看所有数据库:</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> show dbs</div><div class="line">admin  0.000GB</div><div class="line">local  0.000GB</div><div class="line"><span class="meta">&gt;</span> show databases</div><div class="line">admin  0.000GB</div><div class="line">local  0.000GB</div></pre></td></tr></table></figure>
+<p>使用<code>show dbs</code>或者<code>show databases</code>可以达到同样的效果。</p>
+<ul>
+<li>切换到另一个数据库:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; use mydb</div><div class="line">switched to db mydb</div></pre></td></tr></table></figure>
+<p>可以切换到一个不存在数据库，当创建集合时，这个数据库会被自动创建。</p>
+<ul>
+<li>插入一条数据:<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> db.emp.insertOne(&#123;x : 1&#125;);</div><div class="line">&#123;</div><div class="line">	"acknowledged" : true,</div><div class="line">	"insertedId" : ObjectId("59e87617052057c4236c259a")</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>其中 db指的是当前的数据库，emp 指的是要插入的集合的名称。</p>
+<ul>
+<li>查看当前数据库中所有集合：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> show collections</div><div class="line">emp</div></pre></td></tr></table></figure>
+<ul>
+<li>查看集合中的数据:</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span> db.emp.find()</div><div class="line">&#123; "_id" : ObjectId("59e87617052057c4236c259a"), "x" : 1 &#125;</div></pre></td></tr></table></figure>
+<h4 id="格式化输出结果"><a href="#格式化输出结果" class="headerlink" title="格式化输出结果:"></a>格式化输出结果:</h4><p>要格式化打印结果，可以将.pretty()添加到操作中，如下所示：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&gt; db.emp.find().pretty()</div><div class="line">&#123;</div><div class="line">    <span class="attr">"_id"</span>: ObjectId(<span class="string">"59e87617052057c4236c259a"</span>),</div><div class="line">    <span class="attr">"x"</span>: <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>此外，可以在 mongo shell中使用下面的显式打印方法：</p>
+<ul>
+<li>print() 无格式打印</li>
+<li>print(tojson(<obj>)) 用 JSON 格式打印，等效于 printjson()</obj></li>
+<li>printjson() 用 JSON 格式打印，等效于 print(tojson(<obj>))</obj></li>
+</ul>
+<h2 id="MongoShell-配置"><a href="#MongoShell-配置" class="headerlink" title="MongoShell - 配置"></a>MongoShell - 配置</h2><h2 id="MongoShell-脚本"><a href="#MongoShell-脚本" class="headerlink" title="MongoShell - 脚本"></a>MongoShell - 脚本</h2><h2 id="MongoShell-数据类型"><a href="#MongoShell-数据类型" class="headerlink" title="MongoShell - 数据类型"></a>MongoShell - 数据类型</h2><h2 id="MongoShell-其他命令"><a href="#MongoShell-其他命令" class="headerlink" title="MongoShell - 其他命令"></a>MongoShell - 其他命令</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料:"></a>参考资料:</h2><p>MongoDB 中文社区: <a href="http://www.mongoing.com/docs/mongo.html" target="_blank" rel="external">http://www.mongoing.com/docs/mongo.html</a></p>
+<p>MongoDB 官网文档: <a href="https://docs.mongodb.com/manual/mongo/" target="_blank" rel="external">https://docs.mongodb.com/manual/mongo/</a></p>
+<p>MongoShell引用方法: <a href="https://docs.mongodb.com/manual/reference/method/" target="_blank" rel="external">https://docs.mongodb.com/manual/reference/method/</a></p>
 
       
     </div>
@@ -525,9 +486,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Spring-Boot/" rel="tag"># Spring Boot</a>
+            <a href="/tags/MongoDB/" rel="tag"># MongoDB</a>
           
-            <a href="/tags/Spring/" rel="tag"># Spring</a>
+            <a href="/tags/NoSQL/" rel="tag"># NoSQL</a>
           
         </div>
       
@@ -540,8 +501,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/15/springboot-configuration/" rel="next" title="Spring Boot - 多环境配置(.properties & .yml)">
-                <i class="fa fa-chevron-left"></i> Spring Boot - 多环境配置(.properties & .yml)
+              <a href="/2017/10/17/mongodb-quickstart/" rel="next" title="『NoSQL - MongoDB』Introduction & QuickStart">
+                <i class="fa fa-chevron-left"></i> 『NoSQL - MongoDB』Introduction & QuickStart
               </a>
             
           </div>
@@ -549,10 +510,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/02/gradle-node/" rel="prev" title="『构建工具-Gradle』相关内容整理">
-                『构建工具-Gradle』相关内容整理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -721,7 +678,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-Actuator简介"><span class="nav-number">1.</span> <span class="nav-text">Spring Boot - Actuator简介:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-Actuator的特点"><span class="nav-number">2.</span> <span class="nav-text">Spring Boot - Actuator的特点:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringBoot-Actuator-的端点："><span class="nav-number">3.</span> <span class="nav-text">SpringBoot - Actuator 的端点：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringBoot-Actuator的使用："><span class="nav-number">4.</span> <span class="nav-text">SpringBoot - Actuator的使用：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在-Maven-中使用："><span class="nav-number">4.1.</span> <span class="nav-text">在 Maven 中使用：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在-Gradle-中使用："><span class="nav-number">4.2.</span> <span class="nav-text">在 Gradle 中使用：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-简介"><span class="nav-number">2.</span> <span class="nav-text">MongoShell - 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启动MongoShell："><span class="nav-number">2.1.</span> <span class="nav-text">启动MongoShell：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选项-参数"><span class="nav-number">2.2.</span> <span class="nav-text">选项/参数:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#链接选项"><span class="nav-number">2.2.1.</span> <span class="nav-text">链接选项:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mongorc-js文件"><span class="nav-number">2.2.2.</span> <span class="nav-text">.mongorc.js文件:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用MongoShell"><span class="nav-number">2.2.3.</span> <span class="nav-text">使用MongoShell:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#格式化输出结果"><span class="nav-number">2.2.4.</span> <span class="nav-text">格式化输出结果:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-配置"><span class="nav-number">3.</span> <span class="nav-text">MongoShell - 配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-脚本"><span class="nav-number">4.</span> <span class="nav-text">MongoShell - 脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-数据类型"><span class="nav-number">5.</span> <span class="nav-text">MongoShell - 数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-其他命令"><span class="nav-number">6.</span> <span class="nav-text">MongoShell - 其他命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料:</span></a></li></ol></div>
             
 
           </div>

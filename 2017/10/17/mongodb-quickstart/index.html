@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="前言本文从MongoDB 的简介、特点、优点、趋势、等几个方面来介绍了MongoDB。 MongoDB - 简介MongoDB（来自于英文单词“Humongous”）是可以应用于各种规模的企业、各个行业以及各类应用程序的开源数据库。MongoDB是专为可扩展性，高性能和高可用性而设计的数据库。它可以从单服务器部署扩展到大型、复杂的多数据中心架构。利用内存计算的优势，MongoDB能够提供高性能的数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-18T09:06:29.000Z">
+<meta property="og:updated_time" content="2017-10-19T02:52:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="『NoSQL - MongoDB』Introduction &amp; QuickStart">
 <meta name="twitter:description" content="前言本文从MongoDB 的简介、特点、优点、趋势、等几个方面来介绍了MongoDB。 MongoDB - 简介MongoDB（来自于英文单词“Humongous”）是可以应用于各种规模的企业、各个行业以及各类应用程序的开源数据库。MongoDB是专为可扩展性，高性能和高可用性而设计的数据库。它可以从单服务器部署扩展到大型、复杂的多数据中心架构。利用内存计算的优势，MongoDB能够提供高性能的数">
@@ -419,7 +419,7 @@
 <p>聚合框架使用户能够获得使用SQL。聚合框架包括可以从多个文档加入文档的$ lookup运算符，以及诸如标准偏差的统计运算符。</p>
 <h3 id="服务器端JavaScript执行"><a href="#服务器端JavaScript执行" class="headerlink" title="服务器端JavaScript执行:"></a>服务器端JavaScript执行:</h3><p>JavaScript可用于查询，聚合功能（如MapReduce），并直接发送到要执行的数据库。</p>
 <h3 id="覆盖的集合"><a href="#覆盖的集合" class="headerlink" title="覆盖的集合:"></a>覆盖的集合:</h3><p>MongoDB支持固定大小的集合，称为封顶集合。这种类型的集合维护插入顺序，一旦达到指定的大小，就像一个循环队列。</p>
-<h2 id="MongoDB-优点："><a href="#MongoDB-优点：" class="headerlink" title="MongoDB - 优点："></a>MongoDB - 优点：</h2><h3 id="MongoDB优于RDBMS"><a href="#MongoDB优于RDBMS" class="headerlink" title="MongoDB优于RDBMS:"></a>MongoDB优于RDBMS:</h3><ul>
+<h2 id="MongoDB-优点"><a href="#MongoDB-优点" class="headerlink" title="MongoDB - 优点"></a>MongoDB - 优点</h2><h3 id="MongoDB优于RDBMS"><a href="#MongoDB优于RDBMS" class="headerlink" title="MongoDB优于RDBMS:"></a>MongoDB优于RDBMS:</h3><ul>
 <li>模式少  MongoDB是一个文档数据库，其中一个集合持有不同的文档。文档的数量，内容和大小可能因文档而异。</li>
 <li>单个对象的结构是清楚的。</li>
 <li>没有复杂的连接。</li>
@@ -451,20 +451,31 @@
 <p>DB-Engines目前市场上数据库的人气排名列表，列表每月更新一次。</p>
 <p>MongoDB 综合排名第四位，文档类数据库排名第一位。</p>
 <p>DB-Engines：<a href="https://db-engines.com/en/ranking" target="_blank" rel="external">https://db-engines.com/en/ranking</a></p>
-<h2 id="MongoDB-安装"><a href="#MongoDB-安装" class="headerlink" title="MongoDB - 安装"></a>MongoDB - 安装</h2><p>MongoDB 官网提分别供了基于 Linux、OS X、Windows 系统上的安装教程。</p>
-<h3 id="brew-install-mongodb："><a href="#brew-install-mongodb：" class="headerlink" title="brew install mongodb："></a>brew install mongodb：</h3><p>在 OS X系统中，官方建议使用 Homebrew 来安装，步骤如下：</p>
+<p>DB-Engines的排名主要根据5个因素来进行：Google以及Bing搜索引擎的关键字搜索数量、Google Trends的搜索数量、Indeed网站中的职位搜索量、LinkedIn中提到关键字的个人资料数以及Stackoverflow上相关的问题和关注者数量。</p>
+<h2 id="MongoDB-安装"><a href="#MongoDB-安装" class="headerlink" title="MongoDB - 安装"></a>MongoDB - 安装</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装:"></a>安装:</h3><p>MongoDB 官网提分别供了基于 Linux、OS X、Windows 系统上的安装教程。</p>
+<p>在 OS X系统中，官方建议使用 Homebrew 来安装，步骤如下：</p>
 <ol>
-<li><p>更新 HomeBrew： <code>brew update</code></p>
+<li><p>更新 HomeBrew： </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update</div></pre></td></tr></table></figure>
 </li>
-<li><p>安装 MongoDB：<code>brew install mongodb</code></p>
+<li><p>安装 MongoDB：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mongodb</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>其他操作：</p>
+<p>其他安装操作：</p>
 <p>安装具有TLS / SSL支持的MongoDB二进制文件:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mongodb --with-openssl</div></pre></td></tr></table></figure>
-<p>安装用于测试和开发的最新开发版本：</p>
+<p>安装用于测试和开发的最新版本：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mongodb --devel</div></pre></td></tr></table></figure>
 <p>参考资料：<a href="http://www.mongoing.com/docs/installation.html" target="_blank" rel="external">http://www.mongoing.com/docs/installation.html</a></p>
+<h3 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h3><p>安装完成 MoongoDB 之后，需要在当前用户的根目录下为 MongoDB 数据库添加环境变量，由于采用了 HomeBrew来安装的 MongoDB，对 Homebrew 不熟悉的人可能不清楚安装在哪里了，这时可以使用 brew info 来查看。</p>
+<p>示例代码: (省略部分内容)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 查看 MongoDB 的安装信息</div><div class="line">➜  ~ brew info mongodb</div><div class="line">mongodb: stable 3.4.9 (bottled), devel 3.5.11</div><div class="line">==&gt; Dependencies  ……</div><div class="line">==&gt; Requirements  ……</div><div class="line">==&gt; Options  ……</div><div class="line">--with-boost ……</div><div class="line">--with-sasl  ……</div><div class="line">--without-openssl  ……</div><div class="line">--devel  ……</div><div class="line">==&gt; Caveats</div><div class="line">To have launchd start mongodb now and restart at login:</div><div class="line">  brew services start mongodb</div><div class="line">Or, if you don't want/need a background service you can just run:</div><div class="line">  mongod --config /usr/local/etc/mongod.conf</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 配置MongoDB环境变量</div><div class="line">➜  ~ vim .bash_profile</div><div class="line"></div><div class="line">export PATH=/usr/local/Cellar/mongodb/3.4.3/bin:$&#123;PATH&#125;</div><div class="line"></div><div class="line">➜  ~ source .bash_profile</div></pre></td></tr></table></figure>
+<p>MongoDB的默认数据目录为/data/db，如需要修改，可以在 MongoDB 的配置文件中修改dbPath选项。</p>
+<p>路径如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  ~ cat /usr/local/etc/mongod.conf</div></pre></td></tr></table></figure>
+<h2 id="MongoDB-启动"><a href="#MongoDB-启动" class="headerlink" title="MongoDB - 启动"></a>MongoDB - 启动</h2><p>安装配置完成之后，打开 <code>terminal</code>，输入<code>mongod</code>,直至出现<code>I NETWORK  [thread1] waiting for connections on port 27017</code>字样则算启动成功，然后再打开另一终端窗口，输入 <code>mongo</code>，则可以直接进入 MongoShell 界面。</p>
 <h2 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h2><ul>
 <li><p>MongoDB University：</p>
 <p>MongoDB 官方课程:<a href="https://university.mongodb.com/courses/catalog" target="_blank" rel="external">https://university.mongodb.com/courses/catalog</a></p>
@@ -477,6 +488,11 @@
 </li>
 <li><p>云栖社区(AliYun):</p>
 <p>阿里云云栖社区MonbgoDB 资料汇总:<a href="http://t.cn/RO3HQgI" target="_blank" rel="external">http://t.cn/RO3HQgI</a></p>
+</li>
+<li><p>MongoDB YouTube:<br>MongoDB在Youtube 订阅频道:<a href="https://www.youtube.com/user/MongoDB" target="_blank" rel="external">https://www.youtube.com/user/MongoDB</a></p>
+</li>
+<li><p>MongoDB Tutorial for Beginners：</p>
+<p>MongoDB 初学者教程: <a href="https://www.youtube.com/watch?v=9OPP_1eAENg&amp;list=PL4cUxeGkcC9jpvoYriLI0bY8DOgWZfi6u" target="_blank" rel="external">MongoDB Tutorial for Beginners</a>(UP主:The Net Ninja)</p>
 </li>
 </ul>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>DB-Engines: <a href="https://db-engines.com" target="_blank" rel="external">https://db-engines.com</a></p>
@@ -534,6 +550,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/18/mongodb-shell/" rel="prev" title="『NoSQL - MongoDB』Mongo Shell">
+                『NoSQL - MongoDB』Mongo Shell <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -613,7 +633,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -702,7 +722,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-简介"><span class="nav-number">2.</span> <span class="nav-text">MongoDB - 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-特点"><span class="nav-number">3.</span> <span class="nav-text">MongoDB - 特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#临时-Ad-hoc-查询"><span class="nav-number">3.1.</span> <span class="nav-text">临时(Ad hoc)查询:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引"><span class="nav-number">3.2.</span> <span class="nav-text">索引:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制"><span class="nav-number">3.3.</span> <span class="nav-text">复制:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡"><span class="nav-number">3.4.</span> <span class="nav-text">负载均衡:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件存储"><span class="nav-number">3.5.</span> <span class="nav-text">文件存储:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合"><span class="nav-number">3.6.</span> <span class="nav-text">聚合:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器端JavaScript执行"><span class="nav-number">3.7.</span> <span class="nav-text">服务器端JavaScript执行:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#覆盖的集合"><span class="nav-number">3.8.</span> <span class="nav-text">覆盖的集合:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-优点："><span class="nav-number">4.</span> <span class="nav-text">MongoDB - 优点：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB优于RDBMS"><span class="nav-number">4.1.</span> <span class="nav-text">MongoDB优于RDBMS:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要使用MongoDB？"><span class="nav-number">4.2.</span> <span class="nav-text">为什么要使用MongoDB？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB的应用场景？"><span class="nav-number">4.3.</span> <span class="nav-text">MongoDB的应用场景？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-趋势"><span class="nav-number">5.</span> <span class="nav-text">MongoDB - 趋势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索指数："><span class="nav-number">5.1.</span> <span class="nav-text">搜索指数：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流行程度："><span class="nav-number">5.2.</span> <span class="nav-text">流行程度：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-安装"><span class="nav-number">6.</span> <span class="nav-text">MongoDB - 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#brew-install-mongodb："><span class="nav-number">6.1.</span> <span class="nav-text">brew install mongodb：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习资料"><span class="nav-number">7.</span> <span class="nav-text">学习资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">8.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-简介"><span class="nav-number">2.</span> <span class="nav-text">MongoDB - 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-特点"><span class="nav-number">3.</span> <span class="nav-text">MongoDB - 特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#临时-Ad-hoc-查询"><span class="nav-number">3.1.</span> <span class="nav-text">临时(Ad hoc)查询:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引"><span class="nav-number">3.2.</span> <span class="nav-text">索引:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制"><span class="nav-number">3.3.</span> <span class="nav-text">复制:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡"><span class="nav-number">3.4.</span> <span class="nav-text">负载均衡:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件存储"><span class="nav-number">3.5.</span> <span class="nav-text">文件存储:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合"><span class="nav-number">3.6.</span> <span class="nav-text">聚合:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器端JavaScript执行"><span class="nav-number">3.7.</span> <span class="nav-text">服务器端JavaScript执行:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#覆盖的集合"><span class="nav-number">3.8.</span> <span class="nav-text">覆盖的集合:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-优点"><span class="nav-number">4.</span> <span class="nav-text">MongoDB - 优点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB优于RDBMS"><span class="nav-number">4.1.</span> <span class="nav-text">MongoDB优于RDBMS:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要使用MongoDB？"><span class="nav-number">4.2.</span> <span class="nav-text">为什么要使用MongoDB？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB的应用场景？"><span class="nav-number">4.3.</span> <span class="nav-text">MongoDB的应用场景？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-趋势"><span class="nav-number">5.</span> <span class="nav-text">MongoDB - 趋势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索指数："><span class="nav-number">5.1.</span> <span class="nav-text">搜索指数：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流行程度："><span class="nav-number">5.2.</span> <span class="nav-text">流行程度：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-安装"><span class="nav-number">6.</span> <span class="nav-text">MongoDB - 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">6.1.</span> <span class="nav-text">安装:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置："><span class="nav-number">6.2.</span> <span class="nav-text">配置：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-启动"><span class="nav-number">7.</span> <span class="nav-text">MongoDB - 启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习资料"><span class="nav-number">8.</span> <span class="nav-text">学习资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">9.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
