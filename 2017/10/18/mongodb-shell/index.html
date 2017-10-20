@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="前言MongoShell - 简介MongoShell是一个互动的JavaScript接口的MongoDB，可以使用MongoShell来查询和更新数据以及执行管理操作。 MongoShell是MongoDB发行版的一个组件， 安装并启动MongoDB后，将MongoShell连接到正在运行的MongoDB实例，MongoDB手册中的大多数示例使用 MongoShell，然而，许多驱动程序也提供了">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-20T08:25:06.000Z">
+<meta property="og:updated_time" content="2017-10-20T15:21:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="『NoSQL - MongoDB』Mongo Shell">
 <meta name="twitter:description" content="前言MongoShell - 简介MongoShell是一个互动的JavaScript接口的MongoDB，可以使用MongoShell来查询和更新数据以及执行管理操作。 MongoShell是MongoDB发行版的一个组件， 安装并启动MongoDB后，将MongoShell连接到正在运行的MongoDB实例，MongoDB手册中的大多数示例使用 MongoShell，然而，许多驱动程序也提供了">
@@ -410,7 +410,7 @@
 <p>MongoShell是MongoDB发行版的一个组件， 安装并启动MongoDB后，将MongoShell连接到正在运行的MongoDB实例，MongoDB手册中的大多数示例使用 MongoShell，然而，许多驱动程序也提供了与MongoDB类似的接口。</p>
 <h3 id="启动MongoShell："><a href="#启动MongoShell：" class="headerlink" title="启动MongoShell："></a>启动MongoShell：</h3><p>在启动MongoShell之前请确保MongoDB 实例在运行，在Terminal 中键入Mongo则可以直接启动。</p>
 <p>示例代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">➜  ~ mongo</div><div class="line">MongoDB shell version v3.4.3</div><div class="line">connecting to: mongodb://127.0.0.1:27017</div><div class="line">MongoDB server version: 3.4.3</div><div class="line">Server has startup warnings:</div><div class="line">2017-10-19T10:41:29.922+0800 I CONTROL  [initandlisten]</div><div class="line">2017-10-19T10:41:29.923+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.</div><div class="line">2017-10-19T10:41:29.923+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.</div><div class="line">2017-10-19T10:41:29.923+0800 I CONTROL  [initandlisten]</div><div class="line"><span class="meta">&gt;</span> db.version()</div><div class="line">3.4.3</div></pre></td></tr></table></figure>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">➜  ~ mongo</div><div class="line">MongoDB shell version v3.4.3</div><div class="line">connecting to: mongodb://127.0.0.1:27017</div><div class="line">MongoDB server version: 3.4.3</div><div class="line">Server has startup warnings:</div><div class="line">2017-10-19T10:41:29.922+0800 I CONTROL  [initandlisten]</div><div class="line">2017-10-19T10:41:29.923+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.</div><div class="line">2017-10-19T10:41:29.923+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.</div><div class="line">2017-10-19T10:41:29.923+0800 I CONTROL  [initandlisten]</div><div class="line"><span class="meta">&gt;</span> db.version()</div><div class="line">3.4.3</div></pre></td></tr></table></figure>
 <h3 id="选项-参数"><a href="#选项-参数" class="headerlink" title="选项/参数:"></a>选项/参数:</h3><p>当没有任何参数运行mongo时，mongo shell将尝试连接到端口27017上的localhost接口上运行的MongoDB实例。</p>
 <h4 id="链接选项"><a href="#链接选项" class="headerlink" title="链接选项:"></a>链接选项:</h4><p>如果需要链接非27017端口或者远程实例，则可以使用以下语法来链接:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongo --username &lt;user&gt; --password &lt;pass&gt; --host &lt;host&gt; --port 28015</div></pre></td></tr></table></figure>
@@ -461,15 +461,15 @@
 <h4 id="退出-shell-操作"><a href="#退出-shell-操作" class="headerlink" title="退出 shell 操作:"></a>退出 shell 操作:</h4><p>在MongoShell中输入<code>quit()</code>或者按下 <code>Ctrl+C</code>的组合键方式来结束 shell。</p>
 <h2 id="MongoShell-配置"><a href="#MongoShell-配置" class="headerlink" title="MongoShell - 配置"></a>MongoShell - 配置</h2><h3 id="自定义提示符："><a href="#自定义提示符：" class="headerlink" title="自定义提示符："></a>自定义提示符：</h3><p>可以通过在 MongoShell中设置变量 prompt 的值来修改提示符的内容。prompt 变量可以存储字符串以及JavaScript代码。 如果 prompt 为返回字符串的函数， mongo 则会在每个提示符中展示动态信息。</p>
 <h4 id="显示当前Shell的操作数："><a href="#显示当前Shell的操作数：" class="headerlink" title="显示当前Shell的操作数："></a>显示当前Shell的操作数：</h4><p>显示当前MongoShell 的操作数量，示例代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cmdCount = 1;</div><div class="line">prompt = function() &#123;</div><div class="line">             return (cmdCount++) + "&gt; ";</div><div class="line">         &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cmdCount = 1;</div><div class="line">prompt = function() &#123;</div><div class="line">         return (cmdCount++) + "&gt; ";</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>配置好之后，提示符会变成这样:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">1&gt;</span></div><div class="line"><span class="meta">2&gt;</span></div><div class="line"><span class="meta">3&gt;</span></div></pre></td></tr></table></figure>
 <h4 id="显示数据库和主机名"><a href="#显示数据库和主机名" class="headerlink" title="显示数据库和主机名:"></a>显示数据库和主机名:</h4><p>示例代码:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">host = db.serverStatus().host;</div><div class="line"></div><div class="line">prompt = function() &#123;</div><div class="line">             return db+"@"+host+"$ ";</div><div class="line">         &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">host = db.serverStatus().host;</div><div class="line"></div><div class="line">prompt = function() &#123;</div><div class="line">         return db+"@"+host+"$ ";</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>提示符将会变成如下样式：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">test@HostName$</span></div></pre></td></tr></table></figure>
 <h4 id="显示Mongo服务的启动时间以及文档数"><a href="#显示Mongo服务的启动时间以及文档数" class="headerlink" title="显示Mongo服务的启动时间以及文档数:"></a>显示Mongo服务的启动时间以及文档数:</h4><p>示例代码：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">prompt = function() &#123;</div><div class="line">           return "Uptime:"+db.serverStatus().uptime+" Documents:"+db.stats().objects+" &gt; ";</div><div class="line">         &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">prompt = function() &#123;</div><div class="line">  return "Uptime:"+db.serverStatus().uptime+" Documents:"+db.stats().objects+" &gt; ";</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>提示符将会变成如下样式：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Uptime:90104 Documents:0 &gt;</div></pre></td></tr></table></figure>
 <p><strong>以上关于 prompt的相关配置均可以在 MongoShell中直接输入配置，也可以将其写入再<code>.mongorc.js</code>文件中。</strong></p>
@@ -495,10 +495,77 @@
 <p>示例代码:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DBQuery.shellBatchSize = 10;</div></pre></td></tr></table></figure>
 <p>改为10。</p>
-<h2 id="MongoShell-脚本"><a href="#MongoShell-脚本" class="headerlink" title="MongoShell - 脚本"></a>MongoShell - 脚本</h2><h2 id="MongoShell-数据类型"><a href="#MongoShell-数据类型" class="headerlink" title="MongoShell - 数据类型"></a>MongoShell - 数据类型</h2><h2 id="MongoShell-其他命令"><a href="#MongoShell-其他命令" class="headerlink" title="MongoShell - 其他命令"></a>MongoShell - 其他命令</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料:"></a>参考资料:</h2><p>MongoDB 中文社区: <a href="http://www.mongoing.com/docs/mongo.html" target="_blank" rel="external">http://www.mongoing.com/docs/mongo.html</a></p>
+<h2 id="MongoShell-脚本"><a href="#MongoShell-脚本" class="headerlink" title="MongoShell - 脚本"></a>MongoShell - 脚本</h2><p>我们可以在操作MongoDB中的数据或执行管理操作的JavaScript中为mongo shell编写脚本。</p>
+<h3 id="打开新链接："><a href="#打开新链接：" class="headerlink" title="打开新链接："></a>打开新链接：</h3><p>在MongoShell或者 JavaScript文件中，可以使用 Mongo() 构造函数来实例化数据库连接：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">new Mongo()</div><div class="line">new Mongo(&lt;host&gt;)</div><div class="line">new Mongo(&lt;host:port&gt;)</div></pre></td></tr></table></figure>
+<p>考虑下面的示例，实例化一个到本机默认端口上运行的MongoDB实例的新连接，并且使用 getDB()方法将全局的 <code>db</code> 变量设置为 <code>myDatabase</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">conn = new Mongo();</div><div class="line">db = conn.getDB(&quot;mydb&quot;);</div></pre></td></tr></table></figure>
+<p>如果连接到一个需要读取控制的MongoDB实例，你可以使用 <code>db.auth()</code>方法进行授权。</p>
+<p>此外，你可以使用 <code>connect()</code> 方法连接到MongoDB实例。下面的示例 连接到运行在 <code>localhost</code> 非默认端口 <code>27020</code> 上的MongoDB实例，并且设置了全局的 <code>db</code> 变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db = connect(&quot;localhost:27020/mydb&quot;);</div></pre></td></tr></table></figure>
+<h3 id="交互式-shell-和mongo-脚本的区别"><a href="#交互式-shell-和mongo-脚本的区别" class="headerlink" title="交互式 shell 和mongo 脚本的区别:"></a>交互式 shell 和mongo 脚本的区别:</h3><ol>
+<li>要使用db全局变量，请使用getDB()方法或connect()方法。可以将数据库引用分配给非db以外的变量。</li>
+<li>默认情况下，在mongo shell中的写入操作使用写入的{w：1}。如果执行批量操作，请使用Bulk()方法。</li>
+<li>不能在JavaScript文件中使用任何shell 指令，因为它们不是有效的JavaScript,下文附对照表。</li>
+<li>交互模式下，mongo打印包含所有游标内容的操作结果。在脚本中，可以使用JavaScript的 print()函数或返回格式化的JSON的mongo specific printjson()函数。</li>
+</ol>
+<p>下表将最常见的mongo shell助手映射到JavaScript等效项:</p>
+<table>
+<thead>
+<tr>
+<th>Shell 指令</th>
+<th>JavaScript 操作方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>show dbs ,  show databases</td>
+<td>db.adminCommand(‘listDatabases’)</td>
+</tr>
+<tr>
+<td>use <db></db></td>
+<td>db = db.getSiblingDB(‘<db>‘)</db></td>
+</tr>
+<tr>
+<td>show collections</td>
+<td>db.getCollectionNames()</td>
+</tr>
+<tr>
+<td>show users</td>
+<td>db.getUsers()</td>
+</tr>
+<tr>
+<td>show roles</td>
+<td>db.getRoles({showBuiltinRoles: true})</td>
+</tr>
+<tr>
+<td>show log <logname></logname></td>
+<td>db.adminCommand({ ‘getLog’ : ‘<logname>‘ })</logname></td>
+</tr>
+<tr>
+<td>show logs</td>
+<td>db.adminCommand({ ‘getLog’ : ‘*’ })</td>
+</tr>
+<tr>
+<td>it</td>
+<td>cursor = db.collection.find()if ( cursor.hasNext() ){   cursor.next();}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="–evel选项："><a href="#–evel选项：" class="headerlink" title="–evel选项："></a>–evel选项：</h3><p>使用–eval选项来将mongo传递给一个JavaScript代码片段。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">➜  ~ mongo mydb --eval "printjson(db.getCollectionNames())" </div><div class="line"></div><div class="line">MongoDB shell version v3.4.3</div><div class="line">connecting to: mongodb://127.0.0.1:27017/mydb</div><div class="line">MongoDB server version: 3.4.3</div><div class="line">[ "emp", "stores" ]</div></pre></td></tr></table></figure>
+<h3 id="执行-JavaScript-文件："><a href="#执行-JavaScript-文件：" class="headerlink" title="执行 JavaScript 文件："></a>执行 JavaScript 文件：</h3><p>MongoShell 可以 指定一个 .js 文件， mongo 将会直接运行JavaScript。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongo localhost:27017/test myjsfile.js</div></pre></td></tr></table></figure>
+<p>该操作在连接到<code>localhost</code> 接口 <code>27017</code> 端口 <a href="http://www.mongoing.com/docs/reference/program/mongod.html#bin.mongod" target="_blank" rel="external"><code>mongod</code></a> 实例上 <code>test</code> <a href="http://www.mongoing.com/docs/reference/glossary.html#term-database" target="_blank" rel="external"><em>database</em></a> 的:program:mongo shell 中执行 <code>myjsfile.js</code> 脚本。</p>
+<p>可以在MongoShell中使用 <code>load()</code> 函数运行 .js文件，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">load(&quot;myjstest.js&quot;)</div></pre></td></tr></table></figure>
+<p>该函数导入并运行了 <code>myjstest.js</code> 文件。</p>
+<p><code>load()</code> 方法可接受相对路径和绝对路径。如果 <a href="http://www.mongoing.com/docs/reference/program/mongo.html#bin.mongo" target="_blank" rel="external"><code>mongo</code></a> shell 当前的工作目录位于 <code>/data/db</code>， 而文件<code>myjstest.js</code> 位于 <code>/data/db/scripts</code> 目录，那么下面两种在 <a href="http://www.mongoing.com/docs/reference/program/mongo.html#bin.mongo" target="_blank" rel="external"><code>mongo</code></a> 中的调用将会是同样的效果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">load(&quot;scripts/myjstest.js&quot;)</div><div class="line">load(&quot;/data/db/scripts/myjstest.js&quot;)</div></pre></td></tr></table></figure>
+<h2 id="MongoShell-数据类型"><a href="#MongoShell-数据类型" class="headerlink" title="MongoShell - 数据类型"></a>MongoShell - 数据类型</h2><h2 id="MongoShell-其他命令"><a href="#MongoShell-其他命令" class="headerlink" title="MongoShell - 其他命令"></a>MongoShell - 其他命令</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料:"></a>参考资料:</h2><p>MongoDB 中文社区: <a href="http://www.mongoing.com/docs/mongo.html" target="_blank" rel="external">http://www.mongoing.com/docs/mongo.html</a></p>
 <p>MongoDB 官网文档: <a href="https://docs.mongodb.com/manual/mongo/" target="_blank" rel="external">https://docs.mongodb.com/manual/mongo/</a></p>
 <p>MongoShell引用方法: <a href="https://docs.mongodb.com/manual/reference/method/" target="_blank" rel="external">https://docs.mongodb.com/manual/reference/method/</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -719,7 +786,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-简介"><span class="nav-number">2.</span> <span class="nav-text">MongoShell - 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启动MongoShell："><span class="nav-number">2.1.</span> <span class="nav-text">启动MongoShell：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选项-参数"><span class="nav-number">2.2.</span> <span class="nav-text">选项/参数:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#链接选项"><span class="nav-number">2.2.1.</span> <span class="nav-text">链接选项:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mongorc-js文件"><span class="nav-number">2.2.2.</span> <span class="nav-text">.mongorc.js文件:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用MongoShell"><span class="nav-number">2.2.3.</span> <span class="nav-text">使用MongoShell:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#格式化输出结果"><span class="nav-number">2.2.4.</span> <span class="nav-text">格式化输出结果:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#shell-中的多行操作："><span class="nav-number">2.2.5.</span> <span class="nav-text">shell 中的多行操作：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#退出-shell-操作"><span class="nav-number">2.2.6.</span> <span class="nav-text">退出 shell 操作:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-配置"><span class="nav-number">3.</span> <span class="nav-text">MongoShell - 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义提示符："><span class="nav-number">3.1.</span> <span class="nav-text">自定义提示符：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#显示当前Shell的操作数："><span class="nav-number">3.1.1.</span> <span class="nav-text">显示当前Shell的操作数：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示数据库和主机名"><span class="nav-number">3.1.2.</span> <span class="nav-text">显示数据库和主机名:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示Mongo服务的启动时间以及文档数"><span class="nav-number">3.1.3.</span> <span class="nav-text">显示Mongo服务的启动时间以及文档数:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用外部编辑器："><span class="nav-number">3.2.</span> <span class="nav-text">使用外部编辑器：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改批处理大小："><span class="nav-number">3.3.</span> <span class="nav-text">修改批处理大小：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-脚本"><span class="nav-number">4.</span> <span class="nav-text">MongoShell - 脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-数据类型"><span class="nav-number">5.</span> <span class="nav-text">MongoShell - 数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-其他命令"><span class="nav-number">6.</span> <span class="nav-text">MongoShell - 其他命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-简介"><span class="nav-number">2.</span> <span class="nav-text">MongoShell - 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启动MongoShell："><span class="nav-number">2.1.</span> <span class="nav-text">启动MongoShell：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选项-参数"><span class="nav-number">2.2.</span> <span class="nav-text">选项/参数:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#链接选项"><span class="nav-number">2.2.1.</span> <span class="nav-text">链接选项:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mongorc-js文件"><span class="nav-number">2.2.2.</span> <span class="nav-text">.mongorc.js文件:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用MongoShell"><span class="nav-number">2.2.3.</span> <span class="nav-text">使用MongoShell:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#格式化输出结果"><span class="nav-number">2.2.4.</span> <span class="nav-text">格式化输出结果:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#shell-中的多行操作："><span class="nav-number">2.2.5.</span> <span class="nav-text">shell 中的多行操作：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#退出-shell-操作"><span class="nav-number">2.2.6.</span> <span class="nav-text">退出 shell 操作:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-配置"><span class="nav-number">3.</span> <span class="nav-text">MongoShell - 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义提示符："><span class="nav-number">3.1.</span> <span class="nav-text">自定义提示符：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#显示当前Shell的操作数："><span class="nav-number">3.1.1.</span> <span class="nav-text">显示当前Shell的操作数：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示数据库和主机名"><span class="nav-number">3.1.2.</span> <span class="nav-text">显示数据库和主机名:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示Mongo服务的启动时间以及文档数"><span class="nav-number">3.1.3.</span> <span class="nav-text">显示Mongo服务的启动时间以及文档数:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用外部编辑器："><span class="nav-number">3.2.</span> <span class="nav-text">使用外部编辑器：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改批处理大小："><span class="nav-number">3.3.</span> <span class="nav-text">修改批处理大小：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-脚本"><span class="nav-number">4.</span> <span class="nav-text">MongoShell - 脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#打开新链接："><span class="nav-number">4.1.</span> <span class="nav-text">打开新链接：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#交互式-shell-和mongo-脚本的区别"><span class="nav-number">4.2.</span> <span class="nav-text">交互式 shell 和mongo 脚本的区别:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#–evel选项："><span class="nav-number">4.3.</span> <span class="nav-text">–evel选项：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行-JavaScript-文件："><span class="nav-number">4.4.</span> <span class="nav-text">执行 JavaScript 文件：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-数据类型"><span class="nav-number">5.</span> <span class="nav-text">MongoShell - 数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoShell-其他命令"><span class="nav-number">6.</span> <span class="nav-text">MongoShell - 其他命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料:</span></a></li></ol></div>
             
 
           </div>
