@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-22T15:21:25.000Z</updated>
+  <updated>2017-10-23T04:39:35.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>『NoSQL - MongoDB』CRUD</title>
+    <link href="http://yoursite.com/2017/10/23/mongodb-crud/"/>
+    <id>http://yoursite.com/2017/10/23/mongodb-crud/</id>
+    <published>2017-10-23T01:49:45.000Z</published>
+    <updated>2017-10-23T04:39:35.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;h2 id=&quot;MongoDB-插入文档&quot;&gt;&lt;a href=&quot;#MongoDB-插入文档&quot; class=&quot;headerlink&quot; title=&quot;M
+      
+    
+    </summary>
+    
+      <category term="NoSQL" scheme="http://yoursite.com/categories/NoSQL/"/>
+    
+    
+      <category term="MongoDB" scheme="http://yoursite.com/tags/MongoDB/"/>
+    
+      <category term="NoSQL" scheme="http://yoursite.com/tags/NoSQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>『NoSQL - MongoDB』Mongo Shell</title>
     <link href="http://yoursite.com/2017/10/18/mongodb-shell/"/>
     <id>http://yoursite.com/2017/10/18/mongodb-shell/</id>
     <published>2017-10-18T09:27:44.000Z</published>
-    <updated>2017-10-22T15:21:25.000Z</updated>
+    <updated>2017-10-23T08:29:17.000Z</updated>
     
     <summary type="html">
     
@@ -47,7 +72,7 @@
     <link href="http://yoursite.com/2017/10/17/mongodb-quickstart/"/>
     <id>http://yoursite.com/2017/10/17/mongodb-quickstart/</id>
     <published>2017-10-17T05:54:57.000Z</published>
-    <updated>2017-10-19T02:52:32.000Z</updated>
+    <updated>2017-10-23T05:26:58.000Z</updated>
     
     <summary type="html">
     
@@ -508,30 +533,6 @@
     
     
       <category term="NPM" scheme="http://yoursite.com/tags/NPM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『构建工具-Gulp』相关内容整理</title>
-    <link href="http://yoursite.com/2017/04/26/gulp-note/"/>
-    <id>http://yoursite.com/2017/04/26/gulp-note/</id>
-    <published>2017-04-26T14:15:46.000Z</published>
-    <updated>2017-09-20T15:15:06.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Gulp-简介&quot;&gt;&lt;a href=&quot;#Gulp-简介&quot; class=&quot;headerlink&quot; title=&quot;Gulp- 简介&quot;&gt;&lt;/a&gt;Gulp- 简介&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;Automate and enhance your workflow 
-      
-    
-    </summary>
-    
-      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
-    
-    
-      <category term="Gulp" scheme="http://yoursite.com/tags/Gulp/"/>
     
   </entry>
   
