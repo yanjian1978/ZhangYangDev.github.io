@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="前言本文从MongoDB 的简介、特点、优点、趋势、等几个方面来介绍了MongoDB。 MongoDB - 简介MongoDB（来自于英文单词“Humongous”）是可以应用于各种规模的企业、各个行业以及各类应用程序的开源数据库。MongoDB是专为可扩展性，高性能和高可用性而设计的数据库。它可以从单服务器部署扩展到大型、复杂的多数据中心架构。利用内存计算的优势，MongoDB能够提供高性能的数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-23T05:26:58.000Z">
+<meta property="og:updated_time" content="2017-10-24T06:46:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="『NoSQL - MongoDB』Introduction &amp; QuickStart">
 <meta name="twitter:description" content="前言本文从MongoDB 的简介、特点、优点、趋势、等几个方面来介绍了MongoDB。 MongoDB - 简介MongoDB（来自于英文单词“Humongous”）是可以应用于各种规模的企业、各个行业以及各类应用程序的开源数据库。MongoDB是专为可扩展性，高性能和高可用性而设计的数据库。它可以从单服务器部署扩展到大型、复杂的多数据中心架构。利用内存计算的优势，MongoDB能够提供高性能的数">
@@ -408,6 +408,53 @@
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文从MongoDB 的简介、特点、优点、趋势、等几个方面来介绍了MongoDB。</p>
 <h2 id="MongoDB-简介"><a href="#MongoDB-简介" class="headerlink" title="MongoDB - 简介"></a>MongoDB - 简介</h2><p>MongoDB（来自于英文单词“Humongous”）是可以应用于各种规模的企业、各个行业以及各类应用程序的开源数据库。MongoDB是专为可扩展性，高性能和高可用性而设计的数据库。它可以从单服务器部署扩展到大型、复杂的多数据中心架构。利用内存计算的优势，MongoDB能够提供高性能的数据读写操作。 MongoDB的本地复制和自动故障转移功能使您的应用程序具有很高可靠性和操作灵活性。</p>
+<h2 id="MongoDB-概念"><a href="#MongoDB-概念" class="headerlink" title="MongoDB - 概念"></a>MongoDB - 概念</h2><p>在mongodb中基本的概念是文档、集合、数据库。</p>
+<table>
+<thead>
+<tr>
+<th>SQL术语/概念</th>
+<th>MongoDB术语/概念</th>
+<th>解释/说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>database</td>
+<td>database</td>
+<td>数据库</td>
+</tr>
+<tr>
+<td>table</td>
+<td>collection</td>
+<td>数据库表/集合</td>
+</tr>
+<tr>
+<td>row</td>
+<td>document</td>
+<td>数据记录行/文档</td>
+</tr>
+<tr>
+<td>column</td>
+<td>field</td>
+<td>数据字段/域</td>
+</tr>
+<tr>
+<td>index</td>
+<td>index</td>
+<td>索引</td>
+</tr>
+<tr>
+<td>table joins</td>
+<td></td>
+<td>表连接,MongoDB不支持</td>
+</tr>
+<tr>
+<td>primary key</td>
+<td>primary key</td>
+<td>主键,MongoDB自动将_id字段设置为主键</td>
+</tr>
+</tbody>
+</table>
 <h2 id="MongoDB-特点"><a href="#MongoDB-特点" class="headerlink" title="MongoDB - 特点"></a>MongoDB - 特点</h2><h3 id="临时-Ad-hoc-查询"><a href="#临时-Ad-hoc-查询" class="headerlink" title="临时(Ad hoc)查询:"></a>临时(Ad hoc)查询:</h3><p>MongoDB支持字段，范围查询，正则表达式搜索。查询可以返回特定的文档字段，并且还包括用户定义的JavaScript函数。查询也可以配置为返回给定大小的结果的随机抽样。</p>
 <h3 id="索引"><a href="#索引" class="headerlink" title="索引:"></a>索引:</h3><p>MongoDB文档中的字段可以使用主索引和辅助索引进行索引。</p>
 <h3 id="复制"><a href="#复制" class="headerlink" title="复制:"></a>复制:</h3><p>MongoDB提供高可用性与副本集。副本集由两个或多个数据副本组成。每个副本集成员可以在任何时候以主副本的角色起作用。默认情况下，所有写入和读取都在主副本上完成。辅助副本使用内置复制维护主数据的副本。当主副本失败时，副本集会自动进行选举过程，以确定哪个辅助应该成为主要副本。辅助功能可以选择性地提供读取操作，但是数据默认情况下才最终保持一致。</p>
@@ -722,7 +769,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-简介"><span class="nav-number">2.</span> <span class="nav-text">MongoDB - 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-特点"><span class="nav-number">3.</span> <span class="nav-text">MongoDB - 特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#临时-Ad-hoc-查询"><span class="nav-number">3.1.</span> <span class="nav-text">临时(Ad hoc)查询:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引"><span class="nav-number">3.2.</span> <span class="nav-text">索引:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制"><span class="nav-number">3.3.</span> <span class="nav-text">复制:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡"><span class="nav-number">3.4.</span> <span class="nav-text">负载均衡:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件存储"><span class="nav-number">3.5.</span> <span class="nav-text">文件存储:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合"><span class="nav-number">3.6.</span> <span class="nav-text">聚合:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器端JavaScript执行"><span class="nav-number">3.7.</span> <span class="nav-text">服务器端JavaScript执行:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#覆盖的集合"><span class="nav-number">3.8.</span> <span class="nav-text">覆盖的集合:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-优点"><span class="nav-number">4.</span> <span class="nav-text">MongoDB - 优点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB优于RDBMS"><span class="nav-number">4.1.</span> <span class="nav-text">MongoDB优于RDBMS:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要使用MongoDB？"><span class="nav-number">4.2.</span> <span class="nav-text">为什么要使用MongoDB？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB的应用场景？"><span class="nav-number">4.3.</span> <span class="nav-text">MongoDB的应用场景？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-趋势"><span class="nav-number">5.</span> <span class="nav-text">MongoDB - 趋势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索指数："><span class="nav-number">5.1.</span> <span class="nav-text">搜索指数：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流行程度："><span class="nav-number">5.2.</span> <span class="nav-text">流行程度：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-安装"><span class="nav-number">6.</span> <span class="nav-text">MongoDB - 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">6.1.</span> <span class="nav-text">安装:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置："><span class="nav-number">6.2.</span> <span class="nav-text">配置：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-启动"><span class="nav-number">7.</span> <span class="nav-text">MongoDB - 启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习资料"><span class="nav-number">8.</span> <span class="nav-text">学习资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">9.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-简介"><span class="nav-number">2.</span> <span class="nav-text">MongoDB - 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-概念"><span class="nav-number">3.</span> <span class="nav-text">MongoDB - 概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-特点"><span class="nav-number">4.</span> <span class="nav-text">MongoDB - 特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#临时-Ad-hoc-查询"><span class="nav-number">4.1.</span> <span class="nav-text">临时(Ad hoc)查询:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引"><span class="nav-number">4.2.</span> <span class="nav-text">索引:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制"><span class="nav-number">4.3.</span> <span class="nav-text">复制:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡"><span class="nav-number">4.4.</span> <span class="nav-text">负载均衡:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件存储"><span class="nav-number">4.5.</span> <span class="nav-text">文件存储:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合"><span class="nav-number">4.6.</span> <span class="nav-text">聚合:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器端JavaScript执行"><span class="nav-number">4.7.</span> <span class="nav-text">服务器端JavaScript执行:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#覆盖的集合"><span class="nav-number">4.8.</span> <span class="nav-text">覆盖的集合:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-优点"><span class="nav-number">5.</span> <span class="nav-text">MongoDB - 优点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB优于RDBMS"><span class="nav-number">5.1.</span> <span class="nav-text">MongoDB优于RDBMS:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要使用MongoDB？"><span class="nav-number">5.2.</span> <span class="nav-text">为什么要使用MongoDB？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MongoDB的应用场景？"><span class="nav-number">5.3.</span> <span class="nav-text">MongoDB的应用场景？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-趋势"><span class="nav-number">6.</span> <span class="nav-text">MongoDB - 趋势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索指数："><span class="nav-number">6.1.</span> <span class="nav-text">搜索指数：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流行程度："><span class="nav-number">6.2.</span> <span class="nav-text">流行程度：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-安装"><span class="nav-number">7.</span> <span class="nav-text">MongoDB - 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">7.1.</span> <span class="nav-text">安装:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置："><span class="nav-number">7.2.</span> <span class="nav-text">配置：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB-启动"><span class="nav-number">8.</span> <span class="nav-text">MongoDB - 启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#学习资料"><span class="nav-number">9.</span> <span class="nav-text">学习资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">10.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
