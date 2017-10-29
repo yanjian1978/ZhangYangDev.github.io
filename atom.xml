@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-28T05:02:34.000Z</updated>
+  <updated>2017-10-28T05:03:20.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2017/10/23/mongodb-crud/"/>
     <id>http://yoursite.com/2017/10/23/mongodb-crud/</id>
     <published>2017-10-23T01:49:45.000Z</published>
-    <updated>2017-10-28T05:02:34.000Z</updated>
+    <updated>2017-10-28T05:03:20.000Z</updated>
     
     <summary type="html">
     
@@ -514,26 +514,22 @@
   </entry>
   
   <entry>
-    <title>『管理工具-NPM』相关内容整理</title>
-    <link href="http://yoursite.com/2017/05/09/npm-note/"/>
-    <id>http://yoursite.com/2017/05/09/npm-note/</id>
-    <published>2017-05-09T09:15:46.000Z</published>
-    <updated>2017-09-20T15:15:06.000Z</updated>
+    <title>『Enterprise Java - Servlet』 在 Java8中使Servlet 3.1</title>
+    <link href="http://yoursite.com/2017/06/05/entjava-servlet/"/>
+    <id>http://yoursite.com/2017/06/05/entjava-servlet/</id>
+    <published>2017-06-05T15:31:32.000Z</published>
+    <updated>2017-10-29T15:49:32.000Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;NPM是什么？&quot;&gt;&lt;a href=&quot;#NPM是什么？&quot; class=&quot;headerlink&quot; title=&quot;NPM是什么？&quot;&gt;&lt;/a&gt;NPM是什么？&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;npm（全称 &lt;strong&gt;Node Package Manager&lt;/
-      
-    
     </summary>
     
-      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
+      <category term="Ent Java" scheme="http://yoursite.com/categories/Ent-Java/"/>
     
     
-      <category term="NPM" scheme="http://yoursite.com/tags/NPM/"/>
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Servlet" scheme="http://yoursite.com/tags/Servlet/"/>
     
   </entry>
   
