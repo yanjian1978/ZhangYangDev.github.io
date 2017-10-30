@@ -518,9 +518,14 @@
     <link href="http://yoursite.com/2017/06/05/entjava-servlet/"/>
     <id>http://yoursite.com/2017/06/05/entjava-servlet/</id>
     <published>2017-06-05T15:31:32.000Z</published>
-    <updated>2017-10-29T15:49:32.000Z</updated>
+    <updated>2017-10-30T15:42:51.000Z</updated>
     
     <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;本文讲解了在 JAVA8的环境中使用 Servlet3.1的标准容器中使用 Http 上下文的方式来深入了解 Servlet，通过一
+      
     
     </summary>
     
