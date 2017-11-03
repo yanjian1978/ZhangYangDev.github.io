@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="前言本文从讲解了 MongoDB 的数据导入导出，以及 CRUD 操作。 数据下载: JSON示例数据:(美国马萨诸塞州邮政代码-&amp;gt;点击下载)。 12345678910&amp;#123;    &quot;_id&quot; : &quot;01001&quot;,		#序号    &quot;city&quot; : &quot;AGAWAM&quot;,		#城市    &quot;loc&quot; : [ 			#坐标        -72.622739,         42.0702">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-03T05:56:51.000Z">
+<meta property="og:updated_time" content="2017-11-03T06:05:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="『NoSQL - MongoDB』CRUD">
 <meta name="twitter:description" content="前言本文从讲解了 MongoDB 的数据导入导出，以及 CRUD 操作。 数据下载: JSON示例数据:(美国马萨诸塞州邮政代码-&amp;gt;点击下载)。 12345678910&amp;#123;    &quot;_id&quot; : &quot;01001&quot;,		#序号    &quot;city&quot; : &quot;AGAWAM&quot;,		#城市    &quot;loc&quot; : [ 			#坐标        -72.622739,         42.0702">
@@ -749,6 +749,10 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.zips.remove(&#123;&#125;)</div></pre></td></tr></table></figure>
 <p>运行结果:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Removed 11235 record(s) in 136ms</div></pre></td></tr></table></figure>
+<p>删除zips 集合:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">db.zips.drop()</div></pre></td></tr></table></figure>
+<p>运行结果:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">true</div></pre></td></tr></table></figure>
 <h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><p>查询运算符：<a href="https://docs.mongodb.com/manual/reference/operator/query/" target="_blank" rel="external">https://docs.mongodb.com/manual/reference/operator/query/</a></p>
 <p>MongoDB-CRUD：<a href="https://docs.mongodb.com/manual/crud/" target="_blank" rel="external">https://docs.mongodb.com/manual/crud/</a></p>
 <p>MongoDB-writeConcern：<a href="https://docs.mongodb.com/manual/reference/write-concern/" target="_blank" rel="external">https://docs.mongodb.com/manual/reference/write-concern/</a></p>
