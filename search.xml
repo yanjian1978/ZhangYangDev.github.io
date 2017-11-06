@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[『Docker』- Introduction & QuickStart]]></title>
     <url>%2F2017%2F11%2F04%2Fdocker-introduction%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[Docker - 概述：Docker包括了一个命令行程序、一个后台守护进程、以及一组远程服务。它解决了常见的软件问题，并且简化了安装、运行、发布和删除程序。这一切的实现是通过使用一项 UNIX 技术，称之为容器。 Docker的特点： Docker能够通过容器提供更小的操作系统占用空间，从而缩小开发规模。 有了容器，跨不同部门的团队（如开发人员，质量保证人员和操作人员）可以更轻松地跨应用程序进行无缝工作。 您可以在任何物理和虚拟机，甚至是云上的任何位置部署Docker容器。 由于Docker容器非常轻便，所以它们非常容易扩展。 Docker的组件：Docker有以下组件 Docker for Mac - 它允许在Mac OS上运行Docker容器。 Docker for Linux - 它允许在Linux操作系统上运行Docker容器。 Docker for Windows - 它允许在Windows操作系统上运行Docker容器。 Docker Engine - 用于构建Docker镜像和创建Docker容器。 Docker Hub - 这是用来托管各种Docker镜像的注册表。 Docker Compose - 用于定义使用多个Docker容器的应用程序。 参考资料:Docker Get Started：https://docs.docker.com/get-started/]]></content>
       <categories>
         <category>Docker</category>
       </categories>
