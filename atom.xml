@@ -356,9 +356,9 @@
       <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
     
     
-      <category term="Gradle" scheme="http://yoursite.com/tags/Gradle/"/>
-    
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Gradle" scheme="http://yoursite.com/tags/Gradle/"/>
     
   </entry>
   
