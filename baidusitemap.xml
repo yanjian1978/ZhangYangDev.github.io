@@ -53,9 +53,9 @@
         <title>『Enterprise Java - Servlet』 在 Java8中使Servlet 3.1</title>
         <pubTime>2017-06-05T15:31:32.000Z</pubTime>
         
-        <tag>Java</tag>
-         
         <tag>Servlet</tag>
+         
+        <tag>Java</tag>
          
          
            
@@ -305,9 +305,9 @@
         <title>『构建工具-Gradle』相关内容整理</title>
         <pubTime>2017-09-02T07:15:01.000Z</pubTime>
         
-        <tag>Gradle</tag>
-         
         <tag>Java</tag>
+         
+        <tag>Gradle</tag>
          
          
            
@@ -318,7 +318,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://yoursite.com/2017/09/15/groovy-introduction/</loc>
@@ -344,6 +343,7 @@
     </url>
 
     
+    
   <url>
     <loc>http://yoursite.com/2017/04/26/gulp-note/</loc>
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
@@ -358,6 +358,28 @@
            
              
               <breadCrumb title="Build Tools" url="http://yoursite.com/categories/Build-Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/08/22/springboot-actuator/</loc>
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Spring Boot - Actuator QuickStart</title>
+        <pubTime>2017-08-22T13:55:58.000Z</pubTime>
+        
+        <tag>Spring Boot</tag>
+         
+        <tag>Spring</tag>
+         
+         
+           
+             
+              <breadCrumb title="Spring Boot" url="http://yoursite.com/categories/Spring-Boot/"/>
           
         </display>
     </data>
@@ -400,28 +422,6 @@
            
              
               <breadCrumb title="Build Tools" url="http://yoursite.com/categories/Build-Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/08/22/springboot-actuator/</loc>
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spring Boot - Actuator QuickStart</title>
-        <pubTime>2017-08-22T13:55:58.000Z</pubTime>
-        
-        <tag>Spring Boot</tag>
-         
-        <tag>Spring</tag>
-         
-         
-           
-             
-              <breadCrumb title="Spring Boot" url="http://yoursite.com/categories/Spring-Boot/"/>
           
         </display>
     </data>

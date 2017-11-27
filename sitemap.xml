@@ -100,13 +100,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/09/15/groovy-introduction/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
@@ -114,7 +107,21 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/04/26/gulp-note/</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/08/22/springboot-actuator/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
@@ -129,13 +136,6 @@
   
   <url>
     <loc>http://yoursite.com/2017/05/09/npm-note/</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/08/22/springboot-actuator/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
