@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Docker』- Containter]]></title>
+    <title><![CDATA[『Docker』- Containter]]></title>
     <url>%2F2017%2F11%2F27%2Fdocker-containter%2F</url>
     <content type="text"><![CDATA[Docker - 容器概述容器是应用程序层的一个抽象，将代码和依赖关系打包在一起。多个容器可以在同一台机器上运行，并与其他容器共享操作系统内核，每个容器在用户空间中作为孤立进程运行。容器占用的空间少于虚拟机（容器图像的大小通常为几十MB），并且几乎立即启动。]]></content>
       <categories>
