@@ -89,7 +89,7 @@
 
 
 
-<meta name="description" content="Docker - 概述Docker包括了一个命令行程序、一个后台守护进程、以及一组远程服务。它解决了常见的软件问题，并且简化了安装、运行、发布和删除程序。这一切的实现是通过使用一项 UNIX 技术，称之为容器。 容器与虚拟机:容器:容器是应用程序层的一个抽象，将代码和依赖关系打包在一起。多个容器可以在同一台机器上运行，并与其他容器共享操作系统内核，每个容器在用户空间中作为孤立进程运行。容器占用的空">
+<meta name="description" content="Docker - 概述Docker包括了一个命令行程序、一个后台守护进程、以及一组远程服务。它解决了常见的软件问题，并且简化了安装、运行、发布和删除程序。这一切的实现是通过使用一项 UNIX 技术，称之为容器。 容器与虚拟机:容器:容器是应用程序层的一个抽象，将代码和依赖关系打包在一起。多个容器可以在同一台机器上运行，">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『Docker』- Introduction &amp; QuickStart">
@@ -417,7 +417,7 @@
 <li><strong>Edge</strong>每个月都会为您提供新功能</li>
 </ul>
 <p>企业版（EE）专为企业级开发人员和IT团队而设计，他们在大规模生产中构建，发布和运行关键业务应用程序。</p>
-<p>Reference：<a href="https://docs.docker.com/engine/installation/" target="_blank" rel="external">https://docs.docker.com/engine/installation/</a></p>
+<p>Reference：<a href="https://docs.docker.com/engine/installation/" target="_blank" rel="noopener">https://docs.docker.com/engine/installation/</a></p>
 <h2 id="Docker-特点"><a href="#Docker-特点" class="headerlink" title="Docker - 特点"></a>Docker - 特点</h2><ul>
 <li>Docker能够通过容器提供更小的操作系统占用空间，从而缩小开发规模。</li>
 <li>有了容器，跨不同部门的团队（如开发人员，质量保证人员和操作人员）可以更轻松地跨应用程序进行无缝工作。</li>
@@ -467,7 +467,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo wget -qO- https://get.docker.com/ | sh</div></pre></td></tr></table></figure>
 <p>执行这个命令后，脚本就会自动的将一切准备工作做好，并且把 Docker CE 的 edge 版本安装在系统中。</p>
 <p>其他安装方式请参考官网所提供的文档:</p>
-<p>Reference：<a href="https://docs.docker.com/engine/installation/linux/docker-ce/centos/#prerequisites" target="_blank" rel="external">https://docs.docker.com/engine/installation/linux/docker-ce/centos/#prerequisites</a></p>
+<p>Reference：<a href="https://docs.docker.com/engine/installation/linux/docker-ce/centos/#prerequisites" target="_blank" rel="noopener">https://docs.docker.com/engine/installation/linux/docker-ce/centos/#prerequisites</a></p>
 <h2 id="Docker-Hello-World"><a href="#Docker-Hello-World" class="headerlink" title="Docker - Hello World"></a>Docker - Hello World</h2><p>在安装好 Docker 之后，可以再命令行终端中输入:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  ~ docker run hello-world</div></pre></td></tr></table></figure>
 <p>之后，Docker被激活，开始下载各种组件，并最终打印出<code>Hello from Docker!</code>，在这个过程成 Docker依照流程做了如下事情：</p>
@@ -476,8 +476,8 @@
 
 
 <p>当第二次执行<code>docker run hello-world</code>的时候，Docker 会检查是否安装了<code>hello-world</code> 这个镜像，如果已经安装，Docker 会创建一个新的容器并启动该程序。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料:"></a>参考资料:</h2><p>Docker Get Started：<a href="https://docs.docker.com/get-started/" target="_blank" rel="external">https://docs.docker.com/get-started/</a></p>
-<p>8 Ways to Use Docker in the Real World:<a href="http://blog.flux7.com/blogs/docker/8-ways-to-use-docker-in-the-real-world" target="_blank" rel="external">http://blog.flux7.com/blogs/docker</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料:"></a>参考资料:</h2><p>Docker Get Started：<a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">https://docs.docker.com/get-started/</a></p>
+<p>8 Ways to Use Docker in the Real World:<a href="http://blog.flux7.com/blogs/docker/8-ways-to-use-docker-in-the-real-world" target="_blank" rel="noopener">http://blog.flux7.com/blogs/docker</a></p>
 
       
     </div>

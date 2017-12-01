@@ -89,7 +89,7 @@
 
 
 
-<meta name="description" content="前言：本文讲解了 Groovy语言中的基本语法，数据类型，变量和运算符，与 Java 一致的内容则不再赘述。 Groovy - 基本语法：HelloWorld：示例代码： 12345class Example&amp;#123;    static void main (String [] args)&amp;#123;        println(&apos;hello world&apos;)    &amp;#125;&amp;#125;">
+<meta name="description" content="前言：本文讲解了 Groovy语言中的基本语法，数据类型，变量和运算符，与 Java 一致的内容则不再赘述。 Groovy - 基本语法：HelloWorld：示例代码： 12345class Example&amp;#123;    static void main (String [] args)&amp;#123">
 <meta name="keywords" content="Java,Groovy,JVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『JVM语言 - Groovy』基础(一)">
@@ -677,13 +677,13 @@
 <h3 id="运算符重载："><a href="#运算符重载：" class="headerlink" title="运算符重载："></a>运算符重载：</h3><p>Groovy中支持运算符重载，其实也就是实现约定好的方法：</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bucket</span> &#123;</span></div><div class="line">    <span class="keyword">int</span> size</div><div class="line"></div><div class="line">    Bucket(<span class="keyword">int</span> size) &#123; <span class="keyword">this</span>.size = size &#125;</div><div class="line"></div><div class="line">    Bucket plus(Bucket other) &#123; <span class="comment">// 重载这个以实现+操作</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Bucket(<span class="keyword">this</span>.size + other.size)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">def</span> b1 = <span class="keyword">new</span> Bucket(<span class="number">4</span>)</div><div class="line"><span class="keyword">def</span> b2 = <span class="keyword">new</span> Bucket(<span class="number">11</span>)</div><div class="line"><span class="keyword">assert</span> (b1 + b2).size == <span class="number">15</span> <span class="comment">// 这里相当于(b1.plus(b2)).size</span></div></pre></td></tr></table></figure>
 <h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><p>Groovy-基本语法：</p>
-<p><a href="http://www.groovy-lang.org/syntax.html" target="_blank" rel="external">http://www.groovy-lang.org/syntax.html</a></p>
-<p><a href="https://www.tutorialspoint.com/groovy/groovy_basic_syntax.htm" target="_blank" rel="external">https://www.tutorialspoint.com/groovy/groovy_basic_syntax.htm</a></p>
+<p><a href="http://www.groovy-lang.org/syntax.html" target="_blank" rel="noopener">http://www.groovy-lang.org/syntax.html</a></p>
+<p><a href="https://www.tutorialspoint.com/groovy/groovy_basic_syntax.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/groovy/groovy_basic_syntax.htm</a></p>
 <p>Groovy-数据类型：</p>
-<p><a href="https://www.tutorialspoint.com/groovy/groovy_data_types.htm" target="_blank" rel="external">https://www.tutorialspoint.com/groovy/groovy_data_types.htm</a></p>
+<p><a href="https://www.tutorialspoint.com/groovy/groovy_data_types.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/groovy/groovy_data_types.htm</a></p>
 <p>Groovy-运算符：</p>
-<p><a href="http://www.groovy-lang.org/operators.html#_coercion_operator" target="_blank" rel="external">http://www.groovy-lang.org/operators.html#_coercion_operator</a></p>
-<p><a href="https://www.tutorialspoint.com/groovy/groovy_operators.htm" target="_blank" rel="external">https://www.tutorialspoint.com/groovy/groovy_operators.htm</a></p>
+<p><a href="http://www.groovy-lang.org/operators.html#_coercion_operator" target="_blank" rel="noopener">http://www.groovy-lang.org/operators.html#_coercion_operator</a></p>
+<p><a href="https://www.tutorialspoint.com/groovy/groovy_operators.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/groovy/groovy_operators.htm</a></p>
 
       
     </div>

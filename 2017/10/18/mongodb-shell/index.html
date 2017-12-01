@@ -89,7 +89,7 @@
 
 
 
-<meta name="description" content="前言本文从介绍了MongoShell 的配置、脚本、数据类型和其他指令。 MongoShell - 简介MongoShell是一个互动的JavaScript接口的MongoDB，可以使用MongoShell来查询和更新数据以及执行管理操作。 MongoShell是MongoDB发行版的一个组件， 安装并启动MongoDB后，将MongoShell连接到正在运行的MongoDB实例，MongoDB手">
+<meta name="description" content="前言本文从介绍了MongoShell 的配置、脚本、数据类型和其他指令。 MongoShell - 简介MongoShell是一个互动的JavaScript接口的MongoDB，可以使用MongoShell来查询和更新数据以及执行管理操作。 MongoShell是MongoDB发行版的一个组件， 安装并启动MongoD">
 <meta name="keywords" content="MongoDB,NoSQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『NoSQL - MongoDB』Mongo Shell">
@@ -557,11 +557,11 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">➜  ~ mongo mydb --eval "printjson(db.getCollectionNames())" </div><div class="line"></div><div class="line">MongoDB shell version v3.4.3</div><div class="line">connecting to: mongodb://127.0.0.1:27017/mydb</div><div class="line">MongoDB server version: 3.4.3</div><div class="line">[ "emp", "stores" ]</div></pre></td></tr></table></figure>
 <h3 id="执行-JavaScript-文件："><a href="#执行-JavaScript-文件：" class="headerlink" title="执行 JavaScript 文件："></a>执行 JavaScript 文件：</h3><p>MongoShell 可以 指定一个 .js 文件， mongo 将会直接运行JavaScript。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongo localhost:27017/test myjsfile.js</div></pre></td></tr></table></figure>
-<p>该操作在连接到<code>localhost</code> 接口 <code>27017</code> 端口 <a href="http://www.mongoing.com/docs/reference/program/mongod.html#bin.mongod" target="_blank" rel="external"><code>mongod</code></a> 实例上 <code>test</code> <a href="http://www.mongoing.com/docs/reference/glossary.html#term-database" target="_blank" rel="external"><em>database</em></a> 的:program:mongo shell 中执行 <code>myjsfile.js</code> 脚本。</p>
+<p>该操作在连接到<code>localhost</code> 接口 <code>27017</code> 端口 <a href="http://www.mongoing.com/docs/reference/program/mongod.html#bin.mongod" target="_blank" rel="noopener"><code>mongod</code></a> 实例上 <code>test</code> <a href="http://www.mongoing.com/docs/reference/glossary.html#term-database" target="_blank" rel="noopener"><em>database</em></a> 的:program:mongo shell 中执行 <code>myjsfile.js</code> 脚本。</p>
 <p>可以在MongoShell中使用 <code>load()</code> 函数运行 .js文件，如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">load(&quot;demo.js&quot;)</div></pre></td></tr></table></figure>
 <p>该函数导入并运行了 <code>demo.js</code> 文件。</p>
-<p><code>load()</code> 方法可接受相对路径和绝对路径。如果 <a href="http://www.mongoing.com/docs/reference/program/mongo.html#bin.mongo" target="_blank" rel="external"><code>mongo</code></a> shell 当前的工作目录位于 <code>/data/db</code>， 而文件<code>demo.js</code> 位于 <code>/data/db/scripts</code> 目录，那么下面两种在 <a href="http://www.mongoing.com/docs/reference/program/mongo.html#bin.mongo" target="_blank" rel="external"><code>mongo</code></a> 中的调用将会是同样的效果。</p>
+<p><code>load()</code> 方法可接受相对路径和绝对路径。如果 <a href="http://www.mongoing.com/docs/reference/program/mongo.html#bin.mongo" target="_blank" rel="noopener"><code>mongo</code></a> shell 当前的工作目录位于 <code>/data/db</code>， 而文件<code>demo.js</code> 位于 <code>/data/db/scripts</code> 目录，那么下面两种在 <a href="http://www.mongoing.com/docs/reference/program/mongo.html#bin.mongo" target="_blank" rel="noopener"><code>mongo</code></a> 中的调用将会是同样的效果。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">load(&quot;scripts/myjstest.js&quot;)</div><div class="line">load(&quot;/data/db/scripts/demo.js&quot;)</div></pre></td></tr></table></figure>
 <h2 id="MongoShell-数据类型"><a href="#MongoShell-数据类型" class="headerlink" title="MongoShell - 数据类型"></a>MongoShell - 数据类型</h2><p>MongoDB BSON提供了除 JSON之外其它数据类型的支持。 Drivers提供了对这些数据类型在主机语言的本地化支持，MongoShell 也提供了一些帮助类来支持这些数据类型在 mongo JavaScript shell 中的使用。 </p>
 <h3 id="检查类型："><a href="#检查类型：" class="headerlink" title="检查类型："></a>检查类型：</h3><p>如果想要确定字段类型，MongoShell提供了 <code>instanceof</code> 和 <code>typeof</code> 操作符。</p>
@@ -667,9 +667,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料:"></a>参考资料:</h2><p>MongoDB 中文社区: <a href="http://www.mongoing.com/docs/mongo.html" target="_blank" rel="external">http://www.mongoing.com/docs/mongo.html</a></p>
-<p>MongoDB 官网文档: <a href="https://docs.mongodb.com/manual/mongo/" target="_blank" rel="external">https://docs.mongodb.com/manual/mongo/</a></p>
-<p>MongoShell引用方法: <a href="https://docs.mongodb.com/manual/reference/method/" target="_blank" rel="external">https://docs.mongodb.com/manual/reference/method/</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料:"></a>参考资料:</h2><p>MongoDB 中文社区: <a href="http://www.mongoing.com/docs/mongo.html" target="_blank" rel="noopener">http://www.mongoing.com/docs/mongo.html</a></p>
+<p>MongoDB 官网文档: <a href="https://docs.mongodb.com/manual/mongo/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/mongo/</a></p>
+<p>MongoShell引用方法: <a href="https://docs.mongodb.com/manual/reference/method/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/reference/method/</a></p>
 
       
     </div>

@@ -89,7 +89,7 @@
 
 
 
-<meta name="description" content="前言 ZEIT：Our Mission，Make Cloud Computing as Easy and Accessible as Mobile computing.  ZEIT是美国 (域名Ip指向美国华盛顿州西雅图市)一家提供云部署服务的公司，旗下的 Now.sh提供了Realtime global deployments(全球化实时部署)服务。 Now.sh 提供了免费的OSS 服务，配置">
+<meta name="description" content="前言 ZEIT：Our Mission，Make Cloud Computing as Easy and Accessible as Mobile computing.  ZEIT是美国 (域名Ip指向美国华盛顿州西雅图市)一家提供云部署服务的公司，旗下的 Now.sh提供了Realtime global deploy">
 <meta name="keywords" content="Now.sh,Deployments">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何使用 Now.sh来免费部署你的项目？">
@@ -456,18 +456,18 @@
 <p>图例：</p>
 <ul>
 <li>*超出此限额时，您需支付“按需”的价格。服务不中断，不会造成停机。</li>
-<li>†对于某些开源项目，我们赞助了自定义域的支持。请<a href="mailto:support@zeit.co" target="_blank" rel="external">联系我们，</a>以确定您是否适用。</li>
+<li>†对于某些开源项目，我们赞助了自定义域的支持。请<a href="mailto:support@zeit.co" target="_blank" rel="noopener">联系我们，</a>以确定您是否适用。</li>
 <li>‡在免费计划中，您的代码将是公开的和开源的，可通过所有部署的路径URL提供。<code>/_src</code></li>
 </ul>
-<p>Reference：<a href="https://zeit.co/pricing" target="_blank" rel="external">https://zeit.co/pricing</a></p>
+<p>Reference：<a href="https://zeit.co/pricing" target="_blank" rel="noopener">https://zeit.co/pricing</a></p>
 <h2 id="Now-sh-简介："><a href="#Now-sh-简介：" class="headerlink" title="Now.sh - 简介："></a>Now.sh - 简介：</h2><p>now allows you to take your JavaScript (Node.js) or Docker powered websites, applications and services to the cloud with ease, speed and reliability. In practical terms, any directory that contains a package.json or Dockerfile can be transported to the cloud with one command: now.  Every time you deploy a project, now will provide you with a new, unique URL (even before the upload has finished). These URLs will look like this (my-app is your automatically determined application name): my-app-erkgfjtrna.now.sh.  When it’s time to take your deployment to production, you simply pick an appropriate alias (a custom domain).</p>
-<p>Reference：<a href="https://zeit.co/now#whats-now" target="_blank" rel="external">https://zeit.co/now#whats-now</a></p>
-<h2 id="Now-sh-安装："><a href="#Now-sh-安装：" class="headerlink" title="Now.sh - 安装："></a>Now.sh - 安装：</h2><h3 id="基于客户端进行安装："><a href="#基于客户端进行安装：" class="headerlink" title="基于客户端进行安装："></a>基于客户端进行安装：</h3><p>客户端下载地址：<a href="https://zeit.co/download" target="_blank" rel="external">https://zeit.co/download</a></p>
+<p>Reference：<a href="https://zeit.co/now#whats-now" target="_blank" rel="noopener">https://zeit.co/now#whats-now</a></p>
+<h2 id="Now-sh-安装："><a href="#Now-sh-安装：" class="headerlink" title="Now.sh - 安装："></a>Now.sh - 安装：</h2><h3 id="基于客户端进行安装："><a href="#基于客户端进行安装：" class="headerlink" title="基于客户端进行安装："></a>基于客户端进行安装：</h3><p>客户端下载地址：<a href="https://zeit.co/download" target="_blank" rel="noopener">https://zeit.co/download</a></p>
 <p>安装过程就不一一赘述了，因为我也没安装过。我觉得使用<code>homebrew</code>或<code>npm</code>之类的工具安装使用会更方便一些。</p>
 <h3 id="基于-npm-进行安装："><a href="#基于-npm-进行安装：" class="headerlink" title="基于 npm 进行安装："></a>基于 npm 进行安装：</h3><p>示例代码：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">➜  npm install -g now</div><div class="line">/usr/local/bin/now -&gt; /usr/local/lib/node_modules/now/download/dist/now</div><div class="line"></div><div class="line"><span class="meta">&gt;</span> now@8.2.2 postinstall /usr/local/lib/node_modules/now</div><div class="line"><span class="meta">&gt;</span> node download/install.js</div><div class="line"></div><div class="line"><span class="meta">&gt;</span> For the source code, check out: https://github.com/zeit/now-cli</div><div class="line"></div><div class="line"><span class="meta">&gt;</span> Downloading now CLI 8.2.2 [====================] 100%</div><div class="line"></div><div class="line">+ now@8.2.2</div><div class="line">added 1 package in 15.18s</div></pre></td></tr></table></figure>
 <p>如果你还不会使用 npm (<em>Node</em> <em>Package</em> <em>Manager</em>)，请翻阅之前发布的 npm使用教程。</p>
-<p>Reference:<a href="https://www.npmjs.com/package/now" target="_blank" rel="external">https://www.npmjs.com/package/now</a></p>
+<p>Reference:<a href="https://www.npmjs.com/package/now" target="_blank" rel="noopener">https://www.npmjs.com/package/now</a></p>
 <h2 id="Now-sh-CLI"><a href="#Now-sh-CLI" class="headerlink" title="Now.sh - CLI:"></a>Now.sh - CLI:</h2><p>以下是所有可用命令的完整列表，以及您可以使用的命令和您每天工作时应记住的命令：</p>
 <table>
 <thead>
@@ -507,7 +507,7 @@
 </tr>
 <tr>
 <td style="text-align:center">now dns [name]</td>
-<td style="text-align:center">列出使用<a href="https://zeit.co/world" target="_blank" rel="external">zeit.world</a>为域创建的所有DNS记录。该列表不包括由名称服务器自动生成的记录（如默认记录，为记录自动创建的记录等）。<code>SOA``A / AAAA``ALIAS</code></td>
+<td style="text-align:center">列出使用<a href="https://zeit.co/world" target="_blank" rel="noopener">zeit.world</a>为域创建的所有DNS记录。该列表不包括由名称服务器自动生成的记录（如默认记录，为记录自动创建的记录等）。<code>SOA``A / AAAA``ALIAS</code></td>
 </tr>
 <tr>
 <td style="text-align:center">now open</td>
@@ -531,14 +531,14 @@
 </tr>
 </tbody>
 </table>
-<p>Reference：<a href="https://zeit.co/docs/features/now-cli" target="_blank" rel="external">https://zeit.co/docs/features/now-cli</a></p>
-<h2 id="Now-sh-使用："><a href="#Now-sh-使用：" class="headerlink" title="Now.sh - 使用："></a>Now.sh - 使用：</h2><p>要使用 Now.sh就必须要再 <a href="https://zeit.co" target="_blank" rel="external">https://zeit.co</a> 注册一个账户，只需要输入你的邮箱就好了，然后在本地进行认证，认证过程中需要输入你注册时所用的邮箱，然后打开邮箱点击链接进行认证。</p>
+<p>Reference：<a href="https://zeit.co/docs/features/now-cli" target="_blank" rel="noopener">https://zeit.co/docs/features/now-cli</a></p>
+<h2 id="Now-sh-使用："><a href="#Now-sh-使用：" class="headerlink" title="Now.sh - 使用："></a>Now.sh - 使用：</h2><p>要使用 Now.sh就必须要再 <a href="https://zeit.co" target="_blank" rel="noopener">https://zeit.co</a> 注册一个账户，只需要输入你的邮箱就好了，然后在本地进行认证，认证过程中需要输入你注册时所用的邮箱，然后打开邮箱点击链接进行认证。</p>
 <p>示例代码：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">➜  ~ now login</div><div class="line"><span class="meta">&gt;</span> We sent an email to youremail@gmail.com. Please follow the steps provided</div><div class="line">  inside it and make sure the security code matches Silly Water Buffalo.</div><div class="line">✔ Email confirmed</div><div class="line">✔ Fetched your personal details</div><div class="line"><span class="meta">&gt;</span> Ready! Authentication token and personal details saved in "~/.now"</div></pre></td></tr></table></figure>
 <p>邮件内容：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Hi!</div><div class="line"></div><div class="line">Login attempt from Shenzhen, China</div><div class="line"></div><div class="line">Verify that the provided security code matches Confident African Civet</div><div class="line">before proceeding. </div><div class="line"></div><div class="line">Then please follow this link to verify your email address.</div></pre></td></tr></table></figure>
 <h2 id="Now-sh-部署："><a href="#Now-sh-部署：" class="headerlink" title="Now.sh - 部署："></a>Now.sh - 部署：</h2><blockquote>
-<p><a href="https://zeit.co/now" target="_blank" rel="external">Now.sh</a> is <em>free</em> for open-source projects and static deployments. It supports <code>Dockerfile</code>, <code>package.json</code> and static sites out of the box. All builds are reproducible and executed in the cloud.</p>
+<p><a href="https://zeit.co/now" target="_blank" rel="noopener">Now.sh</a> is <em>free</em> for open-source projects and static deployments. It supports <code>Dockerfile</code>, <code>package.json</code> and static sites out of the box. All builds are reproducible and executed in the cloud.</p>
 <p>译：Now.sh对于开源项目和静态部署是免费的。它支持Dockerfile，package.json和静态网站开箱即用。所有的构建都是可重现的，并在云中执行。 </p>
 </blockquote>
 <p>现在你可以使用<code>now</code>命令来部署任何 web应用程序，现在 Now.sh 支持三种类型的部署：</p>
@@ -571,9 +571,9 @@
 <h3 id="部署总结："><a href="#部署总结：" class="headerlink" title="部署总结："></a>部署总结：</h3><p>项目在部署完成之后，我们会得到一个链接，可以通过这个链接来访问部署的项目。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">➜  Index now</div><div class="line"><span class="meta">&gt;</span> Deploying ~/WorkDir/Index under usrename</div><div class="line"><span class="meta">&gt;</span> Warning! Skipping file /Users/Uname/WorkDir/Index/img/background.jpg </div><div class="line">(size exceeded 1MB)</div><div class="line"><span class="meta">&gt;</span> Warning! 1 of the files exceeded the limit for your plan.</div><div class="line"><span class="meta">&gt;</span> Please run `now upgrade` to upgrade.</div><div class="line"><span class="meta">&gt;</span> Ready! https://index-xxxxxxxxx.now.sh (copied to clipboard) [2s]</div><div class="line"><span class="meta">&gt;</span> You (Username) are on the OSS plan. Your code and logs will be made public.</div><div class="line"><span class="meta">&gt;</span> NOTE: You can use `now --public` to skip this prompt</div><div class="line"><span class="meta">&gt;</span> Synced 3 files (877.42KB) [41s]</div><div class="line"><span class="meta">&gt;</span> Initializing…</div><div class="line"><span class="meta">&gt;</span> Deployment complete!</div></pre></td></tr></table></figure>
 <p>每次更新部署后， url 都会生成一个新的，但是老的 url 都还是可以用的。如果最终网站要产品化，可以很容易的绑定自己的域名。</p>
-<p>Reference： <a href="https://zeit.co/docs/getting-started/deployment" target="_blank" rel="external">https://zeit.co/docs/getting-started/deployment</a></p>
+<p>Reference： <a href="https://zeit.co/docs/getting-started/deployment" target="_blank" rel="noopener">https://zeit.co/docs/getting-started/deployment</a></p>
 <h2 id="Now-sh-域名："><a href="#Now-sh-域名：" class="headerlink" title="Now.sh - 域名："></a>Now.sh - 域名：</h2><p>当我们部署完应用程序的时，Now.sh 会为我们生成一个唯一部署URL，如果我们修改项目后进行多次部署，Now.sh 会生成多个 URL 为我们的项目，使用这些特定的 URL 可以访问不同版本的应用，但是这些URL 不容易记住，每次部署新版本都会更新地址，因此我们需要一个固定的域名。我们将使用<code>now alias</code>命令将域名映射到应用的其中一个部署URL。</p>
-<p>需要说明的是，自定义域仅适用于付费计划。如果您要为自己的应用使用自定义域，则需要升级您的帐户。具体价格请参考：<a href="https://zeit.co/pricing" target="_blank" rel="external">https://zeit.co/pricing</a></p>
+<p>需要说明的是，自定义域仅适用于付费计划。如果您要为自己的应用使用自定义域，则需要升级您的帐户。具体价格请参考：<a href="https://zeit.co/pricing" target="_blank" rel="noopener">https://zeit.co/pricing</a></p>
 <p>使用<code>now alias</code>命令的四种不同的方法是： </p>
 <ul>
 <li>使用<code>now.sh</code>提供的域名 </li>
@@ -583,12 +583,12 @@
 </ul>
 <h3 id="使用now-sh提供的域名"><a href="#使用now-sh提供的域名" class="headerlink" title="使用now.sh提供的域名"></a>使用now.sh提供的域名</h3><p>这种方法是使用域名的最简单方法。要立即使用now.sh 后缀获取域名，只需运行以下命令即可，示例代码 ：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> now alias https://my-web-app-avvuiuuwto.now.sh my-web-app</div></pre></td></tr></table></figure>
-<p>现在可以使用<a href="https://my-web-app.now.sh来访问部署的项目。" target="_blank" rel="external">https://my-web-app.now.sh来访问部署的项目。</a></p>
+<p>现在可以使用<a href="https://my-web-app.now.sh来访问部署的项目。" target="_blank" rel="noopener">https://my-web-app.now.sh来访问部署的项目。</a></p>
 <p>###使用now.sh管理的自定义域</p>
 <p>如果您想为自己的应用使用自定义域，最简单的方法是使用<code>now</code>为您的应用购买域名。 只需运行以下alias命令，示例代码：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> now alias https://my-web-app-avvuiuuwto.now.sh my-web-app.com</div></pre></td></tr></table></figure>
 <p>在这里，我们正在尝试将my-web-app.com域名分配给上述部署URL。如果域名可用，您可以在不离开终端的情况下确认并购买。</p>
-<p>确认后，现在将处理您的所有技术细节，并允许您的用户使用<a href="https://my-web-app.com访问您的应用程序。" target="_blank" rel="external">https://my-web-app.com访问您的应用程序。</a></p>
+<p>确认后，现在将处理您的所有技术细节，并允许您的用户使用<a href="https://my-web-app.com访问您的应用程序。" target="_blank" rel="noopener">https://my-web-app.com访问您的应用程序。</a></p>
 <blockquote>
 <p>在这个过程中，<code>now.sh</code>将为我们的域名设置一个域加密SSL证书。</p>
 </blockquote>
@@ -604,17 +604,17 @@
 </blockquote>
 <p>例如，假设您的域名是my-custom-domain.com,设置name后，只需运行以下alias命令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> now alias https://my-web-app-avvuiuuwto.now.sh my-custom-domain.com</div></pre></td></tr></table></figure>
-<p>然后，您可以使用<a href="https://my-custom-domain.com访问您的应用程序。" target="_blank" rel="external">https://my-custom-domain.com访问您的应用程序。</a> 您也可以使用my-custom-domain.com的子域，如下所示：</p>
+<p>然后，您可以使用<a href="https://my-custom-domain.com访问您的应用程序。" target="_blank" rel="noopener">https://my-custom-domain.com访问您的应用程序。</a> 您也可以使用my-custom-domain.com的子域，如下所示：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> now alias https://my-web-app-avvuiuuwto.now.sh ui.my-custom-domain.com</div></pre></td></tr></table></figure>
 <blockquote>
 <p> 在这个过程中，<code>now.sh</code>将为我们的域名设置一个域加密SSL证书。</p>
 </blockquote>
-<p>Reference：<a href="https://support.dnspod.cn/Kb/showarticle/?qtype=%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B&amp;tsid=42" target="_blank" rel="external">Godaddy注册的域名如何使用DNSPod？</a></p>
-<p>Reference：<a href="https://zeit.co/world#introduction" target="_blank" rel="external">now.sh 提供的 Nameservers</a></p>
+<p>Reference：<a href="https://support.dnspod.cn/Kb/showarticle/?qtype=%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B&amp;tsid=42" target="_blank" rel="noopener">Godaddy注册的域名如何使用DNSPod？</a></p>
+<p>Reference：<a href="https://zeit.co/world#introduction" target="_blank" rel="noopener">now.sh 提供的 Nameservers</a></p>
 <h3 id="使用带有CNAME的自定义域名"><a href="#使用带有CNAME的自定义域名" class="headerlink" title="使用带有CNAME的自定义域名"></a>使用带有CNAME的自定义域名</h3><p>如果您正在管理您的域名的DNS设置，您可以使用此选项。 例如，假设您有一个名为my-app.work的域名，并且您已经有一个DNS设置。要映射应用程序的一个部署URL的 ui.my-app.work 域名，请访问您的DNS提供程序，并为ui.my-app.work添加指向alias.zeit.co的CNAME记录。之后，运行以下命令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> now alias https://my-web-app-avvuiuuwto.now.sh ui.my-app.work</div></pre></td></tr></table></figure>
-<p>现在您可以使用<a href="https://ui.my-app.work访问您的应用程序。" target="_blank" rel="external">https://ui.my-app.work访问您的应用程序。</a></p>
-<p>Reference：<a href="https://zeit.co/docs/getting-started/assign-a-domain-name" target="_blank" rel="external">https://zeit.co/docs/getting-started/assign-a-domain-name</a></p>
+<p>现在您可以使用<a href="https://ui.my-app.work访问您的应用程序。" target="_blank" rel="noopener">https://ui.my-app.work访问您的应用程序。</a></p>
+<p>Reference：<a href="https://zeit.co/docs/getting-started/assign-a-domain-name" target="_blank" rel="noopener">https://zeit.co/docs/getting-started/assign-a-domain-name</a></p>
 <h2 id="Now-sh-日志："><a href="#Now-sh-日志：" class="headerlink" title="Now.sh - 日志："></a>Now.sh - 日志：</h2><p>日志很重要，因为它可以让您看到应用程序中发生的情况，尤其是在发生异常时。now可以保存所有部署的日志，并允许您搜索它们，让我们来看看如何访问日志：</p>
 <h3 id="通过CLI："><a href="#通过CLI：" class="headerlink" title="通过CLI："></a>通过CLI：</h3><p>通过现在的CLI访问日志很简单，调用这个命令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> now logs [deployment-url]</div></pre></td></tr></table></figure>
@@ -624,8 +624,8 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> now logs --help</div></pre></td></tr></table></figure>
 <p>这是一个预先查看 now的日志命令，让您检查最后10个HTTP GET请求:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> now logs -a -q "GET" -n 10 my-web-app.com</div></pre></td></tr></table></figure>
-<h3 id="通过Dashboard："><a href="#通过Dashboard：" class="headerlink" title="通过Dashboard："></a>通过Dashboard：</h3><p>您还可以通过您的Web信息板访问和搜索日志，网址为<a href="https://zeit.co/dashboard。" target="_blank" rel="external">https://zeit.co/dashboard。</a> 单击信息中心内的任何部署URL，然后开始搜索日志。</p>
-<p>Reference：<a href="https://zeit.co/docs/getting-started/logs" target="_blank" rel="external">https://zeit.co/docs/getting-started/logs</a></p>
+<h3 id="通过Dashboard："><a href="#通过Dashboard：" class="headerlink" title="通过Dashboard："></a>通过Dashboard：</h3><p>您还可以通过您的Web信息板访问和搜索日志，网址为<a href="https://zeit.co/dashboard。" target="_blank" rel="noopener">https://zeit.co/dashboard。</a> 单击信息中心内的任何部署URL，然后开始搜索日志。</p>
+<p>Reference：<a href="https://zeit.co/docs/getting-started/logs" target="_blank" rel="noopener">https://zeit.co/docs/getting-started/logs</a></p>
 <h2 id="Now-sh-注意事项："><a href="#Now-sh-注意事项：" class="headerlink" title="Now.sh - 注意事项："></a>Now.sh - 注意事项：</h2><p>使用 Now.sh来部署应用的优势：</p>
 <ul>
 <li>自带的 https  </li>
@@ -638,12 +638,12 @@
 <li>在 Now.sh提供的免费服务中，您的代码将是公开的和开源的，如果介意可升级账户或放弃使用。</li>
 </ul>
 <h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><ul>
-<li><a href="https://zeit.co/" target="_blank" rel="external">ZEIT-官网</a></li>
-<li><a href="https://github.com/zeit" target="_blank" rel="external">ZEIT-Github</a></li>
-<li><a href="https://twitter.com/zeithq" target="_blank" rel="external">ZEIT-Twitter</a></li>
-<li><a href="https://github.com/zeit/now-cli" target="_blank" rel="external">Github Now-CLI</a></li>
-<li><a href="https://www.npmjs.com/package/now" target="_blank" rel="external">NpmJS Now</a></li>
-<li><a href="https://github.com/zeit/micro" target="_blank" rel="external">Asynchronous HTTP microservices</a></li>
+<li><a href="https://zeit.co/" target="_blank" rel="noopener">ZEIT-官网</a></li>
+<li><a href="https://github.com/zeit" target="_blank" rel="noopener">ZEIT-Github</a></li>
+<li><a href="https://twitter.com/zeithq" target="_blank" rel="noopener">ZEIT-Twitter</a></li>
+<li><a href="https://github.com/zeit/now-cli" target="_blank" rel="noopener">Github Now-CLI</a></li>
+<li><a href="https://www.npmjs.com/package/now" target="_blank" rel="noopener">NpmJS Now</a></li>
+<li><a href="https://github.com/zeit/micro" target="_blank" rel="noopener">Asynchronous HTTP microservices</a></li>
 </ul>
 
       

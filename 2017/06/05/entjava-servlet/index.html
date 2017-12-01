@@ -89,7 +89,7 @@
 
 
 
-<meta name="description" content="前言：本文讲解了在 JAVA8的环境中使用 Servlet3.1的标准容器中使用 Http 上下文的方式来深入了解 Servlet，通过一个简单的Maven Web项目，可以通过您喜爱的浏览器或Postman来访问。 环境准备： Java Version : 1.8.0_121 Maven Version：Apache Maven 3.3.9 IDE：IntelliJ IDEA (2017.2.3">
+<meta name="description" content="前言：本文讲解了在 JAVA8的环境中使用 Servlet3.1的标准容器中使用 Http 上下文的方式来深入了解 Servlet，通过一个简单的Maven Web项目，可以通过您喜爱的浏览器或Postman来访问。 环境准备： Java Version : 1.8.0_121 Maven Version：Apache">
 <meta name="keywords" content="Servlet,Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『Enterprise Java - Servlet』 在 Java8中使Servlet 3.1">
@@ -435,7 +435,7 @@
 <p>4、servlet通过请求对象得到远程用户，HTTP POST参数和其他有关数据可能作为请求的一部分随请求一起发送过来。Servlet执行我们编写的任意的逻辑，然后动态产生响应内容发送回客户端。发送数据到客户端是通过响应对象完成的。 </p>
 <p>5、一旦servlet完成请求的处理，servlet容器必须确保响应正确的刷出，并且将控制权还给宿主Web服务器。 </p>
 <h2 id="Servlet-规范"><a href="#Servlet-规范" class="headerlink" title="Servlet - 规范:"></a>Servlet - 规范:</h2><p>许多供应商已经实施了servlet规范（例如：Tomcat，Jetty），尽管规范的确发展，供应商最终还是为我们部署我们的Web应用程序提供了实现。</p>
-<p>通过<a href="https://www.jcp.org/en/jsr/detail?id=340" target="_blank" rel="external">JSR 340的提案</a>，servlet 3.1规范在大版本3.0（<a href="https://jcp.org/en/jsr/detail?id=315" target="_blank" rel="external">JSR 315</a>）上进行了迭代，允许我们的Web应用程序利用非阻塞IO和HTTP协议升级机制等功能。</p>
+<p>通过<a href="https://www.jcp.org/en/jsr/detail?id=340" target="_blank" rel="noopener">JSR 340的提案</a>，servlet 3.1规范在大版本3.0（<a href="https://jcp.org/en/jsr/detail?id=315" target="_blank" rel="noopener">JSR 315</a>）上进行了迭代，允许我们的Web应用程序利用非阻塞IO和HTTP协议升级机制等功能。</p>
 <p>在Servlet 3.0规范发布后的一大特点是不再需要一个<code>web.xml</code> 作为描述为我们所有的Servlet、过滤器、Listeners、init-PARAMS在 xml 文件中进行配置，大多数元数据、配置现在可以通过注释来完成。</p>
 <p>此次使用<code>web.xml</code> 仅仅是为了在尝试访问安全路由时配置容器的登录过程。</p>
 <p>web.xml:</p>
@@ -513,10 +513,10 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@WebListener</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyListener</span> <span class="keyword">implements</span> <span class="title">ServletContextListener</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextInitialized</span><span class="params">(ServletContextEvent sce)</span> </span>&#123;</div><div class="line">    ServletContext sc = sce.getServletContext();</div><div class="line">    sc.addServlet(<span class="string">"myServlet"</span>, <span class="string">"Sample servlet"</span>, <span class="string">"foo.bar.MyServlet"</span>, <span class="keyword">null</span>, -<span class="number">1</span>);</div><div class="line">    sc.addServletMapping(<span class="string">"myServlet"</span>, <span class="keyword">new</span> String[] &#123; <span class="string">"/urlpattern/*"</span> &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="MultipartConfig"><a href="#MultipartConfig" class="headerlink" title="@MultipartConfig:"></a>@MultipartConfig:</h3><p>该注解，当指定在Servlet上时，表示请求期望是mime/multipart类型。相应servlet的HttpServletRequest对象必须使用getParts和getPart方法遍历各个mime附件以获取mime附件。javax.servlet.annotation.MultipartConfig的location属性和<multipart-config>的<location>元素被解析为一个绝对路径且默认为javax.servlet.context.tempdir。如果指定了相对地址，它将是相对于tempdir位置。绝对路径与相对地址的测试必须使用java.io.File.isAbsolute。</location></multipart-config></p>
 <h2 id="Servlet-异步操作"><a href="#Servlet-异步操作" class="headerlink" title="Servlet - 异步操作:"></a>Servlet - 异步操作:</h2><p>异步处理在重负载或在客户端和服务器之间以不同速度读取和写入大量数据的情况下特别有用，意味着两个实体之一可能会等待来自另一个的输入。</p>
-<p>在servlet 3.0规范中，引入了<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/Servlet.html" target="_blank" rel="external">servlet</a>内部的异步处理，允许长时间运行的任务在一个单独的线程中完成，以允许请求线程返回到从它处理其他请求的池中。</p>
-<p>通过servlet 3.1规范，我们得到了能够以异步方式在客户端和服务器之间读写数据的功能，从而允许以非阻塞方式异步处理客户端和服务器之间的长时间读写操作，特别适用于大型读取和写入时可能阻止的数据流以不同的速度完成。这些功能通过<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ReadListener.html" target="_blank" rel="external">ReadListener</a>和<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/WriteListener.html" target="_blank" rel="external">WriteListener</a>接口来实现。</p>
+<p>在servlet 3.0规范中，引入了<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/Servlet.html" target="_blank" rel="noopener">servlet</a>内部的异步处理，允许长时间运行的任务在一个单独的线程中完成，以允许请求线程返回到从它处理其他请求的池中。</p>
+<p>通过servlet 3.1规范，我们得到了能够以异步方式在客户端和服务器之间读写数据的功能，从而允许以非阻塞方式异步处理客户端和服务器之间的长时间读写操作，特别适用于大型读取和写入时可能阻止的数据流以不同的速度完成。这些功能通过<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ReadListener.html" target="_blank" rel="noopener">ReadListener</a>和<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/WriteListener.html" target="_blank" rel="noopener">WriteListener</a>接口来实现。</p>
 <p>作为servlet 3.1规范的一部分，我们为servlet和过滤器提供异步处理支持。</p>
-<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><p>JCP(Java Servlet 3.1规范):<a href="https://jcp.org/en/jsr/detail?id=340" target="_blank" rel="external">https://jcp.org/en/jsr/detail?id=340</a></p>
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><p>JCP(Java Servlet 3.1规范):<a href="https://jcp.org/en/jsr/detail?id=340" target="_blank" rel="noopener">https://jcp.org/en/jsr/detail?id=340</a></p>
 
       
     </div>
