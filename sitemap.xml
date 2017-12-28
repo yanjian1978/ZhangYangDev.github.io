@@ -114,20 +114,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/09/02/gradle-node/</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/04/26/gulp-note/</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/06/23/lombok-note-md/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
@@ -142,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/05/09/npm-note/</loc>
+    <loc>http://yoursite.com/2017/04/26/gulp-note/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
@@ -156,7 +142,21 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/2017/09/02/gradle-node/</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/08/15/springboot-configuration/</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/05/09/npm-note/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
