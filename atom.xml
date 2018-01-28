@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-15T07:56:04.045Z</updated>
+  <updated>2018-01-28T17:46:15.927Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML常用标签&amp;lt;meta /&amp;gt;和&amp;lt;link /&amp;gt;详解</title>
+    <link href="http://yoursite.com/2017/12/04/html-head/"/>
+    <id>http://yoursite.com/2017/12/04/html-head/</id>
+    <published>2017-12-03T17:34:09.000Z</published>
+    <updated>2018-01-28T17:46:15.927Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;meta标签：&quot;&gt;&lt;a href=&quot;#meta标签：&quot; class=&quot;headerlink&quot; title=&quot;meta标签：&quot;&gt;&lt;/a&gt;meta标签：&lt;/h2&gt;&lt;h3 id=&quot;定义：&quot;&gt;&lt;a href=&quot;#定义：&quot; class=&quot;headerlink&quot; title=
+      
+    
+    </summary>
+    
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
+    
+      <category term="meta" scheme="http://yoursite.com/tags/meta/"/>
+    
+  </entry>
   
   <entry>
     <title>『Docker』- Containter</title>
@@ -466,7 +489,7 @@
     <link href="http://yoursite.com/2017/08/10/springboot-quickstart/"/>
     <id>http://yoursite.com/2017/08/10/springboot-quickstart/</id>
     <published>2017-08-10T02:14:20.000Z</published>
-    <updated>2017-10-17T06:32:40.000Z</updated>
+    <updated>2018-04-03T17:33:26.449Z</updated>
     
     <summary type="html">
     
@@ -507,30 +530,6 @@
     
     
       <category term="HighCharts" scheme="http://yoursite.com/tags/HighCharts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『构建工具-Webpack』相关内容整理</title>
-    <link href="http://yoursite.com/2017/07/23/webpack-note/"/>
-    <id>http://yoursite.com/2017/07/23/webpack-note/</id>
-    <published>2017-07-23T09:11:16.000Z</published>
-    <updated>2017-09-20T15:15:06.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Webpack是什么？&quot;&gt;&lt;a href=&quot;#Webpack是什么？&quot; class=&quot;headerlink&quot; title=&quot;Webpack是什么？&quot;&gt;&lt;/a&gt;Webpack是什么？&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;webpack is a module b
-      
-    
-    </summary>
-    
-      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
-    
-    
-      <category term="Webpack" scheme="http://yoursite.com/tags/Webpack/"/>
     
   </entry>
   
