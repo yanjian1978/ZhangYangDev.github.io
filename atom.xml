@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-05T06:22:30.160Z</updated>
+  <updated>2018-02-07T06:24:41.966Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,16 +17,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>mobile-css</title>
+    <title>移动端页面基础CSS布局+Reset原有样式</title>
     <link href="http://yoursite.com/2018/02/05/mobile-css/"/>
     <id>http://yoursite.com/2018/02/05/mobile-css/</id>
     <published>2018-02-05T06:22:17.000Z</published>
-    <updated>2018-02-05T06:22:30.160Z</updated>
+    <updated>2018-02-07T06:24:41.966Z</updated>
     
     <summary type="html">
     
+      
+      
+        &lt;h3 id=&quot;移动端页面基础CSS布局-Reset原有样式&quot;&gt;&lt;a href=&quot;#移动端页面基础CSS布局-Reset原有样式&quot; class=&quot;headerlink&quot; title=&quot;移动端页面基础CSS布局+Reset原有样式&quot;&gt;&lt;/a&gt;移动端页面基础CSS布局+Reset原有
+      
+    
     </summary>
     
+      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
+    
+    
+      <category term="Mobile" scheme="http://yoursite.com/tags/Mobile/"/>
+    
+      <category term="Css" scheme="http://yoursite.com/tags/Css/"/>
     
   </entry>
   
