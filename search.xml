@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[centos-inputrc]]></title>
+    <url>%2F2018%2F02%2F22%2Fcentos-inputrc%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[移动端页面基础CSS布局+Reset原有样式]]></title>
     <url>%2F2018%2F02%2F05%2Fmobile-css%2F</url>
     <content type="text"><![CDATA[移动端页面基础CSS布局+Reset原有样式12345678910111213141516171819202122232425262728293031/*reset css*/*,::before,::after&#123; margin: 0; padding: 0; /*清除移动端的默认的 点击高亮效果*/ -webkit-tap-highlight-color: transparent; /* 设置 所有的box-sizing 移动端所有盒子以边框开始计算宽度 使用百分比布局*/ -webkit-box-sizing: border-box; box-sizing: border-box;&#125;body&#123; /*sans-serif: 设备默认字体*/ font-family:"Microsoft Sans Serif",sans-serif; font-size: 14px; color: #333;&#125;a&#123; color: #333;&#125;a:hover&#123; text-decoration: none;&#125;input&#123; border:none; outline: none; /*清除移动默认的表单样式*/ -webkit-appearance: none;&#125;]]></content>

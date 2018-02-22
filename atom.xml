@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-12T06:26:28.985Z</updated>
+  <updated>2018-02-22T01:28:43.084Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos-inputrc</title>
+    <link href="http://yoursite.com/2018/02/22/centos-inputrc/"/>
+    <id>http://yoursite.com/2018/02/22/centos-inputrc/</id>
+    <published>2018-02-22T01:28:43.000Z</published>
+    <updated>2018-02-22T01:28:43.084Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>移动端页面基础CSS布局+Reset原有样式</title>
@@ -496,32 +510,6 @@
       
       
         &lt;p&gt;在Spring Boot的配置文件中，有两种后缀的配置文件，分别是.properties文件和.yml文件。Spring Boot 提供了对应用进行自动化配置。相比以前 XML 的配置方式，很多显式方式申明是不需要的。大多数默认的配置足够实现开发功能，从而更快速开发。&lt;/p
-      
-    
-    </summary>
-    
-      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
-    
-    
-      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
-    
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot - Introduction &amp; QuickStart</title>
-    <link href="http://yoursite.com/2017/08/10/springboot-quickstart/"/>
-    <id>http://yoursite.com/2017/08/10/springboot-quickstart/</id>
-    <published>2017-08-10T02:14:20.000Z</published>
-    <updated>2018-04-03T17:33:26.449Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Spring-Boot-简介：&quot;&gt;&lt;a href=&quot;#Spring-Boot-简介：&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot - 简介：&quot;&gt;&lt;/a&gt;Spring Boot - 简介：&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;T
       
     
     </summary>
