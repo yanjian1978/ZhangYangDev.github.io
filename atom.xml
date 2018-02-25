@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-24T01:46:54.027Z</updated>
+  <updated>2018-02-25T11:49:11.898Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos-nginx</title>
+    <link href="http://yoursite.com/2018/02/25/centos-nginx/"/>
+    <id>http://yoursite.com/2018/02/25/centos-nginx/</id>
+    <published>2018-02-25T11:49:04.000Z</published>
+    <updated>2018-02-25T11:49:11.898Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>去掉CentOS中取消滴滴滴的声音</title>
@@ -494,31 +508,6 @@
       
       
         &lt;h2 id=&quot;Spring-Boot-Actuator简介&quot;&gt;&lt;a href=&quot;#Spring-Boot-Actuator简介&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot - Actuator简介:&quot;&gt;&lt;/a&gt;Spring Boot - Act
-      
-    
-    </summary>
-    
-      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
-    
-    
-      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
-    
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot - 多环境配置(.properties &amp; .yml)</title>
-    <link href="http://yoursite.com/2017/08/15/springboot-configuration/"/>
-    <id>http://yoursite.com/2017/08/15/springboot-configuration/</id>
-    <published>2017-08-15T10:55:08.000Z</published>
-    <updated>2017-09-20T15:15:06.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在Spring Boot的配置文件中，有两种后缀的配置文件，分别是.properties文件和.yml文件。Spring Boot 提供了对应用进行自动化配置。相比以前 XML 的配置方式，很多显式方式申明是不需要的。大多数默认的配置足够实现开发功能，从而更快速开发。&lt;/p
       
     
     </summary>

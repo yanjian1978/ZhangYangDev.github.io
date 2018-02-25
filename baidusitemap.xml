@@ -26,6 +26,21 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/02/25/centos-nginx/</loc>
+    <lastmod>2018-02-25T11:49:11.898Z</lastmod>
+    <data>
+        <display>
+        <title>centos-nginx</title>
+        <pubTime>2018-02-25T11:49:04.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/02/22/centos-inputrc/</loc>
     <lastmod>2018-02-24T01:46:54.027Z</lastmod>
     <data>
@@ -425,28 +440,26 @@
     </url>
 
     
-    
   <url>
-    <loc>http://yoursite.com/2017/06/23/lombok-note-md/</loc>
+    <loc>http://yoursite.com/2017/08/05/hightcharts-note/</loc>
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     <data>
         <display>
-        <title>Lombok - 使用注解让你的JavaBean变得更加简洁</title>
-        <pubTime>2017-06-23T13:23:28.000Z</pubTime>
+        <title>HighCharts - 学习笔记整理</title>
+        <pubTime>2017-08-05T06:10:24.000Z</pubTime>
         
-        <tag>Java</tag>
-         
-        <tag>Lombok</tag>
+        <tag>HighCharts</tag>
          
          
            
              
-              <breadCrumb title="Java Tools" url="http://yoursite.com/categories/Java-Tools/"/>
+              <breadCrumb title="Charts" url="http://yoursite.com/categories/Charts/"/>
           
         </display>
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://yoursite.com/2017/09/02/gradle-node/</loc>
@@ -601,19 +614,21 @@
     
     
   <url>
-    <loc>http://yoursite.com/2017/08/05/hightcharts-note/</loc>
+    <loc>http://yoursite.com/2017/06/23/lombok-note-md/</loc>
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     <data>
         <display>
-        <title>HighCharts - 学习笔记整理</title>
-        <pubTime>2017-08-05T06:10:24.000Z</pubTime>
+        <title>Lombok - 使用注解让你的JavaBean变得更加简洁</title>
+        <pubTime>2017-06-23T13:23:28.000Z</pubTime>
         
-        <tag>HighCharts</tag>
+        <tag>Java</tag>
+         
+        <tag>Lombok</tag>
          
          
            
              
-              <breadCrumb title="Charts" url="http://yoursite.com/categories/Charts/"/>
+              <breadCrumb title="Java Tools" url="http://yoursite.com/categories/Java-Tools/"/>
           
         </display>
     </data>
