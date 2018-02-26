@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-02-25T11:49:11.898Z</updated>
+  <updated>2018-02-26T11:50:08.570Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,16 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>centos-nginx</title>
+    <title>CentOS7 安装 Nginx</title>
     <link href="http://yoursite.com/2018/02/25/centos-nginx/"/>
     <id>http://yoursite.com/2018/02/25/centos-nginx/</id>
     <published>2018-02-25T11:49:04.000Z</published>
-    <updated>2018-02-25T11:49:11.898Z</updated>
+    <updated>2018-02-26T11:50:08.570Z</updated>
     
     <summary type="html">
     
+      
+      
+        &lt;h4 id=&quot;CentOS7-安装-Nginx&quot;&gt;&lt;a href=&quot;#CentOS7-安装-Nginx&quot; class=&quot;headerlink&quot; title=&quot;CentOS7 安装 Nginx&quot;&gt;&lt;/a&gt;CentOS7 安装 Nginx&lt;/h4&gt;&lt;p&gt;在 CentOS 中使用 y
+      
+    
     </summary>
     
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
     
   </entry>
   
