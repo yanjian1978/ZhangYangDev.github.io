@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="CentOS7 安装 Nginx在 CentOS 中使用 yum 直接来安装 Nginx的话会出现如下错误，原因是Nginx这个软件不是 yum源中自带的，所以需要手动来配置添加 Nginx 的 yum 源。 12345678[root@centos-linux ~]# yum install nginx     已加载插件：fastestmirror                Loading">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-26T11:50:08.570Z">
+<meta property="og:updated_time" content="2018-02-26T11:51:01.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7 安装 Nginx">
 <meta name="twitter:description" content="CentOS7 安装 Nginx在 CentOS 中使用 yum 直接来安装 Nginx的话会出现如下错误，原因是Nginx这个软件不是 yum源中自带的，所以需要手动来配置添加 Nginx 的 yum 源。 12345678[root@centos-linux ~]# yum install nginx     已加载插件：fastestmirror                Loading">
@@ -415,7 +415,7 @@
 <p>查看 Nginx版本：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx -v</div></pre></td></tr></table></figure></p>
 <p>启动 Nginx服务：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl start nginx</div></pre></td></tr></table></figure></p>
 <p>停止 Nginx服务：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop nginx</div></pre></td></tr></table></figure></p>
-<p>重启 Nginx 服务：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>重启 Nginx 服务：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart nginx</div></pre></td></tr></table></figure></p>
 <p>查看 Nginx 服务状态：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[root@centos-linux html]# systemctl status nginx</div><div class="line">● nginx.service - nginx - high performance web server</div><div class="line">   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)</div><div class="line">   Active: active (running) since 一 2018-05-14 07:04:11 CST; 7min ago</div><div class="line">     Docs: http://nginx.org/en/docs/</div><div class="line">  Process: 1928 ExecStart=/usr/sbin/nginx -c /etc/nginx/nginx.conf (code=exited, status=0/SUCCESS)</div><div class="line"> Main PID: 1929 (nginx)</div><div class="line">   CGroup: /system.slice/nginx.service</div><div class="line">           ├─1929 nginx: master process /usr/sbin/nginx -c /etc/nginx/nginx.conf</div><div class="line">           └─1930 nginx: worker process</div><div class="line"></div><div class="line">5月 14 07:04:10 centos-linux systemd[1]: Starting nginx - high performance web server...</div><div class="line">5月 14 07:04:11 centos-linux systemd[1]: Started nginx - high performance web server.</div></pre></td></tr></table></figure></p>
 
       
