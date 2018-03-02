@@ -27,14 +27,19 @@
     
   <url>
     <loc>http://yoursite.com/2018/03/02/centos-redis/</loc>
-    <lastmod>2018-03-02T11:53:34.131Z</lastmod>
+    <lastmod>2018-03-02T11:55:16.005Z</lastmod>
     <data>
         <display>
-        <title>centos-redis</title>
+        <title>CentOS7中安装 Redis</title>
         <pubTime>2018-03-02T11:53:28.000Z</pubTime>
         
+        <tag>CentOS</tag>
+         
          
            
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
         </display>
     </data>
     </url>
