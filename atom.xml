@@ -423,34 +423,6 @@
   </entry>
   
   <entry>
-    <title>『JVM语言 - Groovy』基础(一)</title>
-    <link href="http://yoursite.com/2017/09/18/groovy-basic-1/"/>
-    <id>http://yoursite.com/2017/09/18/groovy-basic-1/</id>
-    <published>2017-09-18T15:15:33.000Z</published>
-    <updated>2017-10-01T16:40:29.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;本文讲解了 Groovy语言中的基本语法，数据类型，变量和运算符，与 Java 一致的内容则不再赘述。&lt;/p&gt;
-&lt;h2 id=&quot;Gr
-      
-    
-    </summary>
-    
-      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
-    
-      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>『JVM语言 - Groovy』简介</title>
     <link href="http://yoursite.com/2017/09/15/groovy-introduction/"/>
     <id>http://yoursite.com/2017/09/15/groovy-introduction/</id>
@@ -525,6 +497,31 @@
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
       <category term="Gradle" scheme="http://yoursite.com/tags/Gradle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot - Actuator QuickStart</title>
+    <link href="http://yoursite.com/2017/08/22/springboot-actuator/"/>
+    <id>http://yoursite.com/2017/08/22/springboot-actuator/</id>
+    <published>2017-08-22T13:55:58.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Spring-Boot-Actuator简介&quot;&gt;&lt;a href=&quot;#Spring-Boot-Actuator简介&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot - Actuator简介:&quot;&gt;&lt;/a&gt;Spring Boot - Act
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
+    
+      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
     
   </entry>
   
