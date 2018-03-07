@@ -396,33 +396,6 @@
   </entry>
   
   <entry>
-    <title>『JVM语言 - Groovy』基础(二)</title>
-    <link href="http://yoursite.com/2017/09/21/groovy-basic-2/"/>
-    <id>http://yoursite.com/2017/09/21/groovy-basic-2/</id>
-    <published>2017-09-21T06:56:02.000Z</published>
-    <updated>2017-10-01T16:40:34.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;本文讲解了 Groovy 语言中的循环语句、数字、字符串、Optionally类型(def)，与 Java 一致的内容则不再赘述。&lt;
-      
-    
-    </summary>
-    
-      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
-    
-      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>『JVM语言 - Groovy』简介</title>
     <link href="http://yoursite.com/2017/09/15/groovy-introduction/"/>
     <id>http://yoursite.com/2017/09/15/groovy-introduction/</id>
@@ -512,6 +485,31 @@
       
       
         &lt;h2 id=&quot;Spring-Boot-Actuator简介&quot;&gt;&lt;a href=&quot;#Spring-Boot-Actuator简介&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot - Actuator简介:&quot;&gt;&lt;/a&gt;Spring Boot - Act
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
+    
+      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot - 多环境配置(.properties &amp; .yml)</title>
+    <link href="http://yoursite.com/2017/08/15/springboot-configuration/"/>
+    <id>http://yoursite.com/2017/08/15/springboot-configuration/</id>
+    <published>2017-08-15T10:55:08.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在Spring Boot的配置文件中，有两种后缀的配置文件，分别是.properties文件和.yml文件。Spring Boot 提供了对应用进行自动化配置。相比以前 XML 的配置方式，很多显式方式申明是不需要的。大多数默认的配置足够实现开发功能，从而更快速开发。&lt;/p
       
     
     </summary>
