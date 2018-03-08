@@ -368,34 +368,6 @@
   </entry>
   
   <entry>
-    <title>『JVM语言 - Groovy』基础(三)</title>
-    <link href="http://yoursite.com/2017/09/26/groovy-basic-3/"/>
-    <id>http://yoursite.com/2017/09/26/groovy-basic-3/</id>
-    <published>2017-09-25T16:48:15.000Z</published>
-    <updated>2017-10-01T16:41:28.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;本文讲解了 Groovy 语言中的方法、I/O、日期时间、正则、异常，与 Java 一致的内容则不再赘述。&lt;/p&gt;
-&lt;h2 id=&quot;
-      
-    
-    </summary>
-    
-      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
-    
-      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>『JVM语言 - Groovy』简介</title>
     <link href="http://yoursite.com/2017/09/15/groovy-introduction/"/>
     <id>http://yoursite.com/2017/09/15/groovy-introduction/</id>
@@ -510,6 +482,32 @@
       
       
         &lt;p&gt;在Spring Boot的配置文件中，有两种后缀的配置文件，分别是.properties文件和.yml文件。Spring Boot 提供了对应用进行自动化配置。相比以前 XML 的配置方式，很多显式方式申明是不需要的。大多数默认的配置足够实现开发功能，从而更快速开发。&lt;/p
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
+    
+      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot - Introduction &amp; QuickStart</title>
+    <link href="http://yoursite.com/2017/08/10/springboot-quickstart/"/>
+    <id>http://yoursite.com/2017/08/10/springboot-quickstart/</id>
+    <published>2017-08-10T02:14:20.000Z</published>
+    <updated>2018-04-03T17:33:26.449Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Spring-Boot-简介：&quot;&gt;&lt;a href=&quot;#Spring-Boot-简介：&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot - 简介：&quot;&gt;&lt;/a&gt;Spring Boot - 简介：&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;T
       
     
     </summary>

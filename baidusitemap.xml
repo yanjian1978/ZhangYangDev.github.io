@@ -350,30 +350,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/09/26/groovy-basic-3/</loc>
-    <lastmod>2017-10-01T16:41:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>『JVM语言 - Groovy』基础(三)</title>
-        <pubTime>2017-09-25T16:48:15.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>Groovy</tag>
-         
-        <tag>JVM</tag>
-         
-         
-           
-             
-              <breadCrumb title="Groovy" url="http://yoursite.com/categories/Groovy/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2017/09/15/groovy-introduction/</loc>
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     <data>
@@ -459,6 +435,27 @@
     </url>
 
     
+  <url>
+    <loc>http://yoursite.com/2017/07/04/maven-note/</loc>
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>『构建工具-Maven』相关内容整理</title>
+        <pubTime>2017-07-04T15:12:29.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Maven</tag>
+         
+         
+           
+             
+              <breadCrumb title="Build Tools" url="http://yoursite.com/categories/Build-Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://yoursite.com/2017/09/10/nowsh-note/</loc>
@@ -590,25 +587,4 @@
     
     
     
-  <url>
-    <loc>http://yoursite.com/2017/07/04/maven-note/</loc>
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>『构建工具-Maven』相关内容整理</title>
-        <pubTime>2017-07-04T15:12:29.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>Maven</tag>
-         
-         
-           
-             
-              <breadCrumb title="Build Tools" url="http://yoursite.com/categories/Build-Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
 </urlset>
