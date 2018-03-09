@@ -340,34 +340,6 @@
   </entry>
   
   <entry>
-    <title>『JVM语言 - Groovy』基础(四)</title>
-    <link href="http://yoursite.com/2017/10/01/groovy-basic-4/"/>
-    <id>http://yoursite.com/2017/10/01/groovy-basic-4/</id>
-    <published>2017-10-01T15:28:15.000Z</published>
-    <updated>2017-10-08T15:18:14.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;本文讲解了 Groovy语言中的 List、Map、泛型，与 Java 一致的内容则不再赘述。&lt;/p&gt;
-&lt;h2 id=&quot;Groovy
-      
-    
-    </summary>
-    
-      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
-    
-      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>『JVM语言 - Groovy』简介</title>
     <link href="http://yoursite.com/2017/09/15/groovy-introduction/"/>
     <id>http://yoursite.com/2017/09/15/groovy-introduction/</id>
@@ -518,6 +490,29 @@
       <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
     
       <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HighCharts - 学习笔记整理</title>
+    <link href="http://yoursite.com/2017/08/05/hightcharts-note/"/>
+    <id>http://yoursite.com/2017/08/05/hightcharts-note/</id>
+    <published>2017-08-05T06:10:24.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;HighCharts概述：&quot;&gt;&lt;a href=&quot;#HighCharts概述：&quot; class=&quot;headerlink&quot; title=&quot;HighCharts概述：&quot;&gt;&lt;/a&gt;HighCharts概述：&lt;/h2&gt;&lt;p&gt;HighCharts是用JavaScript编写的图
+      
+    
+    </summary>
+    
+      <category term="Charts" scheme="http://yoursite.com/categories/Charts/"/>
+    
+    
+      <category term="HighCharts" scheme="http://yoursite.com/tags/HighCharts/"/>
     
   </entry>
   
