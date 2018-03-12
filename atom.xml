@@ -340,33 +340,6 @@
   </entry>
   
   <entry>
-    <title>『JVM语言 - Groovy』简介</title>
-    <link href="http://yoursite.com/2017/09/15/groovy-introduction/"/>
-    <id>http://yoursite.com/2017/09/15/groovy-introduction/</id>
-    <published>2017-09-14T16:46:02.000Z</published>
-    <updated>2017-09-20T15:15:06.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Groovy-概述：&quot;&gt;&lt;a href=&quot;#Groovy-概述：&quot; class=&quot;headerlink&quot; title=&quot;Groovy - 概述：&quot;&gt;&lt;/a&gt;Groovy - 概述：&lt;/h2&gt;&lt;p&gt;Apache Groovy是一种&lt;strong&gt;强大的&lt;/stron
-      
-    
-    </summary>
-    
-      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
-    
-      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>如何使用 Now.sh来免费部署你的项目？</title>
     <link href="http://yoursite.com/2017/09/10/nowsh-note/"/>
     <id>http://yoursite.com/2017/09/10/nowsh-note/</id>
@@ -513,6 +486,30 @@
     
     
       <category term="HighCharts" scheme="http://yoursite.com/tags/HighCharts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『构建工具-Webpack』相关内容整理</title>
+    <link href="http://yoursite.com/2017/07/23/webpack-note/"/>
+    <id>http://yoursite.com/2017/07/23/webpack-note/</id>
+    <published>2017-07-23T09:11:16.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Webpack是什么？&quot;&gt;&lt;a href=&quot;#Webpack是什么？&quot; class=&quot;headerlink&quot; title=&quot;Webpack是什么？&quot;&gt;&lt;/a&gt;Webpack是什么？&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;webpack is a module b
+      
+    
+    </summary>
+    
+      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
+    
+    
+      <category term="Webpack" scheme="http://yoursite.com/tags/Webpack/"/>
     
   </entry>
   
