@@ -312,34 +312,6 @@
   </entry>
   
   <entry>
-    <title>『JVM语言 - Groovy』基础(五)</title>
-    <link href="http://yoursite.com/2017/10/09/groovy-basic-5/"/>
-    <id>http://yoursite.com/2017/10/09/groovy-basic-5/</id>
-    <published>2017-10-09T15:36:19.000Z</published>
-    <updated>2018-03-14T14:01:54.736Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;本文讲解了 Groovy 语言中的面向对象，特征，闭包，注解等内容。、&lt;/p&gt;
-&lt;h2 id=&quot;Groovy-面向对象-Object
-      
-    
-    </summary>
-    
-      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
-    
-      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>如何使用 Now.sh来免费部署你的项目？</title>
     <link href="http://yoursite.com/2017/09/10/nowsh-note/"/>
     <id>http://yoursite.com/2017/09/10/nowsh-note/</id>
@@ -510,6 +482,32 @@
     
     
       <category term="Webpack" scheme="http://yoursite.com/tags/Webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『构建工具-Maven』相关内容整理</title>
+    <link href="http://yoursite.com/2017/07/04/maven-note/"/>
+    <id>http://yoursite.com/2017/07/04/maven-note/</id>
+    <published>2017-07-04T15:12:29.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Maven-工具简介&quot;&gt;&lt;a href=&quot;#Maven-工具简介&quot; class=&quot;headerlink&quot; title=&quot;Maven-工具简介:&quot;&gt;&lt;/a&gt;Maven-工具简介:&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;Apache Maven是跨平台的项目管理工具
+      
+    
+    </summary>
+    
+      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
     
   </entry>
   
