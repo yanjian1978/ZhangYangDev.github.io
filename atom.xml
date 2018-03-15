@@ -288,14 +288,15 @@
     <link href="http://yoursite.com/2017/10/11/groovy-basic-6/"/>
     <id>http://yoursite.com/2017/10/11/groovy-basic-6/</id>
     <published>2017-10-11T01:35:20.000Z</published>
-    <updated>2017-10-17T01:43:28.000Z</updated>
+    <updated>2018-03-15T14:03:41.519Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本文讲解了 Groovy 语言中的XML，JSON，DATABASE，测试套件，模板引擎。&lt;/p&gt;
-&lt;h2 id=&quot;Groovy-XML&quot;&gt;
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本文讲解了 Groovy 语言中的X&lt;/p&gt;
+&lt;p&gt;ML，JSON，DATABASE，测试套件，模板引擎。&lt;/p&gt;
+&lt;h2 id=&quot;Groo
       
     
     </summary>
