@@ -284,35 +284,6 @@
   </entry>
   
   <entry>
-    <title>『JVM语言 - Groovy』基础(六)</title>
-    <link href="http://yoursite.com/2017/10/11/groovy-basic-6/"/>
-    <id>http://yoursite.com/2017/10/11/groovy-basic-6/</id>
-    <published>2017-10-11T01:35:20.000Z</published>
-    <updated>2018-03-15T14:03:41.519Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本文讲解了 Groovy 语言中的X&lt;/p&gt;
-&lt;p&gt;ML，JSON，DATABASE，测试套件，模板引擎。&lt;/p&gt;
-&lt;h2 id=&quot;Groo
-      
-    
-    </summary>
-    
-      <category term="Groovy" scheme="http://yoursite.com/categories/Groovy/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="Groovy" scheme="http://yoursite.com/tags/Groovy/"/>
-    
-      <category term="JVM" scheme="http://yoursite.com/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
     <title>如何使用 Now.sh来免费部署你的项目？</title>
     <link href="http://yoursite.com/2017/09/10/nowsh-note/"/>
     <id>http://yoursite.com/2017/09/10/nowsh-note/</id>
@@ -509,6 +480,31 @@
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
       <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lombok - 使用注解让你的JavaBean变得更加简洁</title>
+    <link href="http://yoursite.com/2017/06/23/lombok-note-md/"/>
+    <id>http://yoursite.com/2017/06/23/lombok-note-md/</id>
+    <published>2017-06-23T13:23:28.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Lombok-工具简介：&quot;&gt;&lt;a href=&quot;#Lombok-工具简介：&quot; class=&quot;headerlink&quot; title=&quot;Lombok - 工具简介：&quot;&gt;&lt;/a&gt;Lombok - 工具简介：&lt;/h2&gt;&lt;p&gt;Lombok是一个编译时注释预处理器，有助于在编译时
+      
+    
+    </summary>
+    
+      <category term="Java Tools" scheme="http://yoursite.com/categories/Java-Tools/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Lombok" scheme="http://yoursite.com/tags/Lombok/"/>
     
   </entry>
   
