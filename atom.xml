@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-03T11:56:08.802Z</updated>
+  <updated>2018-03-19T14:09:12.150Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>centos-docker</title>
+    <link href="http://yoursite.com/2018/03/19/centos-docker/"/>
+    <id>http://yoursite.com/2018/03/19/centos-docker/</id>
+    <published>2018-03-19T14:09:12.000Z</published>
+    <updated>2018-03-19T14:09:12.150Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>CentOS7中安装 Redis</title>
     <link href="http://yoursite.com/2018/03/02/centos-redis/"/>
     <id>http://yoursite.com/2018/03/02/centos-redis/</id>
     <published>2018-03-02T11:53:28.000Z</published>
-    <updated>2018-03-03T11:56:08.802Z</updated>
+    <updated>2018-03-06T13:56:55.960Z</updated>
     
     <summary type="html">
     
@@ -90,7 +104,7 @@
     <link href="http://yoursite.com/2018/02/05/mobile-css/"/>
     <id>http://yoursite.com/2018/02/05/mobile-css/</id>
     <published>2018-02-05T06:22:17.000Z</published>
-    <updated>2018-03-17T14:08:03.848Z</updated>
+    <updated>2018-03-19T14:08:47.169Z</updated>
     
     <summary type="html">
     
@@ -480,31 +494,6 @@
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
       <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lombok - 使用注解让你的JavaBean变得更加简洁</title>
-    <link href="http://yoursite.com/2017/06/23/lombok-note-md/"/>
-    <id>http://yoursite.com/2017/06/23/lombok-note-md/</id>
-    <published>2017-06-23T13:23:28.000Z</published>
-    <updated>2017-09-20T15:15:06.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Lombok-工具简介：&quot;&gt;&lt;a href=&quot;#Lombok-工具简介：&quot; class=&quot;headerlink&quot; title=&quot;Lombok - 工具简介：&quot;&gt;&lt;/a&gt;Lombok - 工具简介：&lt;/h2&gt;&lt;p&gt;Lombok是一个编译时注释预处理器，有助于在编译时
-      
-    
-    </summary>
-    
-      <category term="Java Tools" scheme="http://yoursite.com/categories/Java-Tools/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="Lombok" scheme="http://yoursite.com/tags/Lombok/"/>
     
   </entry>
   
