@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-19T14:09:12.150Z</updated>
+  <updated>2018-03-20T14:11:30.134Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,14 @@
     <link href="http://yoursite.com/2018/03/19/centos-docker/"/>
     <id>http://yoursite.com/2018/03/19/centos-docker/</id>
     <published>2018-03-19T14:09:12.000Z</published>
-    <updated>2018-03-19T14:09:12.150Z</updated>
+    <updated>2018-03-20T14:11:30.134Z</updated>
     
     <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;CentOS-安装-Docker&quot;&gt;&lt;a href=&quot;#CentOS-安装-Docker&quot; class=&quot;headerlink&quot; title=&quot;CentOS 安装 Docker&quot;&gt;&lt;/a&gt;CentOS 安装 Docker&lt;/h3&gt;&lt;h4 id=&quot;安装&quot;&gt;&lt;a hr
+      
     
     </summary>
     
@@ -195,10 +200,10 @@
   
   <entry>
     <title>『Node.js - Express』 - QuickStart</title>
-    <link href="http://yoursite.com/2017/10/28/nodejs-express/"/>
-    <id>http://yoursite.com/2017/10/28/nodejs-express/</id>
+    <link href="http://yoursite.com/2017/10/28/centos-express/"/>
+    <id>http://yoursite.com/2017/10/28/centos-express/</id>
     <published>2017-10-28T06:59:39.000Z</published>
-    <updated>2017-12-20T03:18:10.000Z</updated>
+    <updated>2018-03-20T14:11:03.405Z</updated>
     
     <summary type="html">
     
@@ -212,6 +217,8 @@
     
       <category term="NoSQL" scheme="http://yoursite.com/categories/NoSQL/"/>
     
+    
+      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
     
       <category term="Node.js" scheme="http://yoursite.com/tags/Node-js/"/>
     
