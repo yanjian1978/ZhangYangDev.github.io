@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-20T14:11:30.134Z</updated>
+  <updated>2018-03-20T14:13:15.135Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>centos-docker</title>
+    <title>CentOS7 安装 Docker</title>
     <link href="http://yoursite.com/2018/03/19/centos-docker/"/>
     <id>http://yoursite.com/2018/03/19/centos-docker/</id>
     <published>2018-03-19T14:09:12.000Z</published>
-    <updated>2018-03-20T14:11:30.134Z</updated>
+    <updated>2018-03-20T14:13:15.135Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;CentOS-安装-Docker&quot;&gt;&lt;a href=&quot;#CentOS-安装-Docker&quot; class=&quot;headerlink&quot; title=&quot;CentOS 安装 Docker&quot;&gt;&lt;/a&gt;CentOS 安装 Docker&lt;/h3&gt;&lt;h4 id=&quot;安装&quot;&gt;&lt;a hr
+        &lt;h3 id=&quot;CentOS7-安装-Docker&quot;&gt;&lt;a href=&quot;#CentOS7-安装-Docker&quot; class=&quot;headerlink&quot; title=&quot;CentOS7 安装 Docker&quot;&gt;&lt;/a&gt;CentOS7 安装 Docker&lt;/h3&gt;&lt;h4 id=&quot;安装&quot;&gt;&lt;
       
     
     </summary>
