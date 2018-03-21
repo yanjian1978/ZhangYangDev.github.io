@@ -4,6 +4,12 @@
     <title><![CDATA[CentOS7 安装 Docker]]></title>
     <url>%2F2018%2F03%2F19%2Fcentos-docker%2F</url>
     <content type="text"><![CDATA[CentOS7 安装 Docker安装1、Docker 软件包已经包括在默认的 CentOS-Extras 软件源里。因此想要安装 docker，只需要运行下面的 yum 命令：1yum install docker-io -y 2、直接yum安装，安装成功后查看版本1docker -v 3、启动docker1service docker start 4、设置开机启动1chkconfig docker on 配置因为国内访问 Docker Hub 较慢, 可以使用腾讯云提供的国内镜像源, 加速访问 Docker Hub依次执行以下命令123echo "OPTIONS='--registry-mirror=https://mirror.ccs.tencentyun.com'" &gt;&gt; /etc/sysconfig/dockersystemctl daemon-reloadservice docker restart 使用下载镜像下载一个官方的 CentOS 镜像到本地1docker pull centos 下载好的镜像就会出现在镜像列表里1docker images 运行容器这时我们可以在刚才下载的 CentOS 镜像生成的容器内操作了。生成一个 centos 镜像为模板的容器并使用 bash shell 1docker run -it centos /bin/bash 这个时候可以看到命令行的前端已经变成了 [root@(一串 hash Id)] 的形式, 这说明我们已经成功进入了 CentOS 容器。在容器内执行任意命令, 不会影响到宿主机, 如下1mkdir -p /data/simple_docker 可以看到 /data 目录下已经创建成功了 simple_docker 文件夹1ls /data 退出容器1exit 查看宿主机的 /data 目录, 并没有 simple_docker 文件夹, 说明容器内的操作不会影响到宿主机1ls /data 保存容器查看所有的容器信息， 能获取容器的id1docker ps -a 然后执行如下命令，保存镜像：123# docker commit -m="备注" 你的CONTAINER_ID 你的IMAGE[root@VM_125_124_centos ~]# docker commit -m="CentOS-Linux" 7c2cefa961ac centossha256:a251055119b4a3a8631c5a5118e8492cbf711fee985fdad8bf469b2ea0284330 #####]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>CentOS</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[CentOS7中安装 Redis]]></title>
