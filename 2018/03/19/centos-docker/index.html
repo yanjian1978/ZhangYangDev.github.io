@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="CentOS7 安装 Docker安装1、Docker 软件包已经包括在默认的 CentOS-Extras 软件源里。因此想要安装 docker，只需要运行下面的 yum 命令：1yum install docker-io -y 2、直接yum安装，安装成功后查看版本1docker -v 3、启动docker1service docker start 4、设置开机启动1chkconfig dock">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-21T14:13:51.198Z">
+<meta property="og:updated_time" content="2018-03-21T14:14:53.803Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7 安装 Docker">
 <meta name="twitter:description" content="CentOS7 安装 Docker安装1、Docker 软件包已经包括在默认的 CentOS-Extras 软件源里。因此想要安装 docker，只需要运行下面的 yum 命令：1yum install docker-io -y 2、直接yum安装，安装成功后查看版本1docker -v 3、启动docker1service docker start 4、设置开机启动1chkconfig dock">
@@ -420,7 +420,7 @@
 <p>退出容器<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">exit</div></pre></td></tr></table></figure></p>
 <p>查看宿主机的 /data 目录, 并没有 simple_docker 文件夹, 说明容器内的操作不会影响到宿主机<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls /data</div></pre></td></tr></table></figure></p>
 <h5 id="保存容器"><a href="#保存容器" class="headerlink" title="保存容器"></a>保存容器</h5><p>查看所有的容器信息， 能获取容器的id<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps -a</div></pre></td></tr></table></figure></p>
-<p>然后执行如下命令<br>，保存镜像：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> docker commit -m="备注" 你的CONTAINER_ID 你的IMAGE</div><div class="line">[root@VM_125_124_centos ~]# docker commit -m="CentOS-Linux" 7c2cefa961ac centos</div><div class="line">sha256:a251055119b4a3a8631c5a5118e8492cbf711fee985fdad8bf469b2ea0284330</div></pre></td></tr></table></figure></p>
+<p>然后执行如下命令，保存镜像：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> docker commit -m="备注" 你的CONTAINER_ID 你的IMAGE</div><div class="line">[root@VM_125_124_centos ~]# docker commit -m="CentOS-Linux" 7c2cefa961ac centos</div><div class="line">sha256:a251055119b4a3a8631c5a5118e8492cbf711fee985fdad8bf469b2ea0284330</div></pre></td></tr></table></figure></p>
 <p>##### </p>
 
       
