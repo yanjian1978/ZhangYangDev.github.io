@@ -26,6 +26,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/02/05/mobile-css/</loc>
+    <lastmod>2018-03-22T14:15:59.609Z</lastmod>
+    <data>
+        <display>
+        <title>移动端页面基础CSS布局+Reset原有样式</title>
+        <pubTime>2018-02-05T06:22:17.000Z</pubTime>
+        
+        <tag>Mobile</tag>
+         
+        <tag>Css</tag>
+         
+         
+           
+             
+              <breadCrumb title="HTML" url="http://yoursite.com/categories/HTML/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/03/19/centos-docker/</loc>
     <lastmod>2018-03-21T14:14:53.803Z</lastmod>
     <data>
@@ -63,28 +85,6 @@
            
              
               <breadCrumb title="NoSQL" url="http://yoursite.com/categories/NoSQL/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/02/05/mobile-css/</loc>
-    <lastmod>2018-03-19T14:08:47.169Z</lastmod>
-    <data>
-        <display>
-        <title>移动端页面基础CSS布局+Reset原有样式</title>
-        <pubTime>2018-02-05T06:22:17.000Z</pubTime>
-        
-        <tag>Mobile</tag>
-         
-        <tag>Css</tag>
-         
-         
-           
-             
-              <breadCrumb title="HTML" url="http://yoursite.com/categories/HTML/"/>
           
         </display>
     </data>
