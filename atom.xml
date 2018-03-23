@@ -134,29 +134,6 @@
   </entry>
   
   <entry>
-    <title>HTML常用标签&amp;lt;meta /&amp;gt;和&amp;lt;link /&amp;gt;详解</title>
-    <link href="http://yoursite.com/2017/12/04/html-head/"/>
-    <id>http://yoursite.com/2017/12/04/html-head/</id>
-    <published>2017-12-03T17:34:09.000Z</published>
-    <updated>2018-02-02T01:51:20.974Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;meta标签：&quot;&gt;&lt;a href=&quot;#meta标签：&quot; class=&quot;headerlink&quot; title=&quot;meta标签：&quot;&gt;&lt;/a&gt;meta标签：&lt;/h2&gt;&lt;h3 id=&quot;定义：&quot;&gt;&lt;a href=&quot;#定义：&quot; class=&quot;headerlink&quot; title=
-      
-    
-    </summary>
-    
-      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
-    
-    
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
     <title>『Docker』- Containter</title>
     <link href="http://yoursite.com/2017/11/27/docker-containter/"/>
     <id>http://yoursite.com/2017/11/27/docker-containter/</id>
@@ -505,6 +482,31 @@
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
       <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lombok - 使用注解让你的JavaBean变得更加简洁</title>
+    <link href="http://yoursite.com/2017/06/23/lombok-note-md/"/>
+    <id>http://yoursite.com/2017/06/23/lombok-note-md/</id>
+    <published>2017-06-23T13:23:28.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Lombok-工具简介：&quot;&gt;&lt;a href=&quot;#Lombok-工具简介：&quot; class=&quot;headerlink&quot; title=&quot;Lombok - 工具简介：&quot;&gt;&lt;/a&gt;Lombok - 工具简介：&lt;/h2&gt;&lt;p&gt;Lombok是一个编译时注释预处理器，有助于在编译时
+      
+    
+    </summary>
+    
+      <category term="Java Tools" scheme="http://yoursite.com/categories/Java-Tools/"/>
+    
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+    
+      <category term="Lombok" scheme="http://yoursite.com/tags/Lombok/"/>
     
   </entry>
   
