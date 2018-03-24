@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[取消CentOS中取消滴滴滴的声音]]></title>
+    <title><![CDATA[去掉CentOS中取消滴滴滴的声音]]></title>
     <url>%2F2018%2F02%2F22%2Fcentos-inputrc%2F</url>
-    <content type="text"><![CDATA[取消CentOS中取消滴滴滴的声音在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。 即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。 如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑 /etc/inputrc 文件，在vim的命令模式下，用键盘方向键进行定位， 找到“#set bell-style none”，用X 删除语句前方的#号，就可以了。“:wq”进行文件保存，并对系统进行重启以后，既可以去掉这个烦扰的声音了。 代码示例：123# do not bell on tab-completionset bell-style nonereboot]]></content>
+    <content type="text"><![CDATA[去掉CentOS中取消滴滴滴的声音在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。 即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。 如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑 /etc/inputrc 文件，在vim的命令模式下，用键盘方向键进行定位， 找到“#set bell-style none”，用X 删除语句前方的#号，就可以了。“:wq”进行文件保存，并对系统进行重启以后，既可以去掉这个烦扰的声音了。 代码示例：123# do not bell on tab-completionset bell-style nonereboot]]></content>
       <categories>
         <category>Linux</category>
       </categories>
