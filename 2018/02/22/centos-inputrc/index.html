@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="CentOS," />
 
 
 
@@ -89,14 +89,18 @@
 
 
 
+<meta name="description" content="取消CentOS中取消滴滴滴的声音在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。 如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑 /etc/inputrc 文件，在vim的命令模式下，用键盘方向键进行定位， 找到“#set bell-style none”，用X 删除语句前方的#号，">
+<meta name="keywords" content="CentOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos-inputrc">
+<meta property="og:title" content="取消CentOS中取消滴滴滴的声音">
 <meta property="og:url" content="http://yoursite.com/2018/02/22/centos-inputrc/index.html">
 <meta property="og:site_name" content="柒索">
+<meta property="og:description" content="取消CentOS中取消滴滴滴的声音在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。 如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑 /etc/inputrc 文件，在vim的命令模式下，用键盘方向键进行定位， 找到“#set bell-style none”，用X 删除语句前方的#号，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-22T01:28:43.084Z">
+<meta property="og:updated_time" content="2018-03-24T01:30:38.902Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos-inputrc">
+<meta name="twitter:title" content="取消CentOS中取消滴滴滴的声音">
+<meta name="twitter:description" content="取消CentOS中取消滴滴滴的声音在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。 如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑 /etc/inputrc 文件，在vim的命令模式下，用键盘方向键进行定位， 找到“#set bell-style none”，用X 删除语句前方的#号，">
 
 
 
@@ -130,7 +134,7 @@
 
 
 
-  <title> centos-inputrc | 柒索 </title>
+  <title> 取消CentOS中取消滴滴滴的声音 | 柒索 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -324,7 +328,7 @@
             
             
               
-                centos-inputrc
+                取消CentOS中取消滴滴滴的声音
               
             
           </h1>
@@ -349,6 +353,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -380,7 +406,10 @@
       
 
       
-        
+        <h3 id="取消CentOS中取消滴滴滴的声音"><a href="#取消CentOS中取消滴滴滴的声音" class="headerlink" title="取消CentOS中取消滴滴滴的声音"></a>取消CentOS中取消滴滴滴的声音</h3><p>在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。</p>
+<p>如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑 <code>/etc/inputrc</code> 文件，在<code>vim</code>的命令模式下，用键盘方向键进行定位， 找到“<code>#set bell-style none</code>”，用X 删除语句前方的#号，就可以了。“<code>:wq</code>”进行文件保存，并对系统进行重启以后，既可以去掉这个烦扰的声音了。</p>
+<p>代码示例：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> do not bell on tab-completion</div><div class="line">set bell-style none</div><div class="line">reboot</div></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -406,6 +435,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+          
+        </div>
       
 
       
@@ -479,8 +514,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460"
@@ -506,7 +550,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -517,7 +561,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -574,6 +618,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#取消CentOS中取消滴滴滴的声音"><span class="nav-number">1.</span> <span class="nav-text">取消CentOS中取消滴滴滴的声音</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
