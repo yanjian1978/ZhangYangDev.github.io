@@ -5,9 +5,9 @@
   <subtitle>一个头脑聪明，五肢发达的男人。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2018-06-09T10:53:29.453Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://www.object.ws/"/>
+  <updated>2018-04-12T11:37:41.922Z</updated>
+  <id>http://www.object.ws/</id>
   
   <author>
     <name>柒索</name>
@@ -18,30 +18,30 @@
   
   <entry>
     <title>Docker -  NetWork</title>
-    <link href="http://yoursite.com/2018/05/09/docker-network/"/>
-    <id>http://yoursite.com/2018/05/09/docker-network/</id>
+    <link href="http://www.object.ws/2018/05/09/docker-network/"/>
+    <id>http://www.object.ws/2018/05/09/docker-network/</id>
     <published>2018-05-09T10:51:57.000Z</published>
-    <updated>2018-06-09T10:53:29.453Z</updated>
+    <updated>2018-04-12T11:37:41.922Z</updated>
     
     <summary type="html">
     
     </summary>
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
     
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>Docker - Container &amp; Image</title>
-    <link href="http://yoursite.com/2018/04/26/docker-cntrimg/"/>
-    <id>http://yoursite.com/2018/04/26/docker-cntrimg/</id>
+    <link href="http://www.object.ws/2018/04/26/docker-cntrimg/"/>
+    <id>http://www.object.ws/2018/04/26/docker-cntrimg/</id>
     <published>2018-04-26T11:14:31.000Z</published>
     <updated>2018-06-09T10:52:01.138Z</updated>
     
@@ -54,21 +54,21 @@
     
     </summary>
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
     
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境</title>
-    <link href="http://yoursite.com/2018/04/12/vagrant/"/>
-    <id>http://yoursite.com/2018/04/12/vagrant/</id>
+    <link href="http://www.object.ws/2018/04/12/vagrant/"/>
+    <id>http://www.object.ws/2018/04/12/vagrant/</id>
     <published>2018-04-12T12:31:13.000Z</published>
     <updated>2018-06-09T04:26:10.468Z</updated>
     
@@ -82,21 +82,21 @@
     
     </summary>
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
     
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
     
-      <category term="Vagrant" scheme="http://yoursite.com/tags/Vagrant/"/>
+      <category term="Vagrant" scheme="http://www.object.ws/tags/Vagrant/"/>
     
   </entry>
   
   <entry>
     <title>CentOS7 搭建 Consul 集群</title>
-    <link href="http://yoursite.com/2018/04/03/centos-consul/"/>
-    <id>http://yoursite.com/2018/04/03/centos-consul/</id>
+    <link href="http://www.object.ws/2018/04/03/centos-consul/"/>
+    <id>http://www.object.ws/2018/04/03/centos-consul/</id>
     <published>2018-04-03T02:57:14.000Z</published>
     <updated>2018-06-06T06:05:11.028Z</updated>
     
@@ -110,25 +110,25 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
     
     
-      <category term="MicroService" scheme="http://yoursite.com/tags/MicroService/"/>
+      <category term="MicroService" scheme="http://www.object.ws/tags/MicroService/"/>
     
-      <category term="Cluster" scheme="http://yoursite.com/tags/Cluster/"/>
+      <category term="Cluster" scheme="http://www.object.ws/tags/Cluster/"/>
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     
-      <category term="Consul" scheme="http://yoursite.com/tags/Consul/"/>
+      <category term="Consul" scheme="http://www.object.ws/tags/Consul/"/>
     
   </entry>
   
   <entry>
     <title>『ElasticSearch』- Introduction &amp; QuickStart</title>
-    <link href="http://yoursite.com/2018/03/25/elasticsearch-introduction/"/>
-    <id>http://yoursite.com/2018/03/25/elasticsearch-introduction/</id>
+    <link href="http://www.object.ws/2018/03/25/elasticsearch-introduction/"/>
+    <id>http://www.object.ws/2018/03/25/elasticsearch-introduction/</id>
     <published>2018-03-25T15:04:10.000Z</published>
     <updated>2018-05-29T12:15:21.564Z</updated>
     
@@ -141,17 +141,17 @@
     
     </summary>
     
-      <category term="ElasticSearch" scheme="http://yoursite.com/categories/ElasticSearch/"/>
+      <category term="ElasticSearch" scheme="http://www.object.ws/categories/ElasticSearch/"/>
     
     
-      <category term="elasticsearch" scheme="http://yoursite.com/tags/elasticsearch/"/>
+      <category term="elasticsearch" scheme="http://www.object.ws/tags/elasticsearch/"/>
     
   </entry>
   
   <entry>
     <title>CentOS7 安装 Jenkins</title>
-    <link href="http://yoursite.com/2018/03/13/centos-jenkins/"/>
-    <id>http://yoursite.com/2018/03/13/centos-jenkins/</id>
+    <link href="http://www.object.ws/2018/03/13/centos-jenkins/"/>
+    <id>http://www.object.ws/2018/03/13/centos-jenkins/</id>
     <published>2018-03-13T05:17:50.000Z</published>
     <updated>2018-06-03T05:58:11.411Z</updated>
     
@@ -165,14 +165,14 @@
     </summary>
     
     
-      <category term="Jenkins" scheme="http://yoursite.com/tags/Jenkins/"/>
+      <category term="Jenkins" scheme="http://www.object.ws/tags/Jenkins/"/>
     
   </entry>
   
   <entry>
     <title>Docker - Introduction &amp; QuickStart</title>
-    <link href="http://yoursite.com/2018/03/11/docker-introduction/"/>
-    <id>http://yoursite.com/2018/03/11/docker-introduction/</id>
+    <link href="http://www.object.ws/2018/03/11/docker-introduction/"/>
+    <id>http://www.object.ws/2018/03/11/docker-introduction/</id>
     <published>2018-03-11T02:24:12.000Z</published>
     <updated>2018-06-08T08:54:51.729Z</updated>
     
@@ -186,21 +186,21 @@
     
     </summary>
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
     
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>CentOS7 安装 Git</title>
-    <link href="http://yoursite.com/2018/03/07/centos-git/"/>
-    <id>http://yoursite.com/2018/03/07/centos-git/</id>
+    <link href="http://www.object.ws/2018/03/07/centos-git/"/>
+    <id>http://www.object.ws/2018/03/07/centos-git/</id>
     <published>2018-03-07T05:43:51.000Z</published>
     <updated>2018-06-03T05:47:44.116Z</updated>
     
@@ -214,19 +214,19 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
     
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+      <category term="Git" scheme="http://www.object.ws/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>CentOS7 安装 Redis</title>
-    <link href="http://yoursite.com/2018/03/02/centos-redis/"/>
-    <id>http://yoursite.com/2018/03/02/centos-redis/</id>
+    <link href="http://www.object.ws/2018/03/02/centos-redis/"/>
+    <id>http://www.object.ws/2018/03/02/centos-redis/</id>
     <published>2018-03-02T11:53:28.000Z</published>
     <updated>2018-06-09T04:48:45.985Z</updated>
     
@@ -243,19 +243,19 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
     
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="Redis" scheme="http://yoursite.com/tags/Redis/"/>
+      <category term="Redis" scheme="http://www.object.ws/tags/Redis/"/>
     
   </entry>
   
   <entry>
     <title>CentOS7 安装 Nginx</title>
-    <link href="http://yoursite.com/2018/02/25/centos-nginx/"/>
-    <id>http://yoursite.com/2018/02/25/centos-nginx/</id>
+    <link href="http://www.object.ws/2018/02/25/centos-nginx/"/>
+    <id>http://www.object.ws/2018/02/25/centos-nginx/</id>
     <published>2018-02-25T11:49:04.000Z</published>
     <updated>2018-06-03T02:48:11.254Z</updated>
     
@@ -269,19 +269,19 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
     
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="Nginx" scheme="http://yoursite.com/tags/Nginx/"/>
+      <category term="Nginx" scheme="http://www.object.ws/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>CentOS7 安装OpenJDK1.8 &amp; OracleJDK1.8</title>
-    <link href="http://yoursite.com/2018/01/21/centos-jdk/"/>
-    <id>http://yoursite.com/2018/01/21/centos-jdk/</id>
+    <link href="http://www.object.ws/2018/01/21/centos-jdk/"/>
+    <id>http://www.object.ws/2018/01/21/centos-jdk/</id>
     <published>2018-01-21T10:56:49.000Z</published>
     <updated>2018-06-06T03:06:27.273Z</updated>
     
@@ -294,19 +294,19 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
     
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+      <category term="Java" scheme="http://www.object.ws/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>去掉CentOS中取消滴滴滴的声音</title>
-    <link href="http://yoursite.com/2018/01/08/centos-inputrc/"/>
-    <id>http://yoursite.com/2018/01/08/centos-inputrc/</id>
+    <link href="http://www.object.ws/2018/01/08/centos-inputrc/"/>
+    <id>http://www.object.ws/2018/01/08/centos-inputrc/</id>
     <published>2018-01-08T01:28:43.000Z</published>
     <updated>2018-06-06T03:07:10.781Z</updated>
     
@@ -319,17 +319,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
     
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
   </entry>
   
   <entry>
     <title>移动端页面基础CSS布局+Reset原有样式</title>
-    <link href="http://yoursite.com/2017/12/05/mobile-css/"/>
-    <id>http://yoursite.com/2017/12/05/mobile-css/</id>
+    <link href="http://www.object.ws/2017/12/05/mobile-css/"/>
+    <id>http://www.object.ws/2017/12/05/mobile-css/</id>
     <published>2017-12-05T06:22:17.000Z</published>
     <updated>2018-06-06T06:44:16.179Z</updated>
     
@@ -342,21 +342,21 @@
     
     </summary>
     
-      <category term="HTML" scheme="http://yoursite.com/categories/HTML/"/>
+      <category term="HTML" scheme="http://www.object.ws/categories/HTML/"/>
     
     
-      <category term="Mobile" scheme="http://yoursite.com/tags/Mobile/"/>
+      <category term="Mobile" scheme="http://www.object.ws/tags/Mobile/"/>
     
-      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+      <category term="CSS" scheme="http://www.object.ws/tags/CSS/"/>
     
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
+      <category term="HTML" scheme="http://www.object.ws/tags/HTML/"/>
     
   </entry>
   
   <entry>
     <title>Spring Boot - Spring Data -JDBC</title>
-    <link href="http://yoursite.com/2017/11/24/springboot-springdata-jdbc/"/>
-    <id>http://yoursite.com/2017/11/24/springboot-springdata-jdbc/</id>
+    <link href="http://www.object.ws/2017/11/24/springboot-springdata-jdbc/"/>
+    <id>http://www.object.ws/2017/11/24/springboot-springdata-jdbc/</id>
     <published>2017-11-24T06:50:45.000Z</published>
     <updated>2018-05-29T14:54:52.781Z</updated>
     
@@ -369,23 +369,23 @@
     
     </summary>
     
-      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
+      <category term="Spring Boot" scheme="http://www.object.ws/categories/Spring-Boot/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+      <category term="Java" scheme="http://www.object.ws/tags/Java/"/>
     
-      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
+      <category term="Spring Boot" scheme="http://www.object.ws/tags/Spring-Boot/"/>
     
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+      <category term="Spring" scheme="http://www.object.ws/tags/Spring/"/>
     
-      <category term="Spring Data" scheme="http://yoursite.com/tags/Spring-Data/"/>
+      <category term="Spring Data" scheme="http://www.object.ws/tags/Spring-Data/"/>
     
   </entry>
   
   <entry>
     <title>『Node.js - Express』 - QuickStart</title>
-    <link href="http://yoursite.com/2017/10/28/centos-express/"/>
-    <id>http://yoursite.com/2017/10/28/centos-express/</id>
+    <link href="http://www.object.ws/2017/10/28/centos-express/"/>
+    <id>http://www.object.ws/2017/10/28/centos-express/</id>
     <published>2017-10-28T06:59:39.000Z</published>
     <updated>2018-03-21T14:14:34.017Z</updated>
     
@@ -399,21 +399,21 @@
     
     </summary>
     
-      <category term="NoSQL" scheme="http://yoursite.com/categories/NoSQL/"/>
+      <category term="NoSQL" scheme="http://www.object.ws/categories/NoSQL/"/>
     
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="Node.js" scheme="http://yoursite.com/tags/Node-js/"/>
+      <category term="Node.js" scheme="http://www.object.ws/tags/Node-js/"/>
     
-      <category term="Express" scheme="http://yoursite.com/tags/Express/"/>
+      <category term="Express" scheme="http://www.object.ws/tags/Express/"/>
     
   </entry>
   
   <entry>
     <title>『NoSQL - MongoDB』CRUD</title>
-    <link href="http://yoursite.com/2017/10/23/mongodb-crud/"/>
-    <id>http://yoursite.com/2017/10/23/mongodb-crud/</id>
+    <link href="http://www.object.ws/2017/10/23/mongodb-crud/"/>
+    <id>http://www.object.ws/2017/10/23/mongodb-crud/</id>
     <published>2017-10-23T01:49:45.000Z</published>
     <updated>2017-11-03T06:09:29.000Z</updated>
     
@@ -427,19 +427,19 @@
     
     </summary>
     
-      <category term="NoSQL" scheme="http://yoursite.com/categories/NoSQL/"/>
+      <category term="NoSQL" scheme="http://www.object.ws/categories/NoSQL/"/>
     
     
-      <category term="MongoDB" scheme="http://yoursite.com/tags/MongoDB/"/>
+      <category term="MongoDB" scheme="http://www.object.ws/tags/MongoDB/"/>
     
-      <category term="NoSQL" scheme="http://yoursite.com/tags/NoSQL/"/>
+      <category term="NoSQL" scheme="http://www.object.ws/tags/NoSQL/"/>
     
   </entry>
   
   <entry>
     <title>『NoSQL - MongoDB』Mongo Shell</title>
-    <link href="http://yoursite.com/2017/10/18/mongodb-shell/"/>
-    <id>http://yoursite.com/2017/10/18/mongodb-shell/</id>
+    <link href="http://www.object.ws/2017/10/18/mongodb-shell/"/>
+    <id>http://www.object.ws/2017/10/18/mongodb-shell/</id>
     <published>2017-10-18T09:27:44.000Z</published>
     <updated>2017-10-24T06:46:59.000Z</updated>
     
@@ -453,19 +453,19 @@
     
     </summary>
     
-      <category term="NoSQL" scheme="http://yoursite.com/categories/NoSQL/"/>
+      <category term="NoSQL" scheme="http://www.object.ws/categories/NoSQL/"/>
     
     
-      <category term="MongoDB" scheme="http://yoursite.com/tags/MongoDB/"/>
+      <category term="MongoDB" scheme="http://www.object.ws/tags/MongoDB/"/>
     
-      <category term="NoSQL" scheme="http://yoursite.com/tags/NoSQL/"/>
+      <category term="NoSQL" scheme="http://www.object.ws/tags/NoSQL/"/>
     
   </entry>
   
   <entry>
     <title>『NoSQL - MongoDB』Introduction &amp; QuickStart</title>
-    <link href="http://yoursite.com/2017/10/17/mongodb-quickstart/"/>
-    <id>http://yoursite.com/2017/10/17/mongodb-quickstart/</id>
+    <link href="http://www.object.ws/2017/10/17/mongodb-quickstart/"/>
+    <id>http://www.object.ws/2017/10/17/mongodb-quickstart/</id>
     <published>2017-10-17T05:54:57.000Z</published>
     <updated>2017-10-24T06:46:17.000Z</updated>
     
@@ -479,19 +479,19 @@
     
     </summary>
     
-      <category term="NoSQL" scheme="http://yoursite.com/categories/NoSQL/"/>
+      <category term="NoSQL" scheme="http://www.object.ws/categories/NoSQL/"/>
     
     
-      <category term="MongoDB" scheme="http://yoursite.com/tags/MongoDB/"/>
+      <category term="MongoDB" scheme="http://www.object.ws/tags/MongoDB/"/>
     
-      <category term="NoSQL" scheme="http://yoursite.com/tags/NoSQL/"/>
+      <category term="NoSQL" scheme="http://www.object.ws/tags/NoSQL/"/>
     
   </entry>
   
   <entry>
     <title>如何使用 Now.sh来免费部署你的项目？</title>
-    <link href="http://yoursite.com/2017/09/10/nowsh-note/"/>
-    <id>http://yoursite.com/2017/09/10/nowsh-note/</id>
+    <link href="http://www.object.ws/2017/09/10/nowsh-note/"/>
+    <id>http://www.object.ws/2017/09/10/nowsh-note/</id>
     <published>2017-09-10T15:51:59.000Z</published>
     <updated>2017-09-20T15:15:06.000Z</updated>
     
@@ -505,19 +505,19 @@
     
     </summary>
     
-      <category term="Tools" scheme="http://yoursite.com/categories/Tools/"/>
+      <category term="Tools" scheme="http://www.object.ws/categories/Tools/"/>
     
     
-      <category term="Now.sh" scheme="http://yoursite.com/tags/Now-sh/"/>
+      <category term="Now.sh" scheme="http://www.object.ws/tags/Now-sh/"/>
     
-      <category term="Deployments" scheme="http://yoursite.com/tags/Deployments/"/>
+      <category term="Deployments" scheme="http://www.object.ws/tags/Deployments/"/>
     
   </entry>
   
   <entry>
     <title>『构建工具-Gradle』相关内容整理</title>
-    <link href="http://yoursite.com/2017/09/02/gradle-node/"/>
-    <id>http://yoursite.com/2017/09/02/gradle-node/</id>
+    <link href="http://www.object.ws/2017/09/02/gradle-node/"/>
+    <id>http://www.object.ws/2017/09/02/gradle-node/</id>
     <published>2017-09-02T07:15:01.000Z</published>
     <updated>2017-09-20T15:15:06.000Z</updated>
     
@@ -530,12 +530,12 @@
     
     </summary>
     
-      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
+      <category term="Build Tools" scheme="http://www.object.ws/categories/Build-Tools/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
+      <category term="Java" scheme="http://www.object.ws/tags/Java/"/>
     
-      <category term="Gradle" scheme="http://yoursite.com/tags/Gradle/"/>
+      <category term="Gradle" scheme="http://www.object.ws/tags/Gradle/"/>
     
   </entry>
   
