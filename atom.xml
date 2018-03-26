@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-21T14:14:53.803Z</updated>
+  <updated>2018-05-21T10:56:49.963Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos-jdk</title>
+    <link href="http://yoursite.com/2018/05/21/centos-jdk/"/>
+    <id>http://yoursite.com/2018/05/21/centos-jdk/</id>
+    <published>2018-05-21T10:56:49.000Z</published>
+    <updated>2018-05-21T10:56:49.963Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>CentOS7 安装 Docker</title>
@@ -67,7 +81,7 @@
     <link href="http://yoursite.com/2018/02/25/centos-nginx/"/>
     <id>http://yoursite.com/2018/02/25/centos-nginx/</id>
     <published>2018-02-25T11:49:04.000Z</published>
-    <updated>2018-02-28T11:51:25.171Z</updated>
+    <updated>2018-03-22T14:15:36.890Z</updated>
     
     <summary type="html">
     
@@ -161,7 +175,7 @@
     <link href="http://yoursite.com/2017/11/04/docker-introduction/"/>
     <id>http://yoursite.com/2017/11/04/docker-introduction/</id>
     <published>2017-11-04T02:24:12.000Z</published>
-    <updated>2018-03-13T14:01:35.284Z</updated>
+    <updated>2018-03-22T14:16:28.837Z</updated>
     
     <summary type="html">
     
@@ -184,7 +198,7 @@
     <link href="http://yoursite.com/2017/10/28/centos-express/"/>
     <id>http://yoursite.com/2017/10/28/centos-express/</id>
     <published>2017-10-28T06:59:39.000Z</published>
-    <updated>2018-03-20T14:11:03.405Z</updated>
+    <updated>2018-03-21T14:14:34.017Z</updated>
     
     <summary type="html">
     
@@ -482,31 +496,6 @@
       <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
       <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lombok - 使用注解让你的JavaBean变得更加简洁</title>
-    <link href="http://yoursite.com/2017/06/23/lombok-note-md/"/>
-    <id>http://yoursite.com/2017/06/23/lombok-note-md/</id>
-    <published>2017-06-23T13:23:28.000Z</published>
-    <updated>2017-09-20T15:15:06.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Lombok-工具简介：&quot;&gt;&lt;a href=&quot;#Lombok-工具简介：&quot; class=&quot;headerlink&quot; title=&quot;Lombok - 工具简介：&quot;&gt;&lt;/a&gt;Lombok - 工具简介：&lt;/h2&gt;&lt;p&gt;Lombok是一个编译时注释预处理器，有助于在编译时
-      
-    
-    </summary>
-    
-      <category term="Java Tools" scheme="http://yoursite.com/categories/Java-Tools/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="Lombok" scheme="http://yoursite.com/tags/Lombok/"/>
     
   </entry>
   
