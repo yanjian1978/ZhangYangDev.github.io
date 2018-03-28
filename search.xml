@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[CentOS7中安装 Redis]]></title>
     <url>%2F2018%2F03%2F02%2Fcentos-redis%2F</url>
-    <content type="text"><![CDATA[CentOS7中安装 Redis下载：1https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/redis/redis-2.6.14.tar.gz 安装：1、安装 GCC：1yum install gcc -y 2、解压 redis:12[root@centos-linux ~]# cd /usr/local/ [root@centos-linux local]# tar -xvf /opt/redis-2.6.14.tar.gz 3、编译安装：123[root@centos-linux local]# cd redis-2.6.14/ [root@centos-linux redis-2.6.14]# make MALLOC=libc [root@centos-linux src]# make &amp;&amp; make install 使用：启动 Redis:1nohup redis-server /usr/local/redis-2.6.14/redis.conf &lt;/dev/null &amp;&gt;/dev/null &amp; 停止：1redis-cli shutdown 重启：1redis-cli restart]]></content>
+    <content type="text"><![CDATA[CentOS7中安装 Redis下载：1https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/redis/redis-2.6.14.tar.gz 安装：1、安装 GCC：1yum install gcc gcc-c++-y 2、解压 redis:12[root@centos-linux ~]# cd /usr/local/ [root@centos-linux local]# tar -xvf /opt/redis-2.6.14.tar.gz 3、编译安装：123[root@centos-linux local]# cd redis-2.6.14/ [root@centos-linux redis-2.6.14]# make MALLOC=libc [root@centos-linux src]# make &amp;&amp; make install 使用：启动 Redis:1nohup redis-server /usr/local/redis-2.6.14/redis.conf &lt;/dev/null &amp;&gt;/dev/null &amp; 停止：1redis-cli shutdown 重启：1redis-cli]]></content>
       <categories>
         <category>Linux</category>
       </categories>

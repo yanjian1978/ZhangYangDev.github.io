@@ -26,6 +26,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/03/02/centos-redis/</loc>
+    <lastmod>2018-03-28T14:22:19.781Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS7中安装 Redis</title>
+        <pubTime>2018-03-02T11:53:28.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/01/21/centos-jdk/</loc>
     <lastmod>2018-03-27T12:04:47.601Z</lastmod>
     <data>
@@ -165,26 +185,6 @@
            
              
               <breadCrumb title="NoSQL" url="http://yoursite.com/categories/NoSQL/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/03/02/centos-redis/</loc>
-    <lastmod>2018-03-06T13:56:55.960Z</lastmod>
-    <data>
-        <display>
-        <title>CentOS7中安装 Redis</title>
-        <pubTime>2018-03-02T11:53:28.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
           
         </display>
     </data>
@@ -364,21 +364,21 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/06/23/lombok-note-md/</loc>
+    <loc>http://yoursite.com/2017/09/02/gradle-node/</loc>
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     <data>
         <display>
-        <title>Lombok - 使用注解让你的JavaBean变得更加简洁</title>
-        <pubTime>2017-06-23T13:23:28.000Z</pubTime>
+        <title>『构建工具-Gradle』相关内容整理</title>
+        <pubTime>2017-09-02T07:15:01.000Z</pubTime>
         
         <tag>Java</tag>
          
-        <tag>Lombok</tag>
+        <tag>Gradle</tag>
          
          
            
              
-              <breadCrumb title="Java Tools" url="http://yoursite.com/categories/Java-Tools/"/>
+              <breadCrumb title="Build Tools" url="http://yoursite.com/categories/Build-Tools/"/>
           
         </display>
     </data>
@@ -470,21 +470,21 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/09/02/gradle-node/</loc>
+    <loc>http://yoursite.com/2017/06/23/lombok-note-md/</loc>
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     <data>
         <display>
-        <title>『构建工具-Gradle』相关内容整理</title>
-        <pubTime>2017-09-02T07:15:01.000Z</pubTime>
+        <title>Lombok - 使用注解让你的JavaBean变得更加简洁</title>
+        <pubTime>2017-06-23T13:23:28.000Z</pubTime>
         
         <tag>Java</tag>
          
-        <tag>Gradle</tag>
+        <tag>Lombok</tag>
          
          
            
              
-              <breadCrumb title="Build Tools" url="http://yoursite.com/categories/Build-Tools/"/>
+              <breadCrumb title="Java Tools" url="http://yoursite.com/categories/Java-Tools/"/>
           
         </display>
     </data>
