@@ -44,17 +44,17 @@
     <link href="http://yoursite.com/2018/03/02/centos-redis/"/>
     <id>http://yoursite.com/2018/03/02/centos-redis/</id>
     <published>2018-03-02T11:53:28.000Z</published>
-    <updated>2018-04-02T12:16:15.377Z</updated>
+    <updated>2018-04-03T12:18:36.432Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h4 id=&quot;、环境说明&quot;&gt;&lt;a href=&quot;#、环境说明&quot; class=&quot;headerlink&quot; title=&quot;、环境说明&quot;&gt;&lt;/a&gt;、环境说明&lt;/h4&gt;&lt;table&gt;
+        &lt;h4 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明:&quot;&gt;&lt;/a&gt;环境说明:&lt;/h4&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style=&quot;text-align:center&quot;&gt;名称&lt;/th&gt;
-&lt;t
+&lt;th 
       
     
     </summary>
@@ -71,13 +71,14 @@
     <link href="http://yoursite.com/2018/02/25/centos-nginx/"/>
     <id>http://yoursite.com/2018/02/25/centos-nginx/</id>
     <published>2018-02-25T11:49:04.000Z</published>
-    <updated>2018-03-22T14:15:36.890Z</updated>
+    <updated>2018-04-03T12:20:30.973Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h4 id=&quot;CentOS7-安装-Nginx&quot;&gt;&lt;a href=&quot;#CentOS7-安装-Nginx&quot; class=&quot;headerlink&quot; title=&quot;CentOS7 安装 Nginx&quot;&gt;&lt;/a&gt;CentOS7 安装 Nginx&lt;/h4&gt;&lt;p&gt;在 CentOS 中使用 y
+        &lt;p&gt;在 CentOS 中使用 yum 直接来安装 Nginx的话会出现如下错误，原因是Nginx这个软件不是 yum源中自带的，所以需要手动来配置添加 Nginx 的 yum 源。&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;
       
     
     </summary>
