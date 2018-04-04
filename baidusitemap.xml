@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/01/21/centos-jdk/</loc>
+    <lastmod>2018-04-04T14:20:21.491Z</lastmod>
+    <data>
+        <display>
+        <title>在CentOS7上安装OpenJDK1.8 & OracleJDK1.8</title>
+        <pubTime>2018-01-21T10:56:49.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/08/10/springboot-quickstart/</loc>
     <lastmod>2018-04-03T17:33:26.449Z</lastmod>
     <data>
@@ -52,26 +72,6 @@
         <display>
         <title>CentOS7中安装 Redis</title>
         <pubTime>2018-03-02T11:53:28.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/01/21/centos-jdk/</loc>
-    <lastmod>2018-03-27T12:04:47.601Z</lastmod>
-    <data>
-        <display>
-        <title>在CentOS7上安装OpenJDK1.8 & OracleJDK1.8</title>
-        <pubTime>2018-01-21T10:56:49.000Z</pubTime>
         
         <tag>CentOS</tag>
          
