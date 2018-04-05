@@ -1,0 +1,1111 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="elasticsearch," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="柒索" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="简介Elasticsearch是一个高度可扩展的开源全文搜索和分析引擎。它允许您快速、实时地存储、搜索和分析大量数据。它通常被用作支持具有复杂搜索特性和需求的应用的底层引擎/技术。 官网：https://www.elastic.co/ 文档：https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html 版本截止">
+<meta name="keywords" content="elasticsearch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="『ElasticSearch』- Introduction &amp; QuickStart">
+<meta property="og:url" content="http://yoursite.com/2018/05/26/elasticsearch/index.html">
+<meta property="og:site_name" content="柒索">
+<meta property="og:description" content="简介Elasticsearch是一个高度可扩展的开源全文搜索和分析引擎。它允许您快速、实时地存储、搜索和分析大量数据。它通常被用作支持具有复杂搜索特性和需求的应用的底层引擎/技术。 官网：https://www.elastic.co/ 文档：https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html 版本截止">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/var/folders/2m/7_mzftpj5s1b_63sc0tvc73h0000gn/T/abnerworks.Typora/image-20180527232441854.png">
+<meta property="og:updated_time" content="2018-05-29T01:13:41.724Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="『ElasticSearch』- Introduction &amp; QuickStart">
+<meta name="twitter:description" content="简介Elasticsearch是一个高度可扩展的开源全文搜索和分析引擎。它允许您快速、实时地存储、搜索和分析大量数据。它通常被用作支持具有复杂搜索特性和需求的应用的底层引擎/技术。 官网：https://www.elastic.co/ 文档：https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html 版本截止">
+<meta name="twitter:image" content="http://yoursite.com/var/folders/2m/7_mzftpj5s1b_63sc0tvc73h0000gn/T/abnerworks.Typora/image-20180527232441854.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/26/elasticsearch/"/>
+
+
+
+
+
+  <title> 『ElasticSearch』- Introduction & QuickStart | 柒索 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">柒索</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个头脑聪明，五肢发达的男人。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/26/elasticsearch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="柒索">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柒索">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                『ElasticSearch』- Introduction & QuickStart
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-26T23:04:10+08:00">
+                2018-05-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/elasticsearch/" itemprop="url" rel="index">
+                    <span itemprop="name">elasticsearch</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Elasticsearch是一个高度可扩展的开源全文搜索和分析引擎。它允许您快速、实时地存储、搜索和分析大量数据。它通常被用作支持具有复杂搜索特性和需求的应用的底层引擎/技术。</p>
+<p>官网：<a href="https://www.elastic.co/" target="_blank" rel="noopener">https://www.elastic.co/</a></p>
+<p>文档：<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html</a></p>
+<h3 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h3><p>截止目前的最新版是 <code>elasticsearch-6.2.4</code>。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>下载地址：<a href="https://www.elastic.co/downloads" target="_blank" rel="noopener">https://www.elastic.co/downloads</a><br>在官网的下载页面有提供安装方式：</p>
+<ul>
+<li><ol>
+<li>下载并解压缩Elasticsearch。(ES也提供了apt、yum、msi等安装方式，具体参考官网)</li>
+</ol>
+</li>
+<li><ol>
+<li>运行<code>./bin/elasticsearch</code>在Linux,Mac上或<code>bin\elasticsearch.bat</code>在Windows上。</li>
+</ol>
+</li>
+<li><ol>
+<li>运行curl <a href="http://localhost:9200/或在浏览器访问http://localhost:9200" target="_blank" rel="noopener">http://localhost:9200/或在浏览器访问http://localhost:9200</a></li>
+</ol>
+</li>
+</ul>
+<h4 id="CLI参数："><a href="#CLI参数：" class="headerlink" title="CLI参数："></a>CLI参数：</h4><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-E <keyvaluepair></keyvaluepair></td>
+<td>配置设置</td>
+</tr>
+<tr>
+<td>-V, –version</td>
+<td>打印ES版本信息</td>
+</tr>
+<tr>
+<td>-d, –daemonize</td>
+<td>以守护进程运行ES</td>
+</tr>
+<tr>
+<td>-h, –help</td>
+<td>查看帮助</td>
+</tr>
+<tr>
+<td>-p, –pidfile <path></path></td>
+<td>在指定的路径上在开始时创建一个PID文件</td>
+</tr>
+<tr>
+<td>-q, –quiet</td>
+<td>关闭控制台中的标准输出/错误流日志</td>
+</tr>
+<tr>
+<td>-s, –silent</td>
+<td>显示最小输出</td>
+</tr>
+<tr>
+<td>-v, –verbose</td>
+<td>显示冗长输出</td>
+</tr>
+</tbody>
+</table>
+<h4 id="单实例安装"><a href="#单实例安装" class="headerlink" title="单实例安装"></a>单实例安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">➜  ~ wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.4.tar.gz</div><div class="line">➜  ~ tar -xzf elasticsearch-6.2.4.tar.gz</div><div class="line">➜  ~ cd elasticsearch-6.2.4/</div></pre></td></tr></table></figure>
+<p>ES可以从命令行启动，如下所示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  elasticsearch ./bin/elasticsearch</div></pre></td></tr></table></figure>
+<h4 id="集群安装"><a href="#集群安装" class="headerlink" title="集群安装"></a>集群安装</h4><p>创建三个文件夹，依次将<code>elasticsearch-6.2.4.tar.gz</code>解压到三个文件夹中：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">➜  ~ mkdir &#123;es-master,es-slave1,es-slave2&#125;</div><div class="line">➜  ~ tar -vxf elasticsearch-6.2.4.tar.gz -C ~/elasticsearch/es-master</div><div class="line">➜  ~ tar -vxf elasticsearch-6.2.4.tar.gz -C ~/elasticsearch/es-slave1</div><div class="line">➜  ~ tar -vxf elasticsearch-6.2.4.tar.gz -C ~/elasticsearch/es-slave2</div><div class="line">➜  ~ cd elasticsearch </div><div class="line"></div><div class="line"><span class="meta">#</span> 其它如法炮制</div><div class="line">➜  elasticsearch cd es-slave1</div><div class="line">➜  es-slave1 mv elasticsearch-6.2.4/* .</div><div class="line">➜  es-slave1 ls</div><div class="line">LICENSE.txt         bin                 lib                 plugins</div><div class="line">NOTICE.txt          config              logs</div><div class="line">README.textile      elasticsearch-6.2.4 modules</div><div class="line">➜  es-slave1 rm -rf elasticsearch-6.2.4</div></pre></td></tr></table></figure></p>
+<p>修改<code>es-master/config/elasticsearch.yml</code>文件, 在结尾追加以下内容:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">➜  es-master vim es-master/config/elasticsearch.yml</div><div class="line"></div><div class="line"><span class="meta">#</span> 追加以下内容</div><div class="line">http.cors.enabled: true</div><div class="line">http.cors.allow-origin: "*"</div><div class="line"></div><div class="line">cluster.name: Yang</div><div class="line">node.name: master</div><div class="line">node.master: true</div><div class="line">network.host: 127.0.0.1</div></pre></td></tr></table></figure>
+<p>修改<code>es-slave1/config/elasticsearch.yml</code>文件，在结尾追加以下内容:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">➜  es-slave1 vim es-slave1/config/elasticsearch.yml</div><div class="line"></div><div class="line"><span class="meta">#</span> 追加以下内容</div><div class="line">cluster.name: Yang</div><div class="line">node.name: slave1</div><div class="line"></div><div class="line">network.host: 127.0.0.1</div><div class="line">http.port: 9201</div><div class="line"></div><div class="line">discovery.zen.ping.unicast.hosts: ["127.0.0.1"]</div></pre></td></tr></table></figure>
+<p>修改``文件，在结尾追加以下内容:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">➜  es-slave2 vim config/elasticsearch.yml</div><div class="line"></div><div class="line"><span class="meta">#</span> 追加以下内容</div><div class="line">cluster.name: Yang</div><div class="line">node.name: slave2</div><div class="line"></div><div class="line">network.host: 127.0.0.1</div><div class="line">http.port: 9202</div><div class="line"></div><div class="line">discovery.zen.ping.unicast.hosts: ["127.0.0.1"]</div></pre></td></tr></table></figure>
+<p>接下来分别按照下面步骤验证是否安装成功。</p>
+<h4 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h4><p>默认情况下，Elasticsearch在前台运行，会将其日志打印到<code>Console</code>输出，并可通过按停止<code>Ctrl-C</code>。</p>
+<p>需要ES在后台运行，可以再启动时候加上<code>-d</code>参数:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  ~ ./bin/elasticsearch -d</div></pre></td></tr></table></figure>
+<p>查看是否正常运行可以访问<code>http://localhost:9200</code>，或者在控制台查看：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">➜  ~ curl 'http://localhost:9200/?pretty'</div><div class="line">&#123;</div><div class="line">  "name" : "mF61KCm",</div><div class="line">  "cluster_name" : "elasticsearch",</div><div class="line">  "cluster_uuid" : "MmELAlGuQVGLgLDjE4bZ2Q",</div><div class="line">  "version" : &#123;</div><div class="line">    "number" : "6.2.4",</div><div class="line">    "build_hash" : "ccec39f",</div><div class="line">    "build_date" : "2018-04-12T20:37:28.497551Z",</div><div class="line">    "build_snapshot" : false,</div><div class="line">    "lucene_version" : "7.2.1",</div><div class="line">    "minimum_wire_compatibility_version" : "5.6.0",</div><div class="line">    "minimum_index_compatibility_version" : "5.0.0"</div><div class="line">  &#125;,</div><div class="line">  "tagline" : "You Know, for Search"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果输出以上内容  则说明安装成功。</p>
+<h4 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h4><h5 id="elasticsearch-head："><a href="#elasticsearch-head：" class="headerlink" title="elasticsearch-head："></a>elasticsearch-head：</h5><p>下载地址：<a href="https://github.com/mobz/elasticsearch-head" target="_blank" rel="noopener">https://github.com/mobz/elasticsearch-head</a></p>
+<p>安装步骤：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">➜  ~ git clone git://github.com/mobz/elasticsearch-head.git</div><div class="line">➜  ~ cd elasticsearch-head</div><div class="line">➜  ~ npm install</div><div class="line">➜  ~ npm run start</div></pre></td></tr></table></figure>
+<p>启动成功之后访问：<code>http://localhost:9100</code></p>
+<p><img src="/var/folders/2m/7_mzftpj5s1b_63sc0tvc73h0000gn/T/abnerworks.Typora/image-20180527232441854.png" alt="image-20180527232441854"></p>
+<h5 id="kibana"><a href="#kibana" class="headerlink" title="kibana:"></a>kibana:</h5><p>下载地址：<a href="https://www.elastic.co/downloads/kibana" target="_blank" rel="noopener">https://www.elastic.co/downloads/kibana</a></p>
+<p>安装步骤：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">➜  ~  tar -zxvf kibana-6.2.4-darwin-x86_64.tar.gz -C elasticsearch/</div><div class="line">➜  ~ cd elasticsearch &amp;&amp; mv kibana-6.2.4-darwin-x86_64 kibana</div><div class="line">➜  kibana ./bin/kibana # 启动Kibana</div></pre></td></tr></table></figure>
+<p>启动成功之后 访问:<code>http://localhost:5601</code>。</p>
+<p>官方的安装步骤上讲在启动前，要修改<code>./config/kibana.yml</code>文件中的<code>elasticsearch.url</code>，但是<code>elasticsearch.url</code>的默认值是<code>http://localhost:9200</code>,所以此处不做修改。</p>
+<p>值得注意的是，kibana在下载的时候，一定要选择与自己当前系统相对应的版本，不然……</p>
+<h3 id="集群管理："><a href="#集群管理：" class="headerlink" title="集群管理："></a>集群管理：</h3><h4 id="集群健康状态："><a href="#集群健康状态：" class="headerlink" title="集群健康状态："></a>集群健康状态：</h4><p>可以再kibana中使用<code>GET /_cat/health?v</code>来查看集群的健康状态:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">GET /_cat/health?v</div><div class="line"></div><div class="line"><span class="meta">#</span> 返回结果:</div><div class="line">epoch      timestamp cluster status node.total node.data shards pri relo init unassign pending_tasks max_task_wait_time active_shards_percent</div><div class="line">1527521915 23:38:35  Yang    green           3         3      0   0    0    0        0             0                  -                100.0%</div></pre></td></tr></table></figure>
+<p>集群的健康状态<code>status</code>有三种状态：</p>
+<p>green：每个索引的primary shard和replica shard都是active状态的<br>yellow：每个索引的primary shard都是active状态的，但是部分replica shard不是active状态，处于不可用的状态<br>red：不是所有索引的primary shard都是active状态的，部分索引有数据丢失了</p>
+<h4 id="API操作："><a href="#API操作：" class="headerlink" title="API操作："></a>API操作：</h4><table>
+<thead>
+<tr>
+<th style="text-align:center">API</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">GET /_cat/health?v</td>
+<td style="text-align:center">检查集群健康状态</td>
+</tr>
+<tr>
+<td style="text-align:center">GET /_cat/indices?v</td>
+<td style="text-align:center">查看集群中有哪些索引</td>
+</tr>
+<tr>
+<td style="text-align:center">GET _cluster/state</td>
+<td style="text-align:center">检查集群状态信息</td>
+</tr>
+<tr>
+<td style="text-align:center">GET /_cat/master?v</td>
+<td style="text-align:center">查看master的节点ID，绑定IP地址，节点名称</td>
+</tr>
+<tr>
+<td style="text-align:center">GET /_cat/nodes?v</td>
+<td style="text-align:center">输出当前集群的拓扑结构</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>官方文档：<a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/elasticsearch/reference/current/cat.html</a></p>
+<h3 id="索引操作"><a href="#索引操作" class="headerlink" title="索引操作:"></a>索引操作:</h3><h4 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引:"></a>创建索引:</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">PUT /test_index?pretty</div><div class="line"></div><div class="line"># 返回结果:</div><div class="line">&#123;</div><div class="line">  <span class="attr">"acknowledged"</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">"shards_acknowledged"</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">"index"</span>: <span class="string">"test_index"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="查看索引"><a href="#查看索引" class="headerlink" title="查看索引:"></a>查看索引:</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">GET /_cat/indices?v</div><div class="line"></div><div class="line"># 返回结果:</div><div class="line">health status index      uuid                   pri rep docs.count docs.deleted store.size pri.store.size</div><div class="line">green  open   test_index oDZBadoQQAuxMVb7ekUl5g   5   1          0            0      2.2kb          1.1kb</div></pre></td></tr></table></figure>
+<h4 id="删除索引"><a href="#删除索引" class="headerlink" title="删除索引:"></a>删除索引:</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">DELETE /test_index?pretty</div><div class="line"></div><div class="line"># 返回结果:</div><div class="line">&#123;</div><div class="line">  <span class="attr">"acknowledged"</span>: <span class="literal">true</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="CRUD"><a href="#CRUD" class="headerlink" title="CRUD:"></a>CRUD:</h3><h4 id="新增文档："><a href="#新增文档：" class="headerlink" title="新增文档："></a>新增文档：</h4><p>新增文档使用<code>PUT</code>API来操作。</p>
+<p>语法：PUT /index/type/id</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">PUT /shop/product/1</div><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>:<span class="string">"Thinking in Java"</span>,</div><div class="line">  <span class="attr">"desc"</span>:<span class="string">"Java Conding API Book"</span>,</div><div class="line">  <span class="attr">"price"</span>:<span class="number">120</span>,</div><div class="line">  <span class="attr">"from"</span>:<span class="string">"Machinery Industry Press"</span>,</div><div class="line">  <span class="attr">"tags"</span>:[<span class="string">"Java"</span>,<span class="string">"Coding"</span>] </div><div class="line">&#125;</div><div class="line"></div><div class="line"># 返回结果:</div><div class="line">&#123;</div><div class="line">  <span class="attr">"_index"</span>: <span class="string">"shop"</span>,</div><div class="line">  <span class="attr">"_type"</span>: <span class="string">"product"</span>,</div><div class="line">  <span class="attr">"_id"</span>: <span class="string">"1"</span>,</div><div class="line">  <span class="attr">"_version"</span>: <span class="number">1</span>,</div><div class="line">  <span class="attr">"result"</span>: <span class="string">"created"</span>,</div><div class="line">  <span class="attr">"_shards"</span>: &#123;</div><div class="line">    <span class="attr">"total"</span>: <span class="number">2</span>,</div><div class="line">    <span class="attr">"successful"</span>: <span class="number">2</span>,</div><div class="line">    <span class="attr">"failed"</span>: <span class="number">0</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"_seq_no"</span>: <span class="number">0</span>,</div><div class="line">  <span class="attr">"_primary_term"</span>: <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="替换文档"><a href="#替换文档" class="headerlink" title="替换文档:"></a>替换文档:</h4><p>替换文档同样可以使用<code>PUT</code>API来操作，注意每次完成后返回结果的<code>_version</code>会发生变化。</p>
+<p>语法：PUT /index/type/id</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">PUT /shop/product/1</div><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>:<span class="string">"Thinking in Java"</span>,</div><div class="line">  <span class="attr">"desc"</span>:<span class="string">"Java Conding API Book"</span>,</div><div class="line">  <span class="attr">"price"</span>:<span class="number">119</span>,</div><div class="line">  <span class="attr">"from"</span>:<span class="string">"Machinery Industry Press"</span>,</div><div class="line">  <span class="attr">"tags"</span>:[<span class="string">"Java"</span>,<span class="string">"Coding"</span>] </div><div class="line">&#125;</div><div class="line"></div><div class="line"># 返回结果:</div><div class="line">&#123;</div><div class="line">  <span class="attr">"_index"</span>: <span class="string">"shop"</span>,</div><div class="line">  <span class="attr">"_type"</span>: <span class="string">"product"</span>,</div><div class="line">  <span class="attr">"_id"</span>: <span class="string">"1"</span>,</div><div class="line">  "_version": 2, # 由1变为2</div><div class="line">  "result": "updated",</div><div class="line">  "_shards": &#123;</div><div class="line">    "total": 2,</div><div class="line">    "successful": 2,</div><div class="line">    "failed": 0</div><div class="line">  &#125;,</div><div class="line">  "_seq_no": 5,</div><div class="line">  "_primary_term": 1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="修改文档："><a href="#修改文档：" class="headerlink" title="修改文档："></a>修改文档：</h4><p>修改文档使用<code>POST</code>API来操作。</p>
+<p>语法：POST /index/type/id</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">POST /shop/product/1/_update</div><div class="line">&#123;</div><div class="line">  <span class="attr">"doc"</span>: &#123;</div><div class="line">    <span class="attr">"price"</span>:<span class="number">108</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"># 返回结果:</div><div class="line">&#123;</div><div class="line">  <span class="attr">"_index"</span>: <span class="string">"shop"</span>,</div><div class="line">  <span class="attr">"_type"</span>: <span class="string">"product"</span>,</div><div class="line">  <span class="attr">"_id"</span>: <span class="string">"1"</span>,</div><div class="line">  <span class="attr">"_version"</span>: <span class="number">2</span>,</div><div class="line">  <span class="attr">"result"</span>: <span class="string">"updated"</span>,</div><div class="line">  <span class="attr">"_shards"</span>: &#123;</div><div class="line">    <span class="attr">"total"</span>: <span class="number">2</span>,</div><div class="line">    <span class="attr">"successful"</span>: <span class="number">2</span>,</div><div class="line">    <span class="attr">"failed"</span>: <span class="number">0</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"_seq_no"</span>: <span class="number">8</span>,</div><div class="line">  <span class="attr">"_primary_term"</span>: <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="检索文档："><a href="#检索文档：" class="headerlink" title="检索文档："></a>检索文档：</h4><p>检索文档使用<code>GET</code>API来操作。</p>
+<p>语法：GET /index/type/id</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">GET /shop/product/1</div><div class="line"></div><div class="line"># 返回结果:</div><div class="line">&#123;</div><div class="line">  <span class="attr">"_index"</span>: <span class="string">"shop"</span>,</div><div class="line">  <span class="attr">"_type"</span>: <span class="string">"product"</span>,</div><div class="line">  <span class="attr">"_id"</span>: <span class="string">"1"</span>,</div><div class="line">  <span class="attr">"_version"</span>: <span class="number">2</span>,</div><div class="line">  <span class="attr">"found"</span>: <span class="literal">true</span>,</div><div class="line">  <span class="attr">"_source"</span>: &#123;</div><div class="line">    <span class="attr">"name"</span>: <span class="string">"Thinking in Java"</span>,</div><div class="line">    <span class="attr">"desc"</span>: <span class="string">"Java Conding API Book"</span>,</div><div class="line">    <span class="attr">"price"</span>: <span class="number">119</span>,</div><div class="line">    <span class="attr">"from"</span>: <span class="string">"Machinery Industry Press"</span>,</div><div class="line">    <span class="attr">"tags"</span>: [</div><div class="line">      <span class="string">"Java"</span>,</div><div class="line">      <span class="string">"Coding"</span></div><div class="line">    ]</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="删除文档："><a href="#删除文档：" class="headerlink" title="删除文档："></a>删除文档：</h4><p>删除文档使用 <code>DELETE</code>API来操作：</p>
+<p>语法：DELETE  /index/type/id</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">DELETE /shop/product/1</div><div class="line"></div><div class="line"># 返回结果:</div><div class="line">&#123;</div><div class="line">  <span class="attr">"_index"</span>: <span class="string">"shop"</span>,</div><div class="line">  <span class="attr">"_type"</span>: <span class="string">"product"</span>,</div><div class="line">  <span class="attr">"_id"</span>: <span class="string">"1"</span>,</div><div class="line">  <span class="attr">"_version"</span>: <span class="number">3</span>,</div><div class="line">  <span class="attr">"result"</span>: <span class="string">"deleted"</span>,</div><div class="line">  <span class="attr">"_shards"</span>: &#123;</div><div class="line">    <span class="attr">"total"</span>: <span class="number">2</span>,</div><div class="line">    <span class="attr">"successful"</span>: <span class="number">2</span>,</div><div class="line">    <span class="attr">"failed"</span>: <span class="number">0</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">"_seq_no"</span>: <span class="number">6</span>,</div><div class="line">  <span class="attr">"_primary_term"</span>: <span class="number">1</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>es会自动建立index和type，不需要提前创建，而且es默认会对document每个field都建立倒排索引，让其可以被搜索。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/elasticsearch/" rel="tag"># elasticsearch</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/19/centos-docker/" rel="next" title="CentOS7 安装 Docker">
+                <i class="fa fa-chevron-left"></i> CentOS7 安装 Docker
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDgwNi83MzU4"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460"
+               alt="柒索" />
+          <p class="site-author-name" itemprop="name">柒索</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ZhangYangDev" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="" title="Blog" target="_blank">Blog</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本"><span class="nav-number">2.</span> <span class="nav-text">版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CLI参数："><span class="nav-number">3.1.</span> <span class="nav-text">CLI参数：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单实例安装"><span class="nav-number">3.2.</span> <span class="nav-text">单实例安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集群安装"><span class="nav-number">3.3.</span> <span class="nav-text">集群安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#验证安装"><span class="nav-number">3.4.</span> <span class="nav-text">验证安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插件安装"><span class="nav-number">3.5.</span> <span class="nav-text">插件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#elasticsearch-head："><span class="nav-number">3.5.1.</span> <span class="nav-text">elasticsearch-head：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#kibana"><span class="nav-number">3.5.2.</span> <span class="nav-text">kibana:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群管理："><span class="nav-number">4.</span> <span class="nav-text">集群管理：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#集群健康状态："><span class="nav-number">4.1.</span> <span class="nav-text">集群健康状态：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#API操作："><span class="nav-number">4.2.</span> <span class="nav-text">API操作：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引操作"><span class="nav-number">5.</span> <span class="nav-text">索引操作:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建索引"><span class="nav-number">5.1.</span> <span class="nav-text">创建索引:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看索引"><span class="nav-number">5.2.</span> <span class="nav-text">查看索引:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除索引"><span class="nav-number">5.3.</span> <span class="nav-text">删除索引:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CRUD"><span class="nav-number">6.</span> <span class="nav-text">CRUD:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新增文档："><span class="nav-number">6.1.</span> <span class="nav-text">新增文档：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#替换文档"><span class="nav-number">6.2.</span> <span class="nav-text">替换文档:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改文档："><span class="nav-number">6.3.</span> <span class="nav-text">修改文档：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检索文档："><span class="nav-number">6.4.</span> <span class="nav-text">检索文档：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除文档："><span class="nav-number">6.5.</span> <span class="nav-text">删除文档：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">柒索</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
