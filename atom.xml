@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-11T14:41:00.797Z</updated>
+  <updated>2018-05-29T02:02:56.616Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/03/25/elasticsearch/"/>
     <id>http://yoursite.com/2018/03/25/elasticsearch/</id>
     <published>2018-03-25T15:04:10.000Z</published>
-    <updated>2018-04-11T14:41:00.797Z</updated>
+    <updated>2018-05-29T02:02:56.616Z</updated>
     
     <summary type="html">
     
@@ -381,9 +381,9 @@
       <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="Gradle" scheme="http://yoursite.com/tags/Gradle/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
