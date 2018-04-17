@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-29T02:02:56.616Z</updated>
+  <updated>2018-05-29T12:40:19.660Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>『ElasticSearch』- Query DSL(Domain Specific Language)</title>
+    <link href="http://yoursite.com/2018/05/29/elasticsearch-query/"/>
+    <id>http://yoursite.com/2018/05/29/elasticsearch-query/</id>
+    <published>2018-05-29T09:09:09.000Z</published>
+    <updated>2018-05-29T12:40:19.660Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;ElasticSearch提供了基于json的完整查询DSL来定义查询。查询DSL包括两种子句&lt;code&gt;叶查询子句&lt;/code&gt;和&lt;code&gt;复合查询子句&lt;/code&gt;。查询子句的行为有所不同，具体取决于它们是在 查询上下文(&lt;code&gt;Query Context&lt;/co
+      
+    
+    </summary>
+    
+      <category term="ElasticSearch" scheme="http://yoursite.com/categories/ElasticSearch/"/>
+    
+    
+      <category term="Elasticsearch" scheme="http://yoursite.com/tags/Elasticsearch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringCloud-Netflix-Ribbon</title>
+    <link href="http://yoursite.com/2018/05/24/springcloud-ribbon/"/>
+    <id>http://yoursite.com/2018/05/24/springcloud-ribbon/</id>
+    <published>2018-05-24T07:42:28.000Z</published>
+    <updated>2018-06-01T08:14:51.432Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;Ribbon-是什么？&quot;&gt;&lt;a href=&quot;#Ribbon-是什么？&quot; class=&quot;headerlink&quot; title=&quot;Ribbon 是什么？&quot;&gt;&lt;/a&gt;Ribbon 是什么？&lt;/h4&gt;&lt;p&gt;Spring Cloud Ribbon是基于Netflix Ribb
+      
+    
+    </summary>
+    
+      <category term="MicroService" scheme="http://yoursite.com/categories/MicroService/"/>
+    
+    
+      <category term="SpringCloud" scheme="http://yoursite.com/tags/SpringCloud/"/>
+    
+      <category term="Ribbon" scheme="http://yoursite.com/tags/Ribbon/"/>
+    
+  </entry>
+  
+  <entry>
     <title>『ElasticSearch』- Introduction &amp; QuickStart</title>
-    <link href="http://yoursite.com/2018/03/25/elasticsearch/"/>
-    <id>http://yoursite.com/2018/03/25/elasticsearch/</id>
+    <link href="http://yoursite.com/2018/03/25/elasticsearch-introduction/"/>
+    <id>http://yoursite.com/2018/03/25/elasticsearch-introduction/</id>
     <published>2018-03-25T15:04:10.000Z</published>
-    <updated>2018-05-29T02:02:56.616Z</updated>
+    <updated>2018-05-29T12:15:21.564Z</updated>
     
     <summary type="html">
     
@@ -32,7 +80,7 @@
     
     </summary>
     
-      <category term="elasticsearch" scheme="http://yoursite.com/categories/elasticsearch/"/>
+      <category term="ElasticSearch" scheme="http://yoursite.com/categories/ElasticSearch/"/>
     
     
       <category term="elasticsearch" scheme="http://yoursite.com/tags/elasticsearch/"/>
@@ -460,53 +508,6 @@
       <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
     
       <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HighCharts - 学习笔记整理</title>
-    <link href="http://yoursite.com/2017/08/05/hightcharts-note/"/>
-    <id>http://yoursite.com/2017/08/05/hightcharts-note/</id>
-    <published>2017-08-05T06:10:24.000Z</published>
-    <updated>2017-09-20T15:15:06.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;HighCharts概述：&quot;&gt;&lt;a href=&quot;#HighCharts概述：&quot; class=&quot;headerlink&quot; title=&quot;HighCharts概述：&quot;&gt;&lt;/a&gt;HighCharts概述：&lt;/h2&gt;&lt;p&gt;HighCharts是用JavaScript编写的图
-      
-    
-    </summary>
-    
-      <category term="Charts" scheme="http://yoursite.com/categories/Charts/"/>
-    
-    
-      <category term="HighCharts" scheme="http://yoursite.com/tags/HighCharts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『构建工具-Webpack』相关内容整理</title>
-    <link href="http://yoursite.com/2017/07/23/webpack-note/"/>
-    <id>http://yoursite.com/2017/07/23/webpack-note/</id>
-    <published>2017-07-23T09:11:16.000Z</published>
-    <updated>2017-09-20T15:15:06.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Webpack是什么？&quot;&gt;&lt;a href=&quot;#Webpack是什么？&quot; class=&quot;headerlink&quot; title=&quot;Webpack是什么？&quot;&gt;&lt;/a&gt;Webpack是什么？&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;webpack is a module b
-      
-    
-    </summary>
-    
-      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
-    
-    
-      <category term="Webpack" scheme="http://yoursite.com/tags/Webpack/"/>
     
   </entry>
   
