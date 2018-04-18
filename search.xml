@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[『ElasticSearch』- Query DSL(Domain Specific Language)]]></title>
-    <url>%2F2018%2F05%2F29%2Felasticsearch-query%2F</url>
-    <content type="text"><![CDATA[ElasticSearch提供了基于json的完整查询DSL来定义查询。查询DSL包括两种子句叶查询子句和复合查询子句。查询子句的行为有所不同，具体取决于它们是在 查询上下文(Query Context)还是过滤器的上下文(Filter Context)中使用。 叶查询子句：叶查询子句(Leaf query clauses)中寻找一个特定的值在某一特定领域，如 match，term或 range查询。这些查询可以自己使用。 复合查询子句：复合查询子句(Compound query clauses)包装其他叶或复合查询，并用于以逻辑方式（如bool或dis_max查询）组合多个查询 ，或者改变它们的行为（如 constant_score查询）。 Query Context：在查询过程中穿了判断文档是否满足查询条件之外，ES还会计算一个_score来标识查询结果的匹配程度，旨在判断目标文档和查询条件匹配的有多好(吻合程度)。 针对文本类型数据:123456789101112131415161718192021222324252627282930313233343536373839404142GET /zips/code/_search&#123; "query": &#123; "match": &#123; "pop":"122" &#125; &#125;&#125;# 返回结果:&#123; "took": 8, "timed_out": false, "_shards": &#123; "total": 5, "successful": 5, "skipped": 0, "failed": 0 &#125;, "hits": &#123; "total": 1, "max_score": 1, "hits": [ &#123; "_index": "zips", "_type": "code", "_id": "17", "_score": 1, "_source": &#123; "city": "GOSHEN", "loc": [ -72.844092, 42.466234 ], "pop": 122, "state": "MA", "id": "01032" &#125; &#125; ] &#125;&#125; 字段级别查询:Filter Context：复合条件查询：数据示例：1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859PUT /zips/code/1&#123; "city" : "AGAWAM", "loc" : [ -72.622739, 42.070206 ], "pop" : 15338, "state" : "MA", "id" : "01001" &#125;PUT /zips/code/2&#123; "city" : "CUSHMAN", "loc" : [ -72.51564999999999, 42.377017 ], "pop" : 36963, "state" : "MA", "id" : "01002" &#125;PUT /zips/code/3&#123; "city" : "BARRE", "loc" : [ -72.10835400000001, 42.409698 ], "pop" : 4546, "state" : "MA", "id" : "01005" &#125;PUT /zips/code/4&#123; "city" : "BELCHERTOWN", "loc" : [ -72.41095300000001, 42.275103 ], "pop" : 10579, "state" : "MA", "id" : "01007" &#125;PUT /zips/code/5&#123; "city" : "BLANDFORD", "loc" : [ -72.936114, 42.182949 ], "pop" : 1240, "state" : "MA", "id" : "01008" &#125;PUT /zips/code/6&#123; "city" : "BRIMFIELD", "loc" : [ -72.188455, 42.116543 ], "pop" : 3706, "state" : "MA", "id" : "01010" &#125;PUT /zips/code/7&#123; "city" : "CHESTER", "loc" : [ -72.988761, 42.279421 ], "pop" : 1688, "state" : "MA", "id" : "01011" &#125;PUT /zips/code/8&#123; "city" : "CHESTERFIELD", "loc" : [ -72.833309, 42.38167 ], "pop" : 177, "state" : "MA", "id" : "01012" &#125;PUT /zips/code/9&#123; "city" : "CHICOPEE", "loc" : [ -72.607962, 42.162046 ], "pop" : 23396, "state" : "MA", "id" : "01013" &#125;PUT /zips/code/10&#123; "city" : "CHICOPEE", "loc" : [ -72.576142, 42.176443 ], "pop" : 31495, "state" : "MA", "id" : "01020" &#125;PUT /zips/code/11&#123; "city" : "WESTOVER AFB", "loc" : [ -72.558657, 42.196672 ], "pop" : 1764, "state" : "MA", "id" : "01022" &#125;PUT /zips/code/12&#123; "city" : "CUMMINGTON", "loc" : [ -72.905767, 42.435296 ], "pop" : 1484, "state" : "MA", "id" : "01026" &#125;PUT /zips/code/13&#123; "city" : "MOUNT TOM", "loc" : [ -72.67992099999999, 42.264319 ], "pop" : 16864, "state" : "MA", "id" : "01027" &#125;PUT /zips/code/14&#123; "city" : "EAST LONGMEADOW", "loc" : [ -72.505565, 42.067203 ], "pop" : 13367, "state" : "MA", "id" : "01028" &#125;PUT /zips/code/15&#123; "city" : "FEEDING HILLS", "loc" : [ -72.675077, 42.07182 ], "pop" : 11985, "state" : "MA", "id" : "01030" &#125;PUT /zips/code/16&#123; "city" : "GILBERTVILLE", "loc" : [ -72.19858499999999, 42.332194 ], "pop" : 2385, "state" : "MA", "id" : "01031" &#125;PUT /zips/code/17&#123; "city" : "GOSHEN", "loc" : [ -72.844092, 42.466234 ], "pop" : 122, "state" : "MA", "id" : "01032" &#125;PUT /zips/code/18&#123; "city" : "GRANBY", "loc" : [ -72.52000099999999, 42.255704 ], "pop" : 5526, "state" : "MA", "id" : "01033" &#125;PUT /zips/code/19&#123; "city" : "TOLLAND", "loc" : [ -72.908793, 42.070234 ], "pop" : 1652, "state" : "MA", "id" : "01034" &#125;PUT /zips/code/20&#123; "city" : "HADLEY", "loc" : [ -72.571499, 42.36062 ], "pop" : 4231, "state" : "MA", "id" : "01035" &#125;]]></content>
-      <categories>
-        <category>ElasticSearch</category>
-      </categories>
-      <tags>
-        <tag>Elasticsearch</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[SpringCloud-Netflix-Ribbon]]></title>
     <url>%2F2018%2F05%2F24%2Fspringcloud-ribbon%2F</url>
     <content type="text"><![CDATA[Ribbon 是什么？Spring Cloud Ribbon是基于Netflix Ribbon实现的一套客户端负载均衡的工具。 简单的说，Ribbon是Netflix发布的开源项目，主要功能是提供客户端的软件负载均衡算法，将Netflix的中间层服务连接在一起。Ribbon客户端组件提供一系列完善的配置项如连接超时，重试等。简单的说，就是在配置文件中列出Load Balancer（简称LB）后面所有的机器，Ribbon会自动的帮助你基于某种规则（如简单轮询，随即连接等）去连接这些机器。我们也很容易使用Ribbon实现自定义的负载均衡算法。 Ribbon项目资料官方主页：https://cloud.spring.io/spring-cloud-netflix 项目地址：https://github.com/Netflix/ribbon 官方Wiki：https://github.com/Netflix/ribbon/wiki 中文文档：https://springcloud.cc/spring-cloud-netflix.html]]></content>
@@ -192,8 +181,8 @@
         <category>Build Tools</category>
       </categories>
       <tags>
-        <tag>Gradle</tag>
         <tag>Java</tag>
+        <tag>Gradle</tag>
       </tags>
   </entry>
   <entry>
@@ -286,8 +275,8 @@
         <category>Ent Java</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>Servlet</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
