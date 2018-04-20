@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-01T08:14:51.432Z</updated>
+  <updated>2018-05-29T12:15:21.564Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>SpringCloud-Netflix-Ribbon</title>
-    <link href="http://yoursite.com/2018/05/24/springcloud-ribbon/"/>
-    <id>http://yoursite.com/2018/05/24/springcloud-ribbon/</id>
-    <published>2018-05-24T07:42:28.000Z</published>
-    <updated>2018-06-01T08:14:51.432Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;Ribbon-是什么？&quot;&gt;&lt;a href=&quot;#Ribbon-是什么？&quot; class=&quot;headerlink&quot; title=&quot;Ribbon 是什么？&quot;&gt;&lt;/a&gt;Ribbon 是什么？&lt;/h4&gt;&lt;p&gt;Spring Cloud Ribbon是基于Netflix Ribb
-      
-    
-    </summary>
-    
-      <category term="MicroService" scheme="http://yoursite.com/categories/MicroService/"/>
-    
-    
-      <category term="SpringCloud" scheme="http://yoursite.com/tags/SpringCloud/"/>
-    
-      <category term="Ribbon" scheme="http://yoursite.com/tags/Ribbon/"/>
-    
-  </entry>
   
   <entry>
     <title>『ElasticSearch』- Introduction &amp; QuickStart</title>
@@ -508,6 +483,30 @@
     
     
       <category term="HighCharts" scheme="http://yoursite.com/tags/HighCharts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>『构建工具-Webpack』相关内容整理</title>
+    <link href="http://yoursite.com/2017/07/23/webpack-note/"/>
+    <id>http://yoursite.com/2017/07/23/webpack-note/</id>
+    <published>2017-07-23T09:11:16.000Z</published>
+    <updated>2017-09-20T15:15:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Webpack是什么？&quot;&gt;&lt;a href=&quot;#Webpack是什么？&quot; class=&quot;headerlink&quot; title=&quot;Webpack是什么？&quot;&gt;&lt;/a&gt;Webpack是什么？&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;webpack is a module b
+      
+    
+    </summary>
+    
+      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
+    
+    
+      <category term="Webpack" scheme="http://yoursite.com/tags/Webpack/"/>
     
   </entry>
   

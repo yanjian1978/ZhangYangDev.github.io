@@ -4,28 +4,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/05/24/springcloud-ribbon/</loc>
-    <lastmod>2018-06-01T08:14:51.432Z</lastmod>
-    <data>
-        <display>
-        <title>SpringCloud-Netflix-Ribbon</title>
-        <pubTime>2018-05-24T07:42:28.000Z</pubTime>
-        
-        <tag>SpringCloud</tag>
-         
-        <tag>Ribbon</tag>
-         
-         
-           
-             
-              <breadCrumb title="MicroService" url="http://yoursite.com/categories/MicroService/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/03/25/elasticsearch-introduction/</loc>
     <lastmod>2018-05-29T12:15:21.564Z</lastmod>
     <data>
@@ -385,6 +363,26 @@
     </url>
 
     
+  <url>
+    <loc>http://yoursite.com/2017/08/05/hightcharts-note/</loc>
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>HighCharts - 学习笔记整理</title>
+        <pubTime>2017-08-05T06:10:24.000Z</pubTime>
+        
+        <tag>HighCharts</tag>
+         
+         
+           
+             
+              <breadCrumb title="Charts" url="http://yoursite.com/categories/Charts/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://yoursite.com/2017/09/10/nowsh-note/</loc>
@@ -506,26 +504,6 @@
            
              
               <breadCrumb title="Build Tools" url="http://yoursite.com/categories/Build-Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/08/05/hightcharts-note/</loc>
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>HighCharts - 学习笔记整理</title>
-        <pubTime>2017-08-05T06:10:24.000Z</pubTime>
-        
-        <tag>HighCharts</tag>
-         
-         
-           
-             
-              <breadCrumb title="Charts" url="http://yoursite.com/categories/Charts/"/>
           
         </display>
     </data>
