@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="在Spring Boot的配置文件中，有两种后缀的配置文件，分别是.properties文件和.yml文件。Spring Boot 提供了对应用进行自动化配置。相比以前 XML 的配置方式，很多显式方式申明是不需要的。大多数默认的配置足够实现开发功能，从而更快速开发。 Spring Boot - 两种类型的配置文件SpringBoot使用一个全局的配置文件，且配置文件名是固定的；  *.prope">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-20T16:09:45.898Z">
+<meta property="og:updated_time" content="2018-04-22T10:07:16.875Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot - 多环境配置(.properties &amp; .yml)">
 <meta name="twitter:description" content="在Spring Boot的配置文件中，有两种后缀的配置文件，分别是.properties文件和.yml文件。Spring Boot 提供了对应用进行自动化配置。相比以前 XML 的配置方式，很多显式方式申明是不需要的。大多数默认的配置足够实现开发功能，从而更快速开发。 Spring Boot - 两种类型的配置文件SpringBoot使用一个全局的配置文件，且配置文件名是固定的；  *.prope">
@@ -430,11 +430,11 @@
 <p>​                name:   ‘zhangsan \n lisi’：输出；zhangsan \n  lisi</p>
 <h4 id="对象、Map、K-V："><a href="#对象、Map、K-V：" class="headerlink" title="对象、Map、K:V："></a>对象、Map、K:V：</h4><p>​    k: v：在下一行来写对象的属性和值的关系；注意缩进</p>
 <p>​        对象还是k: v的方式</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">friends:</span></div><div class="line">		<span class="attr">lastName:</span> <span class="string">zhangsan</span></div><div class="line">		<span class="attr">age:</span> <span class="number">20</span></div></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">blog:</span></div><div class="line"><span class="attr">  title:</span> <span class="string">柒索</span></div><div class="line"><span class="attr">  age:</span> <span class="number">2</span></div></pre></td></tr></table></figure>
 <p>行内写法：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">friends:</span> <span class="string">&#123;lastName:</span> <span class="string">zhangsan,age:</span> <span class="number">18</span><span class="string">&#125;</span></div></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">info:</span> <span class="string">&#123;url:</span> <span class="string">object.ws,subtitle:</span> <span class="string">.......&#125;</span></div></pre></td></tr></table></figure>
 <h4 id="数组-List、Set"><a href="#数组-List、Set" class="headerlink" title="数组(List、Set):"></a>数组(List、Set):</h4><p>用- 值表示数组中的一个元素</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">pets:</span></div><div class="line"><span class="bullet"> -</span> <span class="string">cat</span></div><div class="line"><span class="bullet"> -</span> <span class="string">dog</span></div><div class="line"><span class="bullet"> -</span> <span class="string">pig</span></div></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="attr">tags:</span></div><div class="line"><span class="bullet">  -</span> <span class="string">java</span></div><div class="line"><span class="bullet">  -</span> <span class="string">go</span></div><div class="line"><span class="bullet">  -</span> <span class="string">node</span></div></pre></td></tr></table></figure>
 <p>行内写法</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attr">pets:</span> <span class="string">[cat,dog,pig]</span></div></pre></td></tr></table></figure>
 <h3 id="配置文件注入"><a href="#配置文件注入" class="headerlink" title="配置文件注入:"></a>配置文件注入:</h3><p>配置文件代码:</p>
@@ -623,7 +623,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -634,7 +634,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">24</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
