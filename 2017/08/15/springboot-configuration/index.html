@@ -92,14 +92,14 @@
 <meta name="description" content="在Spring Boot的配置文件中，有两种后缀的配置文件，分别是.properties文件和.yml文件。Spring Boot 提供了对应用进行自动化配置。相比以前 XML 的配置方式，很多显式方式申明是不需要的。大多数默认的配置足够实现开发功能，从而更快速开发。 Spring Boot - 两种类型的配置文件SpringBoot使用一个全局的配置文件，且配置文件名是固定的；  *.prope">
 <meta name="keywords" content="Spring Boot,Spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring Boot - 多环境配置(.properties &amp; .yml)">
+<meta property="og:title" content="Spring Boot - 配置文件详解">
 <meta property="og:url" content="http://yoursite.com/2017/08/15/springboot-configuration/index.html">
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="在Spring Boot的配置文件中，有两种后缀的配置文件，分别是.properties文件和.yml文件。Spring Boot 提供了对应用进行自动化配置。相比以前 XML 的配置方式，很多显式方式申明是不需要的。大多数默认的配置足够实现开发功能，从而更快速开发。 Spring Boot - 两种类型的配置文件SpringBoot使用一个全局的配置文件，且配置文件名是固定的；  *.prope">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-26T13:20:33.797Z">
+<meta property="og:updated_time" content="2018-04-27T12:08:55.283Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Boot - 多环境配置(.properties &amp; .yml)">
+<meta name="twitter:title" content="Spring Boot - 配置文件详解">
 <meta name="twitter:description" content="在Spring Boot的配置文件中，有两种后缀的配置文件，分别是.properties文件和.yml文件。Spring Boot 提供了对应用进行自动化配置。相比以前 XML 的配置方式，很多显式方式申明是不需要的。大多数默认的配置足够实现开发功能，从而更快速开发。 Spring Boot - 两种类型的配置文件SpringBoot使用一个全局的配置文件，且配置文件名是固定的；  *.prope">
 
 
@@ -134,7 +134,7 @@
 
 
 
-  <title> Spring Boot - 多环境配置(.properties & .yml) | 柒索 </title>
+  <title> Spring Boot - 配置文件详解 | 柒索 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -328,7 +328,7 @@
             
             
               
-                Spring Boot - 多环境配置(.properties & .yml)
+                Spring Boot - 配置文件详解
               
             
           </h1>
@@ -517,14 +517,10 @@
 <p>优先级由高到底，高优先级的配置会覆盖低优先级的配置；</p>
 <p>SpringBoot会从这四个位置全部加载主配置文件；<strong>互补配置</strong>；</p>
 <p>我们还可以通过spring.config.location来改变默认的配置文件位置</p>
-<p>项目打包好以后，我们可以使用命令行参数的形式，启动项目的时候来指定配置文件的新位置；指定配置文件和默认加载的这些配置文件共同起作用形成互补配置；</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar spring-boot-config-0.0.1-SNAPSHOT.jar --spring.config.location=~/desktop/application.properties</div></pre></td></tr></table></figure>
+<p>项目打包好以后，我们可以使用命令行参数的形式，启动项目的时候来指定配置文件的新位置；指定配置文件和默认加载的这些配置文件共同起作用形成互补配置；<code>java -jar spring-boot-config-0.0.1-SNAPSHOT.jar --spring.config.location=~/desktop/application.properties</code></p>
 <h3 id="配置文件加载顺序："><a href="#配置文件加载顺序：" class="headerlink" title="配置文件加载顺序："></a>配置文件加载顺序：</h3><p>把所有配置全都打在一个jar包里，显然不是最好的做法，更常见的做法是把配置文件放在jar包外面，可以在需要时，不动java代码的前提下修改配置，spring-boot会按以下顺序加载配置文件 application.properties或application.yml， 优先级从高到低；高优先级的配置覆盖低优先级的配置，所有的配置会形成互补配置：</p>
 <ol>
-<li><p>所有的配置都可以在命令行上进行指定</p>
-</li>
-<li><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -jar spring-boot-config-0.0.1-SNAPSHOT.jar --server.port=8087  --server.context-path=/root # 多个配置用空格分开； --配置项=值</div></pre></td></tr></table></figure>
-</li>
+<li>所有的配置都可以在命令行上进行指定 <code>java -jar demo.jar --server.port=8087</code>多配置项使用空格分开</li>
 <li><p>来自java:comp/env的JNDI属性</p>
 </li>
 <li><p>Java系统属性（System.getProperties()）</p>
@@ -546,7 +542,7 @@
 <li><p>通过SpringApplication.setDefaultProperties指定的默认属性</p>
 </li>
 </ol>
-<p>所有支持的配置加载来源；</p>
+<p><a href="https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#boot-features-external-config" target="_blank" rel="noopener">参考官方文档-SpringBootConfig</a></p>
 <p>总结：</p>
 <ul>
 <li>先查找jar文件同级目录下的 ./config 子目录 有无配置文件 （外置)</li>
