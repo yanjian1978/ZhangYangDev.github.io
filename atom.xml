@@ -250,11 +250,11 @@
       <category term="NoSQL" scheme="http://yoursite.com/categories/NoSQL/"/>
     
     
+      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+    
       <category term="Node.js" scheme="http://yoursite.com/tags/Node-js/"/>
     
       <category term="Express" scheme="http://yoursite.com/tags/Express/"/>
-    
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
     
   </entry>
   
