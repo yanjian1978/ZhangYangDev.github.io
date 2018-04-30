@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-29T12:15:21.564Z</updated>
+  <updated>2018-06-02T05:51:00.815Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos - 搭建Git服务器</title>
+    <link href="http://yoursite.com/2018/06/02/centos-git/"/>
+    <id>http://yoursite.com/2018/06/02/centos-git/</id>
+    <published>2018-06-02T05:43:51.000Z</published>
+    <updated>2018-06-02T05:51:00.815Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;下载安装-git&quot;&gt;&lt;a href=&quot;#下载安装-git&quot; class=&quot;headerlink&quot; title=&quot;下载安装 git&quot;&gt;&lt;/a&gt;下载安装 git&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;任务时间：5min ~ 10min&lt;/p&gt;
+&lt;/blockquot
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>『ElasticSearch』- Introduction &amp; QuickStart</title>
@@ -63,11 +84,11 @@
   </entry>
   
   <entry>
-    <title>CentOS7中安装 Redis</title>
+    <title>CentOS7 安装 Redis</title>
     <link href="http://yoursite.com/2018/03/02/centos-redis/"/>
     <id>http://yoursite.com/2018/03/02/centos-redis/</id>
     <published>2018-03-02T11:53:28.000Z</published>
-    <updated>2018-04-03T12:18:36.432Z</updated>
+    <updated>2018-06-02T05:44:05.716Z</updated>
     
     <summary type="html">
     
@@ -417,7 +438,7 @@
     <link href="http://yoursite.com/2017/08/15/springboot-configuration/"/>
     <id>http://yoursite.com/2017/08/15/springboot-configuration/</id>
     <published>2017-08-15T10:55:08.000Z</published>
-    <updated>2018-04-27T12:08:55.283Z</updated>
+    <updated>2018-06-01T09:34:34.504Z</updated>
     
     <summary type="html">
     
@@ -483,30 +504,6 @@
     
     
       <category term="HighCharts" scheme="http://yoursite.com/tags/HighCharts/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『构建工具-Webpack』相关内容整理</title>
-    <link href="http://yoursite.com/2017/07/23/webpack-note/"/>
-    <id>http://yoursite.com/2017/07/23/webpack-note/</id>
-    <published>2017-07-23T09:11:16.000Z</published>
-    <updated>2017-09-20T15:15:06.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Webpack是什么？&quot;&gt;&lt;a href=&quot;#Webpack是什么？&quot; class=&quot;headerlink&quot; title=&quot;Webpack是什么？&quot;&gt;&lt;/a&gt;Webpack是什么？&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;webpack is a module b
-      
-    
-    </summary>
-    
-      <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
-    
-    
-      <category term="Webpack" scheme="http://yoursite.com/tags/Webpack/"/>
     
   </entry>
   
