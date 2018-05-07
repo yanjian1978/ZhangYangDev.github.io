@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-30T18:59:31.017Z</updated>
+  <updated>2018-05-29T12:15:21.564Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Centos - 搭建Git服务器</title>
-    <link href="http://yoursite.com/2018/06/02/centos-git/"/>
-    <id>http://yoursite.com/2018/06/02/centos-git/</id>
-    <published>2018-06-02T05:43:51.000Z</published>
-    <updated>2018-04-30T18:59:31.017Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;下载安装-git&quot;&gt;&lt;a href=&quot;#下载安装-git&quot; class=&quot;headerlink&quot; title=&quot;下载安装 git&quot;&gt;&lt;/a&gt;下载安装 git&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;任务时间：5min ~ 10min&lt;/p&gt;
-&lt;/blockquot
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
-    
-  </entry>
   
   <entry>
     <title>『ElasticSearch』- Introduction &amp; QuickStart</title>
@@ -76,6 +51,30 @@
       
       
         &lt;h3 id=&quot;CentOS7-安装-Docker&quot;&gt;&lt;a href=&quot;#CentOS7-安装-Docker&quot; class=&quot;headerlink&quot; title=&quot;CentOS7 安装 Docker&quot;&gt;&lt;/a&gt;CentOS7 安装 Docker&lt;/h3&gt;&lt;h4 id=&quot;安装&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos - 搭建Git服务器</title>
+    <link href="http://yoursite.com/2018/03/07/centos-git/"/>
+    <id>http://yoursite.com/2018/03/07/centos-git/</id>
+    <published>2018-03-07T05:43:51.000Z</published>
+    <updated>2018-05-04T15:37:19.135Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://git-scm.com/images/logo@2x.png&quot; alt=&quot;Git logo&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Git简介&quot;&gt;&lt;a href=&quot;#Git简介&quot; class=&quot;headerlink&quot; title=&quot;Git简介&quot;&gt;&lt;/
       
     
     </summary>
