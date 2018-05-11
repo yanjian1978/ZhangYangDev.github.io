@@ -23,9 +23,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[CentOS7 安装 Jenkins]]></title>
+    <url>%2F2018%2F03%2F13%2Fcentos-jenkins%2F</url>
+    <content type="text"><![CDATA[Jenkins 简介Jenkins 是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。 Jenkins 安装安装基础环境在安装Jenkins之前，首先我们需要准备 Java 环境，使用下面命令来安装 Java： 1yum -y install java-1.8.0-openjdk-devel 为了使用 Jenkins 仓库，我们要执行以下命令：12sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.reposudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key 如果您以前从 Jenkins 导入过 key，那么 rpm --import 将失败，因为您已经有一个 key。请忽略，继续下面步骤。 安装Jenkins接着我们可以使用 yum 安装 Jenkins： 1yum -y install jenkins 启动 Jenkins 任务时间：5min ~ 10min 启动启动 Jenkins 并设置为开机启动： 12systemctl start jenkins.servicechkconfig jenkins on 测试访问Jenkins 默认运行在 8080端口。 稍等片刻，打开 http://&lt;您的 CVM IP 地址&gt;:8080 测试访问。 进入 Jenkins管理员密码登入 Jenkins 需要输入管理员密码，按照提示，我们使用以下命令查看初始密码： 1cat /var/lib/jenkins/secrets/initialAdminPassword 复制密码，填入，进入 Jenkins。 定制 Jenkins我们选择默认的 install suggested plugins 来安装插件。 创建用户请填入相应信息创建用户，然后即可登入 Jenkins 的世界。]]></content>
+      <tags>
+        <tag>Jenkins</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Centos - 搭建Git服务器]]></title>
     <url>%2F2018%2F03%2F07%2Fcentos-git%2F</url>
-    <content type="text"><![CDATA[Git简介Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 Git安装Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 安装依赖库和编译工具为了后续安装能正常进行，我们先来安装一些相关依赖库和编译工具 1yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel 安装编译工具 1yum install gcc perl-ExtUtils-MakeMaker 下载 git选一个目录，用来放下载下来的安装包，这里将安装包放在 /usr/local/src 目录里 1cd /usr/local/src 到官网找一个新版稳定的源码包下载到 /usr/local/src 文件夹里 1wget https://www.kernel.org/pub/software/scm/git/git-2.10.0.tar.gz 解压和编译解压下载的源码包 1tar -zvxf git-2.10.0.tar.gz 解压后进入 git-2.10.0 文件夹 1cd git-2.10.0 执行编译 1make all prefix=/usr/local/git 编译完成后, 安装到 /usr/local/git 目录下 1make install prefix=/usr/local/git Git配置 任务时间：5min ~ 10min 将 git 目录加入 PATH将原来的 PATH 指向目录修改为现在的目录 1echo &apos;export PATH=$PATH:/usr/local/git/bin&apos; &gt;&gt; /etc/bashrc 生效环境变量 1source /etc/bashrc 此时我们能查看 git 版本号，说明我们已经安装成功了。 1git --version 创建 git 账号密码 任务时间：5min ~ 10min 创建 git 账号为我们刚刚搭建好的 git 创建一个账号 1useradd -m gituser 然后为这个账号设置密码1passwd gituser 控制台输入创建密码后，输入您自定义的密码，并二次确认。 初始化 git 仓库并配置用户权限 任务时间：5min ~ 10min 创建 git 仓库并初始化我们创建 /data/repositories 目录用于存放 git 仓库 1mkdir -p /data/repositories 创建好后，初始化这个仓库 1cd /data/repositories/ &amp;&amp; git init --bare test.git 配置用户权限给 git 仓库目录设置用户和用户组并设置权限 1chown -R gituser:gituser /data/repositories 1chmod 755 /data/repositories [查找 git-shell 所在目录] , 编辑 /etc/passwd 文件，将最后一行关于 gituser 的登录 shell 配置改为 git-shell 的目录[?]如下 示例代码：/etc/passwd1gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell 如果按照刚才的步骤执行, 这个位置应该是 /usr/local/git/bin/git-shell, 否则请通过 which git-shell 命令查看位置 安全目的, 限制 git 账号的 ssh 连接只能是登录 git-shell 使用搭建好的 Git 服务克隆 test repo 到本地 1cd ~ &amp;&amp; git clone gituser@&lt;您的 CVM IP 地址&gt;:/data/repositories/test.git 实验完成恭喜，Git 服务器搭建完成, 从此以后你可以方便地将你的本地代码提交到 Git 服务器托管了]]></content>
+    <content type="text"><![CDATA[Git简介Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 Git安装Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 安装依赖库和编译工具为了后续安装能正常进行，我们先来安装一些相关依赖库和编译工具 1yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel 安装编译工具 1yum install gcc perl-ExtUtils-MakeMaker 下载 git选一个目录，用来放下载下来的安装包，这里将安装包放在 /usr/local/src 目录里 1cd /usr/local/src 到官网找一个新版稳定的源码包下载到 /usr/local/src 文件夹里 1wget https://www.kernel.org/pub/software/scm/git/git-2.10.0.tar.gz 解压和编译解压下载的源码包 1tar -zvxf git-2.10.0.tar.gz 解压后进入 git-2.10.0 文件夹 1cd git-2.10.0 执行编译 1make all prefix=/usr/local/git 编译完成后, 安装到 /usr/local/git 目录下 1make install prefix=/usr/local/git Git配置 任务时间：5min ~ 10min 将 git 目录加入 PATH将原来的 PATH 指向目录修改为现在的目录 1echo &apos;export PATH=$PATH:/usr/local/git/bin&apos; &gt;&gt; /etc/bashrc 生效环境变量 1source /etc/bashrc 此时我们能查看 git 版本号，说明我们已经安装成功了。 1git --version 创建 git 账号密码 任务时间：5min ~ 10min 创建 git 账号为我们刚刚搭建好的 git 创建一个账号 1useradd -m gituser 然后为这个账号设置密码1passwd gituser 控制台输入创建密码后，输入您自定义的密码，并二次确认。 初始化 git 仓库并配置用户权限 任务时间：5min ~ 10min 创建 git 仓库并初始化我们创建 /data/repositories 目录用于存放 git 仓库 1mkdir -p /data/repositories 创建好后，初始化这个仓库 1cd /data/repositories/ &amp;&amp; git init --bare test.git 配置用户权限给 git 仓库目录设置用户和用户组并设置权限 1chown -R gituser:gituser /data/repositories 1chmod 755 /data/repositories [查找 git-shell 所在目录] , 编辑 /etc/passwd 文件，将最后一行关于 gituser 的登录 shell 配置改为 git-shell 的目录[?]如下 示例代码：/etc/passwd 1gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell 如果按照刚才的步骤执行, 这个位置应该是 /usr/local/git/bin/git-shell, 否则请通过 which git-shell 命令查看位置 安全目的, 限制 git 账号的 ssh 连接只能是登录 git-shell 使用搭建好的Git服务克隆 test repo 到本地 1cd ~ &amp;&amp; git clone gituser@&lt;您的 CVM IP 地址&gt;:/data/repositories/test.git 实验完成恭喜，Git 服务器搭建完成, 从此以后你可以方便地将你的本地代码提交到 Git 服务器托管了]]></content>
       <categories>
         <category>Linux</category>
       </categories>
@@ -180,8 +188,8 @@
         <category>Build Tools</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>Gradle</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -274,8 +282,8 @@
         <category>Ent Java</category>
       </categories>
       <tags>
-        <tag>Servlet</tag>
         <tag>Java</tag>
+        <tag>Servlet</tag>
       </tags>
   </entry>
   <entry>

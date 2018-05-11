@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CentOS," />
+  <meta name="keywords" content="Jenkins," />
 
 
 
@@ -89,18 +89,18 @@
 
 
 
-<meta name="description" content="在 CentOS 中使用 yum 直接来安装 Nginx的话会出现如下错误，原因是Nginx这个软件不是 yum源中自带的，所以需要手动来配置添加 Nginx 的 yum 源。 12345678[root@centos-linux ~]# yum install nginx     已加载插件：fastestmirror                Loading mirror speeds f">
-<meta name="keywords" content="CentOS">
+<meta name="description" content="Jenkins 简介Jenkins 是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。 Jenkins 安装安装基础环境在安装Jenkins之前，首先我们需要准备 Java 环境，使用下面命令来安装 Java： 1yum -y install java-1.8.0-openjdk-devel 为了使用 Jen">
+<meta name="keywords" content="Jenkins">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS7 安装 Nginx">
-<meta property="og:url" content="http://yoursite.com/2018/02/25/centos-nginx/index.html">
+<meta property="og:title" content="CentOS7 安装 Jenkins">
+<meta property="og:url" content="http://yoursite.com/2018/03/13/centos-jenkins/index.html">
 <meta property="og:site_name" content="柒索">
-<meta property="og:description" content="在 CentOS 中使用 yum 直接来安装 Nginx的话会出现如下错误，原因是Nginx这个软件不是 yum源中自带的，所以需要手动来配置添加 Nginx 的 yum 源。 12345678[root@centos-linux ~]# yum install nginx     已加载插件：fastestmirror                Loading mirror speeds f">
+<meta property="og:description" content="Jenkins 简介Jenkins 是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。 Jenkins 安装安装基础环境在安装Jenkins之前，首先我们需要准备 Java 环境，使用下面命令来安装 Java： 1yum -y install java-1.8.0-openjdk-devel 为了使用 Jen">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-03T12:20:30.973Z">
+<meta property="og:updated_time" content="2018-06-02T19:25:28.336Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS7 安装 Nginx">
-<meta name="twitter:description" content="在 CentOS 中使用 yum 直接来安装 Nginx的话会出现如下错误，原因是Nginx这个软件不是 yum源中自带的，所以需要手动来配置添加 Nginx 的 yum 源。 12345678[root@centos-linux ~]# yum install nginx     已加载插件：fastestmirror                Loading mirror speeds f">
+<meta name="twitter:title" content="CentOS7 安装 Jenkins">
+<meta name="twitter:description" content="Jenkins 简介Jenkins 是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。 Jenkins 安装安装基础环境在安装Jenkins之前，首先我们需要准备 Java 环境，使用下面命令来安装 Java： 1yum -y install java-1.8.0-openjdk-devel 为了使用 Jen">
 
 
 
@@ -128,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/25/centos-nginx/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/13/centos-jenkins/"/>
 
 
 
 
 
-  <title> CentOS7 安装 Nginx | 柒索 </title>
+  <title> CentOS7 安装 Jenkins | 柒索 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -307,7 +307,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/25/centos-nginx/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/13/centos-jenkins/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="柒索">
@@ -328,7 +328,7 @@
             
             
               
-                CentOS7 安装 Nginx
+                CentOS7 安装 Jenkins
               
             
           </h1>
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-25T19:49:04+08:00">
-                2018-02-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-13T13:17:50+08:00">
+                2018-03-13
               </time>
             
 
@@ -353,28 +353,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -406,17 +384,25 @@
       
 
       
-        <p>在 CentOS 中使用 yum 直接来安装 Nginx的话会出现如下错误，原因是Nginx这个软件不是 yum源中自带的，所以需要手动来配置添加 Nginx 的 yum 源。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[root@centos-linux ~]# yum install nginx     </div><div class="line">已加载插件：fastestmirror                </div><div class="line">Loading mirror speeds from cached hostfile   </div><div class="line"> * base: ftp.sjtu.edu.cn     </div><div class="line"> * extras: ftp.sjtu.edu.cn   </div><div class="line"> * updates: ftp.sjtu.edu.cn </div><div class="line">没有可用软件包 nginx。                                                                             </div><div class="line">错误：无须任何处理</div></pre></td></tr></table></figure>
-<h5 id="添加-yum源"><a href="#添加-yum源" class="headerlink" title="添加 yum源:"></a>添加 yum源:</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@centos-linux ~]# rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm</div></pre></td></tr></table></figure>
-<h5 id="安装-Nginx"><a href="#安装-Nginx" class="headerlink" title="安装 Nginx:"></a>安装 Nginx:</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">yum install nginx                                                                                 </div><div class="line">已加载插件：fastestmirror                                                                                                </div><div class="line">nginx                                                                                             | 2.9 kB  00:00:00     </div><div class="line">nginx/x86_64/primary_db                                                                           |  34 kB  00:00:02     </div><div class="line">Loading mirror speeds from cached hostfile                                                                               </div><div class="line"> * base: ftp.sjtu.edu.cn                                                                                                 </div><div class="line"> * extras: ftp.sjtu.edu.cn                                                                                               </div><div class="line"> * updates: ftp.sjtu.edu.cn                                                                                              </div><div class="line">正在解决依赖关系                                                                                                         </div><div class="line"><span class="meta">--&gt;</span> 正在检查事务                                                                                                         </div><div class="line"><span class="meta">---&gt;</span> 软件包 nginx.x86_64.1.1.14.0-1.el7_4.ngx 将被 安装                                                                  </div><div class="line"><span class="meta">--&gt;</span> 解决依赖关系完成                                                                                                     </div><div class="line">                                                                                                                         </div><div class="line">依赖关系解决                                                                                                             </div><div class="line">                                                                                                                         </div><div class="line">=========================================================================================================================</div><div class="line"> Package                 架构                     版本                                     源                       大小 </div><div class="line">=========================================================================================================================</div><div class="line">正在安装:                                                                                                                </div><div class="line"> nginx                   x86_64                   1:1.14.0-1.el7_4.ngx                     nginx                   750 k </div><div class="line"></div><div class="line">事务概要</div><div class="line">=========================================================================================================================</div><div class="line">安装  1 软件包</div><div class="line"></div><div class="line">总下载量：750 k</div><div class="line">安装大小：2.6 M</div><div class="line">Is this ok [y/d/N]: y6</div><div class="line">Is this ok [y/d/N]: y</div><div class="line">Downloading packages:</div><div class="line">nginx-1.14.0-1.el7_4.ngx.x86_64.rpm                                                               | 750 kB  00:00:41     </div><div class="line">Running transaction check</div><div class="line">Running transaction test</div><div class="line">Transaction test succeeded</div><div class="line">Running transaction</div><div class="line">警告：RPM 数据库已被非 yum 程序修改。</div><div class="line">  正在安装    : 1:nginx-1.14.0-1.el7_4.ngx.x86_64                                                                    1/1 </div><div class="line">----------------------------------------------------------------------</div><div class="line"></div><div class="line">Thanks for using nginx!</div><div class="line"></div><div class="line">Please find the official documentation for nginx here:</div><div class="line">* http://nginx.org/en/docs/</div><div class="line"></div><div class="line">Please subscribe to nginx-announce mailing list to get</div><div class="line">the most important news about nginx:</div><div class="line">* http://nginx.org/en/support.html</div><div class="line"></div><div class="line">Commercial subscriptions for nginx are available on:</div><div class="line">* http://nginx.com/products/</div><div class="line"></div><div class="line">----------------------------------------------------------------------</div><div class="line">  验证中      : 1:nginx-1.14.0-1.el7_4.ngx.x86_64                                                                    1/1 </div><div class="line"></div><div class="line">已安装:</div><div class="line">  nginx.x86_64 1:1.14.0-1.el7_4.ngx                                                                                      </div><div class="line"></div><div class="line">完毕！</div></pre></td></tr></table></figure>
-<h5 id="查看Nginx的软件包信息"><a href="#查看Nginx的软件包信息" class="headerlink" title="查看Nginx的软件包信息:"></a>查看Nginx的软件包信息:</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">[root@centos-linux ~]# rpm -ql nginx</div><div class="line">/etc/logrotate.d/nginx</div><div class="line">/etc/nginx</div><div class="line">/etc/nginx/conf.d</div><div class="line">/etc/nginx/conf.d/default.conf</div><div class="line">/etc/nginx/fastcgi_params</div><div class="line">/etc/nginx/koi-utf</div><div class="line">/etc/nginx/koi-win</div><div class="line">/etc/nginx/mime.types</div><div class="line">/etc/nginx/modules</div><div class="line">/etc/nginx/nginx.conf</div><div class="line">/etc/nginx/scgi_params</div><div class="line">/etc/nginx/uwsgi_params</div><div class="line">/etc/nginx/win-utf</div><div class="line">/etc/sysconfig/nginx</div><div class="line">/etc/sysconfig/nginx-debug</div><div class="line">/usr/lib/systemd/system/nginx-debug.service</div><div class="line">/usr/lib/systemd/system/nginx.service</div><div class="line">/usr/lib64/nginx</div><div class="line">/usr/lib64/nginx/modules</div><div class="line">/usr/libexec/initscripts/legacy-actions/nginx</div><div class="line">/usr/libexec/initscripts/legacy-actions/nginx/check-reload</div><div class="line">/usr/libexec/initscripts/legacy-actions/nginx/upgrade</div><div class="line">/usr/sbin/nginx</div><div class="line">/usr/sbin/nginx-debug</div><div class="line">/usr/share/doc/nginx-1.14.0</div><div class="line">/usr/share/doc/nginx-1.14.0/COPYRIGHT</div><div class="line">/usr/share/man/man8/nginx.8.gz</div><div class="line">/usr/share/nginx</div><div class="line">/usr/share/nginx/html</div><div class="line">/usr/share/nginx/html/50x.html</div><div class="line">/usr/share/nginx/html/index.html</div><div class="line">/var/cache/nginx</div><div class="line">/var/log/nginx</div></pre></td></tr></table></figure>
-<h5 id="Nginx-的简单操作"><a href="#Nginx-的简单操作" class="headerlink" title="Nginx 的简单操作:"></a>Nginx 的简单操作:</h5><p>关闭防火墙:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop firewalld.service</div></pre></td></tr></table></figure></p>
-<p>查看 Nginx版本：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nginx -v</div></pre></td></tr></table></figure></p>
-<p>启动 Nginx服务：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl start nginx</div></pre></td></tr></table></figure></p>
-<p>停止 Nginx服务：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop nginx</div></pre></td></tr></table></figure></p>
-<p>重启 Nginx 服务：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart nginx</div></pre></td></tr></table></figure></p>
-<p>查看 Nginx 服务状态：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">[root@centos-linux html]# systemctl status nginx</div><div class="line">● nginx.service - nginx - high performance web server</div><div class="line">   Loaded: loaded (/usr/lib/systemd/system/nginx.service; disabled; vendor preset: disabled)</div><div class="line">   Active: active (running) since 一 2018-05-14 07:04:11 CST; 7min ago</div><div class="line">     Docs: http://nginx.org/en/docs/</div><div class="line">  Process: 1928 ExecStart=/usr/sbin/nginx -c /etc/nginx/nginx.conf (code=exited, status=0/SUCCESS)</div><div class="line"> Main PID: 1929 (nginx)</div><div class="line">   CGroup: /system.slice/nginx.service</div><div class="line">           ├─1929 nginx: master process /usr/sbin/nginx -c /etc/nginx/nginx.conf</div><div class="line">           └─1930 nginx: worker process</div><div class="line"></div><div class="line">5月 14 07:04:10 centos-linux systemd[1]: Starting nginx - high performance web server...</div><div class="line">5月 14 07:04:11 centos-linux systemd[1]: Started nginx - high performance web server.</div></pre></td></tr></table></figure></p>
+        <h2 id="Jenkins-简介"><a href="#Jenkins-简介" class="headerlink" title="Jenkins 简介"></a>Jenkins 简介</h2><p><strong>Jenkins</strong> 是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。</p>
+<h2 id="Jenkins-安装"><a href="#Jenkins-安装" class="headerlink" title="Jenkins 安装"></a>Jenkins 安装</h2><h3 id="安装基础环境"><a href="#安装基础环境" class="headerlink" title="安装基础环境"></a>安装基础环境</h3><p>在安装<strong>Jenkins</strong>之前，首先我们需要准备 Java 环境，使用下面命令来安装 Java：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install java-1.8.0-openjdk-devel</div></pre></td></tr></table></figure>
+<p>为了使用 Jenkins 仓库，我们要执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo</div><div class="line">sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key</div></pre></td></tr></table></figure></p>
+<p>如果您以前从 Jenkins 导入过 key，那么 <code>rpm --import</code> 将失败，因为您已经有一个 key。请忽略，继续下面步骤。</p>
+<h3 id="安装Jenkins"><a href="#安装Jenkins" class="headerlink" title="安装Jenkins"></a>安装Jenkins</h3><p>接着我们可以使用 <code>yum</code> 安装 Jenkins：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install jenkins</div></pre></td></tr></table></figure>
+<h2 id="启动-Jenkins"><a href="#启动-Jenkins" class="headerlink" title="启动 Jenkins"></a>启动 Jenkins</h2><blockquote>
+<p>任务时间：5min ~ 10min</p>
+</blockquote>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>启动 Jenkins 并设置为开机启动：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">systemctl start jenkins.service</div><div class="line">chkconfig jenkins on</div></pre></td></tr></table></figure>
+<h3 id="测试访问"><a href="#测试访问" class="headerlink" title="测试访问"></a>测试访问</h3><p>Jenkins 默认运行在 8080端口。</p>
+<p>稍等片刻，打开 <a href="http://xn--%3C%20cvm%20ip%20%3E-yp49ackh32qjw5g:8080/" target="_blank" rel="noopener">http://&lt;您的 CVM IP 地址&gt;:8080</a> 测试访问。</p>
+<h2 id="进入-Jenkins"><a href="#进入-Jenkins" class="headerlink" title="进入 Jenkins"></a>进入 Jenkins</h2><h3 id="管理员密码"><a href="#管理员密码" class="headerlink" title="管理员密码"></a>管理员密码</h3><p>登入 Jenkins 需要输入管理员密码，按照提示，我们使用以下命令查看初始密码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /var/lib/jenkins/secrets/initialAdminPassword</div></pre></td></tr></table></figure>
+<p>复制密码，填入，进入 Jenkins。</p>
+<h3 id="定制-Jenkins"><a href="#定制-Jenkins" class="headerlink" title="定制 Jenkins"></a>定制 Jenkins</h3><p>我们选择默认的 <code>install suggested plugins</code> 来安装插件。</p>
+<h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><p>请填入相应信息创建用户，然后即可登入 Jenkins 的世界。</p>
 
       
     </div>
@@ -446,7 +432,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+            <a href="/tags/Jenkins/" rel="tag"># Jenkins</a>
           
         </div>
       
@@ -459,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/21/centos-jdk/" rel="next" title="在CentOS7上安装OpenJDK1.8 & OracleJDK1.8">
-                <i class="fa fa-chevron-left"></i> 在CentOS7上安装OpenJDK1.8 & OracleJDK1.8
+              <a href="/2018/03/07/centos-git/" rel="next" title="Centos - 搭建Git服务器">
+                <i class="fa fa-chevron-left"></i> Centos - 搭建Git服务器
               </a>
             
           </div>
@@ -469,8 +455,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/02/centos-redis/" rel="prev" title="CentOS7 安装 Redis">
-                CentOS7 安装 Redis <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/19/centos-docker/" rel="prev" title="CentOS7 安装 Docker">
+                CentOS7 安装 Docker <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -638,7 +624,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#添加-yum源"><span class="nav-number">1.</span> <span class="nav-text">添加 yum源:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#安装-Nginx"><span class="nav-number">2.</span> <span class="nav-text">安装 Nginx:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看Nginx的软件包信息"><span class="nav-number">3.</span> <span class="nav-text">查看Nginx的软件包信息:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Nginx-的简单操作"><span class="nav-number">4.</span> <span class="nav-text">Nginx 的简单操作:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins-简介"><span class="nav-number">1.</span> <span class="nav-text">Jenkins 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jenkins-安装"><span class="nav-number">2.</span> <span class="nav-text">Jenkins 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装基础环境"><span class="nav-number">2.1.</span> <span class="nav-text">安装基础环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Jenkins"><span class="nav-number">2.2.</span> <span class="nav-text">安装Jenkins</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动-Jenkins"><span class="nav-number">3.</span> <span class="nav-text">启动 Jenkins</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启动"><span class="nav-number">3.1.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试访问"><span class="nav-number">3.2.</span> <span class="nav-text">测试访问</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进入-Jenkins"><span class="nav-number">4.</span> <span class="nav-text">进入 Jenkins</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#管理员密码"><span class="nav-number">4.1.</span> <span class="nav-text">管理员密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定制-Jenkins"><span class="nav-number">4.2.</span> <span class="nav-text">定制 Jenkins</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建用户"><span class="nav-number">4.3.</span> <span class="nav-text">创建用户</span></a></li></ol></li></ol></div>
             
 
           </div>
