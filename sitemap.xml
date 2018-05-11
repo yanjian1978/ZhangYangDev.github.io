@@ -135,14 +135,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/05/09/npm-note/</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/04/26/gulp-note/</loc>
+    <loc>http://yoursite.com/2017/09/02/gradle-node/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
@@ -156,27 +149,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/08/22/springboot-actuator/</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/07/23/webpack-note/</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/09/02/gradle-node/</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/09/10/nowsh-note/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
@@ -184,7 +156,35 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2017/07/04/maven-note/</loc>
+    <loc>http://yoursite.com/2017/05/09/npm-note/</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/08/22/springboot-actuator/</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/04/26/gulp-note/</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/07/23/webpack-note/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
@@ -205,7 +205,7 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://yoursite.com/2017/07/04/maven-note/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
