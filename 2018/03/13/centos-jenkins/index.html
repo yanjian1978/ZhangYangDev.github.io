@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="Jenkins 简介Jenkins 是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。 Jenkins 安装安装基础环境在安装Jenkins之前，首先我们需要准备 Java 环境，使用下面命令来安装 Java： 1yum -y install java-1.8.0-openjdk-devel 为了使用 Jen">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-02T19:25:28.336Z">
+<meta property="og:updated_time" content="2018-05-14T12:58:09.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7 安装 Jenkins">
 <meta name="twitter:description" content="Jenkins 简介Jenkins 是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。 Jenkins 安装安装基础环境在安装Jenkins之前，首先我们需要准备 Java 环境，使用下面命令来安装 Java： 1yum -y install java-1.8.0-openjdk-devel 为了使用 Jen">
@@ -397,7 +397,7 @@
 <h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>启动 Jenkins 并设置为开机启动：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">systemctl start jenkins.service</div><div class="line">chkconfig jenkins on</div></pre></td></tr></table></figure>
 <h3 id="测试访问"><a href="#测试访问" class="headerlink" title="测试访问"></a>测试访问</h3><p>Jenkins 默认运行在 8080端口。</p>
-<p>稍等片刻，打开 <a href="http://xn--%3C%20cvm%20ip%20%3E-yp49ackh32qjw5g:8080/" target="_blank" rel="noopener">http://&lt;您的 CVM IP 地址&gt;:8080</a> 测试访问。</p>
+<p>稍等片刻，打开 <a href="http://xn--%3C%20cvm%20ip%20%3E-yp49ackh32qjw5g:8080/" target="_blank" rel="noopener">http://<ip地址>:8080</ip地址></a> 测试访问。</p>
 <h2 id="进入-Jenkins"><a href="#进入-Jenkins" class="headerlink" title="进入 Jenkins"></a>进入 Jenkins</h2><h3 id="管理员密码"><a href="#管理员密码" class="headerlink" title="管理员密码"></a>管理员密码</h3><p>登入 Jenkins 需要输入管理员密码，按照提示，我们使用以下命令查看初始密码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /var/lib/jenkins/secrets/initialAdminPassword</div></pre></td></tr></table></figure>
 <p>复制密码，填入，进入 Jenkins。</p>

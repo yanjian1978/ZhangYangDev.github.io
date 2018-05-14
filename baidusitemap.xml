@@ -4,23 +4,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/03/13/centos-jenkins/</loc>
-    <lastmod>2018-06-02T19:25:28.336Z</lastmod>
-    <data>
-        <display>
-        <title>CentOS7 安装 Jenkins</title>
-        <pubTime>2018-03-13T05:17:50.000Z</pubTime>
-        
-        <tag>Jenkins</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/03/07/centos-git/</loc>
     <lastmod>2018-06-02T19:15:18.582Z</lastmod>
     <data>
@@ -119,6 +102,23 @@
              
               <breadCrumb title="Java Tools" url="http://yoursite.com/categories/Java-Tools/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/03/13/centos-jenkins/</loc>
+    <lastmod>2018-05-14T12:58:09.784Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS7 安装 Jenkins</title>
+        <pubTime>2018-03-13T05:17:50.000Z</pubTime>
+        
+        <tag>Jenkins</tag>
+         
+         
+           
         </display>
     </data>
     </url>
