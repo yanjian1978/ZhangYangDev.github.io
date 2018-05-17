@@ -4,26 +4,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/03/07/centos-git/</loc>
-    <lastmod>2018-06-02T19:15:18.582Z</lastmod>
-    <data>
-        <display>
-        <title>Centos - 搭建Git服务器</title>
-        <pubTime>2018-03-07T05:43:51.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/03/02/centos-redis/</loc>
     <lastmod>2018-06-02T05:44:05.716Z</lastmod>
     <data>
@@ -101,6 +81,26 @@
            
              
               <breadCrumb title="Java Tools" url="http://yoursite.com/categories/Java-Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/03/07/centos-git/</loc>
+    <lastmod>2018-05-16T10:47:36.155Z</lastmod>
+    <data>
+        <display>
+        <title>Centos 搭建Git服务器</title>
+        <pubTime>2018-03-07T05:43:51.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
           
         </display>
     </data>
