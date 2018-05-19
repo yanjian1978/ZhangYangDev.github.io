@@ -30,6 +30,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/2017/11/27/docker-containter/</loc>
+    
+    <lastmod>2018-05-19T02:39:16.840Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/03/07/centos-git/</loc>
     
     <lastmod>2018-05-18T15:11:16.326Z</lastmod>
@@ -96,13 +103,6 @@
     <loc>http://yoursite.com/2017/10/28/centos-express/</loc>
     
     <lastmod>2018-03-21T14:14:34.017Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/11/27/docker-containter/</loc>
-    
-    <lastmod>2018-01-15T07:56:04.045Z</lastmod>
     
   </url>
   

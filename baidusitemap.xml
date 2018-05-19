@@ -88,6 +88,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/11/27/docker-containter/</loc>
+    <lastmod>2018-05-19T02:39:16.840Z</lastmod>
+    <data>
+        <display>
+        <title>『Docker』- Containter</title>
+        <pubTime>2017-11-27T11:53:50.000Z</pubTime>
+        
+        <tag>docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://yoursite.com/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/03/07/centos-git/</loc>
     <lastmod>2018-05-18T15:11:16.326Z</lastmod>
     <data>
@@ -286,26 +306,6 @@
            
              
               <breadCrumb title="NoSQL" url="http://yoursite.com/categories/NoSQL/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2017/11/27/docker-containter/</loc>
-    <lastmod>2018-01-15T07:56:04.045Z</lastmod>
-    <data>
-        <display>
-        <title>『Docker』- Containter</title>
-        <pubTime>2017-11-27T11:53:50.000Z</pubTime>
-        
-        <tag>docker</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="http://yoursite.com/categories/Docker/"/>
           
         </display>
     </data>
