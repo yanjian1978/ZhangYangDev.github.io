@@ -44,7 +44,7 @@
     <link href="http://yoursite.com/2018/03/19/centos-docker/"/>
     <id>http://yoursite.com/2018/03/19/centos-docker/</id>
     <published>2018-03-19T14:09:12.000Z</published>
-    <updated>2018-03-21T14:14:53.803Z</updated>
+    <updated>2018-06-03T02:47:37.185Z</updated>
     
     <summary type="html">
     
@@ -60,6 +60,8 @@
     
       <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
     
+      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+    
   </entry>
   
   <entry>
@@ -67,7 +69,7 @@
     <link href="http://yoursite.com/2018/03/13/centos-jenkins/"/>
     <id>http://yoursite.com/2018/03/13/centos-jenkins/</id>
     <published>2018-03-13T05:17:50.000Z</published>
-    <updated>2018-05-14T12:58:09.784Z</updated>
+    <updated>2018-06-03T05:58:11.411Z</updated>
     
     <summary type="html">
     
@@ -84,11 +86,11 @@
   </entry>
   
   <entry>
-    <title>Centos 搭建Git服务器</title>
+    <title>CentOS7 安装 Git</title>
     <link href="http://yoursite.com/2018/03/07/centos-git/"/>
     <id>http://yoursite.com/2018/03/07/centos-git/</id>
     <published>2018-03-07T05:43:51.000Z</published>
-    <updated>2018-05-18T15:11:16.326Z</updated>
+    <updated>2018-06-03T05:47:44.116Z</updated>
     
     <summary type="html">
     
@@ -105,6 +107,8 @@
     
       <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
     
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
   </entry>
   
   <entry>
@@ -112,7 +116,7 @@
     <link href="http://yoursite.com/2018/03/02/centos-redis/"/>
     <id>http://yoursite.com/2018/03/02/centos-redis/</id>
     <published>2018-03-02T11:53:28.000Z</published>
-    <updated>2018-06-02T05:44:05.716Z</updated>
+    <updated>2018-06-03T02:48:18.742Z</updated>
     
     <summary type="html">
     
@@ -132,6 +136,8 @@
     
       <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
     
+      <category term="Redis" scheme="http://yoursite.com/tags/Redis/"/>
+    
   </entry>
   
   <entry>
@@ -139,7 +145,7 @@
     <link href="http://yoursite.com/2018/02/25/centos-nginx/"/>
     <id>http://yoursite.com/2018/02/25/centos-nginx/</id>
     <published>2018-02-25T11:49:04.000Z</published>
-    <updated>2018-04-03T12:20:30.973Z</updated>
+    <updated>2018-06-03T02:48:11.254Z</updated>
     
     <summary type="html">
     
@@ -156,6 +162,8 @@
     
       <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
     
+      <category term="Nginx" scheme="http://yoursite.com/tags/Nginx/"/>
+    
   </entry>
   
   <entry>
@@ -163,7 +171,7 @@
     <link href="http://yoursite.com/2018/01/21/centos-jdk/"/>
     <id>http://yoursite.com/2018/01/21/centos-jdk/</id>
     <published>2018-01-21T10:56:49.000Z</published>
-    <updated>2018-04-04T14:20:21.491Z</updated>
+    <updated>2018-06-03T02:47:53.150Z</updated>
     
     <summary type="html">
     
@@ -178,6 +186,8 @@
     
     
       <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   
@@ -234,7 +244,7 @@
     <link href="http://yoursite.com/2017/11/27/docker-containter/"/>
     <id>http://yoursite.com/2017/11/27/docker-containter/</id>
     <published>2017-11-27T11:53:50.000Z</published>
-    <updated>2018-05-19T02:39:54.636Z</updated>
+    <updated>2018-06-03T02:48:41.989Z</updated>
     
     <summary type="html">
     
@@ -248,7 +258,7 @@
       <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
     
     
-      <category term="docker" scheme="http://yoursite.com/tags/docker/"/>
+      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
     
   </entry>
   
@@ -257,7 +267,7 @@
     <link href="http://yoursite.com/2017/11/04/docker-introduction/"/>
     <id>http://yoursite.com/2017/11/04/docker-introduction/</id>
     <published>2017-11-04T02:24:12.000Z</published>
-    <updated>2018-03-22T14:16:28.837Z</updated>
+    <updated>2018-06-03T02:48:48.276Z</updated>
     
     <summary type="html">
     
@@ -271,7 +281,7 @@
       <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
     
     
-      <category term="docker" scheme="http://yoursite.com/tags/docker/"/>
+      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
     
   </entry>
   
@@ -426,9 +436,9 @@
       <category term="Build Tools" scheme="http://yoursite.com/categories/Build-Tools/"/>
     
     
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
       <category term="Gradle" scheme="http://yoursite.com/tags/Gradle/"/>
+    
+      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
     
   </entry>
   

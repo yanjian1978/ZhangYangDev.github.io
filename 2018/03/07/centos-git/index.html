@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CentOS," />
+  <meta name="keywords" content="CentOS,Git," />
 
 
 
@@ -90,17 +90,17 @@
 
 
 <meta name="description" content="Git简介Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 Git安装Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理">
-<meta name="keywords" content="CentOS">
+<meta name="keywords" content="CentOS,Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Centos 搭建Git服务器">
+<meta property="og:title" content="CentOS7 安装 Git">
 <meta property="og:url" content="http://yoursite.com/2018/03/07/centos-git/index.html">
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="Git简介Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 Git安装Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://git-scm.com/images/logo@2x.png">
-<meta property="og:updated_time" content="2018-05-18T15:11:16.326Z">
+<meta property="og:updated_time" content="2018-06-03T05:47:44.116Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Centos 搭建Git服务器">
+<meta name="twitter:title" content="CentOS7 安装 Git">
 <meta name="twitter:description" content="Git简介Git是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。 Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。 Git安装Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理">
 <meta name="twitter:image" content="https://git-scm.com/images/logo@2x.png">
 
@@ -136,7 +136,7 @@
 
 
 
-  <title> Centos 搭建Git服务器 | 柒索 </title>
+  <title> CentOS7 安装 Git | 柒索 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -330,7 +330,7 @@
             
             
               
-                Centos 搭建Git服务器
+                CentOS7 安装 Git
               
             
           </h1>
@@ -414,57 +414,44 @@
 <p>Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。</p>
 <h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><p>Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p>
 <h3 id="安装依赖库和编译工具"><a href="#安装依赖库和编译工具" class="headerlink" title="安装依赖库和编译工具"></a>安装依赖库和编译工具</h3><p>为了后续安装能正常进行，我们先来安装一些相关依赖库和编译工具</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# yum install curl-devel expat-devel\</div><div class="line">					gettext-devel openssl-devel zlib-devel</div></pre></td></tr></table></figure>
 <p>安装编译工具</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install gcc perl-ExtUtils-MakeMaker</div></pre></td></tr></table></figure>
-<h3 id="下载-git"><a href="#下载-git" class="headerlink" title="下载 git"></a>下载 git</h3><p>选一个目录，用来放下载下来的安装包，这里将安装包放在 <em>/usr/local/src</em> 目录里</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd /usr/local/src</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# yum install -y  gcc perl-ExtUtils-MakeMaker</div></pre></td></tr></table></figure>
+<h3 id="下载-git"><a href="#下载-git" class="headerlink" title="下载 git"></a>下载 git</h3><p>选一个目录，用来放下载下来的安装包，这里将安装包放在 <em>/opt</em> 目录里</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# cd /opt/</div></pre></td></tr></table></figure>
 <p>到官网找一个新版稳定的源码包下载到 <code>/usr/local/src</code> 文件夹里</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget https://www.kernel.org/pub/software/scm/git/git-2.10.0.tar.gz</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost opt]# wget https://www.kernel.org/pub/software/scm/git/git-2.10.0.tar.gz</div></pre></td></tr></table></figure>
 <h3 id="解压和编译"><a href="#解压和编译" class="headerlink" title="解压和编译"></a>解压和编译</h3><p>解压下载的源码包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zvxf git-2.10.0.tar.gz</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost opt]# tar -xvf git-2.10.0.tar.gz</div></pre></td></tr></table></figure>
 <p>解压后进入 git-2.10.0 文件夹</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd git-2.10.0</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost opt]# cd git-2.10.0</div></pre></td></tr></table></figure>
 <p>执行编译</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">make all prefix=/usr/local/git</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost git-2.10.0]# make all prefix=/usr/local/git</div></pre></td></tr></table></figure>
 <p>编译完成后, 安装到 /usr/local/git 目录下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">make install prefix=/usr/local/git</div></pre></td></tr></table></figure>
-<h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><blockquote>
-<p>任务时间：5min ~ 10min</p>
-</blockquote>
-<h3 id="将-git-目录加入-PATH"><a href="#将-git-目录加入-PATH" class="headerlink" title="将 git 目录加入 PATH"></a>将 git 目录加入 PATH</h3><p>将原来的 PATH 指向目录修改为现在的目录</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo &apos;export PATH=$PATH:/usr/local/git/bin&apos; &gt;&gt; /etc/bashrc</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost git-2.10.0]# make install prefix=/usr/local/git</div></pre></td></tr></table></figure>
+<h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><h3 id="将-git-目录加入-PATH"><a href="#将-git-目录加入-PATH" class="headerlink" title="将 git 目录加入 PATH"></a>将 git 目录加入 PATH</h3><p>将原来的 PATH 指向目录修改为现在的目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# echo 'export PATH=$PATH:/usr/local/git/bin' &gt;&gt; /etc/profile</div></pre></td></tr></table></figure>
 <p>生效环境变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source /etc/bashrc</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# source /etc/profile</div></pre></td></tr></table></figure>
 <p>此时我们能查看 git 版本号，说明我们已经安装成功了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git --version</div></pre></td></tr></table></figure>
-<h2 id="创建-git-账号密码"><a href="#创建-git-账号密码" class="headerlink" title="创建 git 账号密码"></a>创建 git 账号密码</h2><blockquote>
-<p>任务时间：5min ~ 10min</p>
-</blockquote>
-<h3 id="创建-git-账号"><a href="#创建-git-账号" class="headerlink" title="创建 git 账号"></a>创建 git 账号</h3><p>为我们刚刚搭建好的 git 创建一个账号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">useradd -m gituser</div></pre></td></tr></table></figure>
-<p>然后为这个账号设置密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">passwd gituser</div></pre></td></tr></table></figure></p>
-<blockquote>
-<p>控制台输入创建密码后，输入您自定义的密码，并二次确认。</p>
-</blockquote>
-<h2 id="初始化-git-仓库并配置用户权限"><a href="#初始化-git-仓库并配置用户权限" class="headerlink" title="初始化 git 仓库并配置用户权限"></a>初始化 git 仓库并配置用户权限</h2><blockquote>
-<p>任务时间：5min ~ 10min</p>
-</blockquote>
-<h3 id="创建-git-仓库并初始化"><a href="#创建-git-仓库并初始化" class="headerlink" title="创建 git 仓库并初始化"></a>创建 git 仓库并初始化</h3><p>我们创建 <em>/data/repositories</em> 目录用于存放 git 仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir -p /data/repositories</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# git --version</div><div class="line">git version 1.8.3.1</div></pre></td></tr></table></figure>
+<h2 id="创建-git-账号密码"><a href="#创建-git-账号密码" class="headerlink" title="创建 git 账号密码"></a>创建 git 账号密码</h2><h3 id="创建-git-账号"><a href="#创建-git-账号" class="headerlink" title="创建 git 账号"></a>创建 git 账号</h3><p>为我们刚刚搭建好的 git 创建一个账号</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# useradd -m git      #自动建立用户的登入目录。</div></pre></td></tr></table></figure>
+<p>然后为这个账号设置密码<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# passwd git</div></pre></td></tr></table></figure></p>
+<p>在控制台输入创建密码后，输入您自定义的密码，并二次确认。</p>
+<h2 id="初始化仓库和配置权限"><a href="#初始化仓库和配置权限" class="headerlink" title="初始化仓库和配置权限"></a>初始化仓库和配置权限</h2><h3 id="创建-git-仓库并初始化"><a href="#创建-git-仓库并初始化" class="headerlink" title="创建 git 仓库并初始化"></a>创建 git 仓库并初始化</h3><p>我们创建 <em>/data/repo</em> 目录用于存放 git 仓库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# mkdir -p /data/repo</div></pre></td></tr></table></figure>
 <p>创建好后，初始化这个仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd /data/repositories/ &amp;&amp; git init --bare test.git</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# cd /data/repo/ &amp;&amp; git init --bare test.git           </div><div class="line">初始化空的 Git 版本库于 /data/repo/test.git/</div></pre></td></tr></table></figure>
 <h3 id="配置用户权限"><a href="#配置用户权限" class="headerlink" title="配置用户权限"></a>配置用户权限</h3><p>给 git 仓库目录设置用户和用户组并设置权限</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chown -R gituser:gituser /data/repositories</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 755 /data/repositories</div></pre></td></tr></table></figure>
-<p>[<a href="https://cloud.tencent.com/developer/labs/lab/10045#stage-4-step-2-git-shell-location" target="_blank" rel="noopener">查找 git-shell 所在目录</a>] , 编辑 <em>/etc/passwd</em> 文件，将最后一行关于 <code>gituser</code> 的登录 shell 配置改为 git-shell 的目录[<a href="https://cloud.tencent.com/developer/labs/lab/10045#stage-4-step-2-ssh" target="_blank" rel="noopener">?</a>]如下</p>
-<p> 示例代码：/etc/passwd</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gituser:x:500:500::/home/gituser:/usr/local/git/bin/git-shell</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost repo]# chown -R git:git /data/repo/</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost repo]# chmod 755 .</div></pre></td></tr></table></figure>
+<p>编辑 <em>/etc/passwd</em> 文件，将最后一行关于 <code>git</code> 的登录 shell 配置改为 git-shell 的目录<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# vim /etc/passwd </div><div class="line"><span class="meta">#</span>  /etc/passwd： 加入以下内容 </div><div class="line">git:x:500:500::/home/git:/usr/local/git/bin/git-shell</div></pre></td></tr></table></figure></p>
 <p>如果按照刚才的步骤执行, 这个位置应该是 /usr/local/git/bin/git-shell, 否则请通过 <code>which git-shell</code> 命令查看位置</p>
 <p>安全目的, 限制 git 账号的 ssh 连接只能是登录 git-shell</p>
 <h2 id="使用搭建好的Git服务"><a href="#使用搭建好的Git服务" class="headerlink" title="使用搭建好的Git服务"></a>使用搭建好的Git服务</h2><p>克隆 test repo 到本地</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~ &amp;&amp; git clone gituser@&lt;您的 CVM IP 地址&gt;:/data/repositories/test.git</div></pre></td></tr></table></figure>
-<h3 id="实验完成"><a href="#实验完成" class="headerlink" title="实验完成"></a>实验完成</h3><p>恭喜，Git 服务器搭建完成, 从此以后你可以方便地将你的本地代码提交到 Git 服务器托管了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  Desktop git clone git@192.168.1.10:/data/repo/test.git</div><div class="line">fatal: destination path 'test' already exists and is not an empty directory.</div></pre></td></tr></table></figure>
+<p>Done.</p>
 
       
     </div>
@@ -495,6 +482,8 @@
         <div class="post-tags">
           
             <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+          
+            <a href="/tags/Git/" rel="tag"># Git</a>
           
         </div>
       
@@ -619,7 +608,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -686,7 +675,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git简介"><span class="nav-number">1.</span> <span class="nav-text">Git简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git安装"><span class="nav-number">2.</span> <span class="nav-text">Git安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装依赖库和编译工具"><span class="nav-number">2.1.</span> <span class="nav-text">安装依赖库和编译工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载-git"><span class="nav-number">2.2.</span> <span class="nav-text">下载 git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压和编译"><span class="nav-number">2.3.</span> <span class="nav-text">解压和编译</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git配置"><span class="nav-number">3.</span> <span class="nav-text">Git配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#将-git-目录加入-PATH"><span class="nav-number">3.1.</span> <span class="nav-text">将 git 目录加入 PATH</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-git-账号密码"><span class="nav-number">4.</span> <span class="nav-text">创建 git 账号密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-git-账号"><span class="nav-number">4.1.</span> <span class="nav-text">创建 git 账号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化-git-仓库并配置用户权限"><span class="nav-number">5.</span> <span class="nav-text">初始化 git 仓库并配置用户权限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-git-仓库并初始化"><span class="nav-number">5.1.</span> <span class="nav-text">创建 git 仓库并初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置用户权限"><span class="nav-number">5.2.</span> <span class="nav-text">配置用户权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用搭建好的Git服务"><span class="nav-number">6.</span> <span class="nav-text">使用搭建好的Git服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实验完成"><span class="nav-number">6.1.</span> <span class="nav-text">实验完成</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git简介"><span class="nav-number">1.</span> <span class="nav-text">Git简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git安装"><span class="nav-number">2.</span> <span class="nav-text">Git安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装依赖库和编译工具"><span class="nav-number">2.1.</span> <span class="nav-text">安装依赖库和编译工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载-git"><span class="nav-number">2.2.</span> <span class="nav-text">下载 git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压和编译"><span class="nav-number">2.3.</span> <span class="nav-text">解压和编译</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git配置"><span class="nav-number">3.</span> <span class="nav-text">Git配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#将-git-目录加入-PATH"><span class="nav-number">3.1.</span> <span class="nav-text">将 git 目录加入 PATH</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-git-账号密码"><span class="nav-number">4.</span> <span class="nav-text">创建 git 账号密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-git-账号"><span class="nav-number">4.1.</span> <span class="nav-text">创建 git 账号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化仓库和配置权限"><span class="nav-number">5.</span> <span class="nav-text">初始化仓库和配置权限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建-git-仓库并初始化"><span class="nav-number">5.1.</span> <span class="nav-text">创建 git 仓库并初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置用户权限"><span class="nav-number">5.2.</span> <span class="nav-text">配置用户权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用搭建好的Git服务"><span class="nav-number">6.</span> <span class="nav-text">使用搭建好的Git服务</span></a></li></ol></div>
             
 
           </div>
