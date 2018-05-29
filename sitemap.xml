@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2018/06/04/springboot-springdata-jdbc/</loc>
-    
-    <lastmod>2018-06-04T12:25:21.721Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/03/13/centos-jenkins/</loc>
     
     <lastmod>2018-06-03T05:58:11.411Z</lastmod>
@@ -68,6 +61,13 @@
     <loc>http://yoursite.com/2017/08/15/springboot-configuration/</loc>
     
     <lastmod>2018-06-01T09:34:34.504Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/11/24/springboot-springdata-jdbc/</loc>
+    
+    <lastmod>2018-05-29T14:54:52.781Z</lastmod>
     
   </url>
   

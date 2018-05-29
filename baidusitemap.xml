@@ -4,32 +4,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/06/04/springboot-springdata-jdbc/</loc>
-    <lastmod>2018-06-04T12:25:21.721Z</lastmod>
-    <data>
-        <display>
-        <title>Spring Boot - Spring Data -JDBC</title>
-        <pubTime>2018-06-04T06:50:45.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>Spring Boot</tag>
-         
-        <tag>Spring</tag>
-         
-        <tag>Spring Data</tag>
-         
-         
-           
-             
-              <breadCrumb title="Spring Boot" url="http://yoursite.com/categories/Spring-Boot/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/03/13/centos-jenkins/</loc>
     <lastmod>2018-06-03T05:58:11.411Z</lastmod>
     <data>
@@ -207,6 +181,32 @@
         <tag>Spring Boot</tag>
          
         <tag>Spring</tag>
+         
+         
+           
+             
+              <breadCrumb title="Spring Boot" url="http://yoursite.com/categories/Spring-Boot/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/11/24/springboot-springdata-jdbc/</loc>
+    <lastmod>2018-05-29T14:54:52.781Z</lastmod>
+    <data>
+        <display>
+        <title>Spring Boot - Spring Data -JDBC</title>
+        <pubTime>2017-11-24T06:50:45.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Spring Boot</tag>
+         
+        <tag>Spring</tag>
+         
+        <tag>Spring Data</tag>
          
          
            
