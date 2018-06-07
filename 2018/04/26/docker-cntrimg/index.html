@@ -89,15 +89,18 @@
 
 
 
+<meta name="description" content="概述Docker - 镜像[Image]:镜像是构建Docker的基石。用户基于镜像来运行自己的容器。镜像也是Docker生命周期中的“构建”部分。镜像是基于联合文件系统的一种层式结构(layer)，由一系列指令一步一步构建出来，不同image 之间可以共享 layer ,Image本身是只读的(read-only)。 构建Base Image:通过简单的 Dockerfile 来构建一个 bas">
 <meta name="keywords" content="CentOS,Linux,Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker - Container &amp; Image">
 <meta property="og:url" content="http://yoursite.com/2018/04/26/docker-cntrimg/index.html">
 <meta property="og:site_name" content="柒索">
+<meta property="og:description" content="概述Docker - 镜像[Image]:镜像是构建Docker的基石。用户基于镜像来运行自己的容器。镜像也是Docker生命周期中的“构建”部分。镜像是基于联合文件系统的一种层式结构(layer)，由一系列指令一步一步构建出来，不同image 之间可以共享 layer ,Image本身是只读的(read-only)。 构建Base Image:通过简单的 Dockerfile 来构建一个 bas">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-07T09:56:52.596Z">
+<meta property="og:updated_time" content="2018-06-07T16:18:32.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker - Container &amp; Image">
+<meta name="twitter:description" content="概述Docker - 镜像[Image]:镜像是构建Docker的基石。用户基于镜像来运行自己的容器。镜像也是Docker生命周期中的“构建”部分。镜像是基于联合文件系统的一种层式结构(layer)，由一系列指令一步一步构建出来，不同image 之间可以共享 layer ,Image本身是只读的(read-only)。 构建Base Image:通过简单的 Dockerfile 来构建一个 bas">
 
 
 
@@ -403,7 +406,67 @@
       
 
       
-        
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h2 id="Docker-镜像-Image"><a href="#Docker-镜像-Image" class="headerlink" title="Docker - 镜像[Image]:"></a>Docker - 镜像[Image]:</h2><p>镜像是构建Docker的基石。用户基于镜像来运行自己的容器。镜像也是Docker生命周期中的“构建”部分。镜像是基于联合文件系统的一种层式结构(layer)，由一系列指令一步一步构建出来，不同image 之间可以共享 layer ,Image本身是只读的(read-only)。</p>
+<h3 id="构建Base-Image"><a href="#构建Base-Image" class="headerlink" title="构建Base Image:"></a>构建Base Image:</h3><p>通过简单的 Dockerfile 来构建一个 baseimage:</p>
+<p>1、编写一个简单的 C语言程序：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host ~]$ mkdir baseimg &amp;&amp; cd baseimg &amp;&amp; vim base.c</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"hello world"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>2、编译刚才写的程序，得到一个简单的二进制文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host baseimg]$ gcc -static base.c  -o base</div></pre></td></tr></table></figure>
+<p>3、编写 Dockerfile:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host baseimg]$ vim Dockerfile</div><div class="line"><span class="meta">#</span> start </div><div class="line">FROM scratch</div><div class="line">ADD base /</div><div class="line">CMD ["/base"]</div><div class="line"><span class="meta">#</span> end</div></pre></td></tr></table></figure>
+<p>4、构建 baseimage:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host baseimg]$ docker build -t baseimg .</div><div class="line">Sending build context to Docker daemon  868.9kB</div><div class="line">Step 1/3 : FROM scratch</div><div class="line"><span class="meta"> ---&gt;</span></div><div class="line">Step 2/3 : ADD base /</div><div class="line"><span class="meta"> ---&gt;</span> 985f7dd1d401</div><div class="line">Step 3/3 : CMD ["/base"]</div><div class="line"><span class="meta"> ---&gt;</span> Running in b8241cf4dc5c</div><div class="line">Removing intermediate container b8241cf4dc5c</div><div class="line"><span class="meta"> ---&gt;</span> f048aeb88f64</div><div class="line">Successfully built f048aeb88f64</div><div class="line">Successfully tagged baseimg:latest</div></pre></td></tr></table></figure>
+<p>5、查看并运行镜像：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host baseimg]$ docker images</div><div class="line">REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE</div><div class="line">baseimg             latest              f048aeb88f64        About a minute ago   865kB</div><div class="line">[vagrant@docker-host baseimg]$ docker run f048aeb88f64</div><div class="line">hello world</div></pre></td></tr></table></figure>
+<p>至此，已经构建好了一个简单的 baseimage。</p>
+<h2 id="Docker-容器-Container"><a href="#Docker-容器-Container" class="headerlink" title="Docker - 容器[Container]:"></a>Docker - 容器[Container]:</h2><p>Docker可以帮助你构建和部署容器，你只需要把自己的应用程序或者服务打包放进容器即可。容器是基于镜像创建起来的，容器中可以运行一个或多个进程。我们可以认为，镜像是Docker生命周期中的构建或者打包阶段，而容器则是启动或者执行阶段。  容器基于镜像启动，一旦容器启动完成后，我们就可以登录到容器中安装自己需要的软件或者服务。 </p>
+<p>Container是在 Image 镜像上建立的一个 layer是可读可写的，Image 负责app 的存储和分发Container 负责运行。</p>
+<h3 id="创建容器："><a href="#创建容器：" class="headerlink" title="创建容器："></a>创建容器：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host ~]$ docker images # 查看镜像</div><div class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</div><div class="line">baseimg             latest              f048aeb88f64        9 minutes ago       865kB</div><div class="line">hello-world         latest              e38bc07ac18e        8 weeks ago         1.85kB</div><div class="line">[vagrant@docker-host ~]$ docker run hello-world # 启动容器</div><div class="line"></div><div class="line">Hello from Docker!</div></pre></td></tr></table></figure>
+<h3 id="运行交互式容器："><a href="#运行交互式容器：" class="headerlink" title="运行交互式容器："></a>运行交互式容器：</h3><p>dokcer的容器是基于镜像而创建的，所以在运行交互式容器之前需要先<code>pull</code>一个镜像：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host ~]$ docker pull ubuntu  # 拉取镜像</div><div class="line">[vagrant@docker-host ~]$ docker images		 # 查看镜像</div><div class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</div><div class="line">ubuntu              latest              113a43faa138        42 hours ago        81.2MB</div><div class="line">[vagrant@docker-host ~]$ docker run -it ubuntu # 创建交互式容器</div><div class="line">root@4948b39a7d56:/# cat /etc/issue            # 此时会发现进入了一个 Ubuntu 系统中</div><div class="line">Ubuntu 18.04 LTS \n \l       </div><div class="line">root@4948b39a7d56:~# exit					   # 此时容器的状态由Up变为Exited</div></pre></td></tr></table></figure>
+<h2 id="Docker-常用命令："><a href="#Docker-常用命令：" class="headerlink" title="Docker - 常用命令："></a>Docker - 常用命令：</h2><p>docker container ls -aq   # 查看退出状态的容器</p>
+<p>docker rm $(docker container ls -aq)   # 删除掉状态为<code>exited</code>的容器</p>
+<p>dokcer rm $(dokcer container ls -f “status=exited” -q) # 删除掉状态为<code>exited</code>的容器</p>
+<p>docker container commit  # 提交操作</p>
+<p>docker commit  # 提交修改</p>
+<p>docker image build # 通过Dockerfile构建Image</p>
+<p>docker build # 通过Dockerfile构建Image</p>
+<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile:"></a>Dockerfile:</h2><h3 id="语法详解："><a href="#语法详解：" class="headerlink" title="语法详解："></a>语法详解：</h3><h4 id="FROM"><a href="#FROM" class="headerlink" title="FROM :"></a><strong>FROM</strong> :</h4><p>示例： </p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">FROM</span> centos   <span class="comment"># 指定基础镜像为 centos</span></div></pre></td></tr></table></figure>
+<p>作用：FROM指定一个基础镜像， 一般情况下一个可用的 Dockerfile一定是 FROM 为第一个指令。至于镜像则可以是任何合理存在的image镜像，不建议使用任何非官方镜像，为了安全。<br> FROM 一定是首个非注释指令 Dockerfile， FROM 可以在一个 Dockerfile 中出现多次，以便于创建混合的images。 如果没有指定 tag ，latest 将会被指定为要使用的基础镜像版本。</p>
+<h4 id="LABEL-："><a href="#LABEL-：" class="headerlink" title="LABEL ："></a><strong>LABEL</strong> ：</h4><p>示例：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">LABLE version=<span class="string">"1.0"</span>   <span class="comment"># dockefile 版本信息</span></div><div class="line">LABLE <span class="keyword">maintainer</span>=<span class="string">"zhang@gmail.com"</span>   <span class="comment"># dockerfile 维护者信息</span></div></pre></td></tr></table></figure>
+<p>作用： 指定镜像制作者[meta data]的信息信息，如maintainer、version、description等 </p>
+<h4 id="RUN"><a href="#RUN" class="headerlink" title="RUN :"></a><strong>RUN</strong> :</h4><p>示例：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">RUN</span> yum update   # 运行 yum update 命令</div><div class="line">RUN yum makecache</div></pre></td></tr></table></figure>
+<p>作用：RUN命令将在当前image中执行任意合法命令并提交执行结果。命令执行提交后，就会自动执行Dockerfile中的下一个指令，每执行一次就会多分一层 layer，建议合并多条命令为一行。</p>
+<h4 id="WORKDIR："><a href="#WORKDIR：" class="headerlink" title="WORKDIR："></a><strong>WORKDIR</strong>：</h4><p>示例：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">WORKDIR</span> /opt   #指定当前工作目录为/opt 如果不存在 opt 目录，则会自动创建</div></pre></td></tr></table></figure>
+<p>作用： WORKDIR 用来设置当前的工作目录的，尽量使用绝对路径。Docker 默认的工作目录是/，只有 RUN 能执行 cd 命令切换目录，而且还只作用在当下下的 RUN，也就是说每一个 RUN 都是独立进行的。如果想让其他指令在指定的目录下执行，就得靠 WORKDIR。WORKDIR 动作的目录改变是持久的，不用每个指令前都使用一次 WORKDIR。</p>
+<h4 id="ADD-："><a href="#ADD-：" class="headerlink" title="ADD ："></a><strong>ADD</strong> ：</h4><p>示例： </p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ADD</span>  hello.c  /    # 将 hello.c 文件添加到容器的/目录下</div></pre></td></tr></table></figure>
+<p>作用：COPY 将文件从路径 <src> 复制添加到容器内部路径 <dest>。<br> 必须是对于源文件夹的一个文件或目录，也可以是一个远程的url，<dest> 是目标容器中的绝对路径。</dest></dest></src></p>
+<h4 id="COPY："><a href="#COPY：" class="headerlink" title="COPY："></a><strong>COPY</strong>：</h4><p>示例：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">COPY</span>   hello.c  /    # 将 hello.c 文件复制到容器的/目录下</div></pre></td></tr></table></figure>
+<p>作用：COPY 将文件从路径 <src> 复制添加到容器内部路径 <dest>。 <src></src></dest></src></p>
+<p>所有的新文件和文件夹都会创建UID 和 GID。事实上如果 <src> 是一个远程文件URL，那么目标文件的权限将会是600。</src></p>
+<p>ADD命令和 COPY 命令在很大层度上功能是一样的。但是 COPY 语义更加直接，所以推荐尽量使用 COPY 命令。例外的是 ADD 命令自带解压功能，如果需要拷贝并解压一个文件到镜像中，那么可以使用 ADD 命令。</p>
+<p>除此之外，都推荐使用 COPY 命令。</p>
+<p>需要添加远程文件，推荐使用 RUN 来执行<code>wget/curl</code>。</p>
+<h4 id="ENV："><a href="#ENV：" class="headerlink" title="ENV："></a><strong>ENV</strong>：</h4><p>示例：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ENV</span> MYSQL_VERSION <span class="number">5.7</span>   <span class="comment"># 添加常量 设置 MySQL 的版本为5.7</span></div><div class="line"><span class="keyword">RUN</span> apt-get install -y mysql-server="$&#123;MYSQL_VERSION&#125;"  # 在RUN中引用ENV</div></pre></td></tr></table></figure>
+<p>作用：</p>
+<p>ENV指令可以用于为docker容器设置环境变量 ENV设置的环境变量，可以使用 docker inspect命令来查看。同时还可以使用docker run –env <key>=<value>来修改环境变量。</value></key></p>
+<p>ENV 可以尽量多使用，以便于增加程序的可维护性。</p>
+<h4 id="VOLUME："><a href="#VOLUME：" class="headerlink" title="VOLUME："></a><strong>VOLUME</strong>：</h4><p>示例：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">VOLUME</span> /data # 共享 /data文件夹中的数据</div></pre></td></tr></table></figure>
+<p>作用：</p>
+<p>创建一个可以从本地主机或其他容器挂载的挂载点，一般用来存放数据库和需要保持的数据等。</p>
+<h4 id="EXPOSE："><a href="#EXPOSE：" class="headerlink" title="EXPOSE："></a><strong>EXPOSE</strong>：</h4><p>示例：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">EXPOSE</span> <span class="number">80</span>  <span class="comment"># 请求通过80端口来转发</span></div></pre></td></tr></table></figure>
+<p>作用：</p>
+<p>EXPOSE 指令指定在docker允许时指定的端口进行转发。</p>
+
       
     </div>
 
@@ -510,8 +573,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460"
@@ -605,6 +677,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-镜像-Image"><span class="nav-number">2.</span> <span class="nav-text">Docker - 镜像[Image]:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构建Base-Image"><span class="nav-number">2.1.</span> <span class="nav-text">构建Base Image:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-容器-Container"><span class="nav-number">3.</span> <span class="nav-text">Docker - 容器[Container]:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建容器："><span class="nav-number">3.1.</span> <span class="nav-text">创建容器：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行交互式容器："><span class="nav-number">3.2.</span> <span class="nav-text">运行交互式容器：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-常用命令："><span class="nav-number">4.</span> <span class="nav-text">Docker - 常用命令：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dockerfile"><span class="nav-number">5.</span> <span class="nav-text">Dockerfile:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法详解："><span class="nav-number">5.1.</span> <span class="nav-text">语法详解：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#FROM"><span class="nav-number">5.1.1.</span> <span class="nav-text">FROM :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LABEL-："><span class="nav-number">5.1.2.</span> <span class="nav-text">LABEL ：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RUN"><span class="nav-number">5.1.3.</span> <span class="nav-text">RUN :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WORKDIR："><span class="nav-number">5.1.4.</span> <span class="nav-text">WORKDIR：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ADD-："><span class="nav-number">5.1.5.</span> <span class="nav-text">ADD ：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#COPY："><span class="nav-number">5.1.6.</span> <span class="nav-text">COPY：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ENV："><span class="nav-number">5.1.7.</span> <span class="nav-text">ENV：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VOLUME："><span class="nav-number">5.1.8.</span> <span class="nav-text">VOLUME：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EXPOSE："><span class="nav-number">5.1.9.</span> <span class="nav-text">EXPOSE：</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
