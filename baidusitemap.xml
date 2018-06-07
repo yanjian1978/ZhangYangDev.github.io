@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/04/26/docker-cntrimg/</loc>
-    <lastmod>2018-06-07T09:33:39.482Z</lastmod>
+    <lastmod>2018-06-07T09:56:52.596Z</lastmod>
     <data>
         <display>
         <title>Docker - Container & Image</title>
@@ -28,12 +28,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/04/08/vagrant/</loc>
-    <lastmod>2018-06-07T09:32:35.796Z</lastmod>
+    <loc>http://yoursite.com/2018/04/12/vagrant/</loc>
+    <lastmod>2018-06-07T09:39:48.737Z</lastmod>
     <data>
         <display>
         <title>使用 Vagrant + VirtualBox 快速构建CentOS下的Docker开发环境</title>
-        <pubTime>2018-04-08T12:31:13.000Z</pubTime>
+        <pubTime>2018-04-12T12:31:13.000Z</pubTime>
         
         <tag>CentOS</tag>
          
