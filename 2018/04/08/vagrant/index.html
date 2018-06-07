@@ -1,0 +1,1289 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CentOS,Docker,Vagrant," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="柒索" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="​     Vagrant - 基础概念:Vagrant 是什么？Vagrant是一款用于在单个工作流程中构建和管理虚拟机环境的工具。凭借易于使用的工作流程和专注于自动化，Vagrant降低了开发环境设置时间，提高了开发效率。 Vagrant 是构建在虚拟化技术之上的虚拟机运行环境管理工具：  建立和删除虚拟机  配置虚拟机运行参数  管理虚拟机运行状态  自动化配置和安装开发环境  打包和分发虚">
+<meta name="keywords" content="CentOS,Docker,Vagrant">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Vagrant + VirtualBox 快速构建CentOS下的Docker开发环境">
+<meta property="og:url" content="http://yoursite.com/2018/04/08/vagrant/index.html">
+<meta property="og:site_name" content="柒索">
+<meta property="og:description" content="​     Vagrant - 基础概念:Vagrant 是什么？Vagrant是一款用于在单个工作流程中构建和管理虚拟机环境的工具。凭借易于使用的工作流程和专注于自动化，Vagrant降低了开发环境设置时间，提高了开发效率。 Vagrant 是构建在虚拟化技术之上的虚拟机运行环境管理工具：  建立和删除虚拟机  配置虚拟机运行参数  管理虚拟机运行状态  自动化配置和安装开发环境  打包和分发虚">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-07T09:32:35.796Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用 Vagrant + VirtualBox 快速构建CentOS下的Docker开发环境">
+<meta name="twitter:description" content="​     Vagrant - 基础概念:Vagrant 是什么？Vagrant是一款用于在单个工作流程中构建和管理虚拟机环境的工具。凭借易于使用的工作流程和专注于自动化，Vagrant降低了开发环境设置时间，提高了开发效率。 Vagrant 是构建在虚拟化技术之上的虚拟机运行环境管理工具：  建立和删除虚拟机  配置虚拟机运行参数  管理虚拟机运行状态  自动化配置和安装开发环境  打包和分发虚">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/08/vagrant/"/>
+
+
+
+
+
+  <title> 使用 Vagrant + VirtualBox 快速构建CentOS下的Docker开发环境 | 柒索 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">柒索</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个头脑聪明，五肢发达的男人。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            留言板
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/08/vagrant/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="柒索">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="柒索">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                使用 Vagrant + VirtualBox 快速构建CentOS下的Docker开发环境
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-08T20:31:13+08:00">
+                2018-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vagrant/" itemprop="url" rel="index">
+                    <span itemprop="name">Vagrant</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>​    </p>
+<h2 id="Vagrant-基础概念"><a href="#Vagrant-基础概念" class="headerlink" title="Vagrant - 基础概念:"></a>Vagrant - 基础概念:</h2><h3 id="Vagrant-是什么？"><a href="#Vagrant-是什么？" class="headerlink" title="Vagrant 是什么？"></a>Vagrant 是什么？</h3><p>Vagrant是一款用于在单个工作流程中构建和管理虚拟机环境的工具。凭借易于使用的工作流程和专注于自动化，Vagrant降低了开发环境设置时间，提高了开发效率。</p>
+<p>Vagrant 是构建在虚拟化技术之上的虚拟机运行环境管理工具：</p>
+<ul>
+<li>建立和删除虚拟机 </li>
+<li>配置虚拟机运行参数 </li>
+<li>管理虚拟机运行状态 </li>
+<li>自动化配置和安装开发环境 </li>
+<li>打包和分发虚拟机运行环境</li>
+</ul>
+<h3 id="Vagrant的适用范围"><a href="#Vagrant的适用范围" class="headerlink" title="Vagrant的适用范围"></a>Vagrant的适用范围</h3><ul>
+<li>开发</li>
+<li>测试</li>
+</ul>
+<p>参考：<a href="https://www.vagrantup.com/intro/index.html" target="_blank" rel="noopener">https://www.vagrantup.com/intro/index.html</a></p>
+<h2 id="Vagrant-下载安装"><a href="#Vagrant-下载安装" class="headerlink" title="Vagrant - 下载安装:"></a>Vagrant - 下载安装:</h2><p>Vagrant 下载：<a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="noopener">https://www.vagrantup.com/downloads.html</a></p>
+<p>VirtualBox 下载：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Downloads</a></p>
+<h2 id="Vagrant-常用操作："><a href="#Vagrant-常用操作：" class="headerlink" title="Vagrant - 常用操作："></a>Vagrant - 常用操作：</h2><p>以下是 Vagrant 的常用操作命令：</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vagrant box add</td>
+<td>添加box的操作</td>
+</tr>
+<tr>
+<td>vagrant init</td>
+<td>初始化box的操作，会生成vagrant的配置文件Vagrantfile</td>
+</tr>
+<tr>
+<td>vagrant up</td>
+<td>启动本地环境</td>
+</tr>
+<tr>
+<td>vagrant ssh</td>
+<td>通过ssh登录本地环境所在虚拟机</td>
+</tr>
+<tr>
+<td>vagrant halt</td>
+<td>关闭本地环境</td>
+</tr>
+<tr>
+<td>vagrant suspend</td>
+<td>暂停本地环境</td>
+</tr>
+<tr>
+<td>vagrant resume</td>
+<td>恢复本地环境</td>
+</tr>
+<tr>
+<td>vagrant reload</td>
+<td>修改了Vagrantfile后，使之生效（相当于先 halt，再 up）</td>
+</tr>
+<tr>
+<td>vagrant destroy</td>
+<td>彻底移除本地环境</td>
+</tr>
+<tr>
+<td>vagrant box list</td>
+<td>显示当前已经添加的box列表</td>
+</tr>
+<tr>
+<td>vagrant box remove</td>
+<td>删除相应的box</td>
+</tr>
+<tr>
+<td>vagrant package</td>
+<td>打包命令，可以把当前的运行的虚拟机环境进行打包</td>
+</tr>
+<tr>
+<td>vagrant plugin</td>
+<td>用于安装卸载插件</td>
+</tr>
+<tr>
+<td>vagrant status</td>
+<td>获取当前虚拟机的状态</td>
+</tr>
+<tr>
+<td>vagrant global-status</td>
+<td>显示当前用户Vagrant的所有环境状态</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Vagrant-Vgrantfile："><a href="#Vagrant-Vgrantfile：" class="headerlink" title="Vagrant - Vgrantfile："></a>Vagrant - Vgrantfile：</h2><p>Vagrantfile的主要功能是对虚拟机器进行配置，</p>
+<p>官方文档: <a href="https://www.vagrantup.com/docs/vagrantfile/" target="_blank" rel="noopener">https://www.vagrantup.com/docs/vagrantfile/</a></p>
+<p>当执行过<code>vagrant init</code>之后 vagrant 会生成一个名为<code>Vagrantfile</code>的文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> -*- mode: ruby -*-</div><div class="line"><span class="meta">#</span> vi: set ft=ruby :</div><div class="line"></div><div class="line"><span class="meta">#</span> All Vagrant configuration is done below. The "2" in Vagrant.configure</div><div class="line"><span class="meta">#</span> configures the configuration version (we support older styles for</div><div class="line"><span class="meta">#</span> backwards compatibility). Please don't change it unless you know what</div><div class="line"><span class="meta">#</span> you're doing.</div><div class="line">Vagrant.configure("2") do |config|</div><div class="line"><span class="meta">  #</span> The most common configuration options are documented and commented below.</div><div class="line"><span class="meta">  #</span> For a complete reference, please see the online documentation at</div><div class="line"><span class="meta">  #</span> https://docs.vagrantup.com.</div><div class="line"></div><div class="line"><span class="meta">  #</span> Every Vagrant development environment requires a box. You can search for</div><div class="line"><span class="meta">  #</span> boxes at https://vagrantcloud.com/search.</div><div class="line">  config.vm.box = "base"</div><div class="line"></div><div class="line"><span class="meta">  #</span> Disable automatic box update checking. If you disable this, then</div><div class="line"><span class="meta">  #</span> boxes will only be checked for updates when the user runs</div><div class="line"><span class="meta">  #</span> `vagrant box outdated`. This is not recommended.</div><div class="line"><span class="meta">  #</span> config.vm.box_check_update = false</div><div class="line"></div><div class="line"><span class="meta">  #</span> Create a forwarded port mapping which allows access to a specific port</div><div class="line"><span class="meta">  #</span> within the machine from a port on the host machine. In the example below,</div><div class="line"><span class="meta">  #</span> accessing "localhost:8080" will access port 80 on the guest machine.</div><div class="line"><span class="meta">  #</span> NOTE: This will enable public access to the opened port</div><div class="line"><span class="meta">  #</span> config.vm.network "forwarded_port", guest: 80, host: 8080</div><div class="line"></div><div class="line"><span class="meta">  #</span> Create a forwarded port mapping which allows access to a specific port</div><div class="line"><span class="meta">  #</span> within the machine from a port on the host machine and only allow access</div><div class="line"><span class="meta">  #</span> via 127.0.0.1 to disable public access</div><div class="line"><span class="meta">  #</span> config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"</div><div class="line"></div><div class="line"><span class="meta">  #</span> Create a private network, which allows host-only access to the machine</div><div class="line"><span class="meta">  #</span> using a specific IP.</div><div class="line"><span class="meta">  #</span> config.vm.network "private_network", ip: "192.168.33.10"</div><div class="line"></div><div class="line"><span class="meta">  #</span> Create a public network, which generally matched to bridged network.</div><div class="line"><span class="meta">  #</span> Bridged networks make the machine appear as another physical device on</div><div class="line"><span class="meta">  #</span> your network.</div><div class="line"><span class="meta">  #</span> config.vm.network "public_network"</div><div class="line"></div><div class="line"><span class="meta">  #</span> Share an additional folder to the guest VM. The first argument is</div><div class="line"><span class="meta">  #</span> the path on the host to the actual folder. The second argument is</div><div class="line"><span class="meta">  #</span> the path on the guest to mount the folder. And the optional third</div><div class="line"><span class="meta">  #</span> argument is a set of non-required options.</div><div class="line"><span class="meta">  #</span> config.vm.synced_folder "../data", "/vagrant_data"</div><div class="line"></div><div class="line"><span class="meta">  #</span> Provider-specific configuration so you can fine-tune various</div><div class="line"><span class="meta">  #</span> backing providers for Vagrant. These expose provider-specific options.</div><div class="line"><span class="meta">  #</span> Example for VirtualBox:</div><div class="line"><span class="meta">  #</span></div><div class="line"><span class="meta">  #</span> config.vm.provider "virtualbox" do |vb|</div><div class="line"><span class="meta">  #</span>   # Display the VirtualBox GUI when booting the machine</div><div class="line"><span class="meta">  #</span>   vb.gui = true</div><div class="line"><span class="meta">  #</span></div><div class="line"><span class="meta">  #</span>   # Customize the amount of memory on the VM:</div><div class="line"><span class="meta">  #</span>   vb.memory = "1024"</div><div class="line"><span class="meta">  #</span> end</div><div class="line"><span class="meta">  #</span></div><div class="line"><span class="meta">  #</span> View the documentation for the provider you are using for more</div><div class="line"><span class="meta">  #</span> information on available options.</div><div class="line"></div><div class="line"><span class="meta">  #</span> Enable provisioning with a shell script. Additional provisioners such as</div><div class="line"><span class="meta">  #</span> Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the</div><div class="line"><span class="meta">  #</span> documentation for more information about their specific syntax and use.</div><div class="line"><span class="meta">  #</span> config.vm.provision "shell", inline: &lt;&lt;-SHELL</div><div class="line"><span class="meta">  #</span>   apt-get update</div><div class="line"><span class="meta">  #</span>   apt-get install -y apache2</div><div class="line"><span class="meta">  #</span> SHELL</div><div class="line">end</div></pre></td></tr></table></figure>
+<h3 id="配置版本"><a href="#配置版本" class="headerlink" title="配置版本:"></a>配置版本:</h3><p>在命令终端执行完<code>vagrant init</code>之后，Vagrant 大致有以下几种形式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Vagrant.configure("1") do |config|</div><div class="line"><span class="meta">  #</span> v1 configs...</div><div class="line">end</div><div class="line"></div><div class="line">Vagrant.configure("2") do |config|</div><div class="line"><span class="meta">  #</span> v2 configs...</div><div class="line">end</div></pre></td></tr></table></figure>
+<p>目前，只有两个受支持的版本：“1”和“2”。 版本”1”代表Vagrant 1.0.x的配置。 版本“2”代表1.1以上到2.0.x的配置。</p>
+<h3 id="最低Vagrant版本"><a href="#最低Vagrant版本" class="headerlink" title="最低Vagrant版本:"></a>最低Vagrant版本:</h3><p>可以在Vagrantfile中指定一组Vagrant版本要求，以强制人们使用Vagrant文件的特定版本的Vagrant。 这可以帮助解决使用带有Vagrantfile的过时或过时的Vagrant版本可能引起的兼容性问题。</p>
+<p>应使用<code>Vagrant.require_version</code>帮助程序在Vagrant文件的顶部指定Vagrant版本要求：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vagrant.require_version "&gt;= 1.3.5"</div></pre></td></tr></table></figure>
+<p>在上面的情况下，只有加载它的版本是Vagrant 1.3.5或更高版本，Vagrantfile才会加载。</p>
+<p>还可以指定多个需求：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Vagrant.require_version "&gt;= 1.3.5", "&lt; 1.4.0"</div></pre></td></tr></table></figure>
+<h3 id="提示与技巧"><a href="#提示与技巧" class="headerlink" title="提示与技巧"></a>提示与技巧</h3><p>Vagrantfile是一种非常灵活的配置格式。 它基于Ruby，你可以用它做很多事情。 然而，同样的道理，因为它是Ruby，所以有很多方法可以让你在脚下自我射击。 在本页使用一些提示和技巧时，请注意正确使用它们。</p>
+<p>参考：<a href="https://www.vagrantup.com/docs/vagrantfile/tips.html" target="_blank" rel="noopener">https://www.vagrantup.com/docs/vagrantfile/tips.html</a></p>
+<h4 id="循环创建虚拟机"><a href="#循环创建虚拟机" class="headerlink" title="循环创建虚拟机"></a>循环创建虚拟机</h4><p>如果你想对许多多机器应用稍微不同的配置，你可以使用一个循环来做到这一点。 例如，如果你想创建三台机器：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">(1..3).each do |i|</div><div class="line">  config.vm.define "node-#&#123;i&#125;" do |node|</div><div class="line">    node.vm.provision "shell",</div><div class="line">      inline: "echo hello from node #&#123;i&#125;"</div><div class="line">  end</div><div class="line">end</div></pre></td></tr></table></figure>
+<h4 id="在ssh会话中覆盖主机语言环境："><a href="#在ssh会话中覆盖主机语言环境：" class="headerlink" title="在ssh会话中覆盖主机语言环境："></a>在ssh会话中覆盖主机语言环境：</h4><p>通常，主机语言环境变量传递给虚拟机。 如果虚拟机软件不支持主机语言环境，则可能会导致失败。 一种可能的解决方案是覆盖Vagrantfile中的语言环境：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">ENV["LC_ALL"] = "en_US.UTF-8"</div><div class="line"></div><div class="line">Vagrant.configure("2") do |config|</div><div class="line"><span class="meta">  #</span> ...</div><div class="line">end</div></pre></td></tr></table></figure>
+<h3 id="机器设置："><a href="#机器设置：" class="headerlink" title="机器设置："></a>机器设置：</h3><p>以下几组配置以<code>config.</code>开头的配置信息定义了虚拟机的配置信息。</p>
+<h4 id="config-vm"><a href="#config-vm" class="headerlink" title="config.vm"></a>config.vm</h4><p>config.vm中设置了Vagrant管理的机器的配置。</p>
+<table>
+<thead>
+<tr>
+<th>配置</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config.vm.boot_timeout</code></td>
+<td>Vagrant等待机器启动并可访问的时间（秒 默认情况下，这是300秒。</td>
+</tr>
+<tr>
+<td><code>config.vm.box</code></td>
+<td>这将配置该机器要下载的<code>box</code>。可以去HashiCorp/Vagrant Cloud中查找已安装框的名称或框的简写名称。此选项需要Vagrant 1.5或更高版本。</td>
+</tr>
+<tr>
+<td><code>config.vm.box_check_update</code></td>
+<td>如果为true，Vagrant会在每次执行<code>vagrant up</code>时检查配置的<code>config.vm.box</code>的更新。 如果发现更新，Vagrant会告诉用户.</td>
+</tr>
+<tr>
+<td><code>config.vm.box_download_checksum</code></td>
+<td>由<code>config.vm.box_url</code>指定的box的校验。如果未指定，则不会执行校验和比较。如果指定，Vagrant会将下载的box校验与这个值和错误进行比较，如果指定了此选项，则还必须指定`config.vm.box_download_checksum_type。</td>
+</tr>
+<tr>
+<td><code>config.vm.box_download_checksum_type</code></td>
+<td>指定的校验和类型。支持的值目前是“md5”，“sha1”和“sha256”，如果执行则还必须指定<code>config.vm.box_download_checksum</code></td>
+</tr>
+<tr>
+<td><code>config.vm.box_download_client_cert</code></td>
+<td>下载邮箱时使用的客户端证书的路径（如果有必要）。 默认情况下，不使用客户端证书来下载该框。</td>
+</tr>
+<tr>
+<td><code>config.vm.box_download_ca_cert</code></td>
+<td>直接下载盒子时使用的CA证书包的路径。 默认情况下，Vagrant将使用Mozilla CA证书包。</td>
+</tr>
+<tr>
+<td><code>config.vm.box_download_ca_path</code></td>
+<td>包含CA证书的目录的路径，用于直接下载box。 默认情况下，Vagrant将使用Mozilla CA证书包。</td>
+</tr>
+<tr>
+<td><code>config.vm.box_download_insecure</code></td>
+<td>如果为true，则来自服务器的SSL证书将不会被验证。 默认情况下，如果URL是HTTPS URL，则SSL证书将被验证。</td>
+</tr>
+<tr>
+<td><code>config.vm.box_download_location_trusted</code></td>
+<td>如果为true，则所有HTTP重定向将被视为可信。这意味着用于初始URL的凭证将用于所有后续重定向。默认情况下，重定向位置不受信任，因此凭据（如果指定）仅用于初始HTTP请求。</td>
+</tr>
+<tr>
+<td><code>config.vm.box_url</code></td>
+<td>可以找到配置的 box的URL。如果config.vm.box的是值是HashiCorp或者Vagrant Cloud中的一个box的简写，那么不需要指定该值。否则，它应该指向没有安装的盒子可以找到的适当位置。</td>
+</tr>
+<tr>
+<td><code>config.vm.box_version</code></td>
+<td>要使用box的版本</td>
+</tr>
+<tr>
+<td><code>config.vm.communicator</code></td>
+<td>用于连接到 guest box 的通信器类型。默认情况下是“ssh”，但对于 Windows 虚拟机应更改为“winrm”。</td>
+</tr>
+<tr>
+<td><code>config.vm.graceful_halt_timeout</code></td>
+<td>调用 <code>vagrant halt</code> 时 Vagrant 等待机器正常停止的时间。默认为 60 秒。</td>
+</tr>
+<tr>
+<td><code>config.vm.guest</code></td>
+<td>将在本机中运行的客户操作系统。默认为 linux，Vagrant 会自动检测正确的发行版。Vagrant 需要知道这些信息才能执行某些客户操作系统特定的事情，例如挂载目录和配置网络。</td>
+</tr>
+<tr>
+<td><code>config.vm.hostname</code></td>
+<td>机器应具有的主机名。默认为 <code>nil</code>。如果为 <code>nil</code>，Vagrant 将不管理主机名。如果设置为字符串，主机名将在引导时设置。</td>
+</tr>
+<tr>
+<td><code>config.vm.network</code></td>
+<td>参考下文网络配置</td>
+</tr>
+<tr>
+<td><code>config.vm.post_up_message</code></td>
+<td>执行 <code>vagrant up</code> 之后显示给用户的消息，可以用于指示如何访问开发环境的各个组件等。</td>
+</tr>
+<tr>
+<td><code>config.vm.provider</code></td>
+<td>配置 provider 特定的配置，该配置用于修改特定于某个 provider 的设置。如果您正在配置的 provider 不存在或未在运行 Vagrant 的系统上设置，则 Vagrant 将忽略此配置块。这允许共享一个适用于多个 provider 的 Vagrantfile，即使没有安装所有的 provider（至少要安装 Vagrantfile 要求的一个 provider）。</td>
+</tr>
+<tr>
+<td><code>config.vm.provision</code></td>
+<td>在机器上配置 provisioner，以便在创建机器时自动安装和配置软件。 参考：<a href="https://www.vagrantup.com/docs/providers/configuration.html" target="_blank" rel="noopener">provisioner</a></td>
+</tr>
+<tr>
+<td><code>config.vm.synced_folder</code></td>
+<td>在机器上配置已同步的目录，以便主机上的目录可以与客户机同步。</td>
+</tr>
+<tr>
+<td><code>config.vm.usable_port_range</code></td>
+<td>Vagrant 可以使用的用来处理端口冲突的一系列端口。默认为 2200..2250。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="config-ssh"><a href="#config-ssh" class="headerlink" title="config.ssh"></a>config.ssh</h4><p><code>config.ssh</code>涉及配置Vagrant如何通过SSH访问你的机器。大多数Vagrant的设置，默认值通常就够用了，但是我们还是可以根据自己的实际情况做出微调。</p>
+<table>
+<thead>
+<tr>
+<th>配置</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config.ssh.username</code></td>
+<td>默认设置Vagrant将SSH作为用户名。如果自定义设置了用户名，则可以自由覆盖此内容。</td>
+</tr>
+<tr>
+<td><code>config.ssh.password</code></td>
+<td>设置Vagrant将用于验证SSH用户的密码。Vagrant建议在下面使用基于密钥的身份验证而不是密码。</td>
+</tr>
+<tr>
+<td><code>config.ssh.host</code></td>
+<td>SSH进入的主机名或IP。默认情况下，这是空的，因为服务提供商通常会为您解决这个问题。</td>
+</tr>
+<tr>
+<td><code>config.ssh.port</code></td>
+<td>进入SSH的端口。默认情况下，这是端口22。</td>
+</tr>
+<tr>
+<td><code>config.ssh.guest_port</code></td>
+<td>运行SSH的guest虚拟机上的端口。这被一些提供商用来检测转发的SSH端口。例如，如果设置为22（默认值），并且Vagrant从主机上的端口4567检测到来宾端口22上的转发端口，则Vagrant将尝试使用端口4567与来宾进行对话（如果没有其他端口）选项。</td>
+</tr>
+<tr>
+<td><code>config.ssh.private_key_path</code></td>
+<td>用于SSH访问客机的私钥的路径。默认情况下，这是随Vagrant一起提供的不安全私钥，因为这是公共盒子使用的私钥。如果您使用自定义SSH密钥创建自己的自定义框，则应该指向该私钥。</td>
+</tr>
+<tr>
+<td><code>config.ssh.keys_only</code></td>
+<td>仅使用Vagrant提供的SSH私钥（不要使用存储在ssh-agent中的任何密钥）。默认值是true。</td>
+</tr>
+<tr>
+<td><code>config.ssh.verify_host_key</code></td>
+<td>执行严格的主机密钥验证。默认值是false。</td>
+</tr>
+<tr>
+<td><code>config.ssh.forward_agent</code></td>
+<td>如果为true，则启用通过SSH连接的代理转发。默认为false。</td>
+</tr>
+<tr>
+<td><code>config.ssh.forward_x11</code></td>
+<td>如果为true，则启用通过SSH连接进行的X11转发。默认为false。</td>
+</tr>
+<tr>
+<td><code>config.ssh.forward_env</code></td>
+<td>要转发给guest虚拟机的主机环境变量数组</td>
+</tr>
+<tr>
+<td><code>config.ssh.insert_key</code></td>
+<td>如果为true，Vagrant将自动插入一个用于SSH的密钥对，如果检测到，则替换机器内部的Vagrant默认不安全密钥。默认为 true</td>
+</tr>
+<tr>
+<td><code>config.ssh.proxy_command</code></td>
+<td>执行命令行命令，接收要在stdin上发送到SSH的数据。</td>
+</tr>
+<tr>
+<td><code>config.ssh.pty</code></td>
+<td>如果为true，pty将用于供应。默认为false。</td>
+</tr>
+<tr>
+<td><code>config.ssh.keep_alive</code></td>
+<td>如果为true，则此设置将默认每隔5秒发送一次保持活动数据包，以保持连接处于活动状态。</td>
+</tr>
+<tr>
+<td><code>config.ssh.shell</code></td>
+<td>执行来自Vagrant的SSH命令时使用的shell。默认情况下，这是bash -l。请注意，这对运行vagrant ssh时获得的shell没有影响。此配置选项仅影响在Vagrant内部执行命令时使用的shell。</td>
+</tr>
+<tr>
+<td><code>config.ssh.export_command_template</code></td>
+<td>用于在活动会话中生成导出的环境变量的模板。</td>
+</tr>
+<tr>
+<td><code>config.ssh.sudo_command</code></td>
+<td>使用sudo执行命令时使用的命令。</td>
+</tr>
+<tr>
+<td><code>config.ssh.compression</code></td>
+<td>如果设置为false，则此设置将不包括ssh进入机器时的压缩设置。 如果没有设置，它将默认为true，Compression = yes将使用ssh启用。</td>
+</tr>
+<tr>
+<td><code>config.ssh.dsa_authentication</code></td>
+<td>如果为false，则此设置在ssh登录到计算机时不包括DSAAuthentication。 如果未设置，则默认为true，DSAAuthentication = yes将与ssh一起使用。</td>
+</tr>
+<tr>
+<td><code>config.ssh.extra_args</code></td>
+<td>此设置值直接传递到ssh可执行文件中。 这使您可以传递任何命令来执行诸如反向隧道切入ssh程序之类的任务。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="config-vagrant"><a href="#config-vagrant" class="headerlink" title="config.vagrant:"></a>config.vagrant:</h4><p>在设置中<code>config.vagrant</code>修改Vagrant本身的行为。</p>
+<p><code>config.vagrant.host:</code> 设置运行Vagrant主机的类型。默认情况下，这是<code>:detect</code>，这会导致Vagrant自动检测主机。Vagrant需要知道，以执行一些特定主机的东西，如准备NFS文件夹，如果他们启用了此信息。如果自动检测失败的话，您应该手动设置此配置。</p>
+<p><code>config.vagrant.sensitive:(字符串，数组)</code>  值不应该显示在Vagrant的输出值或列表。值将从Vagrant的正常UI输出以及记录器输出中去除。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">config.vagrant.sensitive = [&quot;MySecretPassword&quot;, ENV[&quot;MY_TOKEN&quot;]]</div></pre></td></tr></table></figure>
+<p><strong>config.winrm</strong>:<a href="https://www.vagrantup.com/docs/vagrantfile/winrm_settings.html" target="_blank" rel="noopener">https://www.vagrantup.com/docs/vagrantfile/winrm_settings.html</a></p>
+<p><strong>config.winssh:</strong> <a href="https://www.vagrantup.com/docs/vagrantfile/winssh_settings.html" target="_blank" rel="noopener">https://www.vagrantup.com/docs/vagrantfile/winssh_settings.html</a></p>
+<h2 id="Vagrant-环境构建："><a href="#Vagrant-环境构建：" class="headerlink" title="Vagrant - 环境构建："></a>Vagrant - 环境构建：</h2><h3 id="镜像下载："><a href="#镜像下载：" class="headerlink" title="镜像下载："></a>镜像下载：</h3><p>由于网络的原因只能在:<a href="http://www.vagrantbox.es/下载。" target="_blank" rel="noopener">http://www.vagrantbox.es/下载。</a></p>
+<p>下载完成之后是一个 .box文件。</p>
+<h3 id="环境构建："><a href="#环境构建：" class="headerlink" title="环境构建："></a>环境构建：</h3><p>创建一个文件夹，用来存放<code>vagrantfile</code>：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  ~ cd Vagrant &amp;&amp; mkdir centos &amp;&amp; cd centos</div></pre></td></tr></table></figure>
+<p>添加一个 <code>box</code> 到当前的 目录中：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">➜  centos vagrant box add --name centos ~/Public/Mirrors/centos-7.3.16.box</div><div class="line">==&gt; box: Box file was not detected as metadata. Adding it directly...</div><div class="line">==&gt; box: Adding box 'centos' (v0) for provider:</div><div class="line">    box: Unpacking necessary files from: </div><div class="line">    file:///Users/Yang/Public/Mirrors/centos-7.3.16.box</div><div class="line">==&gt; box: Successfully added box 'centos' (v0) for 'virtualbox'!</div></pre></td></tr></table></figure>
+<p>初始化一个<code>Vagrant</code>文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">➜  centos vagrant init centos</div><div class="line">A `Vagrantfile` has been placed in this directory. You are now</div><div class="line">ready to `vagrant up` your first virtual environment! Please read</div><div class="line">the comments in the Vagrantfile as well as documentation on</div><div class="line">`vagrantup.com` for more information on using Vagrant.</div></pre></td></tr></table></figure>
+<p>编辑<code>Vagrantfile</code>文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">➜  centos vim Vagrantfile</div><div class="line"></div><div class="line"><span class="meta">#</span> 编辑 Vagrantfile 文件,添加以下内容</div><div class="line"></div><div class="line"><span class="meta">#</span>## start </div><div class="line"><span class="meta">#</span> -*- mode: ruby -*-</div><div class="line"><span class="meta">#</span> vi: set ft=ruby :</div><div class="line">Vagrant.require_version "&gt;=1.6.0"</div><div class="line">boxes = [</div><div class="line">  &#123;</div><div class="line">    :name =&gt; "docker-host",</div><div class="line">    :eth1 =&gt; "192.168.100.100",</div><div class="line">    :mem =&gt; "1024",</div><div class="line">    :cpu =&gt; "1"</div><div class="line">  &#125;</div><div class="line">]</div><div class="line"></div><div class="line">Vagrant.configure("2") do |config|</div><div class="line">  config.vm.box = "centos"</div><div class="line"></div><div class="line">  boxes.each do |opts|</div><div class="line">    config.vm.define opts[:name] do |config|</div><div class="line">      config.vm.hostname = opts[:name]</div><div class="line"></div><div class="line">      config.vm.provider "virtualbox" do |v|</div><div class="line">        v.customize ["modifyvm", :id, "--memory", opts[:mem]]</div><div class="line">        v.customize ["modifyvm", :id, "--cpus", opts[:cpu]]</div><div class="line">      end</div><div class="line">      config.vm.network :private_network,ip: opts[:eth1]</div><div class="line">      end</div><div class="line">    end</div><div class="line">    config.vm.synced_folder "~/Share", "/home/vagrant/labs"</div><div class="line">    config.vm.provision "shell", privileged: true, path: "./setup.sh"</div><div class="line">end</div><div class="line"><span class="meta">#</span>## end</div></pre></td></tr></table></figure>
+<p>在当前目录下创建 <code>setup.sh</code>脚本文件，此举是为了安装 docker 环境：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span>/bin/sh</div><div class="line"></div><div class="line"><span class="meta">#</span> install some tools</div><div class="line">sudo yum install -y git vim gcc glibc-static telnet bridge-utils net-tools</div><div class="line"></div><div class="line"><span class="meta">#</span> install docker</div><div class="line">curl -fsSL get.docker.com -o get-docker.sh</div><div class="line">sh get-docker.sh</div><div class="line"></div><div class="line"><span class="meta">#</span> start docker service</div><div class="line">sudo systemctl start docker</div><div class="line"></div><div class="line">rm -rf get-docker.sh</div></pre></td></tr></table></figure>
+<p>配置完成后开始启动本地环境：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  centos vagrant up   # 过程省略 大概要等个两三分钟的样子</div></pre></td></tr></table></figure>
+<p>通过 SSH 进入到刚才启动成功的机器中：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">➜  centos vagrant ssh</div><div class="line">[vagrant@docker-host ~]$ cat /etc/centos-release # 查看 centos 的版本</div><div class="line">CentOS Linux release 7.3.1611 (Core)</div><div class="line">[vagrant@docker-host ~]$ docker -v  # 查看 docker 的版本</div><div class="line">Docker version 18.05.0-ce, build f150324</div></pre></td></tr></table></figure>
+<p>docker 相关配置，此举是为了能够让<code>vagrant</code>用户有权限对 docker 进行操作：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host labs]$ sudo systemctl start docker  # 启动 docker</div><div class="line">[vagrant@docker-host labs]$ sudo systemctl stop docker   # 停止 docker</div><div class="line">[vagrant@docker-host labs]$ sudo groupadd docker # 创建 docker 组</div><div class="line">[vagrant@docker-host labs]$ sudo gpasswd -a vagrant docker # 将用户添加到docker组中</div><div class="line"></div><div class="line"><span class="meta">#</span> 此时停止 docker 退出 shell 然后再重新登录 </div><div class="line"></div><div class="line">[vagrant@docker-host ~]$ systemctl start docker  #此处需要认证一下  密码为: vagrant</div><div class="line">[vagrant@docker-host ~]$ systemctl status docker # 查看 docker 的运行状态</div></pre></td></tr></table></figure>
+<p>docker hello-world:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host ~]$ docker pull hello-world</div><div class="line">[vagrant@docker-host ~]$ docker run hello-world</div></pre></td></tr></table></figure>
+<p>出现<code>Hello from Docker!</code>则说明 docker 环境没问题。</p>
+<p>对了 root用户的密码也是<code>vagrant</code>。</p>
+<p>Done.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CentOS/" rel="tag"># CentOS</a>
+          
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
+          
+            <a href="/tags/Vagrant/" rel="tag"># Vagrant</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/03/centos-consul/" rel="next" title="CentOS7 搭建 Consul 集群">
+                <i class="fa fa-chevron-left"></i> CentOS7 搭建 Consul 集群
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/04/26/docker-cntrimg/" rel="prev" title="Docker - Container & Image">
+                Docker - Container & Image <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460"
+               alt="柒索" />
+          <p class="site-author-name" itemprop="name">柒索</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ZhangYangDev" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="" title="Blog" target="_blank">Blog</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vagrant-基础概念"><span class="nav-number">1.</span> <span class="nav-text">Vagrant - 基础概念:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vagrant-是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">Vagrant 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vagrant的适用范围"><span class="nav-number">1.2.</span> <span class="nav-text">Vagrant的适用范围</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vagrant-下载安装"><span class="nav-number">2.</span> <span class="nav-text">Vagrant - 下载安装:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vagrant-常用操作："><span class="nav-number">3.</span> <span class="nav-text">Vagrant - 常用操作：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vagrant-Vgrantfile："><span class="nav-number">4.</span> <span class="nav-text">Vagrant - Vgrantfile：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置版本"><span class="nav-number">4.1.</span> <span class="nav-text">配置版本:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最低Vagrant版本"><span class="nav-number">4.2.</span> <span class="nav-text">最低Vagrant版本:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提示与技巧"><span class="nav-number">4.3.</span> <span class="nav-text">提示与技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#循环创建虚拟机"><span class="nav-number">4.3.1.</span> <span class="nav-text">循环创建虚拟机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在ssh会话中覆盖主机语言环境："><span class="nav-number">4.3.2.</span> <span class="nav-text">在ssh会话中覆盖主机语言环境：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器设置："><span class="nav-number">4.4.</span> <span class="nav-text">机器设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#config-vm"><span class="nav-number">4.4.1.</span> <span class="nav-text">config.vm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#config-ssh"><span class="nav-number">4.4.2.</span> <span class="nav-text">config.ssh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#config-vagrant"><span class="nav-number">4.4.3.</span> <span class="nav-text">config.vagrant:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vagrant-环境构建："><span class="nav-number">5.</span> <span class="nav-text">Vagrant - 环境构建：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#镜像下载："><span class="nav-number">5.1.</span> <span class="nav-text">镜像下载：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境构建："><span class="nav-number">5.2.</span> <span class="nav-text">环境构建：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">柒索</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

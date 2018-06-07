@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-06T04:44:30.746Z</updated>
+  <updated>2018-06-07T09:33:39.482Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,66 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Docker - Container &amp; Image</title>
+    <link href="http://yoursite.com/2018/04/26/docker-cntrimg/"/>
+    <id>http://yoursite.com/2018/04/26/docker-cntrimg/</id>
+    <published>2018-04-26T11:14:31.000Z</published>
+    <updated>2018-06-07T09:33:39.482Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;h2 id=&quot;Docker-Container&quot;&gt;&lt;a href=&quot;#Docker-Container&quot; class=&quot;headerlink&quot; 
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+    
+    
+      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Vagrant + VirtualBox 快速构建CentOS下的Docker开发环境</title>
+    <link href="http://yoursite.com/2018/04/08/vagrant/"/>
+    <id>http://yoursite.com/2018/04/08/vagrant/</id>
+    <published>2018-04-08T12:31:13.000Z</published>
+    <updated>2018-06-07T09:32:35.796Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;​    &lt;/p&gt;
+&lt;h2 id=&quot;Vagrant-基础概念&quot;&gt;&lt;a href=&quot;#Vagrant-基础概念&quot; class=&quot;headerlink&quot; title=&quot;Vagrant - 基础概念:&quot;&gt;&lt;/a&gt;Vagrant - 基础概念:&lt;/h2&gt;&lt;h3 id=&quot;Vagran
+      
+    
+    </summary>
+    
+      <category term="Vagrant" scheme="http://yoursite.com/categories/Vagrant/"/>
+    
+    
+      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+    
+      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+    
+      <category term="Vagrant" scheme="http://yoursite.com/tags/Vagrant/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CentOS7 搭建 Consul 集群</title>
     <link href="http://yoursite.com/2018/04/03/centos-consul/"/>
     <id>http://yoursite.com/2018/04/03/centos-consul/</id>
     <published>2018-04-03T02:57:14.000Z</published>
-    <updated>2018-06-06T04:44:30.746Z</updated>
+    <updated>2018-06-06T06:05:11.028Z</updated>
     
     <summary type="html">
     
@@ -36,11 +91,11 @@
       <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
     
     
-      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
-    
       <category term="MicroService" scheme="http://yoursite.com/tags/MicroService/"/>
     
       <category term="Cluster" scheme="http://yoursite.com/tags/Cluster/"/>
+    
+      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
     
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
@@ -93,11 +148,11 @@
   </entry>
   
   <entry>
-    <title>『Docker』- Introduction &amp; QuickStart</title>
+    <title>Docker - Introduction &amp; QuickStart</title>
     <link href="http://yoursite.com/2018/03/11/docker-introduction/"/>
     <id>http://yoursite.com/2018/03/11/docker-introduction/</id>
     <published>2018-03-11T02:24:12.000Z</published>
-    <updated>2018-06-05T08:02:52.712Z</updated>
+    <updated>2018-06-06T11:16:41.655Z</updated>
     
     <summary type="html">
     
@@ -111,6 +166,10 @@
     
       <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
     
+    
+      <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
       <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
     
@@ -250,7 +309,7 @@
     <link href="http://yoursite.com/2017/12/05/mobile-css/"/>
     <id>http://yoursite.com/2017/12/05/mobile-css/</id>
     <published>2017-12-05T06:22:17.000Z</published>
-    <updated>2018-03-27T12:04:04.153Z</updated>
+    <updated>2018-06-06T06:44:16.179Z</updated>
     
     <summary type="html">
     
@@ -266,7 +325,9 @@
     
       <category term="Mobile" scheme="http://yoursite.com/tags/Mobile/"/>
     
-      <category term="Css" scheme="http://yoursite.com/tags/Css/"/>
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
     
   </entry>
   
@@ -468,57 +529,6 @@
       
       
         &lt;h2 id=&quot;Spring-Boot-Actuator简介&quot;&gt;&lt;a href=&quot;#Spring-Boot-Actuator简介&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot - Actuator简介:&quot;&gt;&lt;/a&gt;Spring Boot - Act
-      
-    
-    </summary>
-    
-      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
-    
-    
-      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
-    
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot - 配置文件详解</title>
-    <link href="http://yoursite.com/2017/08/15/springboot-configuration/"/>
-    <id>http://yoursite.com/2017/08/15/springboot-configuration/</id>
-    <published>2017-08-15T10:55:08.000Z</published>
-    <updated>2018-06-01T09:34:34.504Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在Spring Boot的配置文件中，有两种后缀的配置文件，分别是.properties文件和.yml文件。Spring Boot 提供了对应用进行自动化配置。相比以前 XML 的配置方式，很多显式方式申明是不需要的。大多数默认的配置足够实现开发功能，从而更快速开发。&lt;/p
-      
-    
-    </summary>
-    
-      <category term="Spring Boot" scheme="http://yoursite.com/categories/Spring-Boot/"/>
-    
-    
-      <category term="Spring Boot" scheme="http://yoursite.com/tags/Spring-Boot/"/>
-    
-      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot - Introduction &amp; QuickStart</title>
-    <link href="http://yoursite.com/2017/08/10/springboot-quickstart/"/>
-    <id>http://yoursite.com/2017/08/10/springboot-quickstart/</id>
-    <published>2017-08-10T02:14:20.000Z</published>
-    <updated>2018-04-03T17:33:26.449Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Spring-Boot-简介：&quot;&gt;&lt;a href=&quot;#Spring-Boot-简介：&quot; class=&quot;headerlink&quot; title=&quot;Spring Boot - 简介：&quot;&gt;&lt;/a&gt;Spring Boot - 简介：&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;T
       
     
     </summary>
