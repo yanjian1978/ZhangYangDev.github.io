@@ -4,32 +4,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/04/26/docker-cntrimg/</loc>
-    <lastmod>2018-06-07T16:18:32.310Z</lastmod>
-    <data>
-        <display>
-        <title>Docker - Container & Image</title>
-        <pubTime>2018-04-26T11:14:31.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>Docker</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="http://yoursite.com/categories/Docker/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2018/04/12/vagrant/</loc>
-    <lastmod>2018-06-07T09:39:48.737Z</lastmod>
+    <lastmod>2018-06-08T02:12:17.540Z</lastmod>
     <data>
         <display>
         <title>使用 Vagrant + VirtualBox 快速构建CentOS下的Docker开发环境</title>
@@ -45,6 +21,30 @@
            
              
               <breadCrumb title="Vagrant" url="http://yoursite.com/categories/Vagrant/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/04/26/docker-cntrimg/</loc>
+    <lastmod>2018-06-07T16:23:33.622Z</lastmod>
+    <data>
+        <display>
+        <title>Docker - Container & Image</title>
+        <pubTime>2018-04-26T11:14:31.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://yoursite.com/categories/Docker/"/>
           
         </display>
     </data>

@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="概述Docker - 镜像[Image]:镜像是构建Docker的基石。用户基于镜像来运行自己的容器。镜像也是Docker生命周期中的“构建”部分。镜像是基于联合文件系统的一种层式结构(layer)，由一系列指令一步一步构建出来，不同image 之间可以共享 layer ,Image本身是只读的(read-only)。 构建Base Image:通过简单的 Dockerfile 来构建一个 bas">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-07T16:18:32.310Z">
+<meta property="og:updated_time" content="2018-06-07T16:23:33.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker - Container &amp; Image">
 <meta name="twitter:description" content="概述Docker - 镜像[Image]:镜像是构建Docker的基石。用户基于镜像来运行自己的容器。镜像也是Docker生命周期中的“构建”部分。镜像是基于联合文件系统的一种层式结构(layer)，由一系列指令一步一步构建出来，不同image 之间可以共享 layer ,Image本身是只读的(read-only)。 构建Base Image:通过简单的 Dockerfile 来构建一个 bas">
@@ -431,7 +431,8 @@
 <p>docker commit  # 提交修改</p>
 <p>docker image build # 通过Dockerfile构建Image</p>
 <p>docker build # 通过Dockerfile构建Image</p>
-<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile:"></a>Dockerfile:</h2><h3 id="语法详解："><a href="#语法详解：" class="headerlink" title="语法详解："></a>语法详解：</h3><h4 id="FROM"><a href="#FROM" class="headerlink" title="FROM :"></a><strong>FROM</strong> :</h4><p>示例： </p>
+<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile:"></a>Dockerfile:</h2><h3 id="语法详解："><a href="#语法详解：" class="headerlink" title="语法详解："></a>语法详解：</h3><p>官方文档：<a href="https://docs.docker.com/engine/reference/builder/" target="_blank" rel="noopener">https://docs.docker.com/engine/reference/builder/</a></p>
+<h4 id="FROM"><a href="#FROM" class="headerlink" title="FROM :"></a><strong>FROM</strong> :</h4><p>示例： </p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">FROM</span> centos   <span class="comment"># 指定基础镜像为 centos</span></div></pre></td></tr></table></figure>
 <p>作用：FROM指定一个基础镜像， 一般情况下一个可用的 Dockerfile一定是 FROM 为第一个指令。至于镜像则可以是任何合理存在的image镜像，不建议使用任何非官方镜像，为了安全。<br> FROM 一定是首个非注释指令 Dockerfile， FROM 可以在一个 Dockerfile 中出现多次，以便于创建混合的images。 如果没有指定 tag ，latest 将会被指定为要使用的基础镜像版本。</p>
 <h4 id="LABEL-："><a href="#LABEL-：" class="headerlink" title="LABEL ："></a><strong>LABEL</strong> ：</h4><p>示例：</p>
