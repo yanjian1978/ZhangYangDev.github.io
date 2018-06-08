@@ -1,15 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30,36 +49,7 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -68,39 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CentOS,Linux,Docker," />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
 
 
-
-  <link rel="alternate" href="/atom.xml" title="柒索" type="application/atom+xml" />
-
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
 
 
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
 
 
 
 
 
 
-<meta name="description" content="概述Docker - 镜像[Image]:镜像是构建Docker的基石。用户基于镜像来运行自己的容器。镜像也是Docker生命周期中的“构建”部分。镜像是基于联合文件系统的一种层式结构(layer)，由一系列指令一步一步构建出来，不同image 之间可以共享 layer ,Image本身是只读的(read-only)。 构建Base Image:通过简单的 Dockerfile 来构建一个 bas">
-<meta name="keywords" content="CentOS,Linux,Docker">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Docker - Container &amp; Image">
-<meta property="og:url" content="http://yoursite.com/2018/04/26/docker-cntrimg/index.html">
-<meta property="og:site_name" content="柒索">
-<meta property="og:description" content="概述Docker - 镜像[Image]:镜像是构建Docker的基石。用户基于镜像来运行自己的容器。镜像也是Docker生命周期中的“构建”部分。镜像是基于联合文件系统的一种层式结构(layer)，由一系列指令一步一步构建出来，不同image 之间可以共享 layer ,Image本身是只读的(read-only)。 构建Base Image:通过简单的 Dockerfile 来构建一个 bas">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-07T16:23:33.622Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker - Container &amp; Image">
-<meta name="twitter:description" content="概述Docker - 镜像[Image]:镜像是构建Docker的基石。用户基于镜像来运行自己的容器。镜像也是Docker生命周期中的“构建”部分。镜像是基于联合文件系统的一种层式结构(layer)，由一系列指令一步一步构建出来，不同image 之间可以共享 layer ,Image本身是只读的(read-only)。 构建Base Image:通过简单的 Dockerfile 来构建一个 bas">
 
 
 
@@ -109,13 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: 'undefined',
-      author: '博主'
-    },
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -127,18 +103,42 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="Docker - 核心概念：docker主机(Host)：安装了Docker程序的机器（Docker直接安装在操作系统之上）； docker客户端(Client)：连接docker主机进行操作； docker仓库(Registry)：用来保存各种打包好的软件镜像； docker镜像(Images)：软件打包好的镜像；放在docker仓库中； docker容器(Container)：镜像启动后的实例">
+<meta name="keywords" content="CentOS,Linux,Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker - Container &amp; Image">
+<meta property="og:url" content="http://yoursite.com/2018/04/26/docker-cntrimg/index.html">
+<meta property="og:site_name" content="柒索">
+<meta property="og:description" content="Docker - 核心概念：docker主机(Host)：安装了Docker程序的机器（Docker直接安装在操作系统之上）； docker客户端(Client)：连接docker主机进行操作； docker仓库(Registry)：用来保存各种打包好的软件镜像； docker镜像(Images)：软件打包好的镜像；放在docker仓库中； docker容器(Container)：镜像启动后的实例">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-08T16:33:08.702Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker - Container &amp; Image">
+<meta name="twitter:description" content="Docker - 核心概念：docker主机(Host)：安装了Docker程序的机器（Docker直接安装在操作系统之上）； docker客户端(Client)：连接docker主机进行操作； docker仓库(Registry)：用来保存各种打包好的软件镜像； docker镜像(Images)：软件打包好的镜像；放在docker仓库中； docker容器(Container)：镜像启动后的实例">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="柒索" type="application/atom+xml" />
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2018/04/26/docker-cntrimg/"/>
 
 
 
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title> Docker - Container & Image | 柒索 </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
+  <title>Docker - Container & Image | 柒索</title>
   
 
 
@@ -149,17 +149,43 @@
 
 
 
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
+</head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -168,19 +194,21 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">柒索</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <p class="site-subtitle">一个头脑聪明，五肢发达的男人。</p>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -188,112 +216,82 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-guestbook">
-          <a href="/guestbook" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
-            
-            留言板
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-guestbook">
+    <a href="/guestbook" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />留言板</a>
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -306,7 +304,13 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/26/docker-cntrimg/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -324,11 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                Docker - Container & Image
+          <h1 class="post-title" itemprop="name headline">Docker - Container & Image
               
             
           </h1>
@@ -336,6 +336,11 @@
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -343,11 +348,12 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-26T19:14:31+08:00">
-                2018-04-26
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-04-26 19:14:31" itemprop="dateCreated datePublished" datetime="2018-04-26T19:14:31+08:00">2018-04-26</time>
             
 
             
@@ -365,11 +371,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Docker/" itemprop="url" rel="index">
-                    <span itemprop="name">Docker</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Docker/" itemprop="url" rel="index"><span itemprop="name">Docker</span></a></span>
 
                 
                 
@@ -385,11 +387,6 @@
           
 
           
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-            </span>
-          
 
           
 
@@ -399,14 +396,21 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h2 id="Docker-镜像-Image"><a href="#Docker-镜像-Image" class="headerlink" title="Docker - 镜像[Image]:"></a>Docker - 镜像[Image]:</h2><p>镜像是构建Docker的基石。用户基于镜像来运行自己的容器。镜像也是Docker生命周期中的“构建”部分。镜像是基于联合文件系统的一种层式结构(layer)，由一系列指令一步一步构建出来，不同image 之间可以共享 layer ,Image本身是只读的(read-only)。</p>
+        <h2 id="Docker-核心概念："><a href="#Docker-核心概念：" class="headerlink" title="Docker - 核心概念："></a>Docker - 核心概念：</h2><p>docker主机(Host)：安装了Docker程序的机器（Docker直接安装在操作系统之上）；</p>
+<p>docker客户端(Client)：连接docker主机进行操作；</p>
+<p>docker仓库(Registry)：用来保存各种打包好的软件镜像；</p>
+<p>docker镜像(Images)：软件打包好的镜像；放在docker仓库中；</p>
+<p>docker容器(Container)：镜像启动后的实例称为一个容器；容器是独立运行的一个或一组应用</p>
+<h2 id="Docker-镜像-Image"><a href="#Docker-镜像-Image" class="headerlink" title="Docker - 镜像[Image]:"></a>Docker - 镜像[Image]:</h2><p>镜像是构建Docker的基石。用户基于镜像来运行自己的容器。镜像也是Docker生命周期中的“构建”部分。镜像是基于联合文件系统的一种层式结构(layer)，由一系列指令一步一步构建出来，不同image 之间可以共享 layer ,Image本身是只读的(read-only)。</p>
 <h3 id="构建Base-Image"><a href="#构建Base-Image" class="headerlink" title="构建Base Image:"></a>构建Base Image:</h3><p>通过简单的 Dockerfile 来构建一个 baseimage:</p>
 <p>1、编写一个简单的 C语言程序：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host ~]$ mkdir baseimg &amp;&amp; cd baseimg &amp;&amp; vim base.c</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"hello world"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -415,22 +419,103 @@
 <p>3、编写 Dockerfile:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host baseimg]$ vim Dockerfile</div><div class="line"><span class="meta">#</span> start </div><div class="line">FROM scratch</div><div class="line">ADD base /</div><div class="line">CMD ["/base"]</div><div class="line"><span class="meta">#</span> end</div></pre></td></tr></table></figure>
 <p>4、构建 baseimage:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host baseimg]$ docker build -t baseimg .</div><div class="line">Sending build context to Docker daemon  868.9kB</div><div class="line">Step 1/3 : FROM scratch</div><div class="line"><span class="meta"> ---&gt;</span></div><div class="line">Step 2/3 : ADD base /</div><div class="line"><span class="meta"> ---&gt;</span> 985f7dd1d401</div><div class="line">Step 3/3 : CMD ["/base"]</div><div class="line"><span class="meta"> ---&gt;</span> Running in b8241cf4dc5c</div><div class="line">Removing intermediate container b8241cf4dc5c</div><div class="line"><span class="meta"> ---&gt;</span> f048aeb88f64</div><div class="line">Successfully built f048aeb88f64</div><div class="line">Successfully tagged baseimg:latest</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host baseimg]$ docker build -t zhangyangdev/baseimg .</div><div class="line">Sending build context to Docker daemon  868.9kB</div><div class="line">Step 1/3 : FROM scratch</div><div class="line"><span class="meta"> ---&gt;</span></div><div class="line">Step 2/3 : ADD base /</div><div class="line"><span class="meta"> ---&gt;</span> 985f7dd1d401</div><div class="line">Step 3/3 : CMD ["/base"]</div><div class="line"><span class="meta"> ---&gt;</span> Running in b8241cf4dc5c</div><div class="line">Removing intermediate container b8241cf4dc5c</div><div class="line"><span class="meta"> ---&gt;</span> f048aeb88f64</div><div class="line">Successfully built f048aeb88f64</div><div class="line">Successfully tagged baseimg:latest</div></pre></td></tr></table></figure>
 <p>5、查看并运行镜像：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host baseimg]$ docker images</div><div class="line">REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE</div><div class="line">baseimg             latest              f048aeb88f64        About a minute ago   865kB</div><div class="line">[vagrant@docker-host baseimg]$ docker run f048aeb88f64</div><div class="line">hello world</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host baseimg]$ docker images</div><div class="line">REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE</div><div class="line">zhangyangdev/baseimg             latest              f048aeb88f64        About a minute ago   865kB</div><div class="line">[vagrant@docker-host baseimg]$ docker run f048aeb88f64</div><div class="line">hello world</div></pre></td></tr></table></figure>
 <p>至此，已经构建好了一个简单的 baseimage。</p>
-<h2 id="Docker-容器-Container"><a href="#Docker-容器-Container" class="headerlink" title="Docker - 容器[Container]:"></a>Docker - 容器[Container]:</h2><p>Docker可以帮助你构建和部署容器，你只需要把自己的应用程序或者服务打包放进容器即可。容器是基于镜像创建起来的，容器中可以运行一个或多个进程。我们可以认为，镜像是Docker生命周期中的构建或者打包阶段，而容器则是启动或者执行阶段。  容器基于镜像启动，一旦容器启动完成后，我们就可以登录到容器中安装自己需要的软件或者服务。 </p>
+<h3 id="镜像发布："><a href="#镜像发布：" class="headerlink" title="镜像发布："></a>镜像发布：</h3><p>docker hub 是一个docker提供的镜像托管网站，可以下载<code>pull</code> 一些官方或者非官方的镜像，同时 也可以将自己构建好的镜像<code>push</code>到自己的 Docker Hub 仓库中。</p>
+<p>要发布自己制作的镜像，首先得在 Docker Hub 上进行注册激活，之后会得到一个用户名和密码，然后在控制台输入<code>docker login</code>进行登录，登录成功会显示<code>Login Succeeded</code>。</p>
+<p>Docker Hub:<a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host baseimg]$ docker push zhangyangdev/baseimg:latest</div><div class="line">The push refers to repository [docker.io/zhangyangdev/baseimg]</div><div class="line">2e492296c0e4: Pushed</div><div class="line">latest: digest: sha256:2ad65382bb199a75a40535fb0adbdbb941211c114d856efd1147eae054022393 size: 527</div></pre></td></tr></table></figure>
+<p>push 结束后，刷新 Docker Hub 的个人中心页面就可以看到push 的镜像了。</p>
+<p>此时，可以将本地的镜像 删除掉，再从 dockhub 上 pull 下来：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host baseimg]$ docker rm $(docker ps -aq)</div><div class="line">[vagrant@docker-host baseimg]$ docker rmi zhangyangdev/baseimg</div><div class="line">[vagrant@docker-host baseimg]$ docker pull zhangyangdev/baseimg</div><div class="line">Using default tag: latest</div><div class="line">latest: Pulling from zhangyangdev/baseimg</div><div class="line">9c94da54d2ab: Pull complete</div><div class="line">Digest: sha256:2ad65382bb199a75a40535fb0adbdbb941211c114d856efd1147eae054022393</div><div class="line">Status: Downloaded newer image for zhangyangdev/baseimg:latest</div></pre></td></tr></table></figure>
+<h2 id="Docker-容器-Container"><a href="#Docker-容器-Container" class="headerlink" title="Docker - 容器[Container]:"></a>Docker - 容器[Container]:</h2><h2 id="Docker-容器概述"><a href="#Docker-容器概述" class="headerlink" title="Docker - 容器概述"></a>Docker - 容器概述</h2><p>容器是应用程序层的一个抽象，将代码和依赖关系打包在一起。多个容器可以在同一台机器上运行，并与其他容器共享操作系统内核，每个容器在用户空间中作为孤立进程运行。容器占用的空间少于虚拟机（容器图像的大小通常为几十MB），并且几乎立即启动。</p>
+<p>Docker可以帮助你构建和部署容器，你只需要把自己的应用程序或者服务打包放进容器即可。容器是基于镜像创建起来的，容器中可以运行一个或多个进程。我们可以认为，镜像是Docker生命周期中的构建或者打包阶段，而容器则是启动或者执行阶段。  容器基于镜像启动，一旦容器启动完成后，我们就可以登录到容器中安装自己需要的软件或者服务。 </p>
 <p>Container是在 Image 镜像上建立的一个 layer是可读可写的，Image 负责app 的存储和分发Container 负责运行。</p>
 <h3 id="创建容器："><a href="#创建容器：" class="headerlink" title="创建容器："></a>创建容器：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host ~]$ docker images # 查看镜像</div><div class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</div><div class="line">baseimg             latest              f048aeb88f64        9 minutes ago       865kB</div><div class="line">hello-world         latest              e38bc07ac18e        8 weeks ago         1.85kB</div><div class="line">[vagrant@docker-host ~]$ docker run hello-world # 启动容器</div><div class="line"></div><div class="line">Hello from Docker!</div></pre></td></tr></table></figure>
+<h4 id="示例：创建Nginx容器"><a href="#示例：创建Nginx容器" class="headerlink" title="示例：创建Nginx容器"></a>示例：创建Nginx容器</h4><p>我们需要安装一个Nginx 的Web服务器，Web 服务器可以使网站文件和程序通过浏览器来访问，操作之前建议关闭系统的防火墙：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# systemctl stop firewalld.service # 关闭防火墙</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# docker search nginx    # 搜索镜像  选择OFFICIAL状态为[OK]的官方镜像</div><div class="line">[root@localhost ~]# docker pull nginx      # 下载Nginx镜像</div><div class="line">[root@localhost ~]# docker run --name docker_nginx -d -p 80:80 nginx   # 启动nginx [80:80] 主机端口:容器端口</div><div class="line">[root@localhost ~]# docker ps              # 查看运行中的容器                                                                                                            </div><div class="line">CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                NAMES                   </div><div class="line">876b4161c793        nginx               "nginx -g 'daemon ..."   About a minute ago   Up About a minute   0.0.0.0:80-&gt;80/tcp   nervous_thompson    </div><div class="line">[root@localhost ~]# docker logs docker_nginx # 查看启动日志</div></pre></td></tr></table></figure>
 <h3 id="运行交互式容器："><a href="#运行交互式容器：" class="headerlink" title="运行交互式容器："></a>运行交互式容器：</h3><p>dokcer的容器是基于镜像而创建的，所以在运行交互式容器之前需要先<code>pull</code>一个镜像：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[vagrant@docker-host ~]$ docker pull ubuntu  # 拉取镜像</div><div class="line">[vagrant@docker-host ~]$ docker images		 # 查看镜像</div><div class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</div><div class="line">ubuntu              latest              113a43faa138        42 hours ago        81.2MB</div><div class="line">[vagrant@docker-host ~]$ docker run -it ubuntu # 创建交互式容器</div><div class="line">root@4948b39a7d56:/# cat /etc/issue            # 此时会发现进入了一个 Ubuntu 系统中</div><div class="line">Ubuntu 18.04 LTS \n \l       </div><div class="line">root@4948b39a7d56:~# exit					   # 此时容器的状态由Up变为Exited</div></pre></td></tr></table></figure>
-<h2 id="Docker-常用命令："><a href="#Docker-常用命令：" class="headerlink" title="Docker - 常用命令："></a>Docker - 常用命令：</h2><p>docker container ls -aq   # 查看退出状态的容器</p>
-<p>docker rm $(docker container ls -aq)   # 删除掉状态为<code>exited</code>的容器</p>
-<p>dokcer rm $(dokcer container ls -f “status=exited” -q) # 删除掉状态为<code>exited</code>的容器</p>
-<p>docker container commit  # 提交操作</p>
-<p>docker commit  # 提交修改</p>
-<p>docker image build # 通过Dockerfile构建Image</p>
-<p>docker build # 通过Dockerfile构建Image</p>
+<h3 id="控制容器"><a href="#控制容器" class="headerlink" title="控制容器:"></a>控制容器:</h3><h2 id="Docker-常用命令："><a href="#Docker-常用命令：" class="headerlink" title="Docker - 常用命令："></a>Docker - 常用命令：</h2><h3 id="简单命令："><a href="#简单命令：" class="headerlink" title="简单命令："></a>简单命令：</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>简写</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker container ls -aq</td>
+<td><em>docker ps -aq</em></td>
+<td>查看退出状态的容器</td>
+</tr>
+<tr>
+<td>docker container commit</td>
+<td><em>docker commit</em></td>
+<td>提交对容器的操作</td>
+</tr>
+<tr>
+<td>docker image build</td>
+<td><em>docker build</em></td>
+<td>通过Dockerfile构建Image</td>
+</tr>
+<tr>
+<td>docker container inspect</td>
+<td>docker inspect</td>
+<td>用于获取容器/镜像的元数据</td>
+</tr>
+<tr>
+<td>docker container stop</td>
+<td><em>docker stop</em></td>
+<td>停止容器</td>
+</tr>
+<tr>
+<td>docker container start</td>
+<td><em>docker start</em></td>
+<td>启动容器</td>
+</tr>
+</tbody>
+</table>
+<h3 id="组合命令："><a href="#组合命令：" class="headerlink" title="组合命令："></a>组合命令：</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker rm $(docker container ls -aq)</td>
+<td>删除掉状态为<code>exited</code>的容器</td>
+</tr>
+<tr>
+<td>dokcer rm $(dokcer container ls -f “status=exited” -q)</td>
+<td>删除掉状态为<code>exited</code>的容器</td>
+</tr>
+<tr>
+<td>docker top docker ps -q</td>
+<td>获取docker执行进程</td>
+</tr>
+<tr>
+<td>docker run –name dk_ubuntu -it ubuntu bash</td>
+<td>进入Ubuntu系统</td>
+</tr>
+<tr>
+<td>docker attach  [image id / name]</td>
+<td>退出后再次进入</td>
+</tr>
+</tbody>
+</table>
+<p>正在运行的容器的数量:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps -q | wc -l</div></pre></td></tr></table></figure>
+<p>监控容器数量:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker ps -a -q | wc -l</div></pre></td></tr></table></figure>
+<p>删除掉状态为<code>exited</code>的容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker rm  $(docker ps -a | grep Exited | awk '&#123;print $1&#125;')</div></pre></td></tr></table></figure>
 <h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile:"></a>Dockerfile:</h2><h3 id="语法详解："><a href="#语法详解：" class="headerlink" title="语法详解："></a>语法详解：</h3><p>官方文档：<a href="https://docs.docker.com/engine/reference/builder/" target="_blank" rel="noopener">https://docs.docker.com/engine/reference/builder/</a></p>
 <h4 id="FROM"><a href="#FROM" class="headerlink" title="FROM :"></a><strong>FROM</strong> :</h4><p>示例： </p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">FROM</span> centos   <span class="comment"># 指定基础镜像为 centos</span></div></pre></td></tr></table></figure>
@@ -441,6 +526,12 @@
 <h4 id="RUN"><a href="#RUN" class="headerlink" title="RUN :"></a><strong>RUN</strong> :</h4><p>示例：</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">RUN</span> yum update   # 运行 yum update 命令</div><div class="line">RUN yum makecache</div></pre></td></tr></table></figure>
 <p>作用：RUN命令将在当前image中执行任意合法命令并提交执行结果。命令执行提交后，就会自动执行Dockerfile中的下一个指令，每执行一次就会多分一层 layer，建议合并多条命令为一行。</p>
+<h4 id="CMD"><a href="#CMD" class="headerlink" title="CMD:"></a><strong>CMD</strong>:</h4><p>示例：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ENV</span> name docker    <span class="comment"># 定义 name 变量</span></div><div class="line"><span class="keyword">CMD</span> echo "$name"	# 输出 name 变量</div></pre></td></tr></table></figure>
+<p>作用：容器启动时默认执行的命令，如果 docker run 指定了其他命令，CMD 命令会被忽略。如果定义了多个 CMD 命令，则只有最后一个会被执行。 </p>
+<h4 id="ENTRYPOINT-："><a href="#ENTRYPOINT-：" class="headerlink" title="ENTRYPOINT ："></a><strong>ENTRYPOINT</strong> ：</h4><p>示例：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">COPY</span> docker-entrypoint.sh  /usr/local/bin</div><div class="line">ENTRYPOINT </div><div class="line"></div><div class="line">EXPOSE 27017</div><div class="line">CMD ["mongod"]</div></pre></td></tr></table></figure>
+<p>作用：让容器以应用程序或者服务的形式运行，不会被忽略，一定会被执行，可以指定一个 shell脚本来作为 entrypoint。</p>
 <h4 id="WORKDIR："><a href="#WORKDIR：" class="headerlink" title="WORKDIR："></a><strong>WORKDIR</strong>：</h4><p>示例：</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">WORKDIR</span> /opt   #指定当前工作目录为/opt 如果不存在 opt 目录，则会自动创建</div></pre></td></tr></table></figure>
 <p>作用： WORKDIR 用来设置当前的工作目录的，尽量使用绝对路径。Docker 默认的工作目录是/，只有 RUN 能执行 cd 命令切换目录，而且还只作用在当下下的 RUN，也就是说每一个 RUN 都是独立进行的。如果想让其他指令在指定的目录下执行，就得靠 WORKDIR。WORKDIR 动作的目录改变是持久的，不用每个指令前都使用一次 WORKDIR。</p>
@@ -471,26 +562,17 @@
       
     </div>
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
 
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -506,15 +588,15 @@
       
 
       
-        
+      
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/12/vagrant/" rel="next" title="使用 Vagrant + VirtualBox 快速构建CentOS下的Docker开发环境">
-                <i class="fa fa-chevron-left"></i> 使用 Vagrant + VirtualBox 快速构建CentOS下的Docker开发环境
+              <a href="/2018/04/12/vagrant/" rel="next" title="使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境">
+                <i class="fa fa-chevron-left"></i> 使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境
               </a>
             
           </div>
@@ -530,17 +612,15 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
 
     <div class="post-spread">
-      
-        
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
       
     </div>
   </div>
@@ -549,11 +629,8 @@
           </div>
           
 
+  
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
 
 
         </div>
@@ -569,113 +646,207 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460"
-               alt="柒索" />
-          <p class="site-author-name" itemprop="name">柒索</p>
-           
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://avatars1.githubusercontent.com/u/13316894?v=3&s=460"
+                alt="柒索" />
+            
+              <p class="site-author-name" itemprop="name">柒索</p>
               <p class="site-description motion-element" itemprop="description"></p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">29</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">12</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">33</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
           </div>
-        
 
-        <div class="links-of-author motion-element">
           
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/ZhangYangDev" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
-                </a>
-              </span>
-            
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
           
-        </div>
 
-        
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
             </div>
-            <ul class="links-of-blogroll-list">
+          
+
+          
+            <div class="links-of-author motion-element">
               
-                <li class="links-of-blogroll-item">
-                  <a href="" title="Blog" target="_blank">Blog</a>
-                </li>
+                <span class="links-of-author-item">
+                  <a href="https://github.com/zhangyangdev" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
               
-            </ul>
-          </div>
-        
+                <span class="links-of-author-item">
+                  <a href="mailto:zhangyangdev@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://plus.google.com/zhangyangdev" target="_blank" title="Google"><i class="fa fa-fw fa-google"></i>Google</a>
+                  
+                </span>
+              
+            </div>
+          
 
-        
+          
+          
 
+          
+          
 
+          
+            
+          
+          
+
+        </div>
       </section>
 
       
@@ -688,7 +859,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-镜像-Image"><span class="nav-number">2.</span> <span class="nav-text">Docker - 镜像[Image]:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构建Base-Image"><span class="nav-number">2.1.</span> <span class="nav-text">构建Base Image:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-容器-Container"><span class="nav-number">3.</span> <span class="nav-text">Docker - 容器[Container]:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建容器："><span class="nav-number">3.1.</span> <span class="nav-text">创建容器：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行交互式容器："><span class="nav-number">3.2.</span> <span class="nav-text">运行交互式容器：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-常用命令："><span class="nav-number">4.</span> <span class="nav-text">Docker - 常用命令：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dockerfile"><span class="nav-number">5.</span> <span class="nav-text">Dockerfile:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法详解："><span class="nav-number">5.1.</span> <span class="nav-text">语法详解：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#FROM"><span class="nav-number">5.1.1.</span> <span class="nav-text">FROM :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LABEL-："><span class="nav-number">5.1.2.</span> <span class="nav-text">LABEL ：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RUN"><span class="nav-number">5.1.3.</span> <span class="nav-text">RUN :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WORKDIR："><span class="nav-number">5.1.4.</span> <span class="nav-text">WORKDIR：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ADD-："><span class="nav-number">5.1.5.</span> <span class="nav-text">ADD ：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#COPY："><span class="nav-number">5.1.6.</span> <span class="nav-text">COPY：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ENV："><span class="nav-number">5.1.7.</span> <span class="nav-text">ENV：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VOLUME："><span class="nav-number">5.1.8.</span> <span class="nav-text">VOLUME：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EXPOSE："><span class="nav-number">5.1.9.</span> <span class="nav-text">EXPOSE：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-核心概念："><span class="nav-number">1.</span> <span class="nav-text">Docker - 核心概念：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-镜像-Image"><span class="nav-number">2.</span> <span class="nav-text">Docker - 镜像[Image]:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构建Base-Image"><span class="nav-number">2.1.</span> <span class="nav-text">构建Base Image:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#镜像发布："><span class="nav-number">2.2.</span> <span class="nav-text">镜像发布：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-容器-Container"><span class="nav-number">3.</span> <span class="nav-text">Docker - 容器[Container]:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-容器概述"><span class="nav-number">4.</span> <span class="nav-text">Docker - 容器概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建容器："><span class="nav-number">4.1.</span> <span class="nav-text">创建容器：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#示例：创建Nginx容器"><span class="nav-number">4.1.1.</span> <span class="nav-text">示例：创建Nginx容器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行交互式容器："><span class="nav-number">4.2.</span> <span class="nav-text">运行交互式容器：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制容器"><span class="nav-number">4.3.</span> <span class="nav-text">控制容器:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-常用命令："><span class="nav-number">5.</span> <span class="nav-text">Docker - 常用命令：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单命令："><span class="nav-number">5.1.</span> <span class="nav-text">简单命令：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合命令："><span class="nav-number">5.2.</span> <span class="nav-text">组合命令：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dockerfile"><span class="nav-number">6.</span> <span class="nav-text">Dockerfile:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法详解："><span class="nav-number">6.1.</span> <span class="nav-text">语法详解：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#FROM"><span class="nav-number">6.1.1.</span> <span class="nav-text">FROM :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LABEL-："><span class="nav-number">6.1.2.</span> <span class="nav-text">LABEL ：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RUN"><span class="nav-number">6.1.3.</span> <span class="nav-text">RUN :</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CMD"><span class="nav-number">6.1.4.</span> <span class="nav-text">CMD:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ENTRYPOINT-："><span class="nav-number">6.1.5.</span> <span class="nav-text">ENTRYPOINT ：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WORKDIR："><span class="nav-number">6.1.6.</span> <span class="nav-text">WORKDIR：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ADD-："><span class="nav-number">6.1.7.</span> <span class="nav-text">ADD ：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#COPY："><span class="nav-number">6.1.8.</span> <span class="nav-text">COPY：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ENV："><span class="nav-number">6.1.9.</span> <span class="nav-text">ENV：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VOLUME："><span class="nav-number">6.1.10.</span> <span class="nav-text">VOLUME：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EXPOSE："><span class="nav-number">6.1.11.</span> <span class="nav-text">EXPOSE：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -708,49 +879,40 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">柒索</span>
+
+  
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>
-</div>
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.5.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Muse</a> v6.3.0</div>
+
+
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
 
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
+
+
+
+
 
 
         
@@ -762,6 +924,8 @@
         <i class="fa fa-arrow-up"></i>
         
       </div>
+    
+
     
 
   </div>
@@ -782,67 +946,72 @@
 
 
 
-  
-
-
-  
 
 
 
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-  
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+
+
 
 
 
   
   
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
 
 
 
   
 
 
-  
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
 
+
+
+  
 
 
 
@@ -864,144 +1033,29 @@
 
 
 
+
+
+
+
+
   
 
 
 
 
 
+  
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length == 0) {
-      search_path = "search.xml";
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.popup').toggle();
-    }
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-      $.ajax({
-        url: path,
-        dataType: "xml",
-        async: true,
-        success: function( xmlResponse ) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = $( "entry", xmlResponse ).map(function() {
-            return {
-              title: $( "title", this ).text(),
-              content: $("content",this).text(),
-              url: $( "url" , this).text()
-            };
-          }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
-                    if( index_title >= 0 || index_content >= 0 ){
-                      isMatch = true;
-                      if (i == 0) {
-                        first_occur = index_content;
-                      }
-                    }
+  
 
-                  });
-                }
-                // show search results
-                if (isMatch) {
-                  matchcounts += 1;
-                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  if (first_occur >= 0) {
-                    // cut out 100 characters
-                    var start = first_occur - 20;
-                    var end = first_occur + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if(start == 0){
-                      end = 50;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    var match_content = content.substring(start, end);
-                    // highlight all keywords
-                    keywords.forEach(function(keyword){
-                      var regS = new RegExp(keyword, "gi");
-                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                    });
+  
+  
 
-                    str += "<p class=\"search-result\">" + match_content +"...</p>"
-                  }
-                  str += "</li>";
-                }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
-          });
-          proceedsearch();
-        }
-      });}
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched == false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    });
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-  </script>
-
-
-
-
+  
 
   
 
