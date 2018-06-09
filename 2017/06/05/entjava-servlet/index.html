@@ -381,6 +381,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/06/05/entjava-servlet/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/06/05/entjava-servlet/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -438,7 +448,7 @@
 <p>在Servlet 3.0规范发布后的一大特点是不再需要一个<code>web.xml</code> 作为描述为我们所有的Servlet、过滤器、Listeners、init-PARAMS在 xml 文件中进行配置，大多数元数据、配置现在可以通过注释来完成。</p>
 <p>此次使用<code>web.xml</code> 仅仅是为了在尝试访问安全路由时配置容器的登录过程。</p>
 <p>web.xml:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns</span>=<span class="string">"http://xmlns.jcp.org/xml/ns/javaee"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></div><div class="line"><span class="tag">	<span class="attr">xsi:schemaLocation</span>=<span class="string">"http://xmlns.jcp.org/xml/ns/javaee</span></span></div><div class="line"><span class="tag"><span class="string">                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"</span></span></div><div class="line"><span class="tag">	<span class="attr">version</span>=<span class="string">"3.1"</span>&gt;</span></div><div class="line">	</div><div class="line">	<span class="comment">&lt;!-- 将以任何安全路由的基本身份验证来挑战用户 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">login-config</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">auth-method</span>&gt;</span>BASIC<span class="tag">&lt;/<span class="name">auth-method</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">realm-name</span>&gt;</span>servletbasics<span class="tag">&lt;/<span class="name">realm-name</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">login-config</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns</span>=<span class="string">"http://xmlns.jcp.org/xml/ns/javaee"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">xsi:schemaLocation</span>=<span class="string">"http://xmlns.jcp.org/xml/ns/javaee</span></span></span><br><span class="line"><span class="tag"><span class="string">                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"</span></span></span><br><span class="line"><span class="tag">	<span class="attr">version</span>=<span class="string">"3.1"</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">&lt;!-- 将以任何安全路由的基本身份验证来挑战用户 --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">login-config</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">auth-method</span>&gt;</span>BASIC<span class="tag">&lt;/<span class="name">auth-method</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">realm-name</span>&gt;</span>servletbasics<span class="tag">&lt;/<span class="name">realm-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">login-config</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="Servlet-生命周期："><a href="#Servlet-生命周期：" class="headerlink" title="Servlet - 生命周期："></a>Servlet - 生命周期：</h2><p>Servlet是按照一个严格定义的生命周期被管理，该生命周期规定了Servlet如何被加载、实例化、初始化、处理客户端请求，以及何时结束服务。该声明周期可以通过javax.servlet.Servlet接口中的init、service和destroy这些API来表示，所有Servlet必须直接或间接的实现GenericServlet或HttpServlet抽象类。</p>
 <p>以下是典型servlet的生命周期。</p>
 <ol>
@@ -493,10 +503,10 @@
 <p>以下注解必须被Servlet 3.0兼容的容器支持。 </p>
 <h3 id="WebServlet"><a href="#WebServlet" class="headerlink" title="@WebServlet:"></a>@WebServlet:</h3><p>该注解用于在Web应用中定义Servlet组件。该注解在一个类上指定并包含声明Servlet的元数据。必须指定注解的urlPatterns或value属性。所有其他属性是可选的默认设置。@WebServlet注解的类必须继承javax.servlet.http.HttpServlet类。 </p>
 <p>使用示例:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@WebServlet</span>(”/foo”)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalculatorServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span></span>&#123;</div><div class="line"><span class="comment">//...</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet</span>(”/foo”)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalculatorServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span></span>&#123;</span><br><span class="line"><span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="WebFilter"><a href="#WebFilter" class="headerlink" title="@WebFilter:"></a>@WebFilter:</h3><p>该注解用于在Web应用中定义Filter。该注解在一个类上指定且包含声明过滤器的元数据。如果没有指定Filter名字则默认是全限定类名。注解的urlPatterns属性, servletNames 属性 或 value 属性必须被指定。所有其他属性是可选的默认设置。@WebFilter注解的类必须实现javax.servlet.Filter。 </p>
 <p>使用示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@WebFilter</span>(“/foo”)</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(HttpServletRequest req, HttpServletResponse res)</span> </span>&#123;</div><div class="line">...</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebFilter</span>(“/foo”)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(HttpServletRequest req, HttpServletResponse res)</span> </span>&#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="WebInitPara"><a href="#WebInitPara" class="headerlink" title="@WebInitPara:"></a>@WebInitPara:</h3><p>该注解用于指定必须传递到Servlet或Filter的任何初始化参数。它是WebServlet和WebFilter注解的一个属性。 </p>
 <h3 id="WebListener"><a href="#WebListener" class="headerlink" title="@WebListener:"></a>@WebListener:</h3><p>WebListener注解用于注解用来获得特定web应用上下文中的各种操作事件的监听器。@WebListener注解的类必须实现以下接口： </p>
 <ul>
@@ -509,7 +519,7 @@
 <li>javax.servlet.http.HttpSessionIdListener </li>
 </ul>
 <p>使用示例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@WebListener</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyListener</span> <span class="keyword">implements</span> <span class="title">ServletContextListener</span></span>&#123;</div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextInitialized</span><span class="params">(ServletContextEvent sce)</span> </span>&#123;</div><div class="line">    ServletContext sc = sce.getServletContext();</div><div class="line">    sc.addServlet(<span class="string">"myServlet"</span>, <span class="string">"Sample servlet"</span>, <span class="string">"foo.bar.MyServlet"</span>, <span class="keyword">null</span>, -<span class="number">1</span>);</div><div class="line">    sc.addServletMapping(<span class="string">"myServlet"</span>, <span class="keyword">new</span> String[] &#123; <span class="string">"/urlpattern/*"</span> &#125;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyListener</span> <span class="keyword">implements</span> <span class="title">ServletContextListener</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextInitialized</span><span class="params">(ServletContextEvent sce)</span> </span>&#123;</span><br><span class="line">    ServletContext sc = sce.getServletContext();</span><br><span class="line">    sc.addServlet(<span class="string">"myServlet"</span>, <span class="string">"Sample servlet"</span>, <span class="string">"foo.bar.MyServlet"</span>, <span class="keyword">null</span>, -<span class="number">1</span>);</span><br><span class="line">    sc.addServletMapping(<span class="string">"myServlet"</span>, <span class="keyword">new</span> String[] &#123; <span class="string">"/urlpattern/*"</span> &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="MultipartConfig"><a href="#MultipartConfig" class="headerlink" title="@MultipartConfig:"></a>@MultipartConfig:</h3><p>该注解，当指定在Servlet上时，表示请求期望是mime/multipart类型。相应servlet的HttpServletRequest对象必须使用getParts和getPart方法遍历各个mime附件以获取mime附件。javax.servlet.annotation.MultipartConfig的location属性和<multipart-config>的<location>元素被解析为一个绝对路径且默认为javax.servlet.context.tempdir。如果指定了相对地址，它将是相对于tempdir位置。绝对路径与相对地址的测试必须使用java.io.File.isAbsolute。</location></multipart-config></p>
 <h2 id="Servlet-异步操作"><a href="#Servlet-异步操作" class="headerlink" title="Servlet - 异步操作:"></a>Servlet - 异步操作:</h2><p>异步处理在重负载或在客户端和服务器之间以不同速度读取和写入大量数据的情况下特别有用，意味着两个实体之一可能会等待来自另一个的输入。</p>
 <p>在servlet 3.0规范中，引入了<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/Servlet.html" target="_blank" rel="noopener">servlet</a>内部的异步处理，允许长时间运行的任务在一个单独的线程中完成，以允许请求线程返回到从它处理其他请求的池中。</p>
@@ -589,6 +599,9 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -678,7 +691,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -988,6 +1001,30 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '6HFsEBK6SKudI5y35KLfEgSA-gzGzoHsz',
+        appKey: 'Fk7vKkEqkS0D9qHrcR3y2EbT',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

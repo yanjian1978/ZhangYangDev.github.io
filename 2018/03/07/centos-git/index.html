@@ -383,6 +383,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/03/07/centos-git/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/03/07/centos-git/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -413,43 +423,43 @@
 <p>Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。</p>
 <h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><p>Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p>
 <h3 id="安装依赖库和编译工具"><a href="#安装依赖库和编译工具" class="headerlink" title="安装依赖库和编译工具"></a>安装依赖库和编译工具</h3><p>为了后续安装能正常进行，我们先来安装一些相关依赖库和编译工具</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# yum install curl-devel expat-devel\</div><div class="line">					gettext-devel openssl-devel zlib-devel</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum install curl-devel expat-devel\</span><br><span class="line">					gettext-devel openssl-devel zlib-devel</span><br></pre></td></tr></table></figure>
 <p>安装编译工具</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# yum install -y  gcc perl-ExtUtils-MakeMaker</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum install -y  gcc perl-ExtUtils-MakeMaker</span><br></pre></td></tr></table></figure>
 <h3 id="下载-git"><a href="#下载-git" class="headerlink" title="下载 git"></a>下载 git</h3><p>选一个目录，用来放下载下来的安装包，这里将安装包放在 <em>/opt</em> 目录里</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# cd /opt/</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# cd /opt/</span><br></pre></td></tr></table></figure>
 <p>到官网找一个新版稳定的源码包下载到 <code>/usr/local/src</code> 文件夹里</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost opt]# wget https://www.kernel.org/pub/software/scm/git/git-2.10.0.tar.gz</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost opt]# wget https://www.kernel.org/pub/software/scm/git/git-2.10.0.tar.gz</span><br></pre></td></tr></table></figure>
 <h3 id="解压和编译"><a href="#解压和编译" class="headerlink" title="解压和编译"></a>解压和编译</h3><p>解压下载的源码包</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost opt]# tar -xvf git-2.10.0.tar.gz</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost opt]# tar -xvf git-2.10.0.tar.gz</span><br></pre></td></tr></table></figure>
 <p>解压后进入 git-2.10.0 文件夹</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost opt]# cd git-2.10.0</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost opt]# cd git-2.10.0</span><br></pre></td></tr></table></figure>
 <p>执行编译</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost git-2.10.0]# make all prefix=/usr/local/git</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost git-2.10.0]# make all prefix=/usr/local/git</span><br></pre></td></tr></table></figure>
 <p>编译完成后, 安装到 /usr/local/git 目录下</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost git-2.10.0]# make install prefix=/usr/local/git</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost git-2.10.0]# make install prefix=/usr/local/git</span><br></pre></td></tr></table></figure>
 <h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><h3 id="将-git-目录加入-PATH"><a href="#将-git-目录加入-PATH" class="headerlink" title="将 git 目录加入 PATH"></a>将 git 目录加入 PATH</h3><p>将原来的 PATH 指向目录修改为现在的目录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# echo 'export PATH=$PATH:/usr/local/git/bin' &gt;&gt; /etc/profile</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# echo 'export PATH=$PATH:/usr/local/git/bin' &gt;&gt; /etc/profile</span><br></pre></td></tr></table></figure>
 <p>生效环境变量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# source /etc/profile</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# source /etc/profile</span><br></pre></td></tr></table></figure>
 <p>此时我们能查看 git 版本号，说明我们已经安装成功了。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# git --version</div><div class="line">git version 1.8.3.1</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# git --version</span><br><span class="line">git version 1.8.3.1</span><br></pre></td></tr></table></figure>
 <h2 id="创建-git-账号密码"><a href="#创建-git-账号密码" class="headerlink" title="创建 git 账号密码"></a>创建 git 账号密码</h2><h3 id="创建-git-账号"><a href="#创建-git-账号" class="headerlink" title="创建 git 账号"></a>创建 git 账号</h3><p>为我们刚刚搭建好的 git 创建一个账号</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# useradd -m git      #自动建立用户的登入目录。</div></pre></td></tr></table></figure>
-<p>然后为这个账号设置密码<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# passwd git</div></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# useradd -m git      #自动建立用户的登入目录。</span><br></pre></td></tr></table></figure>
+<p>然后为这个账号设置密码<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# passwd git</span><br></pre></td></tr></table></figure></p>
 <p>在控制台输入创建密码后，输入您自定义的密码，并二次确认。</p>
 <h2 id="初始化仓库和配置权限"><a href="#初始化仓库和配置权限" class="headerlink" title="初始化仓库和配置权限"></a>初始化仓库和配置权限</h2><h3 id="创建-git-仓库并初始化"><a href="#创建-git-仓库并初始化" class="headerlink" title="创建 git 仓库并初始化"></a>创建 git 仓库并初始化</h3><p>我们创建 <em>/data/repo</em> 目录用于存放 git 仓库</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# mkdir -p /data/repo</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# mkdir -p /data/repo</span><br></pre></td></tr></table></figure>
 <p>创建好后，初始化这个仓库</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# cd /data/repo/ &amp;&amp; git init --bare test.git           </div><div class="line">初始化空的 Git 版本库于 /data/repo/test.git/</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# cd /data/repo/ &amp;&amp; git init --bare test.git           </span><br><span class="line">初始化空的 Git 版本库于 /data/repo/test.git/</span><br></pre></td></tr></table></figure>
 <h3 id="配置用户权限"><a href="#配置用户权限" class="headerlink" title="配置用户权限"></a>配置用户权限</h3><p>给 git 仓库目录设置用户和用户组并设置权限</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost repo]# chown -R git:git /data/repo/</div></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost repo]# chmod 755 .</div></pre></td></tr></table></figure>
-<p>编辑 <em>/etc/passwd</em> 文件，将最后一行关于 <code>git</code> 的登录 shell 配置改为 git-shell 的目录<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# vim /etc/passwd </div><div class="line"><span class="meta">#</span>  /etc/passwd： 加入以下内容 </div><div class="line">git:x:500:500::/home/git:/usr/local/git/bin/git-shell</div></pre></td></tr></table></figure></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost repo]# chown -R git:git /data/repo/</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost repo]# chmod 755 .</span><br></pre></td></tr></table></figure>
+<p>编辑 <em>/etc/passwd</em> 文件，将最后一行关于 <code>git</code> 的登录 shell 配置改为 git-shell 的目录<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vim /etc/passwd </span><br><span class="line"><span class="meta">#</span>  /etc/passwd： 加入以下内容 </span><br><span class="line">git:x:500:500::/home/git:/usr/local/git/bin/git-shell</span><br></pre></td></tr></table></figure></p>
 <p>如果按照刚才的步骤执行, 这个位置应该是 /usr/local/git/bin/git-shell, 否则请通过 <code>which git-shell</code> 命令查看位置</p>
 <p>安全目的, 限制 git 账号的 ssh 连接只能是登录 git-shell</p>
 <h2 id="使用搭建好的Git服务"><a href="#使用搭建好的Git服务" class="headerlink" title="使用搭建好的Git服务"></a>使用搭建好的Git服务</h2><p>克隆 test repo 到本地</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">➜  Desktop git clone git@192.168.1.10:/data/repo/test.git</div><div class="line">fatal: destination path 'test' already exists and is not an empty directory.</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">➜  Desktop git clone git@192.168.1.10:/data/repo/test.git</span><br><span class="line">fatal: destination path 'test' already exists and is not an empty directory.</span><br></pre></td></tr></table></figure>
 <p>Done.</p>
 
       
@@ -524,6 +534,9 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -613,7 +626,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -923,6 +936,30 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '6HFsEBK6SKudI5y35KLfEgSA-gzGzoHsz',
+        appKey: 'Fk7vKkEqkS0D9qHrcR3y2EbT',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

@@ -381,6 +381,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/17/mongodb-quickstart/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/10/17/mongodb-quickstart/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -502,25 +512,25 @@
 <p>在 OS X系统中，官方建议使用 Homebrew 来安装，步骤如下：</p>
 <ol>
 <li><p>更新 HomeBrew： </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew update</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>安装 MongoDB：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mongodb</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mongodb</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>其他安装操作：</p>
 <p>安装具有TLS / SSL支持的MongoDB二进制文件:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mongodb --with-openssl</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mongodb --with-openssl</span><br></pre></td></tr></table></figure>
 <p>安装用于测试和开发的最新版本：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mongodb --devel</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mongodb --devel</span><br></pre></td></tr></table></figure>
 <p>参考资料：<a href="http://www.mongoing.com/docs/installation.html" target="_blank" rel="noopener">http://www.mongoing.com/docs/installation.html</a></p>
 <h3 id="配置："><a href="#配置：" class="headerlink" title="配置："></a>配置：</h3><p>安装完成 MoongoDB 之后，需要在当前用户的根目录下为 MongoDB 数据库添加环境变量，由于采用了 HomeBrew来安装的 MongoDB，对 Homebrew 不熟悉的人可能不清楚安装在哪里了，这时可以使用 brew info 来查看。</p>
 <p>示例代码: (省略部分内容)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 查看 MongoDB 的安装信息</div><div class="line">➜  ~ brew info mongodb</div><div class="line">mongodb: stable 3.4.9 (bottled), devel 3.5.11</div><div class="line">==&gt; Dependencies  ……</div><div class="line">==&gt; Requirements  ……</div><div class="line">==&gt; Options  ……</div><div class="line">--with-boost ……</div><div class="line">--with-sasl  ……</div><div class="line">--without-openssl  ……</div><div class="line">--devel  ……</div><div class="line">==&gt; Caveats</div><div class="line">To have launchd start mongodb now and restart at login:</div><div class="line">  brew services start mongodb</div><div class="line">Or, if you don't want/need a background service you can just run:</div><div class="line">  mongod --config /usr/local/etc/mongod.conf</div></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 配置MongoDB环境变量</div><div class="line">➜  ~ vim .bash_profile</div><div class="line"></div><div class="line">export PATH=/usr/local/Cellar/mongodb/3.4.3/bin:$&#123;PATH&#125;</div><div class="line"></div><div class="line">➜  ~ source .bash_profile</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 查看 MongoDB 的安装信息</span><br><span class="line">➜  ~ brew info mongodb</span><br><span class="line">mongodb: stable 3.4.9 (bottled), devel 3.5.11</span><br><span class="line">==&gt; Dependencies  ……</span><br><span class="line">==&gt; Requirements  ……</span><br><span class="line">==&gt; Options  ……</span><br><span class="line">--with-boost ……</span><br><span class="line">--with-sasl  ……</span><br><span class="line">--without-openssl  ……</span><br><span class="line">--devel  ……</span><br><span class="line">==&gt; Caveats</span><br><span class="line">To have launchd start mongodb now and restart at login:</span><br><span class="line">  brew services start mongodb</span><br><span class="line">Or, if you don't want/need a background service you can just run:</span><br><span class="line">  mongod --config /usr/local/etc/mongod.conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 配置MongoDB环境变量</span><br><span class="line">➜  ~ vim .bash_profile</span><br><span class="line"></span><br><span class="line">export PATH=/usr/local/Cellar/mongodb/3.4.3/bin:$&#123;PATH&#125;</span><br><span class="line"></span><br><span class="line">➜  ~ source .bash_profile</span><br></pre></td></tr></table></figure>
 <p>MongoDB的默认数据目录为/data/db，如需要修改，可以在 MongoDB 的配置文件中修改dbPath选项。</p>
 <p>路径如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">➜  ~ cat /usr/local/etc/mongod.conf</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ cat /usr/local/etc/mongod.conf</span><br></pre></td></tr></table></figure>
 <h2 id="MongoDB-启动"><a href="#MongoDB-启动" class="headerlink" title="MongoDB - 启动"></a>MongoDB - 启动</h2><p>安装配置完成之后，打开 <code>terminal</code>，输入<code>mongod</code>,直至出现<code>I NETWORK  [thread1] waiting for connections on port 27017</code>字样则算启动成功，然后再打开另一终端窗口，输入 <code>mongo</code>，则可以直接进入 MongoShell 界面。</p>
 <h2 id="学习资料"><a href="#学习资料" class="headerlink" title="学习资料"></a>学习资料</h2><ul>
 <li><p>MongoDB University：</p>
@@ -617,6 +627,9 @@
           
 
   
+    <div class="comments" id="comments">
+    </div>
+  
 
 
 
@@ -705,7 +718,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1015,6 +1028,30 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '6HFsEBK6SKudI5y35KLfEgSA-gzGzoHsz',
+        appKey: 'Fk7vKkEqkS0D9qHrcR3y2EbT',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

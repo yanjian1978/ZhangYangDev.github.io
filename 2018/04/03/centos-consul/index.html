@@ -381,6 +381,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/04/03/centos-consul/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/04/03/centos-consul/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -408,11 +418,11 @@
         <h3 id="环境准备："><a href="#环境准备：" class="headerlink" title="环境准备："></a>环境准备：</h3><p>ssh shell工具： 远程连接<br>三个CentOS示例： 部署集群</p>
 <p>配置好各个实例之间的网络访问，以及ssh免密登录。</p>
 <h3 id="下载-amp-上传："><a href="#下载-amp-上传：" class="headerlink" title="下载&amp;上传："></a>下载&amp;上传：</h3><p>1、下载 Consul:<br><a href="https://www.consul.io/downloads.html" target="_blank" rel="noopener">Download Consul - Consul by HashiCorp</a></p>
-<p>2、上传至虚拟机：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">➜  Desktop scp consul_1.1.0_linux_amd64.zip root@192.168.1.11:/opt</div><div class="line">➜  Desktop scp consul_1.1.0_linux_amd64.zip root@192.168.1.12:/opt</div><div class="line">➜  Desktop scp consul_1.1.0_linux_amd64.zip root@192.168.1.13:/opt</div></pre></td></tr></table></figure></p>
-<h3 id="解压-amp-拷贝"><a href="#解压-amp-拷贝" class="headerlink" title="解压&amp;拷贝"></a>解压&amp;拷贝</h3><p>在其他几台机器上重复此命步骤：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">[root@centos-1 ~]# yum install unzip  -y  </div><div class="line">[root@centos-1 ~]# cd /opt</div><div class="line">[root@centos-1 opt]# ls      </div><div class="line">consul_1.1.0_linux_amd64.zip             </div><div class="line">[root@centos-1 opt]# unzip consul_1.1.0_linux_amd64.zip  </div><div class="line">Archive:  consul_1.1.0_linux_amd64.zip </div><div class="line">  inflating: consul          </div><div class="line">[root@centos-1 opt]# ls      </div><div class="line">consul  consul_1.1.0_linux_amd64.zip      </div><div class="line">[root@centos-1 opt]# mv consul /usr/bin/   </div><div class="line">[root@centos-1 bin]# cd /usr/bin/ &amp;&amp; ls consul     </div><div class="line">consul</div></pre></td></tr></table></figure></p>
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@centos-1 ~]# consul agent -server  -data-dir=/tmp/consul -node=server-1 \</div><div class="line">-bind=192.168.1.11 -bootstrap-expect 3  -client=0.0.0.0  -ui &amp;</div></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@centos-2 ~]#  consul agent -server  -data-dir=/tmp/consul -node=server-2 \</div><div class="line">-bind=192.168.1.12 -join=192.168.1.11  -client=0.0.0.0  -ui &amp;</div></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@centos-3 ~]#  consul agent -server  -data-dir=/tmp/consul -node=server-3 \</div><div class="line">-bind=192.168.1.13 -join=192.168.1.11  -client=0.0.0.0  -ui &amp;</div></pre></td></tr></table></figure>
+<p>2、上传至虚拟机：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">➜  Desktop scp consul_1.1.0_linux_amd64.zip root@192.168.1.11:/opt</span><br><span class="line">➜  Desktop scp consul_1.1.0_linux_amd64.zip root@192.168.1.12:/opt</span><br><span class="line">➜  Desktop scp consul_1.1.0_linux_amd64.zip root@192.168.1.13:/opt</span><br></pre></td></tr></table></figure></p>
+<h3 id="解压-amp-拷贝"><a href="#解压-amp-拷贝" class="headerlink" title="解压&amp;拷贝"></a>解压&amp;拷贝</h3><p>在其他几台机器上重复此命步骤：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@centos-1 ~]# yum install unzip  -y  </span><br><span class="line">[root@centos-1 ~]# cd /opt</span><br><span class="line">[root@centos-1 opt]# ls      </span><br><span class="line">consul_1.1.0_linux_amd64.zip             </span><br><span class="line">[root@centos-1 opt]# unzip consul_1.1.0_linux_amd64.zip  </span><br><span class="line">Archive:  consul_1.1.0_linux_amd64.zip </span><br><span class="line">  inflating: consul          </span><br><span class="line">[root@centos-1 opt]# ls      </span><br><span class="line">consul  consul_1.1.0_linux_amd64.zip      </span><br><span class="line">[root@centos-1 opt]# mv consul /usr/bin/   </span><br><span class="line">[root@centos-1 bin]# cd /usr/bin/ &amp;&amp; ls consul     </span><br><span class="line">consul</span><br></pre></td></tr></table></figure></p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos-1 ~]# consul agent -server  -data-dir=/tmp/consul -node=server-1 \</span><br><span class="line">-bind=192.168.1.11 -bootstrap-expect 3  -client=0.0.0.0  -ui &amp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos-2 ~]#  consul agent -server  -data-dir=/tmp/consul -node=server-2 \</span><br><span class="line">-bind=192.168.1.12 -join=192.168.1.11  -client=0.0.0.0  -ui &amp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos-3 ~]#  consul agent -server  -data-dir=/tmp/consul -node=server-3 \</span><br><span class="line">-bind=192.168.1.13 -join=192.168.1.11  -client=0.0.0.0  -ui &amp;</span><br></pre></td></tr></table></figure>
 <h4 id="选项详解："><a href="#选项详解：" class="headerlink" title="选项详解："></a>选项详解：</h4><table>
 <thead>
 <tr>
@@ -459,7 +469,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>验证集群是否搭建成功，执行<code>consul members</code>，在任意的一台机器上：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@centos-1 ~]# consul members</div><div class="line">Node      Address            Status  Type    Build  Protocol  DC   Segment</div><div class="line">server-1  192.168.1.11:8301  alive   server  1.1.0  2         dc1  &lt;all&gt;</div><div class="line">server-2  192.168.1.12:8301  alive   server  1.1.0  2         dc1  &lt;all&gt;</div><div class="line">server-3  192.168.1.13:8301  alive   server  1.1.0  2         dc1  &lt;all&gt;</div></pre></td></tr></table></figure></p>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>验证集群是否搭建成功，执行<code>consul members</code>，在任意的一台机器上：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos-1 ~]# consul members</span><br><span class="line">Node      Address            Status  Type    Build  Protocol  DC   Segment</span><br><span class="line">server-1  192.168.1.11:8301  alive   server  1.1.0  2         dc1  &lt;all&gt;</span><br><span class="line">server-2  192.168.1.12:8301  alive   server  1.1.0  2         dc1  &lt;all&gt;</span><br><span class="line">server-3  192.168.1.13:8301  alive   server  1.1.0  2         dc1  &lt;all&gt;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -539,6 +549,9 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -628,7 +641,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -938,6 +951,30 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '6HFsEBK6SKudI5y35KLfEgSA-gzGzoHsz',
+        appKey: 'Fk7vKkEqkS0D9qHrcR3y2EbT',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

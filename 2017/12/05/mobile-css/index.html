@@ -381,6 +381,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/05/mobile-css/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2017/12/05/mobile-css/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -406,7 +416,7 @@
 
       
         <h2 id="移动端页面基础CSS布局-Reset原有样式"><a href="#移动端页面基础CSS布局-Reset原有样式" class="headerlink" title="移动端页面基础CSS布局+Reset原有样式"></a>移动端页面基础CSS布局+Reset原有样式</h2><p>代码如下: </p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*reset css*/</span></div><div class="line">*,</div><div class="line"><span class="selector-pseudo">::before</span>,</div><div class="line"><span class="selector-pseudo">::after</span>&#123;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line"></div><div class="line">    <span class="comment">/*清除移动端的默认的 点击高亮效果*/</span></div><div class="line">    <span class="attribute">-webkit-tap-highlight-color</span>: transparent;</div><div class="line">    <span class="comment">/* 设置 所有的box-sizing  移动端所有盒子以边框开始计算宽度   使用百分比布局*/</span></div><div class="line">    <span class="attribute">-webkit-box-sizing</span>: border-box;</div><div class="line">    <span class="attribute">box-sizing</span>: border-box;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">body</span>&#123;</div><div class="line">    <span class="comment">/*sans-serif: 设备默认字体*/</span></div><div class="line">    <span class="attribute">font-family</span>:<span class="string">"Microsoft Sans Serif"</span>,sans-serif;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">a</span>&#123;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">    <span class="attribute">text-decoration</span>: none;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">input</span>&#123;</div><div class="line">    <span class="attribute">border</span>:none;</div><div class="line">    <span class="attribute">outline</span>: none;</div><div class="line">    <span class="comment">/*清除移动默认的表单样式*/</span></div><div class="line">    <span class="attribute">-webkit-appearance</span>: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*reset css*/</span></span><br><span class="line">*,</span><br><span class="line"><span class="selector-pseudo">::before</span>,</span><br><span class="line"><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/*清除移动端的默认的 点击高亮效果*/</span></span><br><span class="line">    <span class="attribute">-webkit-tap-highlight-color</span>: transparent;</span><br><span class="line">    <span class="comment">/* 设置 所有的box-sizing  移动端所有盒子以边框开始计算宽度   使用百分比布局*/</span></span><br><span class="line">    <span class="attribute">-webkit-box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="comment">/*sans-serif: 设备默认字体*/</span></span><br><span class="line">    <span class="attribute">font-family</span>:<span class="string">"Microsoft Sans Serif"</span>,sans-serif;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>:none;</span><br><span class="line">    <span class="attribute">outline</span>: none;</span><br><span class="line">    <span class="comment">/*清除移动默认的表单样式*/</span></span><br><span class="line">    <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -482,6 +492,9 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -571,7 +584,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -881,6 +894,30 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '6HFsEBK6SKudI5y35KLfEgSA-gzGzoHsz',
+        appKey: 'Fk7vKkEqkS0D9qHrcR3y2EbT',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

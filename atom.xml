@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-08T16:33:08.702Z</updated>
+  <updated>2018-06-09T09:50:33.251Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/04/26/docker-cntrimg/"/>
     <id>http://yoursite.com/2018/04/26/docker-cntrimg/</id>
     <published>2018-04-26T11:14:31.000Z</published>
-    <updated>2018-06-08T16:33:08.702Z</updated>
+    <updated>2018-06-09T09:50:33.251Z</updated>
     
     <summary type="html">
     
@@ -48,7 +48,7 @@
     <link href="http://yoursite.com/2018/04/12/vagrant/"/>
     <id>http://yoursite.com/2018/04/12/vagrant/</id>
     <published>2018-04-12T12:31:13.000Z</published>
-    <updated>2018-06-08T04:22:54.470Z</updated>
+    <updated>2018-06-09T04:26:10.468Z</updated>
     
     <summary type="html">
     
@@ -60,7 +60,7 @@
     
     </summary>
     
-      <category term="Vagrant" scheme="http://yoursite.com/categories/Vagrant/"/>
+      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
     
     
       <category term="CentOS" scheme="http://yoursite.com/tags/CentOS/"/>
@@ -206,13 +206,13 @@
     <link href="http://yoursite.com/2018/03/02/centos-redis/"/>
     <id>http://yoursite.com/2018/03/02/centos-redis/</id>
     <published>2018-03-02T11:53:28.000Z</published>
-    <updated>2018-06-03T02:48:18.742Z</updated>
+    <updated>2018-06-09T04:48:45.985Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h4 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明:&quot;&gt;&lt;/a&gt;环境说明:&lt;/h4&gt;&lt;table&gt;
+        &lt;h2 id=&quot;环境说明&quot;&gt;&lt;a href=&quot;#环境说明&quot; class=&quot;headerlink&quot; title=&quot;环境说明:&quot;&gt;&lt;/a&gt;环境说明:&lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style=&quot;text-align:center&quot;&gt;名称&lt;/th&gt;
