@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="Docker - 核心概念：docker主机(Host)：安装了Docker程序的机器（Docker直接安装在操作系统之上）； docker客户端(Client)：连接docker主机进行操作； docker仓库(Registry)：用来保存各种打包好的软件镜像； docker镜像(Images)：软件打包好的镜像；放在docker仓库中； docker容器(Container)：镜像启动后的实例">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-09T09:50:33.251Z">
+<meta property="og:updated_time" content="2018-06-09T10:52:01.138Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker - Container &amp; Image">
 <meta name="twitter:description" content="Docker - 核心概念：docker主机(Host)：安装了Docker程序的机器（Docker直接安装在操作系统之上）； docker客户端(Client)：连接docker主机进行操作； docker仓库(Registry)：用来保存各种打包好的软件镜像； docker镜像(Images)：软件打包好的镜像；放在docker仓库中； docker容器(Container)：镜像启动后的实例">
@@ -387,7 +387,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/04/26/docker-cntrimg/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2018/04/26/docker-cntrimg/" itemprop="commentCount"></span>
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/04/26/docker-cntrimg/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -622,6 +622,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/05/09/docker-network/" rel="prev" title="Docker -  NetWork">
+                Docker -  NetWork <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -648,7 +652,11 @@
 
   
     <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
     </div>
+
   
 
 
@@ -701,7 +709,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-count">30</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -713,8 +721,6 @@
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
                     
-                    
-                      
                     
                       
                     
@@ -1047,31 +1053,44 @@
 
 
 
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'zhangyangdev',
+            repo: 'https://github.com/ZhangYangDev/ZhangYangDev.github.io',
+            
+            lang: "zh-CN" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '1faf7d423a42719223ad138f368dbbce099a27f5',
+            
+                client_id: '800428308d6aaec20fee'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-  
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(function (item) {
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: '6HFsEBK6SKudI5y35KLfEgSA-gzGzoHsz',
-        appKey: 'Fk7vKkEqkS0D9qHrcR3y2EbT',
-        placeholder: 'Just go go',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
-  </script>
+
 
 
 
