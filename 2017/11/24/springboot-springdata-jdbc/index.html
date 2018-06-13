@@ -111,14 +111,14 @@
   <meta name="description" content="简介：Spring Data JDBC Extensions是Spring Data项目的一部分。Spring Framework中的JDBC支持非常广泛，涵盖了最常用的功能。此扩展项目为使用高级Oracle数据库功能提供了额外的支持。 配置:pom.xml：1234567891011121314&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.springfram">
 <meta name="keywords" content="Java,Spring Boot,Spring,Spring Data">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring Boot - Spring Data -JDBC">
+<meta property="og:title" content="Spring Boot - 使用Spring Data JDBC">
 <meta property="og:url" content="http://www.object.ws/2017/11/24/springboot-springdata-jdbc/index.html">
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="简介：Spring Data JDBC Extensions是Spring Data项目的一部分。Spring Framework中的JDBC支持非常广泛，涵盖了最常用的功能。此扩展项目为使用高级Oracle数据库功能提供了额外的支持。 配置:pom.xml：1234567891011121314&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.springfram">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-29T14:54:52.781Z">
+<meta property="og:updated_time" content="2018-06-14T02:05:38.437Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Boot - Spring Data -JDBC">
+<meta name="twitter:title" content="Spring Boot - 使用Spring Data JDBC">
 <meta name="twitter:description" content="简介：Spring Data JDBC Extensions是Spring Data项目的一部分。Spring Framework中的JDBC支持非常广泛，涵盖了最常用的功能。此扩展项目为使用高级Oracle数据库功能提供了额外的支持。 配置:pom.xml：1234567891011121314&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;org.springfram">
 
 
@@ -138,7 +138,7 @@
   };
 </script>
 
-  <title>Spring Boot - Spring Data -JDBC | 柒索</title>
+  <title>Spring Boot - 使用Spring Data JDBC | 柒索</title>
   
 
 
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Spring Boot - Spring Data -JDBC
+          <h1 class="post-title" itemprop="name headline">Spring Boot - 使用Spring Data JDBC
               
             
           </h1>
@@ -371,7 +371,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Spring-Boot/" itemprop="url" rel="index"><span itemprop="name">Spring Boot</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -409,13 +409,34 @@
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置:"></a>配置:</h2><h3 id="pom-xml："><a href="#pom-xml：" class="headerlink" title="pom.xml："></a><code>pom.xml</code>：</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-jdbc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.29<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="application-yml"><a href="#application-yml" class="headerlink" title="application.yml:"></a><code>application.yml</code>:</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">  datasource:</span></span><br><span class="line"><span class="attr">    platform:</span> <span class="string">mysql</span></span><br><span class="line"><span class="attr">    name:</span> <span class="string">world_x</span></span><br><span class="line"><span class="attr">    type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line"><span class="attr">    driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line"><span class="attr">    url:</span> <span class="attr">jdbc:mysql://localhost/world_x?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</span></span><br><span class="line"><span class="attr">    password:</span> <span class="string">root</span></span><br><span class="line"><span class="attr">    username:</span> <span class="string">root</span></span><br></pre></td></tr></table></figure>
 <h3 id="数据源配置："><a href="#数据源配置：" class="headerlink" title="数据源配置："></a>数据源配置：</h3><p>springdata-jdbc默认是用<code>org.apache.tomcat.jdbc.pool.DataSource</code>作为数据源；</p>
-<p>数据源的相关配置都在<code>org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration</code>里面；</p>
-<p>SpringBoot支持<code>org.apache.tomcat.jdbc.pool.DataSource</code>、<code>HikariDataSource</code>、<code>BasicDataSource</code>、三种数据源。</p>
+<p>数据源的相关配置都在<code>DataSourceConfiguration</code>里面:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration</span><br></pre></td></tr></table></figure>
+<p>SpringBoot支持以下三种数据源:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">org.apache.tomcat.jdbc.pool.DataSource</span><br><span class="line">HikariDataSource</span><br><span class="line">BasicDataSource</span><br></pre></td></tr></table></figure>
 <h3 id="自定义数据源"><a href="#自定义数据源" class="headerlink" title="自定义数据源:"></a>自定义数据源:</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Generic DataSource configuration.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@ConditionalOnMissingBean</span>(DataSource.class)</span><br><span class="line"><span class="meta">@ConditionalOnProperty</span>(name = <span class="string">"spring.datasource.type"</span>)</span><br><span class="line"><span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Generic</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">   <span class="meta">@Bean</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> DataSource <span class="title">dataSource</span><span class="params">(DataSourceProperties properties)</span> </span>&#123;</span><br><span class="line">       <span class="comment">//使用DataSourceBuilder创建数据源，利用反射创建响应type的数据源，并且绑定相关属性</span></span><br><span class="line">      <span class="keyword">return</span> properties.initializeDataSourceBuilder().build();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="自动配置原理："><a href="#自动配置原理：" class="headerlink" title="自动配置原理："></a>自动配置原理：</h3><p>源码路径：`org.springframework.boot.autoconfigure.jdbc;</p>
 <p>源码片段：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.springframework.boot.autoconfigure.jdbc;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ConditionalOnClass</span>(&#123; DataSource.class, JdbcTemplate.class &#125;)</span><br><span class="line"><span class="meta">@ConditionalOnSingleCandidate</span>(DataSource.class)</span><br><span class="line"><span class="meta">@AutoConfigureAfter</span>(DataSourceAutoConfiguration.class)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdbcTemplateAutoConfiguration</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">final</span> DataSource dataSource;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">JdbcTemplateAutoConfiguration</span><span class="params">(DataSource dataSource)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.dataSource = dataSource;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="meta">@Primary</span></span><br><span class="line">	<span class="meta">@ConditionalOnMissingBean</span>(JdbcOperations.class)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> JdbcTemplate <span class="title">jdbcTemplate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> JdbcTemplate(<span class="keyword">this</span>.dataSource);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="meta">@Primary</span></span><br><span class="line">	<span class="meta">@ConditionalOnMissingBean</span>(NamedParameterJdbcOperations.class)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> NamedParameterJdbcTemplate <span class="title">namedParameterJdbcTemplate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> NamedParameterJdbcTemplate(<span class="keyword">this</span>.dataSource);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>JdbcTemplateAutoConfiguration</code>使用<code>@AutoConfigureAfter</code>注解导入<code>DataSourceAutoConfiguration</code>。</p>
+<h2 id="开发："><a href="#开发：" class="headerlink" title="开发："></a>开发：</h2><h3 id="JDBC模板："><a href="#JDBC模板：" class="headerlink" title="JDBC模板："></a>JDBC模板：</h3><p>Spring的JDBC框架承担了资源管理和异常处理的工作，从而简化了JDBC的代码，让我们只需要遍写从数据库读写数据的必须代码。Spring为JDBC提供了三个模板类供选择：</p>
+<ol>
+<li><p>JdbcTemplate: 最基本的SpringJDBC模板，这个模板支持最简单的JDBC数据库访问功能以及基于索引参数的查询。</p>
+</li>
+<li><p>NamedParameterJdbcTemplate: 使用该模板类执行查询时可以将值以命名参数的形式绑定到SQL中，而不是使用简单的索引参数。</p>
+</li>
+<li><p>SimpleJdbcTemplate: 该模板类利用Java5的一些特性来简化JDBC模板的使用。</p>
+</li>
+</ol>
+<p>   从Spring3.1开始，<code>SimpleJdbcTemplate</code>已经被废弃了，特性被转入到<code>JdbcTemplate</code>中，<code>NamedParameterJdbcTemplate</code>只有在需要使用到命名参数的时候才需要使用到这个模板类，对于绝大多数的JDBC操作来讲，<code>JdbcTemplate</code> 就是最好的选择。</p>
+<h3 id="JDBCTemplate："><a href="#JDBCTemplate：" class="headerlink" title="JDBCTemplate："></a>JDBCTemplate：</h3><p>JdbcTemplate主要提供以下五类方法：</p>
+<ol>
+<li><strong>execute方法：</strong>可以用于执行任何SQL语句，一般用于执行DDL语句；</li>
+<li><strong>update方法及batchUpdate方法：</strong>update方法用于执行新增、修改、删除等语句；batchUpdate方法用于执行批处理相关语句；</li>
+<li><strong>query方法及queryForXXX方法：</strong>用于执行查询相关语句；</li>
+<li><strong>call方法：</strong>用于执行存储过程、函数相关语句。</li>
+<li><strong>batchUpdate方法</strong>：用于执行批处理相关语句；</li>
+</ol>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><p>这个项目好像被废弃了，Spring官网好像也没有提供文档。</p>
 
       
     </div>
@@ -455,8 +476,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/28/centos-express/" rel="next" title="『Node.js - Express』 - QuickStart">
-                <i class="fa fa-chevron-left"></i> 『Node.js - Express』 - QuickStart
+              <a href="/2017/10/29/springboot-restservice/" rel="next" title="Spring Boot - 使用Swagger2构建Rest服务">
+                <i class="fa fa-chevron-left"></i> Spring Boot - 使用Swagger2构建Rest服务
               </a>
             
           </div>
@@ -545,7 +566,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">30</span>
+                    <span class="site-state-item-count">32</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -574,13 +595,7 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -659,7 +674,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">33</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">36</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -721,7 +742,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介："><span class="nav-number">1.</span> <span class="nav-text">简介：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pom-xml："><span class="nav-number">2.1.</span> <span class="nav-text">pom.xml：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#application-yml"><span class="nav-number">2.2.</span> <span class="nav-text">application.yml:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据源配置："><span class="nav-number">2.3.</span> <span class="nav-text">数据源配置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义数据源"><span class="nav-number">2.4.</span> <span class="nav-text">自定义数据源:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动配置原理："><span class="nav-number">2.5.</span> <span class="nav-text">自动配置原理：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介："><span class="nav-number">1.</span> <span class="nav-text">简介：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pom-xml："><span class="nav-number">2.1.</span> <span class="nav-text">pom.xml：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#application-yml"><span class="nav-number">2.2.</span> <span class="nav-text">application.yml:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据源配置："><span class="nav-number">2.3.</span> <span class="nav-text">数据源配置：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义数据源"><span class="nav-number">2.4.</span> <span class="nav-text">自定义数据源:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自动配置原理："><span class="nav-number">2.5.</span> <span class="nav-text">自动配置原理：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发："><span class="nav-number">3.</span> <span class="nav-text">开发：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JDBC模板："><span class="nav-number">3.1.</span> <span class="nav-text">JDBC模板：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JDBCTemplate："><span class="nav-number">3.2.</span> <span class="nav-text">JDBCTemplate：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意："><span class="nav-number">4.</span> <span class="nav-text">注意：</span></a></li></ol></div>
             
 
           </div>
