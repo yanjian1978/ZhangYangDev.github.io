@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="CentOS7 中去掉烦人的滴滴滴的声音在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。 如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑” /etc/inputrc“ 文件，在”vim“的命令模式下，用键盘方向键进行定位， 找到“#set bell-style none”，用X 删除语">
-<meta name="keywords" content="CentOS">
+  <meta name="description" content="环境准备:拉取MySQL的镜像： 1docker pull mysql:latest 启动一个MySQL容器： 1docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag  some-mysql： 容器别名 my-secret-pw：初始化设置的root用户的密码 tag：mysql的版本，不写默认使">
+<meta name="keywords" content="CentOS,Linux,Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="去掉CentOS中取消滴滴滴的声音">
-<meta property="og:url" content="http://www.object.ws/2018/01/08/centos-inputrc/index.html">
+<meta property="og:title" content="Docker - 持久化存储和数据共享">
+<meta property="og:url" content="http://www.object.ws/2018/05/15/docker-data/index.html">
 <meta property="og:site_name" content="柒索">
-<meta property="og:description" content="CentOS7 中去掉烦人的滴滴滴的声音在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。 如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑” /etc/inputrc“ 文件，在”vim“的命令模式下，用键盘方向键进行定位， 找到“#set bell-style none”，用X 删除语">
+<meta property="og:description" content="环境准备:拉取MySQL的镜像： 1docker pull mysql:latest 启动一个MySQL容器： 1docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag  some-mysql： 容器别名 my-secret-pw：初始化设置的root用户的密码 tag：mysql的版本，不写默认使">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-06T03:07:10.781Z">
+<meta property="og:updated_time" content="2018-06-15T16:49:40.123Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="去掉CentOS中取消滴滴滴的声音">
-<meta name="twitter:description" content="CentOS7 中去掉烦人的滴滴滴的声音在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。 如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑” /etc/inputrc“ 文件，在”vim“的命令模式下，用键盘方向键进行定位， 找到“#set bell-style none”，用X 删除语">
+<meta name="twitter:title" content="Docker - 持久化存储和数据共享">
+<meta name="twitter:description" content="环境准备:拉取MySQL的镜像： 1docker pull mysql:latest 启动一个MySQL容器： 1docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag  some-mysql： 容器别名 my-secret-pw：初始化设置的root用户的密码 tag：mysql的版本，不写默认使">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://www.object.ws/2018/01/08/centos-inputrc/"/>
+  <link rel="canonical" href="http://www.object.ws/2018/05/15/docker-data/"/>
 
 
 
@@ -138,7 +138,7 @@
   };
 </script>
 
-  <title>去掉CentOS中取消滴滴滴的声音 | 柒索</title>
+  <title>Docker - 持久化存储和数据共享 | 柒索</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.object.ws/2018/01/08/centos-inputrc/">
+    <link itemprop="mainEntityOfPage" href="http://www.object.ws/2018/05/15/docker-data/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="柒索">
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">去掉CentOS中取消滴滴滴的声音
+          <h1 class="post-title" itemprop="name headline">Docker - 持久化存储和数据共享
               
             
           </h1>
@@ -353,7 +353,7 @@
                 
               
 
-              <time title="创建时间：2018-01-08 09:28:43" itemprop="dateCreated datePublished" datetime="2018-01-08T09:28:43+08:00">2018-01-08</time>
+              <time title="创建时间：2018-05-15 21:18:06" itemprop="dateCreated datePublished" datetime="2018-05-15T21:18:06+08:00">2018-05-15</time>
             
 
             
@@ -371,7 +371,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Docker/" itemprop="url" rel="index"><span itemprop="name">Docker</span></a></span>
 
                 
                 
@@ -405,10 +405,28 @@
       
 
       
-        <h3 id="CentOS7-中去掉烦人的滴滴滴的声音"><a href="#CentOS7-中去掉烦人的滴滴滴的声音" class="headerlink" title="CentOS7 中去掉烦人的滴滴滴的声音"></a>CentOS7 中去掉烦人的滴滴滴的声音</h3><p>在CentOS中，我们常用<code>Tab</code>键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。</p>
-<p>如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑” <code>/etc/inputrc</code>“ 文件，在”<code>vim</code>“的命令模式下，用键盘方向键进行定位， 找到“<code>#set bell-style none</code>”，用X 删除语句前方的#号，就可以了。“<code>:wq</code>”进行文件保存，并对系统进行重启以后，既可以去掉这个烦扰的声音了。</p>
-<p>代码示例：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> do not bell on tab-completion</span><br><span class="line">set bell-style none</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure></p>
-<p>Done.</p>
+        <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备:"></a>环境准备:</h2><p>拉取MySQL的镜像：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:latest</span><br></pre></td></tr></table></figure>
+<p>启动一个MySQL容器：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag</span><br></pre></td></tr></table></figure>
+<ul>
+<li>some-mysql： 容器别名</li>
+<li>my-secret-pw：初始化设置的root用户的密码</li>
+<li>tag：mysql的版本，不写默认使用最新版</li>
+</ul>
+<p>参考：<a href="https://hub.docker.com/_/mysql/" target="_blank" rel="noopener">https://hub.docker.com/_/mysql/</a></p>
+<h2 id="Docker-Data-Volume"><a href="#Docker-Data-Volume" class="headerlink" title="Docker - Data Volume"></a>Docker - Data Volume</h2><p>想要了解Docker Volume,首先我们需要知道Docker的文件系统是如何工作的.<strong>Docker</strong>镜像是由多个文件系统(只读层)叠加而成.当我们启动一个容器的时候,Docker会加载镜像层并在其上添加一个读写层.如果运行中的容器修改了现有的一个已存在的文件,那该文件将会从读写层下的只读层复制到读写层,该文件的只读版本仍然存在,只是已经被读写层中该文件的副本所隐藏.当删除Docker容器,并通过该镜像重新启动时,之前的更改将会丢失.在Docker中,只读层以及在顶部的读写层的组合被称为Union FIle System(联合文件系统).为了能够保存(持久化)数据以及共享容器间的数据,Docker提出了Volume的概念.简单来说,Volume就是目录或者文件,它可以绕过默认的联合文件系统,而以正常的文件或者目录的形式存在于宿主机上.</p>
+<h3 id="创建一个Volume："><a href="#创建一个Volume：" class="headerlink" title="创建一个Volume："></a>创建一个Volume：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host ~]$ docker run --name dk-mysql -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest</span><br><span class="line">48a6888c4061c89f760685827e98955c8323747452c24deb1af688c2f56d38b6</span><br></pre></td></tr></table></figure>
+<ul>
+<li>-v : 指定MySQL的Volume路径以及名称</li>
+</ul>
+<h3 id="查看Volume"><a href="#查看Volume" class="headerlink" title="查看Volume:"></a>查看Volume:</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host ~]$ docker volume ls   # 查看当前机器上的Volume</span><br><span class="line">DRIVER              VOLUME NAME</span><br><span class="line">local               mysql</span><br><span class="line"> </span><br><span class="line">[vagrant@docker-host ~]$ docker volume inspect mysql   # 查看volume的信息</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">"CreatedAt"</span>: <span class="string">"2018-06-15T16:23:27Z"</span>,</span><br><span class="line">        <span class="attr">"Driver"</span>: <span class="string">"local"</span>,</span><br><span class="line">        <span class="attr">"Labels"</span>: <span class="literal">null</span>,</span><br><span class="line">        <span class="attr">"Mountpoint"</span>: <span class="string">"/var/lib/docker/volumes/mysql/_data"</span>,</span><br><span class="line">        <span class="attr">"Name"</span>: <span class="string">"mysql"</span>,</span><br><span class="line">        <span class="attr">"Options"</span>: <span class="literal">null</span>,</span><br><span class="line">        <span class="attr">"Scope"</span>: <span class="string">"local"</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>可以看出Volume的数据的<code>Mountpoint</code>是存储在机器的<code>/var/lib/docker/volumes/</code>目录下。</p>
+<h3 id="测试Volume是否生效："><a href="#测试Volume是否生效：" class="headerlink" title="测试Volume是否生效："></a>测试Volume是否生效：</h3><h4 id="进入到MySQL容器中："><a href="#进入到MySQL容器中：" class="headerlink" title="进入到MySQL容器中："></a>进入到MySQL容器中：</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host ~]$ docker exec -it dk-mysql /bin/sh</span><br><span class="line"><span class="meta">#</span> mysql -u root -p   # 进入到MySQL的shell中</span><br><span class="line">Enter password:</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.≈≈≈≈</span><br><span class="line"><span class="meta">mysql&gt;</span> create database docker;   # 创建数据库，名为docker</span><br><span class="line">Query OK, 1 row affected (0.08 sec)</span><br><span class="line"><span class="meta">mysql&gt;</span> exit</span><br><span class="line">Bye</span><br><span class="line"><span class="meta">#</span> exit</span><br></pre></td></tr></table></figure>
+<h4 id="强制删除容器："><a href="#强制删除容器：" class="headerlink" title="强制删除容器："></a>强制删除容器：</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host ~]$ docker rm -f dk-mysql  # 强制删除MySQL容器</span><br><span class="line">dk-mysql</span><br><span class="line">[vagrant@docker-host ~]$ docker ps -a   # 查看容器 </span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS PORTS               NAMES</span><br><span class="line">[vagrant@docker-host ~]$ docker volume ls  # 查看volume  mysql还在</span><br><span class="line">DRIVER              VOLUME NAME</span><br><span class="line">local               mysql</span><br></pre></td></tr></table></figure>
+<h4 id="创建新容器使用旧的Volume："><a href="#创建新容器使用旧的Volume：" class="headerlink" title="创建新容器使用旧的Volume："></a>创建新容器使用旧的Volume：</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host ~]$ docker run --name mysql-new -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest  # 创建mysql容器 名为：mysql-new</span><br><span class="line">9ab58b633584c5eab99cf28402dfdde22f349f79da9453115a8eab2cc41dc0bf</span><br></pre></td></tr></table></figure>
+<h4 id="查看数据是否存在："><a href="#查看数据是否存在：" class="headerlink" title="查看数据是否存在："></a>查看数据是否存在：</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host ~]$ docker exec -it mysql-new /bin/sh  # 进入到新的容器中</span><br><span class="line"><span class="meta">#</span> mysql -u root -p    </span><br><span class="line">Enter password:</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line"></span><br><span class="line"><span class="meta">mysql&gt;</span> show databases;    # 查看所有数据库 发现docker在列</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| docker             |</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">+--------------------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+<p>Docker容器被删除之后Volume并不会被删除。</p>
 
       
     </div>
@@ -431,6 +449,10 @@
           
             <a href="/tags/CentOS/" rel="tag"># CentOS</a>
           
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
+          
         </div>
       
 
@@ -442,8 +464,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/21/sublime/" rel="next" title="Mac中设置Sublime快速在终端中使用命令打开项目">
-                <i class="fa fa-chevron-left"></i> Mac中设置Sublime快速在终端中使用命令打开项目
+              <a href="/2018/05/09/docker-network/" rel="next" title="Docker -  NetWork">
+                <i class="fa fa-chevron-left"></i> Docker -  NetWork
               </a>
             
           </div>
@@ -451,10 +473,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/21/centos-jdk/" rel="prev" title="CentOS7 安装OpenJDK1.8 & OracleJDK1.8">
-                CentOS7 安装OpenJDK1.8 & OracleJDK1.8 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -708,7 +726,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CentOS7-中去掉烦人的滴滴滴的声音"><span class="nav-number">1.</span> <span class="nav-text">CentOS7 中去掉烦人的滴滴滴的声音</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Data-Volume"><span class="nav-number">2.</span> <span class="nav-text">Docker - Data Volume</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个Volume："><span class="nav-number">2.1.</span> <span class="nav-text">创建一个Volume：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看Volume"><span class="nav-number">2.2.</span> <span class="nav-text">查看Volume:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试Volume是否生效："><span class="nav-number">2.3.</span> <span class="nav-text">测试Volume是否生效：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#进入到MySQL容器中："><span class="nav-number">2.3.1.</span> <span class="nav-text">进入到MySQL容器中：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#强制删除容器："><span class="nav-number">2.3.2.</span> <span class="nav-text">强制删除容器：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建新容器使用旧的Volume："><span class="nav-number">2.3.3.</span> <span class="nav-text">创建新容器使用旧的Volume：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看数据是否存在："><span class="nav-number">2.3.4.</span> <span class="nav-text">查看数据是否存在：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

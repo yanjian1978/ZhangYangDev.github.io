@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.object.ws/2018/05/15/docker-data/</loc>
+    
+    <lastmod>2018-06-15T16:49:40.123Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.object.ws/2018/05/09/docker-network/</loc>
     
-    <lastmod>2018-06-15T12:54:34.484Z</lastmod>
+    <lastmod>2018-06-15T16:45:46.561Z</lastmod>
     
   </url>
   
