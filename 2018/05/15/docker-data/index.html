@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="环境准备:拉取MySQL的镜像： 1docker pull mysql:latest 启动一个MySQL容器： 1docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag  some-mysql： 容器别名 my-secret-pw：初始化设置的root用户的密码 tag：mysql的版本，不写默认使">
+  <meta name="description" content="Docker - Data Volume想要了解Docker Volume,首先我们需要知道Docker的文件系统是如何工作的.Docker镜像是由多个文件系统(只读层)叠加而成.当我们启动一个容器的时候,Docker会加载镜像层并在其上添加一个读写层.如果运行中的容器修改了现有的一个已存在的文件,那该文件将会从读写层下的只读层复制到读写层,该文件的只读版本仍然存在,只是已经被读写层中该文件的副本">
 <meta name="keywords" content="CentOS,Linux,Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker - 持久化存储和数据共享">
 <meta property="og:url" content="http://www.object.ws/2018/05/15/docker-data/index.html">
 <meta property="og:site_name" content="柒索">
-<meta property="og:description" content="环境准备:拉取MySQL的镜像： 1docker pull mysql:latest 启动一个MySQL容器： 1docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag  some-mysql： 容器别名 my-secret-pw：初始化设置的root用户的密码 tag：mysql的版本，不写默认使">
+<meta property="og:description" content="Docker - Data Volume想要了解Docker Volume,首先我们需要知道Docker的文件系统是如何工作的.Docker镜像是由多个文件系统(只读层)叠加而成.当我们启动一个容器的时候,Docker会加载镜像层并在其上添加一个读写层.如果运行中的容器修改了现有的一个已存在的文件,那该文件将会从读写层下的只读层复制到读写层,该文件的只读版本仍然存在,只是已经被读写层中该文件的副本">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-15T16:49:40.123Z">
+<meta property="og:updated_time" content="2018-06-16T04:33:30.708Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker - 持久化存储和数据共享">
-<meta name="twitter:description" content="环境准备:拉取MySQL的镜像： 1docker pull mysql:latest 启动一个MySQL容器： 1docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag  some-mysql： 容器别名 my-secret-pw：初始化设置的root用户的密码 tag：mysql的版本，不写默认使">
+<meta name="twitter:description" content="Docker - Data Volume想要了解Docker Volume,首先我们需要知道Docker的文件系统是如何工作的.Docker镜像是由多个文件系统(只读层)叠加而成.当我们启动一个容器的时候,Docker会加载镜像层并在其上添加一个读写层.如果运行中的容器修改了现有的一个已存在的文件,那该文件将会从读写层下的只读层复制到读写层,该文件的只读版本仍然存在,只是已经被读写层中该文件的副本">
 
 
 
@@ -405,7 +405,8 @@
       
 
       
-        <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备:"></a>环境准备:</h2><p>拉取MySQL的镜像：</p>
+        <h2 id="Docker-Data-Volume"><a href="#Docker-Data-Volume" class="headerlink" title="Docker - Data Volume"></a>Docker - Data Volume</h2><p>想要了解Docker Volume,首先我们需要知道Docker的文件系统是如何工作的.<strong>Docker</strong>镜像是由多个文件系统(只读层)叠加而成.当我们启动一个容器的时候,Docker会加载镜像层并在其上添加一个读写层.如果运行中的容器修改了现有的一个已存在的文件,那该文件将会从读写层下的只读层复制到读写层,该文件的只读版本仍然存在,只是已经被读写层中该文件的副本所隐藏.当删除Docker容器,并通过该镜像重新启动时,之前的更改将会丢失.在Docker中,只读层以及在顶部的读写层的组合被称为Union FIle System(联合文件系统).为了能够保存(持久化)数据以及共享容器间的数据,Docker提出了Volume的概念.简单来说,Volume就是目录或者文件,它可以绕过默认的联合文件系统,而以正常的文件或者目录的形式存在于宿主机上.</p>
+<h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备:"></a>环境准备:</h3><p>拉取MySQL的镜像：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:latest</span><br></pre></td></tr></table></figure>
 <p>启动一个MySQL容器：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag</span><br></pre></td></tr></table></figure>
@@ -415,7 +416,6 @@
 <li>tag：mysql的版本，不写默认使用最新版</li>
 </ul>
 <p>参考：<a href="https://hub.docker.com/_/mysql/" target="_blank" rel="noopener">https://hub.docker.com/_/mysql/</a></p>
-<h2 id="Docker-Data-Volume"><a href="#Docker-Data-Volume" class="headerlink" title="Docker - Data Volume"></a>Docker - Data Volume</h2><p>想要了解Docker Volume,首先我们需要知道Docker的文件系统是如何工作的.<strong>Docker</strong>镜像是由多个文件系统(只读层)叠加而成.当我们启动一个容器的时候,Docker会加载镜像层并在其上添加一个读写层.如果运行中的容器修改了现有的一个已存在的文件,那该文件将会从读写层下的只读层复制到读写层,该文件的只读版本仍然存在,只是已经被读写层中该文件的副本所隐藏.当删除Docker容器,并通过该镜像重新启动时,之前的更改将会丢失.在Docker中,只读层以及在顶部的读写层的组合被称为Union FIle System(联合文件系统).为了能够保存(持久化)数据以及共享容器间的数据,Docker提出了Volume的概念.简单来说,Volume就是目录或者文件,它可以绕过默认的联合文件系统,而以正常的文件或者目录的形式存在于宿主机上.</p>
 <h3 id="创建一个Volume："><a href="#创建一个Volume：" class="headerlink" title="创建一个Volume："></a>创建一个Volume：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host ~]$ docker run --name dk-mysql -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest</span><br><span class="line">48a6888c4061c89f760685827e98955c8323747452c24deb1af688c2f56d38b6</span><br></pre></td></tr></table></figure>
 <ul>
 <li>-v : 指定MySQL的Volume路径以及名称</li>
@@ -427,6 +427,19 @@
 <h4 id="创建新容器使用旧的Volume："><a href="#创建新容器使用旧的Volume：" class="headerlink" title="创建新容器使用旧的Volume："></a>创建新容器使用旧的Volume：</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host ~]$ docker run --name mysql-new -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest  # 创建mysql容器 名为：mysql-new</span><br><span class="line">9ab58b633584c5eab99cf28402dfdde22f349f79da9453115a8eab2cc41dc0bf</span><br></pre></td></tr></table></figure>
 <h4 id="查看数据是否存在："><a href="#查看数据是否存在：" class="headerlink" title="查看数据是否存在："></a>查看数据是否存在：</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host ~]$ docker exec -it mysql-new /bin/sh  # 进入到新的容器中</span><br><span class="line"><span class="meta">#</span> mysql -u root -p    </span><br><span class="line">Enter password:</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line"></span><br><span class="line"><span class="meta">mysql&gt;</span> show databases;    # 查看所有数据库 发现docker在列</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| docker             |</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">+--------------------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
 <p>Docker容器被删除之后Volume并不会被删除。</p>
+<h2 id="Docker-Bing-Mounting"><a href="#Docker-Bing-Mounting" class="headerlink" title="Docker - Bing Mounting:"></a>Docker - Bing Mounting:</h2><h3 id="环境准备："><a href="#环境准备：" class="headerlink" title="环境准备："></a>环境准备：</h3><p>在机器上创建一个目录，放一个html网页，然后将这个目录挂载到容器中：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host ~]$ mkdir web &amp;&amp; touch web/index.html</span><br><span class="line">[vagrant@docker-host ~]$ vim web/index.html</span><br><span class="line">[vagrant@docker-host ~]$ cd web/</span><br><span class="line">[vagrant@docker-host web]$ more index.html</span><br><span class="line">&lt;h1&gt;From Dokcer Container!&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="挂载目录到容器中："><a href="#挂载目录到容器中：" class="headerlink" title="挂载目录到容器中："></a>挂载目录到容器中：</h3><p>将当前目录中的文件挂载到Nginx容器中：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host web]$ docker run -d -p 8088:80 -v $(pwd):/usr/share/nginx/html  --name webnginx nginx</span><br></pre></td></tr></table></figure>
+<ul>
+<li>$(pwd): 当前目录</li>
+</ul>
+<p>待容器启动后，可以访问容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.10.10:8088/</span><br></pre></td></tr></table></figure>
+<h3 id="容器中修改网页内容："><a href="#容器中修改网页内容：" class="headerlink" title="容器中修改网页内容："></a>容器中修改网页内容：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host web]$ docker exec -it webnginx /bin/sh</span><br><span class="line"><span class="meta">#</span> cd /usr/share/nginx/html</span><br><span class="line"><span class="meta">#</span> vim index.html</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;From Dokcer Container! Edit&lt;/h1&gt;  # 修改完成后再次访问 可看到内容已更新</span><br></pre></td></tr></table></figure>
+<h3 id="退出容器查看文件："><a href="#退出容器查看文件：" class="headerlink" title="退出容器查看文件："></a>退出容器查看文件：</h3><p>退出容器，查看机器上的文件，会发现已有变化：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host web]$ more index.html</span><br><span class="line">&lt;h1&gt;From Dokcer Container! Edit&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+<p>Done.</p>
 
       
     </div>
@@ -726,7 +739,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境准备"><span class="nav-number">1.</span> <span class="nav-text">环境准备:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Data-Volume"><span class="nav-number">2.</span> <span class="nav-text">Docker - Data Volume</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个Volume："><span class="nav-number">2.1.</span> <span class="nav-text">创建一个Volume：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看Volume"><span class="nav-number">2.2.</span> <span class="nav-text">查看Volume:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试Volume是否生效："><span class="nav-number">2.3.</span> <span class="nav-text">测试Volume是否生效：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#进入到MySQL容器中："><span class="nav-number">2.3.1.</span> <span class="nav-text">进入到MySQL容器中：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#强制删除容器："><span class="nav-number">2.3.2.</span> <span class="nav-text">强制删除容器：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建新容器使用旧的Volume："><span class="nav-number">2.3.3.</span> <span class="nav-text">创建新容器使用旧的Volume：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看数据是否存在："><span class="nav-number">2.3.4.</span> <span class="nav-text">查看数据是否存在：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Data-Volume"><span class="nav-number">1.</span> <span class="nav-text">Docker - Data Volume</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备"><span class="nav-number">1.1.</span> <span class="nav-text">环境准备:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个Volume："><span class="nav-number">1.2.</span> <span class="nav-text">创建一个Volume：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看Volume"><span class="nav-number">1.3.</span> <span class="nav-text">查看Volume:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试Volume是否生效："><span class="nav-number">1.4.</span> <span class="nav-text">测试Volume是否生效：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#进入到MySQL容器中："><span class="nav-number">1.4.1.</span> <span class="nav-text">进入到MySQL容器中：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#强制删除容器："><span class="nav-number">1.4.2.</span> <span class="nav-text">强制删除容器：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建新容器使用旧的Volume："><span class="nav-number">1.4.3.</span> <span class="nav-text">创建新容器使用旧的Volume：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看数据是否存在："><span class="nav-number">1.4.4.</span> <span class="nav-text">查看数据是否存在：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Bing-Mounting"><span class="nav-number">2.</span> <span class="nav-text">Docker - Bing Mounting:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境准备："><span class="nav-number">2.1.</span> <span class="nav-text">环境准备：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#挂载目录到容器中："><span class="nav-number">2.2.</span> <span class="nav-text">挂载目录到容器中：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器中修改网页内容："><span class="nav-number">2.3.</span> <span class="nav-text">容器中修改网页内容：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#退出容器查看文件："><span class="nav-number">2.4.</span> <span class="nav-text">退出容器查看文件：</span></a></li></ol></li></ol></div>
             
 
           </div>

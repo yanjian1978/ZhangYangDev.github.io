@@ -407,12 +407,7 @@
       
         
           
-          环境准备:拉取MySQL的镜像：
-1docker pull mysql:latest
-启动一个MySQL容器：
-1docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
-
-some-mysql： 容器
+          Docker - Data Volume想要了解Docker Volume,首先我们需要知道Docker的文件系统是如何工作的.Docker镜像是由多个文件系统(只读层)叠加而成.当我们启动一个容器的时候,Docker会加载镜像层并在其上添加一个读写层.如果运行中的容器修改了现有的一个已存在的文件,
           ...
           <!--noindex-->
           <div class="post-button text-center">

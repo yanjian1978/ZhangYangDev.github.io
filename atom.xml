@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.object.ws/"/>
-  <updated>2018-06-15T16:49:40.123Z</updated>
+  <updated>2018-06-16T04:33:30.708Z</updated>
   <id>http://www.object.ws/</id>
   
   <author>
@@ -21,14 +21,13 @@
     <link href="http://www.object.ws/2018/05/15/docker-data/"/>
     <id>http://www.object.ws/2018/05/15/docker-data/</id>
     <published>2018-05-15T13:18:06.000Z</published>
-    <updated>2018-06-15T16:49:40.123Z</updated>
+    <updated>2018-06-16T04:33:30.708Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;环境准备&quot;&gt;&lt;a href=&quot;#环境准备&quot; class=&quot;headerlink&quot; title=&quot;环境准备:&quot;&gt;&lt;/a&gt;环境准备:&lt;/h2&gt;&lt;p&gt;拉取MySQL的镜像：&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;
+        &lt;h2 id=&quot;Docker-Data-Volume&quot;&gt;&lt;a href=&quot;#Docker-Data-Volume&quot; class=&quot;headerlink&quot; title=&quot;Docker - Data Volume&quot;&gt;&lt;/a&gt;Docker - Data Volume&lt;/h2&gt;&lt;p&gt;想要
       
     
     </summary>
