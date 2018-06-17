@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.object.ws/"/>
-  <updated>2018-06-16T04:33:30.708Z</updated>
+  <updated>2018-06-17T03:30:45.807Z</updated>
   <id>http://www.object.ws/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Docker - Compose</title>
+    <link href="http://www.object.ws/2018/05/23/docker-multicntdeploy/"/>
+    <id>http://www.object.ws/2018/05/23/docker-multicntdeploy/</id>
+    <published>2018-05-23T04:50:04.000Z</published>
+    <updated>2018-06-17T03:30:45.807Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Docker-Compose简介&quot;&gt;&lt;a href=&quot;#Docker-Compose简介&quot; class=&quot;headerlink&quot; title=&quot;Docker - Compose简介:&quot;&gt;&lt;/a&gt;Docker - Compose简介:&lt;/h2&gt;&lt;h3 id=&quot;Com
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
+    
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
+    
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
+    
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Docker - 持久化存储和数据共享</title>
     <link href="http://www.object.ws/2018/05/15/docker-data/"/>
     <id>http://www.object.ws/2018/05/15/docker-data/</id>
     <published>2018-05-15T13:18:06.000Z</published>
-    <updated>2018-06-16T04:33:30.708Z</updated>
+    <updated>2018-06-16T04:47:13.587Z</updated>
     
     <summary type="html">
     
@@ -510,32 +537,6 @@
       
         &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本文从讲解了 MongoDB 的数据导入导出，以及 CRUD 操作。&lt;/p&gt;
 &lt;h3 id=&quot;数据下载&quot;&gt;&lt;a href=&quot;#数据下载&quot; c
-      
-    
-    </summary>
-    
-      <category term="NoSQL" scheme="http://www.object.ws/categories/NoSQL/"/>
-    
-    
-      <category term="MongoDB" scheme="http://www.object.ws/tags/MongoDB/"/>
-    
-      <category term="NoSQL" scheme="http://www.object.ws/tags/NoSQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『NoSQL - MongoDB』Mongo Shell</title>
-    <link href="http://www.object.ws/2017/10/18/mongodb-shell/"/>
-    <id>http://www.object.ws/2017/10/18/mongodb-shell/</id>
-    <published>2017-10-18T09:27:44.000Z</published>
-    <updated>2017-10-24T06:46:59.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本文从介绍了MongoShell 的配置、脚本、数据类型和其他指令。&lt;/p&gt;
-&lt;h2 id=&quot;MongoShell-简介&quot;&gt;&lt;a href=
       
     
     </summary>

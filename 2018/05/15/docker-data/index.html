@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="Docker - Data Volume想要了解Docker Volume,首先我们需要知道Docker的文件系统是如何工作的.Docker镜像是由多个文件系统(只读层)叠加而成.当我们启动一个容器的时候,Docker会加载镜像层并在其上添加一个读写层.如果运行中的容器修改了现有的一个已存在的文件,那该文件将会从读写层下的只读层复制到读写层,该文件的只读版本仍然存在,只是已经被读写层中该文件的副本">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-16T04:33:30.708Z">
+<meta property="og:updated_time" content="2018-06-16T04:47:13.587Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker - 持久化存储和数据共享">
 <meta name="twitter:description" content="Docker - Data Volume想要了解Docker Volume,首先我们需要知道Docker的文件系统是如何工作的.Docker镜像是由多个文件系统(只读层)叠加而成.当我们启动一个容器的时候,Docker会加载镜像层并在其上添加一个读写层.如果运行中的容器修改了现有的一个已存在的文件,那该文件将会从读写层下的只读层复制到读写层,该文件的只读版本仍然存在,只是已经被读写层中该文件的副本">
@@ -437,6 +437,7 @@
 <p>待容器启动后，可以访问容器：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://192.168.10.10:8088/</span><br></pre></td></tr></table></figure>
 <h3 id="容器中修改网页内容："><a href="#容器中修改网页内容：" class="headerlink" title="容器中修改网页内容："></a>容器中修改网页内容：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host web]$ docker exec -it webnginx /bin/sh</span><br><span class="line"><span class="meta">#</span> cd /usr/share/nginx/html</span><br><span class="line"><span class="meta">#</span> vim index.html</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;From Dokcer Container! Edit&lt;/h1&gt;  # 修改完成后再次访问 可看到内容已更新</span><br></pre></td></tr></table></figure>
+<p>同样，在机器上修改文件，容器中的文件也会同步更新。</p>
 <h3 id="退出容器查看文件："><a href="#退出容器查看文件：" class="headerlink" title="退出容器查看文件："></a>退出容器查看文件：</h3><p>退出容器，查看机器上的文件，会发现已有变化：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host web]$ more index.html</span><br><span class="line">&lt;h1&gt;From Dokcer Container! Edit&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
 <p>Done.</p>
@@ -486,6 +487,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/23/docker-multicntdeploy/" rel="prev" title="Docker - Compose">
+                Docker - Compose <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -563,7 +568,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">33</span>
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
