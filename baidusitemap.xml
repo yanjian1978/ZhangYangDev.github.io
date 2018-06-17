@@ -4,8 +4,8 @@
 
     
   <url>
-    <loc>http://www.object.ws/2018/05/23/docker-multicntdeploy/</loc>
-    <lastmod>2018-06-17T03:30:45.807Z</lastmod>
+    <loc>http://www.object.ws/2018/05/23/docker-compose/</loc>
+    <lastmod>2018-06-17T05:49:39.750Z</lastmod>
     <data>
         <display>
         <title>Docker - Compose</title>
@@ -16,6 +16,8 @@
         <tag>Linux</tag>
          
         <tag>Docker</tag>
+         
+        <tag>Docker-Compose</tag>
          
          
            

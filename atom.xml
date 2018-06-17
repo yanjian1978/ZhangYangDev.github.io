@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.object.ws/"/>
-  <updated>2018-06-17T03:30:45.807Z</updated>
+  <updated>2018-06-17T05:49:39.750Z</updated>
   <id>http://www.object.ws/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Docker - Compose</title>
-    <link href="http://www.object.ws/2018/05/23/docker-multicntdeploy/"/>
-    <id>http://www.object.ws/2018/05/23/docker-multicntdeploy/</id>
+    <link href="http://www.object.ws/2018/05/23/docker-compose/"/>
+    <id>http://www.object.ws/2018/05/23/docker-compose/</id>
     <published>2018-05-23T04:50:04.000Z</published>
-    <updated>2018-06-17T03:30:45.807Z</updated>
+    <updated>2018-06-17T05:49:39.750Z</updated>
     
     <summary type="html">
     
@@ -40,6 +40,8 @@
       <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     
       <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
+    
+      <category term="Docker-Compose" scheme="http://www.object.ws/tags/Docker-Compose/"/>
     
   </entry>
   
