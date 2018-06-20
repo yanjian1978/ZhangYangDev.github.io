@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.object.ws/"/>
-  <updated>2018-06-17T05:49:39.750Z</updated>
+  <updated>2018-06-17T06:20:41.846Z</updated>
   <id>http://www.object.ws/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker - Swarm</title>
+    <link href="http://www.object.ws/2018/06/17/docker-swarm/"/>
+    <id>http://www.object.ws/2018/06/17/docker-swarm/</id>
+    <published>2018-06-17T06:09:15.000Z</published>
+    <updated>2018-06-17T06:20:41.846Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Docker-Swarm简介：&quot;&gt;&lt;a href=&quot;#Docker-Swarm简介：&quot; class=&quot;headerlink&quot; title=&quot;Docker Swarm简介：&quot;&gt;&lt;/a&gt;Docker Swarm简介：&lt;/h2&gt;&lt;p&gt;Docker Swarm是Docke
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
+    
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
+    
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
+    
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
+    
+      <category term="Swarm" scheme="http://www.object.ws/tags/Swarm/"/>
+    
+      <category term="Vagrant" scheme="http://www.object.ws/tags/Vagrant/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker - Compose</title>
@@ -523,32 +554,6 @@
       <category term="Node.js" scheme="http://www.object.ws/tags/Node-js/"/>
     
       <category term="Express" scheme="http://www.object.ws/tags/Express/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『NoSQL - MongoDB』CRUD</title>
-    <link href="http://www.object.ws/2017/10/23/mongodb-crud/"/>
-    <id>http://www.object.ws/2017/10/23/mongodb-crud/</id>
-    <published>2017-10-23T01:49:45.000Z</published>
-    <updated>2017-11-03T06:09:29.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;本文从讲解了 MongoDB 的数据导入导出，以及 CRUD 操作。&lt;/p&gt;
-&lt;h3 id=&quot;数据下载&quot;&gt;&lt;a href=&quot;#数据下载&quot; c
-      
-    
-    </summary>
-    
-      <category term="NoSQL" scheme="http://www.object.ws/categories/NoSQL/"/>
-    
-    
-      <category term="MongoDB" scheme="http://www.object.ws/tags/MongoDB/"/>
-    
-      <category term="NoSQL" scheme="http://www.object.ws/tags/NoSQL/"/>
     
   </entry>
   
