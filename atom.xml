@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.object.ws/"/>
-  <updated>2018-06-27T15:50:10.714Z</updated>
+  <updated>2018-06-27T15:59:09.056Z</updated>
   <id>http://www.object.ws/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Docker - Swarm、SwarmKit、Swarm Mode</title>
+    <title>Docker - Swarm、SwarmKit、Swarm Mode QuickStart</title>
     <link href="http://www.object.ws/2018/05/30/docker-swarm/"/>
     <id>http://www.object.ws/2018/05/30/docker-swarm/</id>
     <published>2018-05-30T06:09:15.000Z</published>
-    <updated>2018-06-27T15:50:10.714Z</updated>
+    <updated>2018-06-27T15:59:09.056Z</updated>
     
     <summary type="html">
     
