@@ -523,11 +523,11 @@
     
       <category term="Spring Boot" scheme="http://www.object.ws/tags/Spring-Boot/"/>
     
-      <category term="Spring" scheme="http://www.object.ws/tags/Spring/"/>
-    
       <category term="Swagger" scheme="http://www.object.ws/tags/Swagger/"/>
     
       <category term="SpringFox" scheme="http://www.object.ws/tags/SpringFox/"/>
+    
+      <category term="Spring" scheme="http://www.object.ws/tags/Spring/"/>
     
   </entry>
   
