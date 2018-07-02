@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.object.ws/"/>
-  <updated>2018-06-27T15:59:09.056Z</updated>
+  <updated>2018-11-14T06:28:47.047Z</updated>
   <id>http://www.object.ws/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Docker - Dockerfile</title>
+    <link href="http://www.object.ws/2018/09/14/docker-dockerfile/"/>
+    <id>http://www.object.ws/2018/09/14/docker-dockerfile/</id>
+    <published>2018-09-14T06:27:02.000Z</published>
+    <updated>2018-11-14T06:28:47.047Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Dockerfile&quot;&gt;&lt;a href=&quot;#Dockerfile&quot; class=&quot;headerlink&quot; title=&quot;Dockerfile:&quot;&gt;&lt;/a&gt;Dockerfile:&lt;/h2&gt;&lt;h3 id=&quot;语法详解：&quot;&gt;&lt;a href=&quot;#语法详解：&quot; class=&quot;
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
+    
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
+    
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
+    
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
+    
+      <category term="Docker-Compose" scheme="http://www.object.ws/tags/Docker-Compose/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目部署前的服务器环境准备</title>
+    <link href="http://www.object.ws/2018/06/25/springcloud-deploy/"/>
+    <id>http://www.object.ws/2018/06/25/springcloud-deploy/</id>
+    <published>2018-06-25T05:20:28.000Z</published>
+    <updated>2018-11-14T06:29:46.436Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;服务器环境准备&quot;&gt;&lt;a href=&quot;#服务器环境准备&quot; class=&quot;headerlink&quot; title=&quot;服务器环境准备:&quot;&gt;&lt;/a&gt;服务器环境准备:&lt;/h2&gt;&lt;h3 id=&quot;使用Vagrant构建CentOS：&quot;&gt;&lt;a href=&quot;#使用Vagrant构建Ce
+      
+    
+    </summary>
+    
+    
+      <category term="SpringCloud" scheme="http://www.object.ws/tags/SpringCloud/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Docker - Swarm、SwarmKit、Swarm Mode QuickStart</title>
     <link href="http://www.object.ws/2018/05/30/docker-swarm/"/>
     <id>http://www.object.ws/2018/05/30/docker-swarm/</id>
     <published>2018-05-30T06:09:15.000Z</published>
-    <updated>2018-06-27T15:59:09.056Z</updated>
+    <updated>2018-07-02T16:25:48.085Z</updated>
     
     <summary type="html">
     
@@ -47,14 +97,16 @@
     
       <category term="Swarmkit" scheme="http://www.object.ws/tags/Swarmkit/"/>
     
+      <category term="Swarm Mode" scheme="http://www.object.ws/tags/Swarm-Mode/"/>
+    
   </entry>
   
   <entry>
-    <title>Docker - Compose</title>
+    <title>Docker - Compose 服务编排</title>
     <link href="http://www.object.ws/2018/05/23/docker-compose/"/>
     <id>http://www.object.ws/2018/05/23/docker-compose/</id>
     <published>2018-05-23T04:50:04.000Z</published>
-    <updated>2018-06-17T05:49:39.750Z</updated>
+    <updated>2018-07-02T16:17:39.391Z</updated>
     
     <summary type="html">
     
@@ -83,7 +135,7 @@
     <link href="http://www.object.ws/2018/05/15/docker-data/"/>
     <id>http://www.object.ws/2018/05/15/docker-data/</id>
     <published>2018-05-15T13:18:06.000Z</published>
-    <updated>2018-06-16T04:47:13.587Z</updated>
+    <updated>2018-07-09T08:11:31.463Z</updated>
     
     <summary type="html">
     
@@ -137,7 +189,7 @@
     <link href="http://www.object.ws/2018/04/26/docker-cntrimg/"/>
     <id>http://www.object.ws/2018/04/26/docker-cntrimg/</id>
     <published>2018-04-26T11:14:31.000Z</published>
-    <updated>2018-06-15T12:45:22.724Z</updated>
+    <updated>2018-11-14T06:27:38.559Z</updated>
     
     <summary type="html">
     
@@ -164,7 +216,7 @@
     <link href="http://www.object.ws/2018/04/12/vagrant/"/>
     <id>http://www.object.ws/2018/04/12/vagrant/</id>
     <published>2018-04-12T12:31:13.000Z</published>
-    <updated>2018-06-09T04:26:10.468Z</updated>
+    <updated>2018-07-10T06:47:59.114Z</updated>
     
     <summary type="html">
     
@@ -192,7 +244,7 @@
     <link href="http://www.object.ws/2018/04/03/centos-consul/"/>
     <id>http://www.object.ws/2018/04/03/centos-consul/</id>
     <published>2018-04-03T02:57:14.000Z</published>
-    <updated>2018-06-06T06:05:11.028Z</updated>
+    <updated>2018-08-06T06:35:06.357Z</updated>
     
     <summary type="html">
     
@@ -322,7 +374,7 @@
     <link href="http://www.object.ws/2018/03/02/centos-redis/"/>
     <id>http://www.object.ws/2018/03/02/centos-redis/</id>
     <published>2018-03-02T11:53:28.000Z</published>
-    <updated>2018-06-09T04:48:45.985Z</updated>
+    <updated>2018-07-11T07:59:34.850Z</updated>
     
     <summary type="html">
     
@@ -497,65 +549,6 @@
       <category term="Spring" scheme="http://www.object.ws/tags/Spring/"/>
     
       <category term="Spring Data" scheme="http://www.object.ws/tags/Spring-Data/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot - 使用Swagger2构建Rest服务</title>
-    <link href="http://www.object.ws/2017/10/29/springboot-restservice/"/>
-    <id>http://www.object.ws/2017/10/29/springboot-restservice/</id>
-    <published>2017-10-29T06:50:45.000Z</published>
-    <updated>2018-06-14T07:10:26.102Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;简介：&quot;&gt;&lt;a href=&quot;#简介：&quot; class=&quot;headerlink&quot; title=&quot;简介：&quot;&gt;&lt;/a&gt;简介：&lt;/h2&gt;&lt;h3 id=&quot;Swagger：&quot;&gt;&lt;a href=&quot;#Swagger：&quot; class=&quot;headerlink&quot; title=&quot;Swagg
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://www.object.ws/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://www.object.ws/tags/Java/"/>
-    
-      <category term="Spring Boot" scheme="http://www.object.ws/tags/Spring-Boot/"/>
-    
-      <category term="Swagger" scheme="http://www.object.ws/tags/Swagger/"/>
-    
-      <category term="SpringFox" scheme="http://www.object.ws/tags/SpringFox/"/>
-    
-      <category term="Spring" scheme="http://www.object.ws/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>『Node.js - Express』 - QuickStart</title>
-    <link href="http://www.object.ws/2017/10/28/centos-express/"/>
-    <id>http://www.object.ws/2017/10/28/centos-express/</id>
-    <published>2017-10-28T06:59:39.000Z</published>
-    <updated>2018-03-21T14:14:34.017Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;安装-NodeJS&quot;&gt;&lt;a href=&quot;#安装-NodeJS&quot; class=&quot;headerlink&quot; title=&quot;安装 NodeJS&quot;&gt;&lt;/a&gt;安装 NodeJS&lt;/h2&gt;&lt;p&gt;安装 NodeJS在终端中，使用下面的命令安装 NodeJS：&lt;/p&gt;
-&lt;figur
-      
-    
-    </summary>
-    
-      <category term="NoSQL" scheme="http://www.object.ws/categories/NoSQL/"/>
-    
-    
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
-    
-      <category term="Node.js" scheme="http://www.object.ws/tags/Node-js/"/>
-    
-      <category term="Express" scheme="http://www.object.ws/tags/Express/"/>
     
   </entry>
   

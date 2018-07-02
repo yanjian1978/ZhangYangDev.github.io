@@ -4,42 +4,29 @@
 
     
   <url>
-    <loc>http://www.object.ws/2018/05/30/docker-swarm/</loc>
-    <lastmod>2018-06-27T15:59:09.056Z</lastmod>
+    <loc>http://www.object.ws/2018/06/25/springcloud-deploy/</loc>
+    <lastmod>2018-11-14T06:29:46.436Z</lastmod>
     <data>
         <display>
-        <title>Docker - Swarm、SwarmKit、Swarm Mode QuickStart</title>
-        <pubTime>2018-05-30T06:09:15.000Z</pubTime>
+        <title>项目部署前的服务器环境准备</title>
+        <pubTime>2018-06-25T05:20:28.000Z</pubTime>
         
-        <tag>CentOS</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>Docker</tag>
-         
-        <tag>Swarm</tag>
-         
-        <tag>Vagrant</tag>
-         
-        <tag>Swarmkit</tag>
+        <tag>SpringCloud</tag>
          
          
            
-             
-              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
-          
         </display>
     </data>
     </url>
 
     
   <url>
-    <loc>http://www.object.ws/2018/05/23/docker-compose/</loc>
-    <lastmod>2018-06-17T05:49:39.750Z</lastmod>
+    <loc>http://www.object.ws/2018/09/14/docker-dockerfile/</loc>
+    <lastmod>2018-11-14T06:28:47.047Z</lastmod>
     <data>
         <display>
-        <title>Docker - Compose</title>
-        <pubTime>2018-05-23T04:50:04.000Z</pubTime>
+        <title>Docker - Dockerfile</title>
+        <pubTime>2018-09-14T06:27:02.000Z</pubTime>
         
         <tag>CentOS</tag>
          
@@ -60,8 +47,106 @@
 
     
   <url>
+    <loc>http://www.object.ws/2018/04/26/docker-cntrimg/</loc>
+    <lastmod>2018-11-14T06:27:38.559Z</lastmod>
+    <data>
+        <display>
+        <title>Docker - Container & Image</title>
+        <pubTime>2018-04-26T11:14:31.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.object.ws/2018/04/03/centos-consul/</loc>
+    <lastmod>2018-08-06T06:35:06.357Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS7 搭建 Consul 集群</title>
+        <pubTime>2018-04-03T02:57:14.000Z</pubTime>
+        
+        <tag>MicroService</tag>
+         
+        <tag>Cluster</tag>
+         
+        <tag>CentOS</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Consul</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.object.ws/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.object.ws/2018/03/02/centos-redis/</loc>
+    <lastmod>2018-07-11T07:59:34.850Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS7 安装 Redis</title>
+        <pubTime>2018-03-02T11:53:28.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Redis</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.object.ws/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.object.ws/2018/04/12/vagrant/</loc>
+    <lastmod>2018-07-10T06:47:59.114Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境</title>
+        <pubTime>2018-04-12T12:31:13.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Docker</tag>
+         
+        <tag>Vagrant</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.object.ws/2018/05/15/docker-data/</loc>
-    <lastmod>2018-06-16T04:47:13.587Z</lastmod>
+    <lastmod>2018-07-09T08:11:31.463Z</lastmod>
     <data>
         <display>
         <title>Docker - 持久化存储和数据共享</title>
@@ -72,6 +157,64 @@
         <tag>Linux</tag>
          
         <tag>Docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.object.ws/2018/05/30/docker-swarm/</loc>
+    <lastmod>2018-07-02T16:25:48.085Z</lastmod>
+    <data>
+        <display>
+        <title>Docker - Swarm、SwarmKit、Swarm Mode QuickStart</title>
+        <pubTime>2018-05-30T06:09:15.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Docker</tag>
+         
+        <tag>Swarm</tag>
+         
+        <tag>Vagrant</tag>
+         
+        <tag>Swarmkit</tag>
+         
+        <tag>Swarm Mode</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.object.ws/2018/05/23/docker-compose/</loc>
+    <lastmod>2018-07-02T16:17:39.391Z</lastmod>
+    <data>
+        <display>
+        <title>Docker - Compose 服务编排</title>
+        <pubTime>2018-05-23T04:50:04.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Docker</tag>
+         
+        <tag>Docker-Compose</tag>
          
          
            
@@ -108,30 +251,6 @@
 
     
   <url>
-    <loc>http://www.object.ws/2018/04/26/docker-cntrimg/</loc>
-    <lastmod>2018-06-15T12:45:22.724Z</lastmod>
-    <data>
-        <display>
-        <title>Docker - Container & Image</title>
-        <pubTime>2018-04-26T11:14:31.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>Docker</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.object.ws/2017/10/29/springboot-restservice/</loc>
     <lastmod>2018-06-14T07:10:26.102Z</lastmod>
     <data>
@@ -143,11 +262,11 @@
          
         <tag>Spring Boot</tag>
          
+        <tag>Spring</tag>
+         
         <tag>Swagger</tag>
          
         <tag>SpringFox</tag>
-         
-        <tag>Spring</tag>
          
          
            
@@ -468,52 +587,6 @@
 
     
   <url>
-    <loc>http://www.object.ws/2018/03/02/centos-redis/</loc>
-    <lastmod>2018-06-09T04:48:45.985Z</lastmod>
-    <data>
-        <display>
-        <title>CentOS7 安装 Redis</title>
-        <pubTime>2018-03-02T11:53:28.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-        <tag>Redis</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://www.object.ws/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.object.ws/2018/04/12/vagrant/</loc>
-    <lastmod>2018-06-09T04:26:10.468Z</lastmod>
-    <data>
-        <display>
-        <title>使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境</title>
-        <pubTime>2018-04-12T12:31:13.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-        <tag>Docker</tag>
-         
-        <tag>Vagrant</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.object.ws/2018/03/11/docker-introduction/</loc>
     <lastmod>2018-06-08T08:54:51.729Z</lastmod>
     <data>
@@ -556,34 +629,6 @@
            
              
               <breadCrumb title="HTML" url="http://www.object.ws/categories/HTML/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.object.ws/2018/04/03/centos-consul/</loc>
-    <lastmod>2018-06-06T06:05:11.028Z</lastmod>
-    <data>
-        <display>
-        <title>CentOS7 搭建 Consul 集群</title>
-        <pubTime>2018-04-03T02:57:14.000Z</pubTime>
-        
-        <tag>MicroService</tag>
-         
-        <tag>Cluster</tag>
-         
-        <tag>CentOS</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>Consul</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://www.object.ws/categories/Linux/"/>
           
         </display>
     </data>

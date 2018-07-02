@@ -2,23 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.object.ws/2018/05/30/docker-swarm/</loc>
+    <loc>http://www.object.ws/2018/06/25/springcloud-deploy/</loc>
     
-    <lastmod>2018-06-27T15:59:09.056Z</lastmod>
+    <lastmod>2018-11-14T06:29:46.436Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.object.ws/2018/05/23/docker-compose/</loc>
+    <loc>http://www.object.ws/2018/09/14/docker-dockerfile/</loc>
     
-    <lastmod>2018-06-17T05:49:39.750Z</lastmod>
+    <lastmod>2018-11-14T06:28:47.047Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2018/04/26/docker-cntrimg/</loc>
+    
+    <lastmod>2018-11-14T06:27:38.559Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2018/04/03/centos-consul/</loc>
+    
+    <lastmod>2018-08-06T06:35:06.357Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2018/03/02/centos-redis/</loc>
+    
+    <lastmod>2018-07-11T07:59:34.850Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2018/04/12/vagrant/</loc>
+    
+    <lastmod>2018-07-10T06:47:59.114Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.object.ws/2018/05/15/docker-data/</loc>
     
-    <lastmod>2018-06-16T04:47:13.587Z</lastmod>
+    <lastmod>2018-07-09T08:11:31.463Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2018/05/30/docker-swarm/</loc>
+    
+    <lastmod>2018-07-02T16:25:48.085Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2018/05/23/docker-compose/</loc>
+    
+    <lastmod>2018-07-02T16:17:39.391Z</lastmod>
     
   </url>
   
@@ -26,13 +68,6 @@
     <loc>http://www.object.ws/2018/05/09/docker-network/</loc>
     
     <lastmod>2018-06-15T16:45:46.561Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.object.ws/2018/04/26/docker-cntrimg/</loc>
-    
-    <lastmod>2018-06-15T12:45:22.724Z</lastmod>
     
   </url>
   
@@ -142,20 +177,6 @@
   </url>
   
   <url>
-    <loc>http://www.object.ws/2018/03/02/centos-redis/</loc>
-    
-    <lastmod>2018-06-09T04:48:45.985Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.object.ws/2018/04/12/vagrant/</loc>
-    
-    <lastmod>2018-06-09T04:26:10.468Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.object.ws/2018/03/11/docker-introduction/</loc>
     
     <lastmod>2018-06-08T08:54:51.729Z</lastmod>
@@ -173,13 +194,6 @@
     <loc>http://www.object.ws/2017/12/05/mobile-css/</loc>
     
     <lastmod>2018-06-06T06:44:16.179Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.object.ws/2018/04/03/centos-consul/</loc>
-    
-    <lastmod>2018-06-06T06:05:11.028Z</lastmod>
     
   </url>
   
