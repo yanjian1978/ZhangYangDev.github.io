@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="Docker - Compose简介:Compose 是什么？Compose是定义和运行多容器Docker应用程序的工具。使用Compose，您可以使用YAML文件来配置应用程序的服务。然后，使用单个命令，您可以创建并启动配置中的所有服务。 Compose适用于所有环境：生产，分期，开发，测试以及CI工作流程。 Compose 历史版本？Docker Compose目前为止迭代了三个版本，官网建议">
+  <meta name="description" content="Docker - Compose简介Compose 是什么？Compose是定义和运行多容器Docker应用程序的工具。使用Compose，您可以使用YAML文件来配置应用程序的服务。然后，使用单个命令，您可以创建并启动配置中的所有服务。 Compose适用于所有环境：生产，分期，开发，测试以及CI工作流程。 Compose 历史版本？Docker Compose目前为止迭代了三个版本，官网建议使">
 <meta name="keywords" content="CentOS,Linux,Docker,Docker-Compose">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker - Compose 服务编排">
 <meta property="og:url" content="http://www.object.ws/2018/05/23/docker-compose/index.html">
 <meta property="og:site_name" content="柒索">
-<meta property="og:description" content="Docker - Compose简介:Compose 是什么？Compose是定义和运行多容器Docker应用程序的工具。使用Compose，您可以使用YAML文件来配置应用程序的服务。然后，使用单个命令，您可以创建并启动配置中的所有服务。 Compose适用于所有环境：生产，分期，开发，测试以及CI工作流程。 Compose 历史版本？Docker Compose目前为止迭代了三个版本，官网建议">
+<meta property="og:description" content="Docker - Compose简介Compose 是什么？Compose是定义和运行多容器Docker应用程序的工具。使用Compose，您可以使用YAML文件来配置应用程序的服务。然后，使用单个命令，您可以创建并启动配置中的所有服务。 Compose适用于所有环境：生产，分期，开发，测试以及CI工作流程。 Compose 历史版本？Docker Compose目前为止迭代了三个版本，官网建议使">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-02T16:17:39.391Z">
+<meta property="og:updated_time" content="2018-12-13T01:58:18.228Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker - Compose 服务编排">
-<meta name="twitter:description" content="Docker - Compose简介:Compose 是什么？Compose是定义和运行多容器Docker应用程序的工具。使用Compose，您可以使用YAML文件来配置应用程序的服务。然后，使用单个命令，您可以创建并启动配置中的所有服务。 Compose适用于所有环境：生产，分期，开发，测试以及CI工作流程。 Compose 历史版本？Docker Compose目前为止迭代了三个版本，官网建议">
+<meta name="twitter:description" content="Docker - Compose简介Compose 是什么？Compose是定义和运行多容器Docker应用程序的工具。使用Compose，您可以使用YAML文件来配置应用程序的服务。然后，使用单个命令，您可以创建并启动配置中的所有服务。 Compose适用于所有环境：生产，分期，开发，测试以及CI工作流程。 Compose 历史版本？Docker Compose目前为止迭代了三个版本，官网建议使">
 
 
 
@@ -405,34 +405,37 @@
       
 
       
-        <h2 id="Docker-Compose简介"><a href="#Docker-Compose简介" class="headerlink" title="Docker - Compose简介:"></a>Docker - Compose简介:</h2><h3 id="Compose-是什么？"><a href="#Compose-是什么？" class="headerlink" title="Compose 是什么？"></a>Compose 是什么？</h3><p>Compose是定义和运行多容器Docker应用程序的工具。使用Compose，您可以使用YAML文件来配置应用程序的服务。然后，使用单个命令，您可以创建并启动配置中的所有服务。</p>
+        <h2 id="Docker-Compose简介"><a href="#Docker-Compose简介" class="headerlink" title="Docker - Compose简介"></a>Docker - Compose简介</h2><h3 id="Compose-是什么？"><a href="#Compose-是什么？" class="headerlink" title="Compose 是什么？"></a>Compose 是什么？</h3><p>Compose是定义和运行多容器Docker应用程序的工具。使用Compose，您可以使用YAML文件来配置应用程序的服务。然后，使用单个命令，您可以创建并启动配置中的所有服务。</p>
 <p>Compose适用于所有环境：生产，分期，开发，测试以及CI工作流程。</p>
 <h3 id="Compose-历史版本？"><a href="#Compose-历史版本？" class="headerlink" title="Compose 历史版本？"></a>Compose 历史版本？</h3><p>Docker Compose目前为止迭代了三个版本，官网建议使用最新的3版本，Docker从<code>1.13.0+</code>开始支持3版本。</p>
 <p>本机的Docker版本是：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@docker-host ~]$ docker -v</span><br><span class="line">Docker version 18.05.0-ce, build f150324</span><br></pre></td></tr></table></figure>
 <p>参考：<a href="https://docs.docker.com/compose/compose-file/#reference-and-guidelines" target="_blank" rel="noopener">https://docs.docker.com/compose/compose-file/#reference-and-guidelines</a></p>
-<h3 id="Docker-Compose-yml"><a href="#Docker-Compose-yml" class="headerlink" title="Docker - Compose.yml:"></a>Docker - Compose.yml:</h3><p>一个简单的dokcer-compose.yml文件：</p>
+<h3 id="Docker-Compose-yml"><a href="#Docker-Compose-yml" class="headerlink" title="Docker - Compose.yml"></a>Docker - Compose.yml</h3><p>一个简单的dokcer-compose.yml文件：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line"><span class="attr">  web:</span></span><br><span class="line"><span class="attr">    build:</span> <span class="string">.</span></span><br><span class="line"><span class="attr">    ports:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">"5000:5000"</span></span><br><span class="line"><span class="attr">    volumes:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">.:/code</span></span><br><span class="line"><span class="attr">    - logvolume01:</span><span class="string">/var/log</span></span><br><span class="line"><span class="attr">    links:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">redis</span></span><br><span class="line"><span class="attr">  redis:</span></span><br><span class="line"><span class="attr">    image:</span> <span class="string">redis</span></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line"><span class="attr">  logvolume01:</span> <span class="string">&#123;&#125;</span></span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line"><span class="attr">  my-bridge:</span></span><br><span class="line"><span class="attr">    driver:</span> <span class="string">bridge</span></span><br></pre></td></tr></table></figure>
 <p>以上文件可以看出，一个<code>docker-compose.yml</code>文件主要包含了四个部分:<code>version</code>、<code>services</code>、<code>volumes</code>、<code>networks</code>。</p>
-<h4 id="Version"><a href="#Version" class="headerlink" title="Version:"></a>Version:</h4><p>用于指定docker-compose.yml文件的版本。</p>
-<h4 id="Services："><a href="#Services：" class="headerlink" title="Services："></a>Services：</h4><p>一个Service代表一个Container，这个Container可以从dockerhub的image来创建，或者从本地的Dockerfile                        build出来的image来创建。</p>
+<h4 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h4><p>用于指定docker-compose.yml文件的版本。</p>
+<h4 id="Services"><a href="#Services" class="headerlink" title="Services"></a>Services</h4><p>一个Service代表一个Container，这个Container可以从dockerhub的image来创建，或者从本地的Dockerfile                        build出来的image来创建。</p>
 <p>service的启动类类似docker run,我们可以给Service指定network和volume，所以可以给service指定network和volume的引用。</p>
-<h4 id="Volumes"><a href="#Volumes" class="headerlink" title="Volumes:"></a>Volumes:</h4><p>可以再Service中给镜像定义volumes，然后再在volumes中引用Service中定义的volumes的名称。</p>
-<h4 id="Networks"><a href="#Networks" class="headerlink" title="Networks:"></a>Networks:</h4><p>指定docker-compose使用的网络。</p>
-<h2 id="Docker-Compose安装"><a href="#Docker-Compose安装" class="headerlink" title="Docker - Compose安装:"></a>Docker - Compose安装:</h2><p>如果是直接在电脑上安装了<code>Docker for Mac</code>或<code>Docker for Win</code>，那么<strong>Docker Toolbox</strong>中已经包含了Docker Compose，无需单独安装。</p>
-<h3 id="Centos7安装Docker-Compose"><a href="#Centos7安装Docker-Compose" class="headerlink" title="Centos7安装Docker-Compose:"></a>Centos7安装Docker-Compose:</h3><p>1、下载最新版本的Docker Compose：</p>
+<h4 id="Volumes"><a href="#Volumes" class="headerlink" title="Volumes"></a>Volumes</h4><p>可以再Service中给镜像定义volumes，然后再在volumes中引用Service中定义的volumes的名称。</p>
+<h4 id="Networks"><a href="#Networks" class="headerlink" title="Networks"></a>Networks</h4><p>指定docker-compose使用的网络。</p>
+<h2 id="Docker-Compose安装"><a href="#Docker-Compose安装" class="headerlink" title="Docker - Compose安装"></a>Docker - Compose安装</h2><p>如果是直接在电脑上安装了<code>Docker for Mac</code>或<code>Docker for Win</code>，那么<strong>Docker Toolbox</strong>中已经包含了Docker Compose，无需单独安装。</p>
+<h3 id="Centos7安装Docker-Compose"><a href="#Centos7安装Docker-Compose" class="headerlink" title="Centos7安装Docker-Compose"></a>Centos7安装Docker-Compose</h3><p>1、下载最新版本的Docker Compose</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
-<p>2、 给予Docker Compose执行权限：</p>
+<p>2、 给予Docker Compose执行权限</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
-<p> 3、测试安装：</p>
+<p> 3、测试安装</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker-compose  -v</span><br><span class="line">docker-compose version 1.21.2, build a133471</span><br></pre></td></tr></table></figure>
-<h2 id="Docker-Compose使用"><a href="#Docker-Compose使用" class="headerlink" title="Docker - Compose使用:"></a>Docker - Compose使用:</h2><p>使用Compose基本上是一个三步过程：</p>
+<h3 id="使用-PIP-安装-Docker-Compose"><a href="#使用-PIP-安装-Docker-Compose" class="headerlink" title="使用 PIP 安装 Docker-Compose"></a>使用 PIP 安装 Docker-Compose</h3><h4 id="安装pip"><a href="#安装pip" class="headerlink" title="安装pip"></a>安装pip</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@dk vagrant]# sudo yum -y install epel-release</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@dk vagrant]# sudo yum -y install python-pip</span><br><span class="line">[root@dk vagrant]# pip install --upgrade pip</span><br><span class="line">[root@dk vagrant]# pip -V </span><br><span class="line">pip 18.1 from /usr/lib/python2.7/site-packages/pip (python 2.7)</span><br></pre></td></tr></table></figure>
+<h4 id="安装Docker-Compose"><a href="#安装Docker-Compose" class="headerlink" title="安装Docker-Compose"></a>安装Docker-Compose</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@dk vagrant]# pip install docker-compose --ignore-installed requests</span><br><span class="line">[root@dk vagrant]# docker-compose -v</span><br><span class="line">docker-compose version 1.23.2, build 1110ad0</span><br></pre></td></tr></table></figure>
+<h2 id="Docker-Compose使用"><a href="#Docker-Compose使用" class="headerlink" title="Docker - Compose使用"></a>Docker - Compose使用</h2><p>使用Compose基本上是一个三步过程：</p>
 <ol>
 <li>用一个定义你的应用程序的环境，<code>Dockerfile</code>这样它就可以在任何地方再现。</li>
 <li>定义组成您的应用程序的服务，<code>docker-compose.yml</code> 以便它们可以在隔离的环境中一起运行。</li>
 <li>运行<code>docker-compose up</code>和撰写启动并运行您的整个应用程序。</li>
 </ol>
-<h2 id="Docker-Compose命令"><a href="#Docker-Compose命令" class="headerlink" title="Docker - Compose命令:"></a>Docker - Compose命令:</h2><table>
+<h2 id="Docker-Compose命令"><a href="#Docker-Compose命令" class="headerlink" title="Docker - Compose命令"></a>Docker - Compose命令</h2><table>
 <thead>
 <tr>
 <th>命令</th>
@@ -546,7 +549,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="Docker-Compose实践"><a href="#Docker-Compose实践" class="headerlink" title="Docker - Compose实践:"></a>Docker - Compose实践:</h2><h3 id="使用Compse构建多容器WordPress："><a href="#使用Compse构建多容器WordPress：" class="headerlink" title="使用Compse构建多容器WordPress："></a>使用Compse构建多容器WordPress：</h3><p>1、创建一个目录：</p>
+<h2 id="Docker-Compose实践"><a href="#Docker-Compose实践" class="headerlink" title="Docker - Compose实践"></a>Docker - Compose实践</h2><h3 id="使用Compse构建多容器WordPress"><a href="#使用Compse构建多容器WordPress" class="headerlink" title="使用Compse构建多容器WordPress"></a>使用Compse构建多容器WordPress</h3><p>1、创建一个目录：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir wp</span><br></pre></td></tr></table></figure>
 <p>2、进入目录撰写<code>docker-compose.yml</code>:</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd wp &amp;&amp; touch docker-compose.yml</span><br></pre></td></tr></table></figure>
@@ -702,7 +705,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">37</span>
+                    <span class="site-state-item-count">38</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -826,7 +829,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">41</span>
+                      
+                    
+                    <span class="site-state-item-count">42</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -888,7 +893,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Compose简介"><span class="nav-number">1.</span> <span class="nav-text">Docker - Compose简介:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Compose-是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">Compose 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compose-历史版本？"><span class="nav-number">1.2.</span> <span class="nav-text">Compose 历史版本？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker-Compose-yml"><span class="nav-number">1.3.</span> <span class="nav-text">Docker - Compose.yml:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Version"><span class="nav-number">1.3.1.</span> <span class="nav-text">Version:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Services："><span class="nav-number">1.3.2.</span> <span class="nav-text">Services：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Volumes"><span class="nav-number">1.3.3.</span> <span class="nav-text">Volumes:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Networks"><span class="nav-number">1.3.4.</span> <span class="nav-text">Networks:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Compose安装"><span class="nav-number">2.</span> <span class="nav-text">Docker - Compose安装:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Centos7安装Docker-Compose"><span class="nav-number">2.1.</span> <span class="nav-text">Centos7安装Docker-Compose:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Compose使用"><span class="nav-number">3.</span> <span class="nav-text">Docker - Compose使用:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Compose命令"><span class="nav-number">4.</span> <span class="nav-text">Docker - Compose命令:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Compose实践"><span class="nav-number">5.</span> <span class="nav-text">Docker - Compose实践:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Compse构建多容器WordPress："><span class="nav-number">5.1.</span> <span class="nav-text">使用Compse构建多容器WordPress：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Compose结果Dockerfile构建一个web应用："><span class="nav-number">5.2.</span> <span class="nav-text">使用Compose结果Dockerfile构建一个web应用：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Compose简介"><span class="nav-number">1.</span> <span class="nav-text">Docker - Compose简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Compose-是什么？"><span class="nav-number">1.1.</span> <span class="nav-text">Compose 是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compose-历史版本？"><span class="nav-number">1.2.</span> <span class="nav-text">Compose 历史版本？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker-Compose-yml"><span class="nav-number">1.3.</span> <span class="nav-text">Docker - Compose.yml</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Version"><span class="nav-number">1.3.1.</span> <span class="nav-text">Version</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Services"><span class="nav-number">1.3.2.</span> <span class="nav-text">Services</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Volumes"><span class="nav-number">1.3.3.</span> <span class="nav-text">Volumes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Networks"><span class="nav-number">1.3.4.</span> <span class="nav-text">Networks</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Compose安装"><span class="nav-number">2.</span> <span class="nav-text">Docker - Compose安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Centos7安装Docker-Compose"><span class="nav-number">2.1.</span> <span class="nav-text">Centos7安装Docker-Compose</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-PIP-安装-Docker-Compose"><span class="nav-number">2.2.</span> <span class="nav-text">使用 PIP 安装 Docker-Compose</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装pip"><span class="nav-number">2.2.1.</span> <span class="nav-text">安装pip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Docker-Compose"><span class="nav-number">2.2.2.</span> <span class="nav-text">安装Docker-Compose</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Compose使用"><span class="nav-number">3.</span> <span class="nav-text">Docker - Compose使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Compose命令"><span class="nav-number">4.</span> <span class="nav-text">Docker - Compose命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-Compose实践"><span class="nav-number">5.</span> <span class="nav-text">Docker - Compose实践</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Compse构建多容器WordPress"><span class="nav-number">5.1.</span> <span class="nav-text">使用Compse构建多容器WordPress</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用Compose结果Dockerfile构建一个web应用："><span class="nav-number">5.2.</span> <span class="nav-text">使用Compose结果Dockerfile构建一个web应用：</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.object.ws/"/>
-  <updated>2018-11-14T06:28:47.047Z</updated>
+  <updated>2018-12-11T06:14:09.291Z</updated>
   <id>http://www.object.ws/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS7 安装 WordPress</title>
+    <link href="http://www.object.ws/2018/12/02/centos-wordpress/"/>
+    <id>http://www.object.ws/2018/12/02/centos-wordpress/</id>
+    <published>2018-12-02T11:53:28.000Z</published>
+    <updated>2018-12-11T06:14:09.291Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;环境准备&quot;&gt;&lt;a href=&quot;#环境准备&quot; class=&quot;headerlink&quot; title=&quot;环境准备&quot;&gt;&lt;/a&gt;环境准备&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;软件&lt;/th&gt;
+&lt;th st
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
+    
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
+    
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
+    
+      <category term="WordPress" scheme="http://www.object.ws/tags/WordPress/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker - Dockerfile</title>
@@ -106,13 +137,13 @@
     <link href="http://www.object.ws/2018/05/23/docker-compose/"/>
     <id>http://www.object.ws/2018/05/23/docker-compose/</id>
     <published>2018-05-23T04:50:04.000Z</published>
-    <updated>2018-07-02T16:17:39.391Z</updated>
+    <updated>2018-12-13T01:58:18.228Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;Docker-Compose简介&quot;&gt;&lt;a href=&quot;#Docker-Compose简介&quot; class=&quot;headerlink&quot; title=&quot;Docker - Compose简介:&quot;&gt;&lt;/a&gt;Docker - Compose简介:&lt;/h2&gt;&lt;h3 id=&quot;Com
+        &lt;h2 id=&quot;Docker-Compose简介&quot;&gt;&lt;a href=&quot;#Docker-Compose简介&quot; class=&quot;headerlink&quot; title=&quot;Docker - Compose简介&quot;&gt;&lt;/a&gt;Docker - Compose简介&lt;/h2&gt;&lt;h3 id=&quot;Compo
       
     
     </summary>
@@ -162,7 +193,7 @@
     <link href="http://www.object.ws/2018/05/09/docker-network/"/>
     <id>http://www.object.ws/2018/05/09/docker-network/</id>
     <published>2018-05-09T10:51:57.000Z</published>
-    <updated>2018-06-15T16:45:46.561Z</updated>
+    <updated>2019-01-08T16:13:30.320Z</updated>
     
     <summary type="html">
     
@@ -320,7 +351,7 @@
     <link href="http://www.object.ws/2018/03/11/docker-introduction/"/>
     <id>http://www.object.ws/2018/03/11/docker-introduction/</id>
     <published>2018-03-11T02:24:12.000Z</published>
-    <updated>2018-06-08T08:54:51.729Z</updated>
+    <updated>2019-01-04T06:05:43.708Z</updated>
     
     <summary type="html">
     
@@ -520,35 +551,6 @@
       <category term="CSS" scheme="http://www.object.ws/tags/CSS/"/>
     
       <category term="HTML" scheme="http://www.object.ws/tags/HTML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot - 使用Spring Data JDBC</title>
-    <link href="http://www.object.ws/2017/11/24/springboot-springdata-jdbc/"/>
-    <id>http://www.object.ws/2017/11/24/springboot-springdata-jdbc/</id>
-    <published>2017-11-24T06:50:45.000Z</published>
-    <updated>2018-06-14T02:05:38.437Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;简介：&quot;&gt;&lt;a href=&quot;#简介：&quot; class=&quot;headerlink&quot; title=&quot;简介：&quot;&gt;&lt;/a&gt;简介：&lt;/h2&gt;&lt;p&gt;Spring Data JDBC Extensions是&lt;a href=&quot;https://spring.io/projects/sp
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://www.object.ws/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://www.object.ws/tags/Java/"/>
-    
-      <category term="Spring Boot" scheme="http://www.object.ws/tags/Spring-Boot/"/>
-    
-      <category term="Spring" scheme="http://www.object.ws/tags/Spring/"/>
-    
-      <category term="Spring Data" scheme="http://www.object.ws/tags/Spring-Data/"/>
     
   </entry>
   

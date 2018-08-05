@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.object.ws/2018/05/09/docker-network/</loc>
+    
+    <lastmod>2019-01-08T16:13:30.320Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2018/03/11/docker-introduction/</loc>
+    
+    <lastmod>2019-01-04T06:05:43.708Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2018/05/23/docker-compose/</loc>
+    
+    <lastmod>2018-12-13T01:58:18.228Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2018/12/02/centos-wordpress/</loc>
+    
+    <lastmod>2018-12-11T06:14:09.291Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.object.ws/2018/06/25/springcloud-deploy/</loc>
     
     <lastmod>2018-11-14T06:29:46.436Z</lastmod>
@@ -54,20 +82,6 @@
     <loc>http://www.object.ws/2018/05/30/docker-swarm/</loc>
     
     <lastmod>2018-07-02T16:25:48.085Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.object.ws/2018/05/23/docker-compose/</loc>
-    
-    <lastmod>2018-07-02T16:17:39.391Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.object.ws/2018/05/09/docker-network/</loc>
-    
-    <lastmod>2018-06-15T16:45:46.561Z</lastmod>
     
   </url>
   
@@ -173,13 +187,6 @@
     <loc>http://www.object.ws/2017/08/22/springboot-actuator/</loc>
     
     <lastmod>2018-06-10T03:09:41.446Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.object.ws/2018/03/11/docker-introduction/</loc>
-    
-    <lastmod>2018-06-08T08:54:51.729Z</lastmod>
     
   </url>
   
