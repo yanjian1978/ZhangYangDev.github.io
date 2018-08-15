@@ -72,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http://www.object.ws/2000/03/29/golang-beetool/</loc>
-    
-    <lastmod>2018-11-05T03:10:39.872Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.object.ws/2019/01/24/python-pip-conf/</loc>
     
     <lastmod>2018-10-18T11:27:59.397Z</lastmod>
@@ -89,6 +82,13 @@
     <loc>http://www.object.ws/2018/11/08/linux-vim-encode/</loc>
     
     <lastmod>2018-09-13T02:48:23.029Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2000/03/29/golang-beetool/</loc>
+    
+    <lastmod>2018-08-15T03:12:05.973Z</lastmod>
     
   </url>
   
