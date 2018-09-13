@@ -42,6 +42,31 @@
   </entry>
   
   <entry>
+    <title>Python pip配置国内清华大学Tuna镜像</title>
+    <link href="http://www.object.ws/2019/01/24/python-pip-conf/"/>
+    <id>http://www.object.ws/2019/01/24/python-pip-conf/</id>
+    <published>2019-01-24T09:15:46.000Z</published>
+    <updated>2018-09-13T02:43:10.522Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Python-pip配置国内清华大学镜像&quot;&gt;&lt;a href=&quot;#Python-pip配置国内清华大学镜像&quot; class=&quot;headerlink&quot; title=&quot;Python pip配置国内清华大学镜像&quot;&gt;&lt;/a&gt;Python pip配置国内清华大学镜像&lt;/h2&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="http://www.object.ws/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://www.object.ws/tags/Python/"/>
+    
+      <category term="pip" scheme="http://www.object.ws/tags/pip/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CentOS7 安装 WordPress</title>
     <link href="http://www.object.ws/2018/12/02/centos-wordpress/"/>
     <id>http://www.object.ws/2018/12/02/centos-wordpress/</id>
@@ -525,30 +550,6 @@
     
     
       <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac中设置Sublime快速在终端中使用命令打开项目</title>
-    <link href="http://www.object.ws/2017/12/21/sublime/"/>
-    <id>http://www.object.ws/2017/12/21/sublime/</id>
-    <published>2017-12-21T02:05:36.000Z</published>
-    <updated>2018-06-11T02:28:20.974Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;工作中用Atom比较多，比较喜欢Atom可以直接在终端中直接输入&lt;code&gt;atom .&lt;/code&gt;就能直接打开项目的功能，于是搜索得知&lt;code&gt;sublime text&lt;/code&gt;也有这样的功能，下面就简单的配置了一下：&lt;/p&gt;
-&lt;figure class=&quot;hig
-      
-    
-    </summary>
-    
-      <category term="Tools" scheme="http://www.object.ws/categories/Tools/"/>
-    
-    
-      <category term="Sublime Test" scheme="http://www.object.ws/tags/Sublime-Test/"/>
     
   </entry>
   
