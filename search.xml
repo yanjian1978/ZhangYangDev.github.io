@@ -38,6 +38,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[解决Linux系统中Vim编辑器中文乱码的问题]]></title>
+    <url>%2F2018%2F11%2F08%2Flinux-vim-encode%2F</url>
+    <content type="text"><![CDATA[解决Vim中文乱码的问题编辑 vimrc 文件1sudo vim /etc/vimrc 在文件中加入如下几行：1234set fileencodings=ucs-bom,utf-8,gbk,gb2312,cp936,gb18030,big5,latin-1set encoding=utf-8set termencoding=utf-8set fileencoding=utf-8 参考资料： https://www.cnblogs.com/hfyfpga/p/5451918.html]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Vim</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Docker - Dockerfile]]></title>
     <url>%2F2018%2F09%2F14%2Fdocker-dockerfile%2F</url>
     <content type="text"><![CDATA[Dockerfile:语法详解：官方文档：https://docs.docker.com/engine/reference/builder/ FROM :示例： 1FROM centos # 指定基础镜像为 centos 作用：FROM指定一个基础镜像， 一般情况下一个可用的 Dockerfile一定是 FROM 为第一个指令。至于镜像则可以是任何合理存在的image镜像，不建议使用任何非官方镜像，为了安全。 FROM 一定是首个非注释指令 Dockerfile， FROM 可以在一个 Dockerfile 中出现多次，以便于创建混合的images。 如果没有指定 tag ，latest 将会被指定为要使用的基础镜像版本。 LABEL ：示例： 12LABLE version="1.0" # dockefile 版本信息LABLE maintainer="zhang@gmail.com" # dockerfile 维护者信息 作用： 指定镜像制作者[meta data]的信息信息，如maintainer、version、description等 RUN :示例： 12RUN yum update # 运行 yum update 命令RUN yum makecache 作用：RUN命令将在当前image中执行任意合法命令并提交执行结果。命令执行提交后，就会自动执行Dockerfile中的下一个指令，每执行一次就会多分一层 layer，建议合并多条命令为一行。 CMD:示例： 12ENV name docker # 定义 name 变量CMD echo "$name" # 输出 name 变量 作用：容器启动时默认执行的命令，如果 docker run 指定了其他命令，CMD 命令会被忽略。如果定义了多个 CMD 命令，则只有最后一个会被执行。 ENTRYPOINT ：示例： 12345COPY docker-entrypoint.sh /usr/local/binENTRYPOINT EXPOSE 27017CMD ["mongod"] 作用：让容器以应用程序或者服务的形式运行，不会被忽略，一定会被执行，可以指定一个 shell脚本来作为 entrypoint。 WORKDIR：示例： 1WORKDIR /opt #指定当前工作目录为/opt 如果不存在 opt 目录，则会自动创建 作用： WORKDIR 用来设置当前的工作目录的，尽量使用绝对路径。Docker 默认的工作目录是/，只有 RUN 能执行 cd 命令切换目录，而且还只作用在当下下的 RUN，也就是说每一个 RUN 都是独立进行的。如果想让其他指令在指定的目录下执行，就得靠 WORKDIR。WORKDIR 动作的目录改变是持久的，不用每个指令前都使用一次 WORKDIR。 ADD ：示例： 1ADD hello.c / # 将 hello.c 文件添加到容器的/目录下 作用：COPY 将文件从路径 复制添加到容器内部路径 。 必须是对于源文件夹的一个文件或目录，也可以是一个远程的url， 是目标容器中的绝对路径。 COPY：示例： 1COPY hello.c / # 将 hello.c 文件复制到容器的/目录下 作用：COPY 将文件从路径 复制添加到容器内部路径 。 所有的新文件和文件夹都会创建UID 和 GID。事实上如果 是一个远程文件URL，那么目标文件的权限将会是600。 ADD命令和 COPY 命令在很大层度上功能是一样的。但是 COPY 语义更加直接，所以推荐尽量使用 COPY 命令。例外的是 ADD 命令自带解压功能，如果需要拷贝并解压一个文件到镜像中，那么可以使用 ADD 命令。 除此之外，都推荐使用 COPY 命令。 需要添加远程文件，推荐使用 RUN 来执行wget/curl。 ENV：示例： 12ENV MYSQL_VERSION 5.7 # 添加常量 设置 MySQL 的版本为5.7RUN apt-get install -y mysql-server="$&#123;MYSQL_VERSION&#125;" # 在RUN中引用ENV 作用： ENV指令可以用于为docker容器设置环境变量 ENV设置的环境变量，可以使用 docker inspect命令来查看。同时还可以使用docker run –env =来修改环境变量。 ENV 可以尽量多使用，以便于增加程序的可维护性。 VOLUME：示例： 1VOLUME /data # 共享 /data文件夹中的数据 作用： 创建一个可以从本地主机或其他容器挂载的挂载点，一般用来存放数据库和需要保持的数据等。 EXPOSE：示例： 1EXPOSE 80 # 请求通过80端口来转发 作用： EXPOSE 指令指定在docker允许时指定的端口进行转发。 简单实践：Dockerfile内容：12345FROM nginx:latestLABEL MAINTAINER="xxx xxx@gmail.com"WORKDIR /usr/share/nginx/htmlCOPY index.html index.html html网页内容：123456789&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt; &lt;title&gt;Docer&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;h1&gt;From Docker Nginx&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt; 构建image:1[vagrant@docker-host ]$ docker build -t dk_nginx . 启动容器：1[vagrant@docker-host ]$ docker run -d -p 80:80 dk_nginx 测试访问[虚拟机环境下]：12345678910[vagrant@docker-host ]$ curl 127.0.0.1&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;head&gt; &lt;title&gt;Docer&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;h1&gt;From Docker Nginx&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt; 测试访问(物理机环境下)：1浏览器访问虚拟机IP地址： 192.168.10.10]]></content>

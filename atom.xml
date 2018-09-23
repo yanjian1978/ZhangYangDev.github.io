@@ -98,6 +98,31 @@
   </entry>
   
   <entry>
+    <title>解决Linux系统中Vim编辑器中文乱码的问题</title>
+    <link href="http://www.object.ws/2018/11/08/linux-vim-encode/"/>
+    <id>http://www.object.ws/2018/11/08/linux-vim-encode/</id>
+    <published>2018-11-08T06:10:24.000Z</published>
+    <updated>2018-09-13T02:48:23.029Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;解决Vim中文乱码的问题&quot;&gt;&lt;a href=&quot;#解决Vim中文乱码的问题&quot; class=&quot;headerlink&quot; title=&quot;解决Vim中文乱码的问题&quot;&gt;&lt;/a&gt;解决Vim中文乱码的问题&lt;/h3&gt;&lt;h4 id=&quot;编辑-vimrc-文件&quot;&gt;&lt;a href=&quot;#编辑
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
+    
+      <category term="Vim" scheme="http://www.object.ws/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Docker - Dockerfile</title>
     <link href="http://www.object.ws/2018/09/14/docker-dockerfile/"/>
     <id>http://www.object.ws/2018/09/14/docker-dockerfile/</id>
@@ -527,29 +552,6 @@
       <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
       <category term="Java" scheme="http://www.object.ws/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>去掉CentOS中取消滴滴滴的声音</title>
-    <link href="http://www.object.ws/2018/01/08/centos-inputrc/"/>
-    <id>http://www.object.ws/2018/01/08/centos-inputrc/</id>
-    <published>2018-01-08T01:28:43.000Z</published>
-    <updated>2018-06-06T03:07:10.781Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;CentOS7-中去掉烦人的滴滴滴的声音&quot;&gt;&lt;a href=&quot;#CentOS7-中去掉烦人的滴滴滴的声音&quot; class=&quot;headerlink&quot; title=&quot;CentOS7 中去掉烦人的滴滴滴的声音&quot;&gt;&lt;/a&gt;CentOS7 中去掉烦人的滴滴滴的声音&lt;/h3&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
-    
-    
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
   </entry>
   
