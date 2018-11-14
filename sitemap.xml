@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.object.ws/2000/03/29/golang-beetool/</loc>
+    
+    <lastmod>2019-04-25T15:56:57.131Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2000/04/11/nsca-basic-knowledge/</loc>
+    
+    <lastmod>2019-04-25T15:56:28.298Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2018/04/26/docker-cntrimg/</loc>
+    
+    <lastmod>2019-03-28T16:43:30.752Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.object.ws/2017/12/05/mobile-css/</loc>
     
     <lastmod>2019-03-28T02:28:58.991Z</lastmod>
@@ -54,13 +75,6 @@
     <loc>http://www.object.ws/2018/09/14/docker-dockerfile/</loc>
     
     <lastmod>2018-11-14T06:28:47.047Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.object.ws/2018/04/26/docker-cntrimg/</loc>
-    
-    <lastmod>2018-11-14T06:27:38.559Z</lastmod>
     
   </url>
   
@@ -296,14 +310,14 @@
   </url>
   
   <url>
-    <loc>http://www.object.ws/categories/index.html</loc>
+    <loc>http://www.object.ws/guestbook/index.html</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.object.ws/guestbook/index.html</loc>
+    <loc>http://www.object.ws/categories/index.html</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     
