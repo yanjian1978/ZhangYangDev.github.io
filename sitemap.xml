@@ -44,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://www.object.ws/2000/03/29/golang-beetool/</loc>
-    
-    <lastmod>2018-12-27T03:15:39.647Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.object.ws/2018/05/23/docker-compose/</loc>
     
     <lastmod>2018-12-13T01:58:18.228Z</lastmod>
@@ -61,6 +54,13 @@
     <loc>http://www.object.ws/2018/12/02/centos-wordpress/</loc>
     
     <lastmod>2018-12-11T06:14:09.291Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2000/03/29/golang-beetool/</loc>
+    
+    <lastmod>2018-12-03T03:16:37.179Z</lastmod>
     
   </url>
   
