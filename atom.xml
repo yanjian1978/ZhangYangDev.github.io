@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.object.ws/"/>
-  <updated>2019-03-28T02:28:41.199Z</updated>
+  <updated>2019-08-11T06:09:29.018Z</updated>
   <id>http://www.object.ws/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境</title>
+    <link href="http://www.object.ws/2019/04/12/vagrant/"/>
+    <id>http://www.object.ws/2019/04/12/vagrant/</id>
+    <published>2019-04-12T12:31:13.000Z</published>
+    <updated>2019-08-11T06:09:29.018Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;​    &lt;/p&gt;
+&lt;h2 id=&quot;Vagrant-基础概念&quot;&gt;&lt;a href=&quot;#Vagrant-基础概念&quot; class=&quot;headerlink&quot; title=&quot;Vagrant - 基础概念:&quot;&gt;&lt;/a&gt;Vagrant - 基础概念:&lt;/h2&gt;&lt;h3 id=&quot;Vagran
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
+    
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
+    
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
+    
+      <category term="Vagrant" scheme="http://www.object.ws/tags/Vagrant/"/>
+    
+  </entry>
   
   <entry>
     <title>在Vue中使用防抖、截流函数 防止重复点击或者重复上拉加载</title>
@@ -318,34 +346,6 @@
   </entry>
   
   <entry>
-    <title>使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境</title>
-    <link href="http://www.object.ws/2018/04/12/vagrant/"/>
-    <id>http://www.object.ws/2018/04/12/vagrant/</id>
-    <published>2018-04-12T12:31:13.000Z</published>
-    <updated>2018-07-10T06:47:59.114Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;​    &lt;/p&gt;
-&lt;h2 id=&quot;Vagrant-基础概念&quot;&gt;&lt;a href=&quot;#Vagrant-基础概念&quot; class=&quot;headerlink&quot; title=&quot;Vagrant - 基础概念:&quot;&gt;&lt;/a&gt;Vagrant - 基础概念:&lt;/h2&gt;&lt;h3 id=&quot;Vagran
-      
-    
-    </summary>
-    
-      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
-    
-    
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
-    
-      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
-    
-      <category term="Vagrant" scheme="http://www.object.ws/tags/Vagrant/"/>
-    
-  </entry>
-  
-  <entry>
     <title>CentOS7 搭建 Consul 集群</title>
     <link href="http://www.object.ws/2018/04/03/centos-consul/"/>
     <id>http://www.object.ws/2018/04/03/centos-consul/</id>
@@ -365,11 +365,11 @@
       <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
     
     
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
+    
       <category term="MicroService" scheme="http://www.object.ws/tags/MicroService/"/>
     
       <category term="Cluster" scheme="http://www.object.ws/tags/Cluster/"/>
-    
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
       <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     

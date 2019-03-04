@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://www.object.ws/2019/04/12/vagrant/</loc>
+    <lastmod>2019-08-11T06:09:29.018Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境</title>
+        <pubTime>2019-04-12T12:31:13.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Docker</tag>
+         
+        <tag>Vagrant</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.object.ws/2000/04/11/nsca-basic-knowledge/</loc>
     <lastmod>2019-04-25T15:56:28.298Z</lastmod>
     <data>
@@ -95,7 +119,7 @@
     
   <url>
     <loc>http://www.object.ws/2000/03/29/golang-beetool/</loc>
-    <lastmod>2019-01-31T03:24:47.501Z</lastmod>
+    <lastmod>2019-01-31T03:27:28.558Z</lastmod>
     <data>
         <display>
         <title>BeeGo bee工具的使用</title>
@@ -310,11 +334,11 @@
         <title>CentOS7 搭建 Consul 集群</title>
         <pubTime>2018-04-03T02:57:14.000Z</pubTime>
         
+        <tag>CentOS</tag>
+         
         <tag>MicroService</tag>
          
         <tag>Cluster</tag>
-         
-        <tag>CentOS</tag>
          
         <tag>Linux</tag>
          
@@ -346,30 +370,6 @@
            
              
               <breadCrumb title="Linux" url="http://www.object.ws/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.object.ws/2018/04/12/vagrant/</loc>
-    <lastmod>2018-07-10T06:47:59.114Z</lastmod>
-    <data>
-        <display>
-        <title>使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境</title>
-        <pubTime>2018-04-12T12:31:13.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-        <tag>Docker</tag>
-         
-        <tag>Vagrant</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
           
         </display>
     </data>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.object.ws/2019/04/12/vagrant/</loc>
+    
+    <lastmod>2019-08-11T06:09:29.018Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.object.ws/2000/04/11/nsca-basic-knowledge/</loc>
     
     <lastmod>2019-04-25T15:56:28.298Z</lastmod>
@@ -32,7 +39,7 @@
   <url>
     <loc>http://www.object.ws/2000/03/29/golang-beetool/</loc>
     
-    <lastmod>2019-01-31T03:24:47.501Z</lastmod>
+    <lastmod>2019-01-31T03:27:28.558Z</lastmod>
     
   </url>
   
@@ -103,13 +110,6 @@
     <loc>http://www.object.ws/2018/03/02/centos-redis/</loc>
     
     <lastmod>2018-07-11T07:59:34.850Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.object.ws/2018/04/12/vagrant/</loc>
-    
-    <lastmod>2018-07-10T06:47:59.114Z</lastmod>
     
   </url>
   
