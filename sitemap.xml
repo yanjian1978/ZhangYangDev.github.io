@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.object.ws/2018/05/18/go-basic/</loc>
+    
+    <lastmod>2019-08-19T08:36:46.601Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2019/03/18/java-spring-cros/</loc>
+    
+    <lastmod>2019-08-19T08:36:35.401Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.object.ws/2019/04/12/vagrant/</loc>
     
     <lastmod>2019-08-11T06:09:29.018Z</lastmod>
@@ -303,13 +317,6 @@
   </url>
   
   <url>
-    <loc>http://www.object.ws/2017/08/05/hightcharts-note/</loc>
-    
-    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.object.ws/categories/index.html</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
@@ -318,6 +325,13 @@
   
   <url>
     <loc>http://www.object.ws/guestbook/index.html</loc>
+    
+    <lastmod>2017-09-20T15:15:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2017/08/05/hightcharts-note/</loc>
     
     <lastmod>2017-09-20T15:15:06.000Z</lastmod>
     

@@ -14,6 +14,19 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[使用Spring CROS解决项目中的跨域问题]]></title>
+    <url>%2F2019%2F03%2F18%2Fjava-spring-cros%2F</url>
+    <content type="text"><![CDATA[CROS(Cross-Origin Resource Sharing) 用于解决浏览器中跨域请求的问题。简单的Get请求可以使用JSONP来解决，而对于其它复杂的请求则需要后端应用的支持CROS。Spring在4.2版本之后提供了@CrossOrigin 注解来实现对Cross的支持。 在Controller方法上配置 123456@CrossOrigin(origins = &#123;"http://loaclhost:8088"&#125;)@RequestMapping(value = "/crossTest",method = RequestMethod.GET)public String greeting() &#123; return "corss test";&#125; 在Controller上配置，那么这个Controller中的所有方法都会支持CORS 1234567891011121314151617import org.springframework.stereotype.Controller;import org.springframework.web.bind.annotation.CrossOrigin;import org.springframework.web.bind.annotation.RequestMapping;import org.springframework.web.bind.annotation.RequestMethod;@CrossOrigin(origins = "http://localhost:8088",maxAge = 3600)@Controller@RequestMapping("/api")public class AppController &#123; @RequestMapping(value = "/crossTest",method = RequestMethod.GET) public String greeting() &#123; return "corss test"; &#125; &#125; Java Config全局配置 123456789101112131415161718192021222324252627282930import org.springframework.context.annotation.Configuration;import org.springframework.web.servlet.config.annotation.CorsRegistry;import org.springframework.web.servlet.config.annotation.EnableWebMvc;import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;@Configuration@EnableWebMvcpublic class SpringWebConfig extends WebMvcConfigurerAdapter &#123; /** * &#123;@inheritDoc&#125; * &lt;p&gt;This implementation is empty. * * @param registry */ @Override public void addCorsMappings(CorsRegistry registry) &#123; super.addCorsMappings(registry); // 对所有的URL配置 registry.addMapping("/**"); // 针对某些URL配置 registry.addMapping("/api/**").allowedOrigins("http:///localhost:8088") .allowedMethods("PUT","DELETE") .allowedHeaders("header1","header2","header3") .exposedHeaders("header1","header2") .allowCredentials(false).maxAge(3600); &#125;&#125; XML全局配置 1234567891011121314151617181920&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd"&gt; &lt;mvc:cors&gt; &lt;!--&lt;mvc:mapping path=""/&gt;--&gt; &lt;mvc:mapping path="/api/**" allowed-origins="http://localhost:8088,http://localhost:8888" allowed-methods="GET,PUT" allowed-headers="header1,header2" exposed-headers="header1,header2" allow-credentials="false" max-age="3600" /&gt; &lt;/mvc:cors&gt;&lt;/beans&gt;]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring</tag>
+        <tag>Cros</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[在Vue中使用防抖、截流函数 防止重复点击或者重复上拉加载]]></title>
     <url>%2F2019%2F02%2F25%2Fvue-debounce-throttle-func%2F</url>
     <content type="text"><![CDATA[函数防抖1234567891011121314151617181920212223/** * 函数防抖 (只执行最后一次点击) * @param fn * @param delay * @returns &#123;Function&#125; * @constructor */export const Debounce = (fn, t) =&gt; &#123; let delay = t || 500; let timer; console.log(fn) console.log(typeof fn) return function () &#123; let args = arguments; if(timer)&#123; clearTimeout(timer); &#125; timer = setTimeout(() =&gt; &#123; timer = null; fn.apply(this, args); &#125;, delay); &#125;&#125;; 函数节流1234567891011121314151617181920212223242526/** * 函数节流 * @param fn * @param interval * @returns &#123;Function&#125; * @constructor */export const Throttle = (fn, t) =&gt; &#123; let last; let timer; let interval = t || 500; return function () &#123; let args = arguments; let now = +new Date(); if (last &amp;&amp; now - last &lt; interval) &#123; clearTimeout(timer); timer = setTimeout(() =&gt; &#123; last = now; fn.apply(this, args); &#125;, interval); &#125; else &#123; last = now; fn.apply(this, args); &#125; &#125;&#125;; 使用方法1234567...methods:&#123; getAliyunData:Throttle(function()&#123; ... &#125;,1000),&#125;...]]></content>
@@ -116,6 +129,19 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[GoLang 基础学习笔记]]></title>
+    <url>%2F2018%2F05%2F18%2Fgo-basic%2F</url>
+    <content type="text"><![CDATA[GOLANG - 转义字符GoLang转义字符： 1234567891011121314151617181920212223242526272829CODE：package main// fmt包提供格式化、输入、输出函数import "fmt"func main() &#123; // GoLang转义字符 // (1) \t 制表符排版 fmt.Println("Go\tLanguage") // (2) \n 换行使用 fmt.Println("Go\nLanguage") // (3) \\ 输出单个\ fmt.Println("Go\\Language") // (4) \" 输出单个" fmt.Println("\"GoLanguage\"") // (5) \r 输出回车换行 fmt.Println("Go\rLanguage")&#125;RESULT:Running] go run "/tempCodeRunnerFile.go"Go LanguageGoLanguageGo\Language"GoLanguage"GoLanguage]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>CentOS</tag>
+        <tag>Docker</tag>
+        <tag>Vagrant</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Docker - 持久化存储和数据共享]]></title>
     <url>%2F2018%2F05%2F15%2Fdocker-data%2F</url>
     <content type="text"><![CDATA[Docker - Data Volume想要了解Docker Volume,首先我们需要知道Docker的文件系统是如何工作的.Docker镜像是由多个文件系统(只读层)叠加而成.当我们启动一个容器的时候,Docker会加载镜像层并在其上添加一个读写层.如果运行中的容器修改了现有的一个已存在的文件,那该文件将会从读写层下的只读层复制到读写层,该文件的只读版本仍然存在,只是已经被读写层中该文件的副本所隐藏.当删除Docker容器,并通过该镜像重新启动时,之前的更改将会丢失.在Docker中,只读层以及在顶部的读写层的组合被称为Union FIle System(联合文件系统).为了能够保存(持久化)数据以及共享容器间的数据,Docker提出了Volume的概念.简单来说,Volume就是目录或者文件,它可以绕过默认的联合文件系统,而以正常的文件或者目录的形式存在于宿主机上. 环境准备:拉取MySQL的镜像： 1docker pull mysql:latest 启动一个MySQL容器： 1docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag some-mysql： 容器别名 my-secret-pw：初始化设置的root用户的密码 tag：mysql的版本，不写默认使用最新版 参考：https://hub.docker.com/_/mysql/ 创建一个Volume：12[vagrant@docker-host ~]$ docker run --name dk-mysql -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest48a6888c4061c89f760685827e98955c8323747452c24deb1af688c2f56d38b6 -v : 指定MySQL的Volume路径以及名称 查看Volume:12345678910111213141516[vagrant@docker-host ~]$ docker volume ls # 查看当前机器上的VolumeDRIVER VOLUME NAMElocal mysql [vagrant@docker-host ~]$ docker volume inspect mysql # 查看volume的信息[ &#123; "CreatedAt": "2018-06-15T16:23:27Z", "Driver": "local", "Labels": null, "Mountpoint": "/var/lib/docker/volumes/mysql/_data", "Name": "mysql", "Options": null, "Scope": "local" &#125;] 可以看出Volume的数据的Mountpoint是存储在机器的/var/lib/docker/volumes/目录下。 测试Volume是否生效：进入到MySQL容器中：123456789[vagrant@docker-host ~]$ docker exec -it dk-mysql /bin/sh# mysql -u root -p # 进入到MySQL的shell中Enter password:Welcome to the MySQL monitor. Commands end with ; or \g.≈≈≈≈mysql&gt; create database docker; # 创建数据库，名为dockerQuery OK, 1 row affected (0.08 sec)mysql&gt; exitBye# exit 强制删除容器：1234567[vagrant@docker-host ~]$ docker rm -f dk-mysql # 强制删除MySQL容器dk-mysql[vagrant@docker-host ~]$ docker ps -a # 查看容器 CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES[vagrant@docker-host ~]$ docker volume ls # 查看volume mysql还在DRIVER VOLUME NAMElocal mysql 创建新容器使用旧的Volume：12[vagrant@docker-host ~]$ docker run --name mysql-new -v mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest # 创建mysql容器 名为：mysql-new9ab58b633584c5eab99cf28402dfdde22f349f79da9453115a8eab2cc41dc0bf 查看数据是否存在：12345678910111213141516[vagrant@docker-host ~]$ docker exec -it mysql-new /bin/sh # 进入到新的容器中# mysql -u root -p Enter password:Welcome to the MySQL monitor. Commands end with ; or \g.mysql&gt; show databases; # 查看所有数据库 发现docker在列+--------------------+| Database |+--------------------+| docker || information_schema || mysql || performance_schema || sys |+--------------------+5 rows in set (0.00 sec) Docker容器被删除之后Volume并不会被删除。 Docker - Bing Mounting:环境准备：在机器上创建一个目录，放一个html网页，然后将这个目录挂载到容器中： 12345[vagrant@docker-host ~]$ mkdir web &amp;&amp; touch web/index.html[vagrant@docker-host ~]$ vim web/index.html[vagrant@docker-host ~]$ cd web/[vagrant@docker-host web]$ more index.html&lt;h1&gt;From Dokcer Container!&lt;/h1&gt; 挂载目录到容器中：将当前目录中的文件挂载到Nginx容器中： 1[vagrant@docker-host web]$ docker run -d -p 8088:80 -v $(pwd):/usr/share/nginx/html --name webnginx nginx $(pwd): 当前目录 待容器启动后，可以访问容器： 1http://192.168.10.10:8088/ 容器中修改网页内容：12345[vagrant@docker-host web]$ docker exec -it webnginx /bin/sh# cd /usr/share/nginx/html# vim index.html&lt;h1&gt;From Dokcer Container! Edit&lt;/h1&gt; # 修改完成后再次访问 可看到内容已更新 同样，在机器上修改文件，容器中的文件也会同步更新。 退出容器查看文件：退出容器，查看机器上的文件，会发现已有变化： 12[vagrant@docker-host web]$ more index.html&lt;h1&gt;From Dokcer Container! Edit&lt;/h1&gt; Done.]]></content>
@@ -162,9 +188,9 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>CentOS</tag>
         <tag>MicroService</tag>
         <tag>Cluster</tag>
+        <tag>CentOS</tag>
         <tag>Linux</tag>
         <tag>Consul</tag>
       </tags>

@@ -45,6 +45,33 @@
   </entry>
   
   <entry>
+    <title>使用Spring CROS解决项目中的跨域问题</title>
+    <link href="http://www.object.ws/2019/03/18/java-spring-cros/"/>
+    <id>http://www.object.ws/2019/03/18/java-spring-cros/</id>
+    <published>2019-03-18T06:59:13.000Z</published>
+    <updated>2019-08-19T08:36:35.401Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;CROS(Cross-Origin Resource Sharing) 用于解决浏览器中跨域请求的问题。简单的Get请求可以使用JSONP来解决，而对于其它复杂的请求则需要后端应用的支持CROS。Spring在4.2版本之后提供了&lt;strong&gt;&lt;em&gt;@CrossOrig
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://www.object.ws/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://www.object.ws/tags/Java/"/>
+    
+      <category term="Spring" scheme="http://www.object.ws/tags/Spring/"/>
+    
+      <category term="Cros" scheme="http://www.object.ws/tags/Cros/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在Vue中使用防抖、截流函数 防止重复点击或者重复上拉加载</title>
     <link href="http://www.object.ws/2019/02/25/vue-debounce-throttle-func/"/>
     <id>http://www.object.ws/2019/02/25/vue-debounce-throttle-func/</id>
@@ -265,6 +292,34 @@
   </entry>
   
   <entry>
+    <title>GoLang 基础学习笔记</title>
+    <link href="http://www.object.ws/2018/05/18/go-basic/"/>
+    <id>http://www.object.ws/2018/05/18/go-basic/</id>
+    <published>2018-05-18T12:59:13.000Z</published>
+    <updated>2019-08-19T08:36:46.601Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;GOLANG-转义字符&quot;&gt;&lt;a href=&quot;#GOLANG-转义字符&quot; class=&quot;headerlink&quot; title=&quot;GOLANG - 转义字符&quot;&gt;&lt;/a&gt;GOLANG - 转义字符&lt;/h3&gt;&lt;p&gt;GoLang转义字符：&lt;/p&gt;
+&lt;figure class=
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
+    
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
+    
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
+    
+      <category term="Vagrant" scheme="http://www.object.ws/tags/Vagrant/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Docker - 持久化存储和数据共享</title>
     <link href="http://www.object.ws/2018/05/15/docker-data/"/>
     <id>http://www.object.ws/2018/05/15/docker-data/</id>
@@ -365,11 +420,11 @@
       <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
     
     
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
-    
       <category term="MicroService" scheme="http://www.object.ws/tags/MicroService/"/>
     
       <category term="Cluster" scheme="http://www.object.ws/tags/Cluster/"/>
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
       <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     
@@ -501,57 +556,6 @@
       <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
       <category term="Redis" scheme="http://www.object.ws/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS7 安装 Nginx</title>
-    <link href="http://www.object.ws/2018/02/25/centos-nginx/"/>
-    <id>http://www.object.ws/2018/02/25/centos-nginx/</id>
-    <published>2018-02-25T11:49:04.000Z</published>
-    <updated>2018-06-03T02:48:11.254Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在 CentOS 中使用 yum 直接来安装 Nginx的话会出现如下错误，原因是Nginx这个软件不是 yum源中自带的，所以需要手动来配置添加 Nginx 的 yum 源。&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
-    
-    
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
-    
-      <category term="Nginx" scheme="http://www.object.ws/tags/Nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS7 安装OpenJDK1.8 &amp; OracleJDK1.8</title>
-    <link href="http://www.object.ws/2018/01/21/centos-jdk/"/>
-    <id>http://www.object.ws/2018/01/21/centos-jdk/</id>
-    <published>2018-01-21T10:56:49.000Z</published>
-    <updated>2018-06-06T03:06:27.273Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;安装OpenJDK1-8-：&quot;&gt;&lt;a href=&quot;#安装OpenJDK1-8-：&quot; class=&quot;headerlink&quot; title=&quot;安装OpenJDK1.8 ：&quot;&gt;&lt;/a&gt;安装OpenJDK1.8 ：&lt;/h3&gt;&lt;h4 id=&quot;检查当前机器是否有自带的JDK&quot;&gt;
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
-    
-    
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
-    
-      <category term="Java" scheme="http://www.object.ws/tags/Java/"/>
     
   </entry>
   
