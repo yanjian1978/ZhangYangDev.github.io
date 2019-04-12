@@ -4,8 +4,54 @@
 
     
   <url>
+    <loc>http://www.object.ws/2019/04/22/vagrant/</loc>
+    <lastmod>2019-08-22T12:19:36.515Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境</title>
+        <pubTime>2019-04-22T12:31:13.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Docker</tag>
+         
+        <tag>Vagrant</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.object.ws/2019/04/13/centos-login-fail/</loc>
+    <lastmod>2019-08-22T12:18:32.974Z</lastmod>
+    <data>
+        <display>
+        <title>CentOS 7.6出现SSH登录失败的解决方法</title>
+        <pubTime>2019-04-13T11:49:04.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.object.ws/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.object.ws/2018/05/18/go-basic/</loc>
-    <lastmod>2019-08-19T08:36:46.601Z</lastmod>
+    <lastmod>2019-08-19T12:25:10.247Z</lastmod>
     <data>
         <display>
         <title>GoLang 基础学习笔记</title>
@@ -45,30 +91,6 @@
            
              
               <breadCrumb title="Java" url="http://www.object.ws/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.object.ws/2019/04/12/vagrant/</loc>
-    <lastmod>2019-08-11T06:09:29.018Z</lastmod>
-    <data>
-        <display>
-        <title>使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境</title>
-        <pubTime>2019-04-12T12:31:13.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-        <tag>Docker</tag>
-         
-        <tag>Vagrant</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
           
         </display>
     </data>
@@ -382,11 +404,11 @@
         <title>CentOS7 搭建 Consul 集群</title>
         <pubTime>2018-04-03T02:57:14.000Z</pubTime>
         
+        <tag>CentOS</tag>
+         
         <tag>MicroService</tag>
          
         <tag>Cluster</tag>
-         
-        <tag>CentOS</tag>
          
         <tag>Linux</tag>
          

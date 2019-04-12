@@ -108,18 +108,18 @@
 
 
 
-  <meta name="description" content="CentOS7 中去掉烦人的滴滴滴的声音在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。 如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑” /etc/inputrc“ 文件，在”vim“的命令模式下，用键盘方向键进行定位， 找到“#set bell-style none”，用X 删除语">
-<meta name="keywords" content="CentOS">
+  <meta name="description" content="CentOS 7.6出现SSH登录失败的解决方案问题重现：iterm登录123456ssh vagrant@192.168.10.10The authenticity of host &apos;192.168.10.10 (192.168.10.10)&apos; can&apos;t be established.ECDSA key fingerprint is SHA256:8nyfIaEq9jMHfb9aQIlPh5O">
+<meta name="keywords" content="CentOS,Nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="去掉CentOS中取消滴滴滴的声音">
-<meta property="og:url" content="http://www.object.ws/2018/01/08/centos-inputrc/index.html">
+<meta property="og:title" content="CentOS 7.6出现SSH登录失败的解决方法">
+<meta property="og:url" content="http://www.object.ws/2019/04/13/centos-login-fail/index.html">
 <meta property="og:site_name" content="柒索">
-<meta property="og:description" content="CentOS7 中去掉烦人的滴滴滴的声音在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。 如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑” /etc/inputrc“ 文件，在”vim“的命令模式下，用键盘方向键进行定位， 找到“#set bell-style none”，用X 删除语">
+<meta property="og:description" content="CentOS 7.6出现SSH登录失败的解决方案问题重现：iterm登录123456ssh vagrant@192.168.10.10The authenticity of host &apos;192.168.10.10 (192.168.10.10)&apos; can&apos;t be established.ECDSA key fingerprint is SHA256:8nyfIaEq9jMHfb9aQIlPh5O">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-06T03:07:10.781Z">
+<meta property="og:updated_time" content="2019-08-22T12:18:32.974Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="去掉CentOS中取消滴滴滴的声音">
-<meta name="twitter:description" content="CentOS7 中去掉烦人的滴滴滴的声音在CentOS中，我们常用Tab键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。 如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑” /etc/inputrc“ 文件，在”vim“的命令模式下，用键盘方向键进行定位， 找到“#set bell-style none”，用X 删除语">
+<meta name="twitter:title" content="CentOS 7.6出现SSH登录失败的解决方法">
+<meta name="twitter:description" content="CentOS 7.6出现SSH登录失败的解决方案问题重现：iterm登录123456ssh vagrant@192.168.10.10The authenticity of host &apos;192.168.10.10 (192.168.10.10)&apos; can&apos;t be established.ECDSA key fingerprint is SHA256:8nyfIaEq9jMHfb9aQIlPh5O">
 
 
 
@@ -128,7 +128,7 @@
 
 
 
-  <link rel="canonical" href="http://www.object.ws/2018/01/08/centos-inputrc/"/>
+  <link rel="canonical" href="http://www.object.ws/2019/04/13/centos-login-fail/"/>
 
 
 
@@ -138,7 +138,7 @@
   };
 </script>
 
-  <title>去掉CentOS中取消滴滴滴的声音 | 柒索</title>
+  <title>CentOS 7.6出现SSH登录失败的解决方法 | 柒索</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.object.ws/2018/01/08/centos-inputrc/">
+    <link itemprop="mainEntityOfPage" href="http://www.object.ws/2019/04/13/centos-login-fail/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="柒索">
@@ -328,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">去掉CentOS中取消滴滴滴的声音
+          <h1 class="post-title" itemprop="name headline">CentOS 7.6出现SSH登录失败的解决方法
               
             
           </h1>
@@ -353,7 +353,7 @@
                 
               
 
-              <time title="创建时间：2018-01-08 09:28:43" itemprop="dateCreated datePublished" datetime="2018-01-08T09:28:43+08:00">2018-01-08</time>
+              <time title="创建时间：2019-04-13 19:49:04" itemprop="dateCreated datePublished" datetime="2019-04-13T19:49:04+08:00">2019-04-13</time>
             
 
             
@@ -405,11 +405,13 @@
       
 
       
-        <h3 id="CentOS7-中去掉烦人的滴滴滴的声音"><a href="#CentOS7-中去掉烦人的滴滴滴的声音" class="headerlink" title="CentOS7 中去掉烦人的滴滴滴的声音"></a>CentOS7 中去掉烦人的滴滴滴的声音</h3><p>在CentOS中，我们常用<code>Tab</code>键进行命令补全，但是系统总是提示滴滴声，让人很烦躁。  即使把音频设备关掉，或者虚拟机的音频设备也关掉，还是有这个声音。</p>
-<p>如果不喜欢这个声音，可以通过修改配置去掉它。用vim编辑” <code>/etc/inputrc</code>“ 文件，在”<code>vim</code>“的命令模式下，用键盘方向键进行定位， 找到“<code>#set bell-style none</code>”，用X 删除语句前方的#号，就可以了。“<code>:wq</code>”进行文件保存，并对系统进行重启以后，既可以去掉这个烦扰的声音了。</p>
-<p>代码示例：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> do not bell on tab-completion</span><br><span class="line">set bell-style none</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure></p>
-<p>Done.</p>
-
+        <h2 id="CentOS-7-6出现SSH登录失败的解决方案"><a href="#CentOS-7-6出现SSH登录失败的解决方案" class="headerlink" title="CentOS 7.6出现SSH登录失败的解决方案"></a>CentOS 7.6出现SSH登录失败的解决方案</h2><h3 id="问题重现："><a href="#问题重现：" class="headerlink" title="问题重现："></a>问题重现：</h3><h4 id="iterm登录"><a href="#iterm登录" class="headerlink" title="iterm登录"></a>iterm登录</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ssh vagrant@192.168.10.10</span><br><span class="line">The authenticity of host '192.168.10.10 (192.168.10.10)' can't be established.</span><br><span class="line">ECDSA key fingerprint is SHA256:8nyfIaEq9jMHfb9aQIlPh5OAGXjjSVGEDiXfMjlD7H8.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)? yes</span><br><span class="line">Warning: Permanently added '192.168.10.10' (ECDSA) to the list of known hosts.</span><br><span class="line">vagrant@192.168.10.10: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).</span><br></pre></td></tr></table></figure>
+<h4 id="sshShell登录"><a href="#sshShell登录" class="headerlink" title="sshShell登录"></a>sshShell登录</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span>   11:06:29 Connecting to 192.168.10.10 port 22</span><br><span class="line"><span class="meta">&gt;</span>   11:06:29 Command: ssh -p 22 vagrant@192.168.10.12</span><br><span class="line"><span class="meta">&gt;</span>   11:06:29 Connect to 192.168.10.12:22, with timeout 15.000000</span><br><span class="line"><span class="meta">&gt;</span>   11:06:29 Create socket with IPv4 address family</span><br><span class="line"><span class="meta">&gt;</span>   11:06:29 Socket is connected successfully</span><br><span class="line"><span class="meta">&gt;</span>   11:06:29 Client banner: SSH-2.0-libssh_0.7.5</span><br><span class="line"><span class="meta">&gt;</span>   11:06:29 Server banner: SSH-2.0-OpenSSH_7.4</span><br><span class="line"><span class="meta">&gt;</span>   11:06:29 Negotiated with server</span><br><span class="line"><span class="meta">&gt;</span>   11:06:29 Authentication that can continue: publickey, gssapi-with-mic</span><br><span class="line"><span class="meta">&gt;</span>   11:06:29 Disconnected from server</span><br></pre></td></tr></table></figure>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="1、卸载重新"><a href="#1、卸载重新" class="headerlink" title="1、卸载重新"></a>1、卸载重新</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@cent ~]# yum -y remove openssh-server</span><br><span class="line">[root@cent ~]# yum -y install openssh-server</span><br></pre></td></tr></table></figure>
+<h4 id="2、生成密钥-可选"><a href="#2、生成密钥-可选" class="headerlink" title="2、生成密钥(可选)"></a>2、生成密钥(可选)</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@cent ~]# sshd-keygen</span><br></pre></td></tr></table></figure>
+<h4 id="3、修改sshd-config配置文件"><a href="#3、修改sshd-config配置文件" class="headerlink" title="3、修改sshd_config配置文件"></a>3、修改sshd_config配置文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@cent ~]# vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 添加以下内容至文件末尾处 :wq</span><br><span class="line">PubkeyAuthentication yes</span><br></pre></td></tr></table></figure>
+<h4 id="4、重新启动sshd"><a href="#4、重新启动sshd" class="headerlink" title="4、重新启动sshd"></a>4、重新启动sshd</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@cent ~]# systemctl restart sshd.service</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -431,6 +433,8 @@
           
             <a href="/tags/CentOS/" rel="tag"># CentOS</a>
           
+            <a href="/tags/Nginx/" rel="tag"># Nginx</a>
+          
         </div>
       
 
@@ -442,8 +446,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/21/sublime/" rel="next" title="Mac中设置Sublime快速在终端中使用命令打开项目">
-                <i class="fa fa-chevron-left"></i> Mac中设置Sublime快速在终端中使用命令打开项目
+              <a href="/2019/03/18/java-spring-cros/" rel="next" title="使用Spring CROS解决项目中的跨域问题">
+                <i class="fa fa-chevron-left"></i> 使用Spring CROS解决项目中的跨域问题
               </a>
             
           </div>
@@ -452,8 +456,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/21/centos-jdk/" rel="prev" title="CentOS7 安装OpenJDK1.8 & OracleJDK1.8">
-                CentOS7 安装OpenJDK1.8 & OracleJDK1.8 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/22/vagrant/" rel="prev" title="使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境">
+                使用 Vagrant + VirtualBox 快速构建 CentOS 下的 Docker 环境 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -746,7 +750,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CentOS7-中去掉烦人的滴滴滴的声音"><span class="nav-number">1.</span> <span class="nav-text">CentOS7 中去掉烦人的滴滴滴的声音</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS-7-6出现SSH登录失败的解决方案"><span class="nav-number">1.</span> <span class="nav-text">CentOS 7.6出现SSH登录失败的解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题重现："><span class="nav-number">1.1.</span> <span class="nav-text">问题重现：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#iterm登录"><span class="nav-number">1.1.1.</span> <span class="nav-text">iterm登录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sshShell登录"><span class="nav-number">1.1.2.</span> <span class="nav-text">sshShell登录</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法"><span class="nav-number">1.2.</span> <span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、卸载重新"><span class="nav-number">1.2.1.</span> <span class="nav-text">1、卸载重新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、生成密钥-可选"><span class="nav-number">1.2.2.</span> <span class="nav-text">2、生成密钥(可选)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、修改sshd-config配置文件"><span class="nav-number">1.2.3.</span> <span class="nav-text">3、修改sshd_config配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、重新启动sshd"><span class="nav-number">1.2.4.</span> <span class="nav-text">4、重新启动sshd</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
