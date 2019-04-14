@@ -445,11 +445,11 @@
       <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
     
     
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
-    
       <category term="MicroService" scheme="http://www.object.ws/tags/MicroService/"/>
     
       <category term="Cluster" scheme="http://www.object.ws/tags/Cluster/"/>
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
       <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     
