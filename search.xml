@@ -120,8 +120,8 @@
         <tag>CentOS</tag>
         <tag>Linux</tag>
         <tag>Docker</tag>
-        <tag>Vagrant</tag>
         <tag>Swarm</tag>
+        <tag>Vagrant</tag>
         <tag>Swarmkit</tag>
         <tag>Swarm Mode</tag>
       </tags>

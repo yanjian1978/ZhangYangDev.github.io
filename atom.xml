@@ -277,9 +277,9 @@
     
       <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
     
-      <category term="Vagrant" scheme="http://www.object.ws/tags/Vagrant/"/>
-    
       <category term="Swarm" scheme="http://www.object.ws/tags/Swarm/"/>
+    
+      <category term="Vagrant" scheme="http://www.object.ws/tags/Vagrant/"/>
     
       <category term="Swarmkit" scheme="http://www.object.ws/tags/Swarmkit/"/>
     
