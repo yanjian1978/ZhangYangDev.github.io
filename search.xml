@@ -71,8 +71,8 @@
       </categories>
       <tags>
         <tag>CentOS</tag>
-        <tag>WordPress</tag>
         <tag>Docker</tag>
+        <tag>WordPress</tag>
       </tags>
   </entry>
   <entry>
@@ -85,6 +85,19 @@
       <tags>
         <tag>Linux</tag>
         <tag>Vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用grep命令过滤到掉文件中的内容]]></title>
+    <url>%2F2018%2F10%2F18%2Flinux-grep-use%2F</url>
+    <content type="text"><![CDATA[使用grep命令过滤到掉文件中的内容过滤掉注释1cat /etc/ntp.conf | grep -v '^#' 过滤掉空行1cat /etc/ntp.conf | grep -v '^#' 过滤掉注释和空行1cat /etc/ntp.conf | grep -Ev '^#|^$']]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Shell</tag>
+        <tag>Grep</tag>
       </tags>
   </entry>
   <entry>

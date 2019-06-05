@@ -171,9 +171,9 @@
     
       <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="WordPress" scheme="http://www.object.ws/tags/WordPress/"/>
-    
       <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
+    
+      <category term="WordPress" scheme="http://www.object.ws/tags/WordPress/"/>
     
   </entry>
   
@@ -199,6 +199,33 @@
       <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     
       <category term="Vim" scheme="http://www.object.ws/tags/Vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用grep命令过滤到掉文件中的内容</title>
+    <link href="http://www.object.ws/2018/10/18/linux-grep-use/"/>
+    <id>http://www.object.ws/2018/10/18/linux-grep-use/</id>
+    <published>2018-10-18T12:31:13.000Z</published>
+    <updated>2019-09-03T14:11:18.112Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;使用grep命令过滤到掉文件中的内容&quot;&gt;&lt;a href=&quot;#使用grep命令过滤到掉文件中的内容&quot; class=&quot;headerlink&quot; title=&quot;使用grep命令过滤到掉文件中的内容&quot;&gt;&lt;/a&gt;使用grep命令过滤到掉文件中的内容&lt;/h2&gt;&lt;h3 id=&quot;过
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
+    
+      <category term="Shell" scheme="http://www.object.ws/tags/Shell/"/>
+    
+      <category term="Grep" scheme="http://www.object.ws/tags/Grep/"/>
     
   </entry>
   
@@ -526,32 +553,6 @@
       <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     
       <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS7 安装 Git</title>
-    <link href="http://www.object.ws/2018/03/07/centos-git/"/>
-    <id>http://www.object.ws/2018/03/07/centos-git/</id>
-    <published>2018-03-07T05:43:51.000Z</published>
-    <updated>2018-06-03T05:47:44.116Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://git-scm.com/images/logo@2x.png&quot; alt=&quot;Git logo&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Git简介&quot;&gt;&lt;a href=&quot;#Git简介&quot; class=&quot;headerlink&quot; title=&quot;Git简介&quot;&gt;&lt;/
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
-    
-    
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
-    
-      <category term="Git" scheme="http://www.object.ws/tags/Git/"/>
     
   </entry>
   
