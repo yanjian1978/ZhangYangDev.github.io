@@ -207,14 +207,15 @@
     <link href="http://www.object.ws/2018/10/18/linux-grep-use/"/>
     <id>http://www.object.ws/2018/10/18/linux-grep-use/</id>
     <published>2018-10-18T12:31:13.000Z</published>
-    <updated>2019-06-05T14:13:59.638Z</updated>
+    <updated>2019-06-05T14:15:27.078Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;使用grep命令过滤到掉文件中的内容&quot;&gt;&lt;a href=&quot;#使用grep命令过滤到掉文件中的内容&quot; class=&quot;headerlink&quot; title=&quot;使用grep命令过滤到掉文件中的内容&quot;&gt;&lt;/a&gt;使用grep命令过滤到掉文件中的内容&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;
+        &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;过滤掉注释&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class
       
     
     </summary>
