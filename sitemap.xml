@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.object.ws/2019/09/02/oracle-cursor/</loc>
-    
-    <lastmod>2019-09-04T03:56:05.097Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.object.ws/2019/04/22/vagrant/</loc>
     
     <lastmod>2019-08-22T12:19:36.515Z</lastmod>
@@ -33,6 +26,13 @@
     <loc>http://www.object.ws/2019/03/18/java-spring-cros/</loc>
     
     <lastmod>2019-08-19T08:36:35.401Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2019/09/02/oracle-cursor/</loc>
+    
+    <lastmod>2019-06-13T03:59:45.307Z</lastmod>
     
   </url>
   
