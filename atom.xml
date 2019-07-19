@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.object.ws/"/>
-  <updated>2019-07-04T13:22:04.735Z</updated>
+  <updated>2019-09-04T10:32:49.877Z</updated>
   <id>http://www.object.ws/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Oracle PL/SQL 关于存储过程和存函数的使用</title>
+    <link href="http://www.object.ws/2019/09/04/oracle-func-proc/"/>
+    <id>http://www.object.ws/2019/09/04/oracle-func-proc/</id>
+    <published>2019-09-04T12:03:32.000Z</published>
+    <updated>2019-09-04T10:32:49.877Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;存储过程&quot;&gt;&lt;a href=&quot;#存储过程&quot; class=&quot;headerlink&quot; title=&quot;存储过程&quot;&gt;&lt;/a&gt;存储过程&lt;/h2&gt;&lt;h2 id=&quot;存储函数&quot;&gt;&lt;a href=&quot;#存储函数&quot; class=&quot;headerlink&quot; title=&quot;存储函数&quot;&gt;&lt;/a
+      
+    
+    </summary>
+    
+      <category term="Oracle" scheme="http://www.object.ws/categories/Oracle/"/>
+    
+    
+      <category term="Oracle" scheme="http://www.object.ws/tags/Oracle/"/>
+    
+      <category term="Cursor" scheme="http://www.object.ws/tags/Cursor/"/>
+    
+      <category term="PL/SQL" scheme="http://www.object.ws/tags/PL-SQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Oracle PL/SQL 关于游标的使用</title>
     <link href="http://www.object.ws/2019/09/02/oracle-cursor/"/>
     <id>http://www.object.ws/2019/09/02/oracle-cursor/</id>
     <published>2019-09-02T12:03:32.000Z</published>
-    <updated>2019-07-04T13:22:04.735Z</updated>
+    <updated>2019-09-04T07:42:42.038Z</updated>
     
     <summary type="html">
     
@@ -198,9 +225,9 @@
     
       <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="WordPress" scheme="http://www.object.ws/tags/WordPress/"/>
-    
       <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
+    
+      <category term="WordPress" scheme="http://www.object.ws/tags/WordPress/"/>
     
   </entry>
   
@@ -377,13 +404,13 @@
     <link href="http://www.object.ws/2018/05/18/go-basic/"/>
     <id>http://www.object.ws/2018/05/18/go-basic/</id>
     <published>2018-05-18T12:59:13.000Z</published>
-    <updated>2019-08-19T12:25:10.247Z</updated>
+    <updated>2019-09-06T15:15:49.634Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;GOLANG-转义字符&quot;&gt;&lt;a href=&quot;#GOLANG-转义字符&quot; class=&quot;headerlink&quot; title=&quot;GOLANG - 转义字符&quot;&gt;&lt;/a&gt;GOLANG - 转义字符&lt;/h3&gt;&lt;p&gt;GoLang转义字符：&lt;/p&gt;
+        &lt;h2 id=&quot;GOLANG-转义字符&quot;&gt;&lt;a href=&quot;#GOLANG-转义字符&quot; class=&quot;headerlink&quot; title=&quot;GOLANG - 转义字符&quot;&gt;&lt;/a&gt;GOLANG - 转义字符&lt;/h2&gt;&lt;p&gt;GoLang转义字符：&lt;/p&gt;
 &lt;figure class=
       
     
@@ -501,11 +528,11 @@
       <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
     
     
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
+    
       <category term="MicroService" scheme="http://www.object.ws/tags/MicroService/"/>
     
       <category term="Cluster" scheme="http://www.object.ws/tags/Cluster/"/>
-    
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
       <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     
@@ -533,27 +560,6 @@
     
     
       <category term="Elasticsearch" scheme="http://www.object.ws/tags/Elasticsearch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS7 安装 Jenkins</title>
-    <link href="http://www.object.ws/2018/03/13/centos-jenkins/"/>
-    <id>http://www.object.ws/2018/03/13/centos-jenkins/</id>
-    <published>2018-03-13T05:17:50.000Z</published>
-    <updated>2018-06-03T05:58:11.411Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Jenkins-简介&quot;&gt;&lt;a href=&quot;#Jenkins-简介&quot; class=&quot;headerlink&quot; title=&quot;Jenkins 简介&quot;&gt;&lt;/a&gt;Jenkins 简介&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Jenkins&lt;/strong&gt; 是一个开源软件项目，是基于
-      
-    
-    </summary>
-    
-    
-      <category term="Jenkins" scheme="http://www.object.ws/tags/Jenkins/"/>
     
   </entry>
   
