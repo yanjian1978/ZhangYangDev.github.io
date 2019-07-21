@@ -225,9 +225,9 @@
     
       <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
-      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
-    
       <category term="WordPress" scheme="http://www.object.ws/tags/WordPress/"/>
+    
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
     
   </entry>
   
@@ -404,7 +404,7 @@
     <link href="http://www.object.ws/2018/05/18/go-basic/"/>
     <id>http://www.object.ws/2018/05/18/go-basic/</id>
     <published>2018-05-18T12:59:13.000Z</published>
-    <updated>2019-09-06T15:15:49.634Z</updated>
+    <updated>2019-07-21T11:21:26.725Z</updated>
     
     <summary type="html">
     
@@ -528,11 +528,11 @@
       <category term="Linux" scheme="http://www.object.ws/categories/Linux/"/>
     
     
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
-    
       <category term="MicroService" scheme="http://www.object.ws/tags/MicroService/"/>
     
       <category term="Cluster" scheme="http://www.object.ws/tags/Cluster/"/>
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
     
       <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
     

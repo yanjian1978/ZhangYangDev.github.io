@@ -4,30 +4,6 @@
 
     
   <url>
-    <loc>http://www.object.ws/2018/05/18/go-basic/</loc>
-    <lastmod>2019-09-06T15:15:49.634Z</lastmod>
-    <data>
-        <display>
-        <title>GoLang 基础学习笔记</title>
-        <pubTime>2018-05-18T12:59:13.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-        <tag>Docker</tag>
-         
-        <tag>Vagrant</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.object.ws/2019/09/04/oracle-func-proc/</loc>
     <lastmod>2019-09-04T10:32:49.877Z</lastmod>
     <data>
@@ -139,6 +115,30 @@
            
              
               <breadCrumb title="Java" url="http://www.object.ws/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.object.ws/2018/05/18/go-basic/</loc>
+    <lastmod>2019-07-21T11:21:26.725Z</lastmod>
+    <data>
+        <display>
+        <title>GoLang 基础学习笔记</title>
+        <pubTime>2018-05-18T12:59:13.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Docker</tag>
+         
+        <tag>Vagrant</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
           
         </display>
     </data>
@@ -367,9 +367,9 @@
         
         <tag>CentOS</tag>
          
-        <tag>Docker</tag>
-         
         <tag>WordPress</tag>
+         
+        <tag>Docker</tag>
          
          
            
@@ -476,11 +476,11 @@
         <title>CentOS7 搭建 Consul 集群</title>
         <pubTime>2018-04-03T02:57:14.000Z</pubTime>
         
-        <tag>CentOS</tag>
-         
         <tag>MicroService</tag>
          
         <tag>Cluster</tag>
+         
+        <tag>CentOS</tag>
          
         <tag>Linux</tag>
          

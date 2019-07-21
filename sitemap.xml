@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.object.ws/2018/05/18/go-basic/</loc>
-    
-    <lastmod>2019-09-06T15:15:49.634Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.object.ws/2019/09/04/oracle-func-proc/</loc>
     
     <lastmod>2019-09-04T10:32:49.877Z</lastmod>
@@ -40,6 +33,13 @@
     <loc>http://www.object.ws/2019/03/18/java-spring-cros/</loc>
     
     <lastmod>2019-08-19T08:36:35.401Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2018/05/18/go-basic/</loc>
+    
+    <lastmod>2019-07-21T11:21:26.725Z</lastmod>
     
   </url>
   

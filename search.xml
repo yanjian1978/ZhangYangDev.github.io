@@ -97,8 +97,8 @@
       </categories>
       <tags>
         <tag>CentOS</tag>
-        <tag>Docker</tag>
         <tag>WordPress</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -182,7 +182,7 @@
   <entry>
     <title><![CDATA[GoLang 基础学习笔记]]></title>
     <url>%2F2018%2F05%2F18%2Fgo-basic%2F</url>
-    <content type="text"><![CDATA[GOLANG - 转义字符GoLang转义字符： 1234567891011121314151617181920212223242526272829CODE：package main// fmt包提供格式化、输入、输出函数import "fmt"func main() &#123; // GoLang转义字符 // (1) \t 制表符排版 fmt.Println("Go\tLanguage") // (2) \n 换行使用 fmt.Println("Go\nLanguage") // (3) \\ 输出单个\ fmt.Println("Go\\Language") // (4) \" 输出单个" fmt.Println("\"GoLanguage\"") // (5) \r 输出回车换行 fmt.Println("Go\rLanguage")&#125;RESULT:Running] go run "/tempCodeRunnerFile.go"Go LanguageGoLanguageGo\Language"GoLanguage"GoLanguage GOLANG - 常见异常]]></content>
+    <content type="text"><![CDATA[GOLANG - 转义字符GoLang转义字符： 1234567891011121314151617181920212223242526272829CODE：package main// fmt包提供格式化、输入、输出函数import "fmt"func main() &#123; // GoLang转义字符 // (1) \t 制表符排版 fmt.Println("Go\tLanguage") // (2) \n 换行使用 fmt.Println("Go\nLanguage") // (3) \\ 输出单个\ fmt.Println("Go\\Language") // (4) \" 输出单个" fmt.Println("\"GoLanguage\"") // (5) \r 输出回车换行 fmt.Println("Go\rLanguage")&#125;RESULT:Running] go run "/tempCodeRunnerFile.go"Go LanguageGoLanguageGo\Language"GoLanguage"GoLanguage]]></content>
       <categories>
         <category>Docker</category>
       </categories>
@@ -239,9 +239,9 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>CentOS</tag>
         <tag>MicroService</tag>
         <tag>Cluster</tag>
+        <tag>CentOS</tag>
         <tag>Linux</tag>
         <tag>Consul</tag>
       </tags>
