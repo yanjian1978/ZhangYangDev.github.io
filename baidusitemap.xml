@@ -122,30 +122,6 @@
 
     
   <url>
-    <loc>http://www.object.ws/2018/05/18/go-basic/</loc>
-    <lastmod>2019-07-21T11:21:26.725Z</lastmod>
-    <data>
-        <display>
-        <title>GoLang 基础学习笔记</title>
-        <pubTime>2018-05-18T12:59:13.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-        <tag>Docker</tag>
-         
-        <tag>Vagrant</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.object.ws/2018/10/18/linux-grep-use/</loc>
     <lastmod>2019-06-05T14:15:27.078Z</lastmod>
     <data>
