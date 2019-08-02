@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="柒索">
 <meta property="og:description" content="服务器环境准备:使用Vagrant构建CentOS：本地需要安装 Vagrant和 VirtualBox，然后使用 Vagrant 在 VirtualBox 中构建一个 CentOS7系统。 版本信息：Vagrant 版本： 2.2.0 VirtualBox版本：5.1.26 Vagrantfile：新建一个文件夹，使用 Vagrant 来初始化一个项目。 12345➜  ~ mkdir Maxu">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-14T06:29:46.436Z">
+<meta property="og:updated_time" content="2019-07-24T14:44:05.046Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="项目部署前的服务器环境准备">
 <meta name="twitter:description" content="服务器环境准备:使用Vagrant构建CentOS：本地需要安装 Vagrant和 VirtualBox，然后使用 Vagrant 在 VirtualBox 中构建一个 CentOS7系统。 版本信息：Vagrant 版本： 2.2.0 VirtualBox版本：5.1.26 Vagrantfile：新建一个文件夹，使用 Vagrant 来初始化一个项目。 12345➜  ~ mkdir Maxu">
@@ -440,6 +440,7 @@
 <p>复制密码并打开链接进入浏览器中，在 Jenkins 的页面输入密码，点击继续，选择”选择插件来安装”,下一步创建用户，可以使用默认的 admin账户，下一步 Instance Configuration 默认不变。</p>
 <p>回到终端，给 Jenkins安装插件：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@Maxus ~]$ cd /var/lib/jenkins/  # 进入到 jenkins 目录</span><br><span class="line">[vagrant@Maxus jenkins]$ sudo wget http://dev-cv.saicmotor.com/mirrors/software/jenkins/plugins.tar # 下载插件</span><br><span class="line">[vagrant@Maxus jenkins]$ sudo tar -vxf plugins.tar # 解压</span><br><span class="line">[vagrant@Maxus jenkins]$ sudo systemctl restart jenkins # 重启</span><br></pre></td></tr></table></figure>
+<p>Done.</p>
 
       
     </div>

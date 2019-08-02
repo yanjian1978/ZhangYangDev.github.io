@@ -122,6 +122,23 @@
 
     
   <url>
+    <loc>http://www.object.ws/2018/06/25/springcloud-deploy/</loc>
+    <lastmod>2019-07-24T14:44:05.046Z</lastmod>
+    <data>
+        <display>
+        <title>项目部署前的服务器环境准备</title>
+        <pubTime>2018-06-25T05:20:28.000Z</pubTime>
+        
+        <tag>SpringCloud</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.object.ws/2018/10/18/linux-grep-use/</loc>
     <lastmod>2019-06-05T14:15:27.078Z</lastmod>
     <data>
@@ -352,23 +369,6 @@
              
               <breadCrumb title="Linux" url="http://www.object.ws/categories/Linux/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.object.ws/2018/06/25/springcloud-deploy/</loc>
-    <lastmod>2018-11-14T06:29:46.436Z</lastmod>
-    <data>
-        <display>
-        <title>项目部署前的服务器环境准备</title>
-        <pubTime>2018-06-25T05:20:28.000Z</pubTime>
-        
-        <tag>SpringCloud</tag>
-         
-         
-           
         </display>
     </data>
     </url>
