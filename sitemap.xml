@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.object.ws/2019/09/04/oracle-func-proc/</loc>
-    
-    <lastmod>2019-09-04T10:32:49.877Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.object.ws/2019/09/02/oracle-cursor/</loc>
     
     <lastmod>2019-09-04T07:42:42.038Z</lastmod>
@@ -33,6 +26,20 @@
     <loc>http://www.object.ws/2019/03/18/java-spring-cros/</loc>
     
     <lastmod>2019-08-19T08:36:35.401Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2000/09/04/oracle-func-proc/</loc>
+    
+    <lastmod>2019-08-02T04:07:22.718Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.object.ws/2017/11/24/springboot-springdata-jdbc/</loc>
+    
+    <lastmod>2019-08-02T04:06:37.065Z</lastmod>
     
   </url>
   
@@ -166,13 +173,6 @@
     <loc>http://www.object.ws/2017/10/29/springboot-restservice/</loc>
     
     <lastmod>2018-06-14T07:10:26.102Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.object.ws/2017/11/24/springboot-springdata-jdbc/</loc>
-    
-    <lastmod>2018-06-14T02:05:38.437Z</lastmod>
     
   </url>
   

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.object.ws/"/>
-  <updated>2019-09-04T10:32:49.877Z</updated>
+  <updated>2019-09-04T07:42:42.038Z</updated>
   <id>http://www.object.ws/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Oracle PL/SQL 关于存储过程和存函数的使用</title>
-    <link href="http://www.object.ws/2019/09/04/oracle-func-proc/"/>
-    <id>http://www.object.ws/2019/09/04/oracle-func-proc/</id>
-    <published>2019-09-04T12:03:32.000Z</published>
-    <updated>2019-09-04T10:32:49.877Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;存储过程&quot;&gt;&lt;a href=&quot;#存储过程&quot; class=&quot;headerlink&quot; title=&quot;存储过程&quot;&gt;&lt;/a&gt;存储过程&lt;/h2&gt;&lt;h2 id=&quot;存储函数&quot;&gt;&lt;a href=&quot;#存储函数&quot; class=&quot;headerlink&quot; title=&quot;存储函数&quot;&gt;&lt;/a
-      
-    
-    </summary>
-    
-      <category term="Oracle" scheme="http://www.object.ws/categories/Oracle/"/>
-    
-    
-      <category term="Oracle" scheme="http://www.object.ws/tags/Oracle/"/>
-    
-      <category term="Cursor" scheme="http://www.object.ws/tags/Cursor/"/>
-    
-      <category term="PL/SQL" scheme="http://www.object.ws/tags/PL-SQL/"/>
-    
-  </entry>
   
   <entry>
     <title>Oracle PL/SQL 关于游标的使用</title>
@@ -553,6 +526,34 @@
     
     
       <category term="Jenkins" scheme="http://www.object.ws/tags/Jenkins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker - Introduction &amp; QuickStart</title>
+    <link href="http://www.object.ws/2018/03/11/docker-introduction/"/>
+    <id>http://www.object.ws/2018/03/11/docker-introduction/</id>
+    <published>2018-03-11T02:24:12.000Z</published>
+    <updated>2019-01-04T06:05:43.708Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://www.docker.com/sites/default/files/ee_0.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Docker-概述&quot;&gt;&lt;a href=&quot;#Docker-概述&quot; class=&quot;headerlink&quot; tit
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
+    
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
+    
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
+    
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
     
   </entry>
   
