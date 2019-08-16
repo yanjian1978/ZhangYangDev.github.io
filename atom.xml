@@ -124,6 +124,38 @@
   </entry>
   
   <entry>
+    <title>在项目中使用Docker Maven Plugin插件远程构建镜像</title>
+    <link href="http://www.object.ws/2019/03/11/docker-maven-pro/"/>
+    <id>http://www.object.ws/2019/03/11/docker-maven-pro/</id>
+    <published>2019-03-11T02:24:12.000Z</published>
+    <updated>2019-08-16T11:41:33.213Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;日常开发过程中，可以在项目的pom.xml文件中配置Docker容器，这样方便我们直接将项目打包成Docker镜像，发布到容器中&lt;/p&gt;
+&lt;h3 id=&quot;在Java项目中配置&quot;&gt;&lt;a href=&quot;#在Java项目中配置&quot; class=&quot;headerlink&quot; title=&quot;
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
+    
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
+    
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
+    
+      <category term="Java" scheme="http://www.object.ws/tags/Java/"/>
+    
+      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
+    
+      <category term="Maven" scheme="http://www.object.ws/tags/Maven/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在Vue中使用防抖、截流函数 防止重复点击或者重复上拉加载</title>
     <link href="http://www.object.ws/2019/02/25/vue-debounce-throttle-func/"/>
     <id>http://www.object.ws/2019/02/25/vue-debounce-throttle-func/</id>
@@ -526,34 +558,6 @@
     
     
       <category term="Jenkins" scheme="http://www.object.ws/tags/Jenkins/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker - Introduction &amp; QuickStart</title>
-    <link href="http://www.object.ws/2018/03/11/docker-introduction/"/>
-    <id>http://www.object.ws/2018/03/11/docker-introduction/</id>
-    <published>2018-03-11T02:24:12.000Z</published>
-    <updated>2019-01-04T06:05:43.708Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://www.docker.com/sites/default/files/ee_0.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Docker-概述&quot;&gt;&lt;a href=&quot;#Docker-概述&quot; class=&quot;headerlink&quot; tit
-      
-    
-    </summary>
-    
-      <category term="Docker" scheme="http://www.object.ws/categories/Docker/"/>
-    
-    
-      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
-    
-      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
-    
-      <category term="Docker" scheme="http://www.object.ws/tags/Docker/"/>
     
   </entry>
   
