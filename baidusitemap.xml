@@ -74,32 +74,8 @@
 
     
   <url>
-    <loc>http://www.object.ws/2019/03/18/java-spring-cros/</loc>
-    <lastmod>2019-08-19T08:36:35.401Z</lastmod>
-    <data>
-        <display>
-        <title>使用Spring CROS解决项目中的跨域问题</title>
-        <pubTime>2019-03-18T06:59:13.000Z</pubTime>
-        
-        <tag>Java</tag>
-         
-        <tag>Spring</tag>
-         
-        <tag>Cros</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://www.object.ws/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.object.ws/2019/03/11/docker-maven-pro/</loc>
-    <lastmod>2019-08-16T11:41:33.213Z</lastmod>
+    <lastmod>2019-08-20T18:01:17.163Z</lastmod>
     <data>
         <display>
         <title>在项目中使用Docker Maven Plugin插件远程构建镜像</title>
@@ -119,6 +95,30 @@
            
              
               <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.object.ws/2019/03/18/java-spring-cros/</loc>
+    <lastmod>2019-08-19T08:36:35.401Z</lastmod>
+    <data>
+        <display>
+        <title>使用Spring CROS解决项目中的跨域问题</title>
+        <pubTime>2019-03-18T06:59:13.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Spring</tag>
+         
+        <tag>Cros</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.object.ws/categories/Java/"/>
           
         </display>
     </data>
