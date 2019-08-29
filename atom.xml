@@ -48,14 +48,14 @@
     <link href="http://www.object.ws/2019/06/11/docker-maven-pro/"/>
     <id>http://www.object.ws/2019/06/11/docker-maven-pro/</id>
     <published>2019-06-11T02:24:12.000Z</published>
-    <updated>2019-08-26T11:03:42.528Z</updated>
+    <updated>2019-08-29T09:22:59.510Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;日常开发过程中，可以在项目的&lt;code&gt;pom.xml&lt;/code&gt;文件中配置Docker容器，这样方便我们直接将项目打包成&lt;code&gt;Docker&lt;/code&gt;镜像，发布到容器中&lt;/p&gt;
-&lt;h3 id=&quot;在Java项目中配置&quot;&gt;&lt;a href=&quot;#在Java项目中配置&quot; 
+        &lt;p&gt;日常开发过程中，可以在项目的&lt;code&gt;pom.xml&lt;/code&gt;文件中配置Docker容器，这样方便我们直接将项目打包成&lt;code&gt;Docker&lt;/code&gt;镜像，发布到容器中.&lt;/p&gt;
+&lt;h3 id=&quot;在Java项目中配置&quot;&gt;&lt;a href=&quot;#在Java项目中配置&quot;
       
     
     </summary>
