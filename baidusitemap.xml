@@ -28,6 +28,32 @@
 
     
   <url>
+    <loc>http://www.object.ws/2018/09/14/docker-dockerfile/</loc>
+    <lastmod>2019-09-02T17:12:13.453Z</lastmod>
+    <data>
+        <display>
+        <title>Docker - Dockerfile</title>
+        <pubTime>2018-09-14T06:27:02.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Docker</tag>
+         
+        <tag>Docker-Compose</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.object.ws/2019/06/11/docker-maven-pro/</loc>
     <lastmod>2019-08-29T09:22:59.510Z</lastmod>
     <data>
@@ -444,32 +470,6 @@
            
              
               <breadCrumb title="Linux" url="http://www.object.ws/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.object.ws/2018/09/14/docker-dockerfile/</loc>
-    <lastmod>2018-11-14T06:28:47.047Z</lastmod>
-    <data>
-        <display>
-        <title>Docker - Dockerfile</title>
-        <pubTime>2018-09-14T06:27:02.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>Docker</tag>
-         
-        <tag>Docker-Compose</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
           
         </display>
     </data>
