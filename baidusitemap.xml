@@ -4,6 +4,98 @@
 
     
   <url>
+    <loc>http://www.object.ws/2019/09/19/golang-env/</loc>
+    <lastmod>2019-09-20T13:49:55.031Z</lastmod>
+    <data>
+        <display>
+        <title>在CentOS下搭建GoLang开发环境</title>
+        <pubTime>2019-09-19T07:15:01.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>GoLang</tag>
+         
+         
+           
+             
+              <breadCrumb title="GoLang" url="http://www.object.ws/categories/GoLang/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.object.ws/2000/03/29/golang-beetool/</loc>
+    <lastmod>2019-09-20T13:46:24.718Z</lastmod>
+    <data>
+        <display>
+        <title>BeeGo bee工具的使用</title>
+        <pubTime>2000-03-29T05:43:33.000Z</pubTime>
+        
+        <tag>GoLang</tag>
+         
+        <tag>BeeGo</tag>
+         
+        <tag>Bee</tag>
+         
+         
+           
+             
+              <breadCrumb title="GoLang" url="http://www.object.ws/categories/GoLang/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.object.ws/2017/04/26/gulp-note/</loc>
+    <lastmod>2019-09-15T04:16:56.554Z</lastmod>
+    <data>
+        <display>
+        <title>『构建工具-Gulp』相关内容整理</title>
+        <pubTime>2017-04-26T14:15:46.000Z</pubTime>
+        
+        <tag>Gulp</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="http://www.object.ws/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.object.ws/2018/05/15/docker-data/</loc>
+    <lastmod>2019-09-08T15:27:05.218Z</lastmod>
+    <data>
+        <display>
+        <title>Docker - 持久化存储和数据共享</title>
+        <pubTime>2018-05-15T13:18:06.000Z</pubTime>
+        
+        <tag>CentOS</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Docker</tag>
+         
+         
+           
+             
+              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.object.ws/2019/09/02/oracle-cursor/</loc>
     <lastmod>2019-09-04T07:42:42.038Z</lastmod>
     <data>
@@ -355,30 +447,6 @@
 
     
   <url>
-    <loc>http://www.object.ws/2000/03/29/golang-beetool/</loc>
-    <lastmod>2019-01-31T03:27:28.558Z</lastmod>
-    <data>
-        <display>
-        <title>BeeGo bee工具的使用</title>
-        <pubTime>2000-03-29T05:43:33.000Z</pubTime>
-        
-        <tag>GoLang</tag>
-         
-        <tag>BeeGo</tag>
-         
-        <tag>Bee</tag>
-         
-         
-           
-             
-              <breadCrumb title="Golang" url="http://www.object.ws/categories/Golang/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.object.ws/2018/05/09/docker-network/</loc>
     <lastmod>2019-01-08T16:13:30.320Z</lastmod>
     <data>
@@ -542,30 +610,6 @@
            
              
               <breadCrumb title="Linux" url="http://www.object.ws/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.object.ws/2018/05/15/docker-data/</loc>
-    <lastmod>2018-07-09T08:11:31.463Z</lastmod>
-    <data>
-        <display>
-        <title>Docker - 持久化存储和数据共享</title>
-        <pubTime>2018-05-15T13:18:06.000Z</pubTime>
-        
-        <tag>CentOS</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>Docker</tag>
-         
-         
-           
-             
-              <breadCrumb title="Docker" url="http://www.object.ws/categories/Docker/"/>
           
         </display>
     </data>
@@ -813,26 +857,6 @@
         <tag>Java</tag>
          
         <tag>Maven</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tools" url="http://www.object.ws/categories/Tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.object.ws/2017/04/26/gulp-note/</loc>
-    <lastmod>2018-06-10T03:12:02.815Z</lastmod>
-    <data>
-        <display>
-        <title>『构建工具-Gulp』相关内容整理</title>
-        <pubTime>2017-04-26T14:15:46.000Z</pubTime>
-        
-        <tag>Gulp</tag>
          
          
            

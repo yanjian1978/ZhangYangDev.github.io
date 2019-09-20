@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.object.ws/"/>
-  <updated>2019-09-04T07:42:42.038Z</updated>
+  <updated>2019-09-20T13:49:55.031Z</updated>
   <id>http://www.object.ws/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在CentOS下搭建GoLang开发环境</title>
+    <link href="http://www.object.ws/2019/09/19/golang-env/"/>
+    <id>http://www.object.ws/2019/09/19/golang-env/</id>
+    <published>2019-09-19T07:15:01.000Z</published>
+    <updated>2019-09-20T13:49:55.031Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;下载安装包&quot;&gt;&lt;a href=&quot;#下载安装包&quot; class=&quot;headerlink&quot; title=&quot;下载安装包&quot;&gt;&lt;/a&gt;下载安装包&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;
+      
+    
+    </summary>
+    
+      <category term="GoLang" scheme="http://www.object.ws/categories/GoLang/"/>
+    
+    
+      <category term="CentOS" scheme="http://www.object.ws/tags/CentOS/"/>
+    
+      <category term="Linux" scheme="http://www.object.ws/tags/Linux/"/>
+    
+      <category term="GoLang" scheme="http://www.object.ws/tags/GoLang/"/>
+    
+  </entry>
   
   <entry>
     <title>Oracle PL/SQL 关于游标的使用</title>
@@ -409,7 +436,7 @@
     <link href="http://www.object.ws/2018/05/15/docker-data/"/>
     <id>http://www.object.ws/2018/05/15/docker-data/</id>
     <published>2018-05-15T13:18:06.000Z</published>
-    <updated>2018-07-09T08:11:31.463Z</updated>
+    <updated>2019-09-08T15:27:05.218Z</updated>
     
     <summary type="html">
     
@@ -537,27 +564,6 @@
     
     
       <category term="Elasticsearch" scheme="http://www.object.ws/tags/Elasticsearch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS7 安装 Jenkins</title>
-    <link href="http://www.object.ws/2018/03/13/centos-jenkins/"/>
-    <id>http://www.object.ws/2018/03/13/centos-jenkins/</id>
-    <published>2018-03-13T05:17:50.000Z</published>
-    <updated>2018-06-03T05:58:11.411Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;Jenkins-简介&quot;&gt;&lt;a href=&quot;#Jenkins-简介&quot; class=&quot;headerlink&quot; title=&quot;Jenkins 简介&quot;&gt;&lt;/a&gt;Jenkins 简介&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Jenkins&lt;/strong&gt; 是一个开源软件项目，是基于
-      
-    
-    </summary>
-    
-    
-      <category term="Jenkins" scheme="http://www.object.ws/tags/Jenkins/"/>
     
   </entry>
   
