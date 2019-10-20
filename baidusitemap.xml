@@ -574,11 +574,11 @@
         <title>CentOS7 搭建 Consul 集群</title>
         <pubTime>2018-04-03T02:57:14.000Z</pubTime>
         
-        <tag>CentOS</tag>
-         
         <tag>MicroService</tag>
          
         <tag>Cluster</tag>
+         
+        <tag>CentOS</tag>
          
         <tag>Linux</tag>
          

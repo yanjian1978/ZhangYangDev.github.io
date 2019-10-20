@@ -241,9 +241,9 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>CentOS</tag>
         <tag>MicroService</tag>
         <tag>Cluster</tag>
+        <tag>CentOS</tag>
         <tag>Linux</tag>
         <tag>Consul</tag>
       </tags>
